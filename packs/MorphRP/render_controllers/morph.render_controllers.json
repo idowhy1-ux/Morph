@@ -1,0 +1,162 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.morph.third_person": {
+      "arrays": {
+        "geometries": {
+          "Array.morph_geo": [
+            "Geometry.morph_shapeshifter",
+            "Geometry.morph_zombie",
+            "Geometry.morph_skeleton",
+            "Geometry.morph_creeper",
+            "Geometry.morph_spider",
+            "Geometry.morph_enderman",
+            "Geometry.morph_blaze"
+          ]
+        },
+        "textures": {
+          "Array.morph_tex": [
+            "Texture.morph_shapeshifter",
+            "Texture.morph_zombie",
+            "Texture.morph_skeleton",
+            "Texture.morph_creeper",
+            "Texture.morph_spider",
+            "Texture.morph_enderman",
+            "Texture.morph_blaze"
+          ]
+        }
+      },
+      "geometry": "Array.morph_geo[variable.morph_form]",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.morph_tex[variable.morph_form]"
+      ],
+      "overlay_color": {
+        "r": "0.62",
+        "g": "0.18",
+        "b": "1.0",
+        "a": "variable.morph_glow"
+      },
+      "part_visibility": [
+        {
+          "*": true
+        }
+      ]
+    },
+    "controller.render.morph.first_person": {
+      "arrays": {
+        "geometries": {
+          "Array.morph_fp_geo": [
+            "Geometry.morph_fp_shapeshifter",
+            "Geometry.morph_fp_zombie",
+            "Geometry.morph_fp_skeleton",
+            "Geometry.morph_fp_creeper",
+            "Geometry.morph_fp_spider",
+            "Geometry.morph_fp_enderman",
+            "Geometry.morph_fp_blaze"
+          ]
+        },
+        "textures": {
+          "Array.morph_tex": [
+            "Texture.morph_shapeshifter",
+            "Texture.morph_zombie",
+            "Texture.morph_skeleton",
+            "Texture.morph_creeper",
+            "Texture.morph_spider",
+            "Texture.morph_enderman",
+            "Texture.morph_blaze"
+          ]
+        }
+      },
+      "geometry": "Array.morph_fp_geo[variable.morph_form]",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.morph_tex[variable.morph_form]"
+      ],
+      "overlay_color": {
+        "r": "0.62",
+        "g": "0.18",
+        "b": "1.0",
+        "a": "variable.morph_glow"
+      },
+      "part_visibility": [
+        {
+          "*": false
+        },
+        {
+          "rightArm": "(query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'filled_map')"
+        },
+        {
+          "spiderLeg": "(query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'filled_map')"
+        },
+        {
+          "spiderClaw": "(query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'filled_map')"
+        },
+        {
+          "leftArm": "(query.get_equipped_item_name(0, 1) == 'filled_map' && query.get_equipped_item_name('off_hand') != 'shield') || (query.get_equipped_item_name('off_hand') == 'filled_map' && !query.item_is_charged) || (!query.item_is_charged && (variable.item_use_normalized > 0 && variable.item_use_normalized < 1.0))"
+        }
+      ]
+    },
+    "controller.render.morph.stolen_skin": {
+      "arrays": {
+        "geometries": {
+          "Array.morph_geo": [
+            "Geometry.morph_shapeshifter",
+            "Geometry.morph_zombie",
+            "Geometry.morph_skeleton",
+            "Geometry.morph_creeper",
+            "Geometry.morph_spider",
+            "Geometry.morph_enderman",
+            "Geometry.morph_blaze"
+          ]
+        },
+        "textures": {
+          "Array.morph_tex": [
+            "Texture.morph_shapeshifter",
+            "Texture.morph_zombie",
+            "Texture.morph_skeleton",
+            "Texture.morph_creeper",
+            "Texture.morph_spider",
+            "Texture.morph_enderman",
+            "Texture.morph_blaze"
+          ]
+        }
+      },
+      "geometry": "Array.morph_geo[variable.morph_form]",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Array.morph_tex[variable.morph_form]"
+      ],
+      "overlay_color": {
+        "r": "0.62",
+        "g": "0.18",
+        "b": "1.0",
+        "a": "variable.morph_glow"
+      },
+      "is_hurt_color": {
+        "r": "0",
+        "g": "0",
+        "b": "0",
+        "a": "0"
+      },
+      "on_fire_color": {
+        "r": "0",
+        "g": "0",
+        "b": "0",
+        "a": "0"
+      }
+    }
+  }
+}

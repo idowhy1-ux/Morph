@@ -1,0 +1,33 @@
+{
+  "format_version": "1.26.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "morph:stolen_skin",
+      "is_spawnable": false,
+      "is_summonable": true,
+      "properties": {
+        "morph:form": { "type": "int", "range": [ 0, 6 ], "default": 0, "client_sync": true }
+      }
+    },
+    "component_groups": {
+      "morph:despawn": { "minecraft:instant_despawn": {} }
+    },
+    "components": {
+      "minecraft:type_family": { "family": [ "morph_skin", "inanimate" ] },
+      "minecraft:collision_box": { "width": 0.1, "height": 0.1 },
+      "minecraft:physics": { "has_gravity": false, "has_collision": false },
+      "minecraft:pushable": { "is_pushable": false, "is_pushable_by_piston": false },
+      "minecraft:damage_sensor": { "triggers": { "cause": "all", "deals_damage": "no" } },
+      "minecraft:fire_immune": {},
+      "minecraft:health": { "value": 1, "max": 1 },
+      "minecraft:timer": {
+        "looping": false,
+        "time": 6,
+        "time_down_event": { "event": "morph:despawn", "target": "self" }
+      }
+    },
+    "events": {
+      "morph:despawn": { "add": { "component_groups": [ "morph:despawn" ] } }
+    }
+  }
+}

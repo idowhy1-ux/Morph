@@ -1,0 +1,7 @@
+{
+  "resource_pack_name": "MorphRP",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "morph_core": { "textures": "textures/items/morph_core" }
+  }
+}

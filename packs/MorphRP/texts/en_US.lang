@@ -1,0 +1,5 @@
+pack.name=Morph: Shapeshifter (Resources)
+pack.description=Kill mobs, steal their skin, become them.
+item.morph:morph_core=Morph Core
+item.morph:morph_core.name=Morph Core
+entity.morph:stolen_skin.name=Stolen Skin

@@ -1,0 +1,54 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "morph:stolen_skin",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "morph_shapeshifter": "textures/entity/morph/shapeshifter",
+        "morph_zombie": "textures/entity/zombie/zombie",
+        "morph_skeleton": "textures/entity/skeleton/skeleton",
+        "morph_creeper": "textures/entity/creeper/creeper",
+        "morph_spider": "textures/entity/spider/spider",
+        "morph_enderman": "textures/entity/enderman/enderman",
+        "morph_blaze": "textures/entity/blaze"
+      },
+      "geometry": {
+        "morph_shapeshifter": "geometry.morph.shapeshifter",
+        "morph_zombie": "geometry.morph.zombie",
+        "morph_skeleton": "geometry.morph.skeleton",
+        "morph_creeper": "geometry.morph.creeper",
+        "morph_spider": "geometry.morph.spider",
+        "morph_enderman": "geometry.morph.enderman",
+        "morph_blaze": "geometry.morph.blaze"
+      },
+      "scripts": {
+        "scale": "math.clamp(1.0 - math.pow(query.life_time / 1.6, 2.0), 0.12, 1.0)",
+        "pre_animation": [
+          "variable.morph_form = query.property('morph:form');",
+          "variable.morph_glow = math.clamp(query.life_time * 0.7, 0.15, 0.85);",
+          "variable.is_first_person = 0.0;"
+        ],
+        "animate": [
+          "peel",
+          {
+            "blaze_rods": "variable.morph_form == 6"
+          },
+          {
+            "spider_pose": "variable.morph_form == 4"
+          }
+        ]
+      },
+      "animations": {
+        "peel": "animation.morph.skin.peel",
+        "blaze_rods": "animation.blaze.move",
+        "spider_pose": "animation.spider.default_leg_pose"
+      },
+      "render_controllers": [
+        "controller.render.morph.stolen_skin"
+      ]
+    }
+  }
+}
