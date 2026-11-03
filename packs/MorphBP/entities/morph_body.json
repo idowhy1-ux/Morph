@@ -1,0 +1,6991 @@
+{
+ "format_version": "1.26.0",
+ "minecraft:entity": {
+  "description": {
+   "identifier": "morph:body",
+   "is_spawnable": false,
+   "is_summonable": true
+  },
+  "component_groups": {
+   "morph:seat_0": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_1": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_2": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_3": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_4": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_5": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_6": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_7": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_8": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_9": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_10": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -2.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_11": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_12": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_13": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_14": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_15": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_16": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_17": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_18": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_19": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_20": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_21": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_22": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_23": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_24": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_25": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_26": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_27": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_28": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_29": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_30": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -1.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_31": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_32": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_33": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_34": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_35": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_36": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_37": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_38": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_39": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_40": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_41": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_42": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_43": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_44": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_45": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_46": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_47": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_48": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_49": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        -0.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_50": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_51": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_52": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_53": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_54": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_55": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_56": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_57": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_58": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_59": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_60": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_61": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_62": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_63": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_64": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_65": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_66": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_67": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_68": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_69": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        0.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_70": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_71": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_72": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_73": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_74": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_75": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_76": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_77": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_78": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_79": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_80": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_81": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_82": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_83": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_84": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_85": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_86": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_87": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_88": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_89": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        1.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_90": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_91": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_92": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_93": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_94": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_95": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_96": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_97": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_98": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_99": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_100": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_101": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_102": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_103": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_104": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_105": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_106": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_107": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_108": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_109": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        2.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_110": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_111": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_112": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_113": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_114": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_115": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_116": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_117": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_118": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_119": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_120": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_121": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_122": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_123": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_124": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_125": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_126": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_127": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_128": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_129": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        3.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_130": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_131": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_132": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_133": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_134": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_135": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_136": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_137": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_138": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_139": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_140": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_141": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_142": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_143": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_144": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_145": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_146": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_147": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_148": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_149": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        4.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_150": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_151": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_152": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_153": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_154": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_155": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_156": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_157": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_158": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_159": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_160": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_161": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_162": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_163": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_164": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_165": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_166": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_167": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_168": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_169": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        5.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_170": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_171": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_172": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_173": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_174": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_175": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_176": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_177": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_178": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_179": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_180": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_181": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_182": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_183": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_184": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_185": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_186": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_187": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_188": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_189": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        6.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_190": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_191": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_192": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_193": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_194": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_195": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_196": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_197": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_198": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_199": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_200": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_201": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_202": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_203": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_204": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_205": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_206": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_207": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_208": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_209": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        7.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_210": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_211": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_212": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_213": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_214": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_215": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_216": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_217": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_218": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_219": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_220": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_221": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.55,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_222": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.6,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_223": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.65,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_224": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.7,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_225": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.75,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_226": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.8,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_227": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.85,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_228": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.9,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_229": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        8.95,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_230": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_231": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.05,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_232": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.1,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_233": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.15,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_234": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.2,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_235": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.25,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_236": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.3,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_237": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.35,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_238": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.4,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_239": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.45,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:seat_240": {
+    "minecraft:rideable": {
+     "seat_count": 1,
+     "family_types": [
+      "player"
+     ],
+     "crouching_skip_interact": true,
+     "pull_in_entities": false,
+     "seats": [
+      {
+       "position": [
+        0.0,
+        9.5,
+        0.0
+       ]
+      }
+     ]
+    }
+   },
+   "morph:size_60_180": {
+    "minecraft:collision_box": {
+     "width": 0.6,
+     "height": 1.8
+    }
+   },
+   "morph:size_35_60": {
+    "minecraft:collision_box": {
+     "width": 0.35,
+     "height": 0.6
+    }
+   },
+   "morph:size_70_65": {
+    "minecraft:collision_box": {
+     "width": 0.7,
+     "height": 0.65
+    }
+   },
+   "morph:size_75_42": {
+    "minecraft:collision_box": {
+     "width": 0.75,
+     "height": 0.42
+    }
+   },
+   "morph:size_50_90": {
+    "minecraft:collision_box": {
+     "width": 0.5,
+     "height": 0.9
+    }
+   },
+   "morph:size_55_50": {
+    "minecraft:collision_box": {
+     "width": 0.55,
+     "height": 0.5
+    }
+   },
+   "morph:size_50_180": {
+    "minecraft:collision_box": {
+     "width": 0.5,
+     "height": 1.8
+    }
+   },
+   "morph:size_60_190": {
+    "minecraft:collision_box": {
+     "width": 0.6,
+     "height": 1.9
+    }
+   },
+   "morph:size_60_177": {
+    "minecraft:collision_box": {
+     "width": 0.6,
+     "height": 1.77
+    }
+   },
+   "morph:size_170_238": {
+    "minecraft:collision_box": {
+     "width": 1.7,
+     "height": 2.38
+    }
+   },
+   "morph:size_60_70": {
+    "minecraft:collision_box": {
+     "width": 0.6,
+     "height": 0.7
+    }
+   },
+   "morph:size_70_50": {
+    "minecraft:collision_box": {
+     "width": 0.7,
+     "height": 0.5
+    }
+   },
+   "morph:size_60_80": {
+    "minecraft:collision_box": {
+     "width": 0.6,
+     "height": 0.8
+    }
+   },
+   "morph:size_60_30": {
+    "minecraft:collision_box": {
+     "width": 0.6,
+     "height": 0.3
+    }
+   },
+   "morph:size_60_98": {
+    "minecraft:collision_box": {
+     "width": 0.6,
+     "height": 0.98
+    }
+   },
+   "morph:size_90_130": {
+    "minecraft:collision_box": {
+     "width": 0.9,
+     "height": 1.3
+    }
+   },
+   "morph:size_90_60": {
+    "minecraft:collision_box": {
+     "width": 0.9,
+     "height": 0.6
+    }
+   },
+   "morph:size_140_160": {
+    "minecraft:collision_box": {
+     "width": 1.4,
+     "height": 1.6
+    }
+   },
+   "morph:size_199_199": {
+    "minecraft:collision_box": {
+     "width": 1.99,
+     "height": 1.99
+    }
+   },
+   "morph:size_300_400": {
+    "minecraft:collision_box": {
+     "width": 3.0,
+     "height": 4.0
+    }
+   },
+   "morph:size_60_290": {
+    "minecraft:collision_box": {
+     "width": 0.6,
+     "height": 2.9
+    }
+   },
+   "morph:size_40_30": {
+    "minecraft:collision_box": {
+     "width": 0.4,
+     "height": 0.3
+    }
+   },
+   "morph:size_50_55": {
+    "minecraft:collision_box": {
+     "width": 0.5,
+     "height": 0.55
+    }
+   },
+   "morph:size_80_80": {
+    "minecraft:collision_box": {
+     "width": 0.8,
+     "height": 0.8
+    }
+   },
+   "morph:size_85_85": {
+    "minecraft:collision_box": {
+     "width": 0.85,
+     "height": 0.85
+    }
+   },
+   "morph:size_140_290": {
+    "minecraft:collision_box": {
+     "width": 1.4,
+     "height": 2.9
+    }
+   },
+   "morph:size_90_187": {
+    "minecraft:collision_box": {
+     "width": 0.9,
+     "height": 1.87
+    }
+   },
+   "morph:size_208_208": {
+    "minecraft:collision_box": {
+     "width": 2.08,
+     "height": 2.08
+    }
+   },
+   "morph:size_88_95": {
+    "minecraft:collision_box": {
+     "width": 0.88,
+     "height": 0.95
+    }
+   },
+   "morph:size_130_125": {
+    "minecraft:collision_box": {
+     "width": 1.3,
+     "height": 1.25
+    }
+   },
+   "morph:size_50_100": {
+    "minecraft:collision_box": {
+     "width": 0.5,
+     "height": 1
+    }
+   },
+   "morph:size_90_50": {
+    "minecraft:collision_box": {
+     "width": 0.9,
+     "height": 0.5
+    }
+   },
+   "morph:size_90_90": {
+    "minecraft:collision_box": {
+     "width": 0.9,
+     "height": 0.9
+    }
+   },
+   "morph:size_140_140": {
+    "minecraft:collision_box": {
+     "width": 1.4,
+     "height": 1.4
+    }
+   },
+   "morph:size_82_100": {
+    "minecraft:collision_box": {
+     "width": 0.82,
+     "height": 1.0
+    }
+   },
+   "morph:size_195_220": {
+    "minecraft:collision_box": {
+     "width": 1.95,
+     "height": 2.2
+    }
+   },
+   "morph:size_50_50": {
+    "minecraft:collision_box": {
+     "width": 0.5,
+     "height": 0.5
+    }
+   },
+   "morph:size_190_175": {
+    "minecraft:collision_box": {
+     "width": 1.9,
+     "height": 1.75
+    }
+   },
+   "morph:size_40_180": {
+    "minecraft:collision_box": {
+     "width": 0.4,
+     "height": 1.8
+    }
+   },
+   "morph:size_140_90": {
+    "minecraft:collision_box": {
+     "width": 1.4,
+     "height": 0.9
+    }
+   },
+   "morph:size_90_170": {
+    "minecraft:collision_box": {
+     "width": 0.9,
+     "height": 1.7
+    }
+   },
+   "morph:size_98_98": {
+    "minecraft:collision_box": {
+     "width": 0.98,
+     "height": 0.98
+    }
+   },
+   "morph:size_80_60": {
+    "minecraft:collision_box": {
+     "width": 0.8,
+     "height": 0.6
+    }
+   },
+   "morph:size_40_40": {
+    "minecraft:collision_box": {
+     "width": 0.4,
+     "height": 0.4
+    }
+   },
+   "morph:size_120_40": {
+    "minecraft:collision_box": {
+     "width": 1.2,
+     "height": 0.4
+    }
+   },
+   "morph:size_40_80": {
+    "minecraft:collision_box": {
+     "width": 0.4,
+     "height": 0.8
+    }
+   },
+   "morph:size_90_290": {
+    "minecraft:collision_box": {
+     "width": 0.9,
+     "height": 2.9
+    }
+   },
+   "morph:size_100_300": {
+    "minecraft:collision_box": {
+     "width": 1,
+     "height": 3
+    }
+   },
+   "morph:size_72_200": {
+    "minecraft:collision_box": {
+     "width": 0.72,
+     "height": 2.01
+    }
+   },
+   "morph:despawn": {
+    "minecraft:instant_despawn": {}
+   }
+  },
+  "components": {
+   "minecraft:type_family": {
+    "family": [
+     "morph_body",
+     "inanimate"
+    ]
+   },
+   "minecraft:collision_box": {
+    "width": 0.6,
+    "height": 1.8
+   },
+   "minecraft:physics": {},
+   "minecraft:movement": {
+    "value": 0.13
+   },
+   "minecraft:movement.basic": {},
+   "minecraft:jump.static": {},
+   "minecraft:input_ground_controlled": {},
+   "minecraft:behavior.player_ride_tamed": {},
+   "minecraft:is_tamed": {},
+   "minecraft:is_saddled": {},
+   "minecraft:rideable": {
+    "seat_count": 1,
+    "family_types": [
+     "player"
+    ],
+    "crouching_skip_interact": true,
+    "pull_in_entities": false,
+    "seats": [
+     {
+      "position": [
+       0.0,
+       0.6,
+       0.0
+      ]
+     }
+    ]
+   },
+   "minecraft:health": {
+    "value": 1000,
+    "max": 1000
+   },
+   "minecraft:damage_sensor": {
+    "triggers": {
+     "cause": "all",
+     "deals_damage": "no"
+    }
+   },
+   "minecraft:fire_immune": {},
+   "minecraft:breathable": {
+    "breathes_air": true,
+    "breathes_water": true,
+    "suffocate_time": -1,
+    "total_supply": 15
+   },
+   "minecraft:knockback_resistance": {
+    "value": 1.0
+   },
+   "minecraft:pushable": {
+    "is_pushable": false,
+    "is_pushable_by_piston": true
+   },
+   "minecraft:conditional_bandwidth_optimization": {}
+  },
+  "events": {
+   "morph:seat_0": {
+    "add": {
+     "component_groups": [
+      "morph:seat_0"
+     ]
+    }
+   },
+   "morph:seat_1": {
+    "add": {
+     "component_groups": [
+      "morph:seat_1"
+     ]
+    }
+   },
+   "morph:seat_2": {
+    "add": {
+     "component_groups": [
+      "morph:seat_2"
+     ]
+    }
+   },
+   "morph:seat_3": {
+    "add": {
+     "component_groups": [
+      "morph:seat_3"
+     ]
+    }
+   },
+   "morph:seat_4": {
+    "add": {
+     "component_groups": [
+      "morph:seat_4"
+     ]
+    }
+   },
+   "morph:seat_5": {
+    "add": {
+     "component_groups": [
+      "morph:seat_5"
+     ]
+    }
+   },
+   "morph:seat_6": {
+    "add": {
+     "component_groups": [
+      "morph:seat_6"
+     ]
+    }
+   },
+   "morph:seat_7": {
+    "add": {
+     "component_groups": [
+      "morph:seat_7"
+     ]
+    }
+   },
+   "morph:seat_8": {
+    "add": {
+     "component_groups": [
+      "morph:seat_8"
+     ]
+    }
+   },
+   "morph:seat_9": {
+    "add": {
+     "component_groups": [
+      "morph:seat_9"
+     ]
+    }
+   },
+   "morph:seat_10": {
+    "add": {
+     "component_groups": [
+      "morph:seat_10"
+     ]
+    }
+   },
+   "morph:seat_11": {
+    "add": {
+     "component_groups": [
+      "morph:seat_11"
+     ]
+    }
+   },
+   "morph:seat_12": {
+    "add": {
+     "component_groups": [
+      "morph:seat_12"
+     ]
+    }
+   },
+   "morph:seat_13": {
+    "add": {
+     "component_groups": [
+      "morph:seat_13"
+     ]
+    }
+   },
+   "morph:seat_14": {
+    "add": {
+     "component_groups": [
+      "morph:seat_14"
+     ]
+    }
+   },
+   "morph:seat_15": {
+    "add": {
+     "component_groups": [
+      "morph:seat_15"
+     ]
+    }
+   },
+   "morph:seat_16": {
+    "add": {
+     "component_groups": [
+      "morph:seat_16"
+     ]
+    }
+   },
+   "morph:seat_17": {
+    "add": {
+     "component_groups": [
+      "morph:seat_17"
+     ]
+    }
+   },
+   "morph:seat_18": {
+    "add": {
+     "component_groups": [
+      "morph:seat_18"
+     ]
+    }
+   },
+   "morph:seat_19": {
+    "add": {
+     "component_groups": [
+      "morph:seat_19"
+     ]
+    }
+   },
+   "morph:seat_20": {
+    "add": {
+     "component_groups": [
+      "morph:seat_20"
+     ]
+    }
+   },
+   "morph:seat_21": {
+    "add": {
+     "component_groups": [
+      "morph:seat_21"
+     ]
+    }
+   },
+   "morph:seat_22": {
+    "add": {
+     "component_groups": [
+      "morph:seat_22"
+     ]
+    }
+   },
+   "morph:seat_23": {
+    "add": {
+     "component_groups": [
+      "morph:seat_23"
+     ]
+    }
+   },
+   "morph:seat_24": {
+    "add": {
+     "component_groups": [
+      "morph:seat_24"
+     ]
+    }
+   },
+   "morph:seat_25": {
+    "add": {
+     "component_groups": [
+      "morph:seat_25"
+     ]
+    }
+   },
+   "morph:seat_26": {
+    "add": {
+     "component_groups": [
+      "morph:seat_26"
+     ]
+    }
+   },
+   "morph:seat_27": {
+    "add": {
+     "component_groups": [
+      "morph:seat_27"
+     ]
+    }
+   },
+   "morph:seat_28": {
+    "add": {
+     "component_groups": [
+      "morph:seat_28"
+     ]
+    }
+   },
+   "morph:seat_29": {
+    "add": {
+     "component_groups": [
+      "morph:seat_29"
+     ]
+    }
+   },
+   "morph:seat_30": {
+    "add": {
+     "component_groups": [
+      "morph:seat_30"
+     ]
+    }
+   },
+   "morph:seat_31": {
+    "add": {
+     "component_groups": [
+      "morph:seat_31"
+     ]
+    }
+   },
+   "morph:seat_32": {
+    "add": {
+     "component_groups": [
+      "morph:seat_32"
+     ]
+    }
+   },
+   "morph:seat_33": {
+    "add": {
+     "component_groups": [
+      "morph:seat_33"
+     ]
+    }
+   },
+   "morph:seat_34": {
+    "add": {
+     "component_groups": [
+      "morph:seat_34"
+     ]
+    }
+   },
+   "morph:seat_35": {
+    "add": {
+     "component_groups": [
+      "morph:seat_35"
+     ]
+    }
+   },
+   "morph:seat_36": {
+    "add": {
+     "component_groups": [
+      "morph:seat_36"
+     ]
+    }
+   },
+   "morph:seat_37": {
+    "add": {
+     "component_groups": [
+      "morph:seat_37"
+     ]
+    }
+   },
+   "morph:seat_38": {
+    "add": {
+     "component_groups": [
+      "morph:seat_38"
+     ]
+    }
+   },
+   "morph:seat_39": {
+    "add": {
+     "component_groups": [
+      "morph:seat_39"
+     ]
+    }
+   },
+   "morph:seat_40": {
+    "add": {
+     "component_groups": [
+      "morph:seat_40"
+     ]
+    }
+   },
+   "morph:seat_41": {
+    "add": {
+     "component_groups": [
+      "morph:seat_41"
+     ]
+    }
+   },
+   "morph:seat_42": {
+    "add": {
+     "component_groups": [
+      "morph:seat_42"
+     ]
+    }
+   },
+   "morph:seat_43": {
+    "add": {
+     "component_groups": [
+      "morph:seat_43"
+     ]
+    }
+   },
+   "morph:seat_44": {
+    "add": {
+     "component_groups": [
+      "morph:seat_44"
+     ]
+    }
+   },
+   "morph:seat_45": {
+    "add": {
+     "component_groups": [
+      "morph:seat_45"
+     ]
+    }
+   },
+   "morph:seat_46": {
+    "add": {
+     "component_groups": [
+      "morph:seat_46"
+     ]
+    }
+   },
+   "morph:seat_47": {
+    "add": {
+     "component_groups": [
+      "morph:seat_47"
+     ]
+    }
+   },
+   "morph:seat_48": {
+    "add": {
+     "component_groups": [
+      "morph:seat_48"
+     ]
+    }
+   },
+   "morph:seat_49": {
+    "add": {
+     "component_groups": [
+      "morph:seat_49"
+     ]
+    }
+   },
+   "morph:seat_50": {
+    "add": {
+     "component_groups": [
+      "morph:seat_50"
+     ]
+    }
+   },
+   "morph:seat_51": {
+    "add": {
+     "component_groups": [
+      "morph:seat_51"
+     ]
+    }
+   },
+   "morph:seat_52": {
+    "add": {
+     "component_groups": [
+      "morph:seat_52"
+     ]
+    }
+   },
+   "morph:seat_53": {
+    "add": {
+     "component_groups": [
+      "morph:seat_53"
+     ]
+    }
+   },
+   "morph:seat_54": {
+    "add": {
+     "component_groups": [
+      "morph:seat_54"
+     ]
+    }
+   },
+   "morph:seat_55": {
+    "add": {
+     "component_groups": [
+      "morph:seat_55"
+     ]
+    }
+   },
+   "morph:seat_56": {
+    "add": {
+     "component_groups": [
+      "morph:seat_56"
+     ]
+    }
+   },
+   "morph:seat_57": {
+    "add": {
+     "component_groups": [
+      "morph:seat_57"
+     ]
+    }
+   },
+   "morph:seat_58": {
+    "add": {
+     "component_groups": [
+      "morph:seat_58"
+     ]
+    }
+   },
+   "morph:seat_59": {
+    "add": {
+     "component_groups": [
+      "morph:seat_59"
+     ]
+    }
+   },
+   "morph:seat_60": {
+    "add": {
+     "component_groups": [
+      "morph:seat_60"
+     ]
+    }
+   },
+   "morph:seat_61": {
+    "add": {
+     "component_groups": [
+      "morph:seat_61"
+     ]
+    }
+   },
+   "morph:seat_62": {
+    "add": {
+     "component_groups": [
+      "morph:seat_62"
+     ]
+    }
+   },
+   "morph:seat_63": {
+    "add": {
+     "component_groups": [
+      "morph:seat_63"
+     ]
+    }
+   },
+   "morph:seat_64": {
+    "add": {
+     "component_groups": [
+      "morph:seat_64"
+     ]
+    }
+   },
+   "morph:seat_65": {
+    "add": {
+     "component_groups": [
+      "morph:seat_65"
+     ]
+    }
+   },
+   "morph:seat_66": {
+    "add": {
+     "component_groups": [
+      "morph:seat_66"
+     ]
+    }
+   },
+   "morph:seat_67": {
+    "add": {
+     "component_groups": [
+      "morph:seat_67"
+     ]
+    }
+   },
+   "morph:seat_68": {
+    "add": {
+     "component_groups": [
+      "morph:seat_68"
+     ]
+    }
+   },
+   "morph:seat_69": {
+    "add": {
+     "component_groups": [
+      "morph:seat_69"
+     ]
+    }
+   },
+   "morph:seat_70": {
+    "add": {
+     "component_groups": [
+      "morph:seat_70"
+     ]
+    }
+   },
+   "morph:seat_71": {
+    "add": {
+     "component_groups": [
+      "morph:seat_71"
+     ]
+    }
+   },
+   "morph:seat_72": {
+    "add": {
+     "component_groups": [
+      "morph:seat_72"
+     ]
+    }
+   },
+   "morph:seat_73": {
+    "add": {
+     "component_groups": [
+      "morph:seat_73"
+     ]
+    }
+   },
+   "morph:seat_74": {
+    "add": {
+     "component_groups": [
+      "morph:seat_74"
+     ]
+    }
+   },
+   "morph:seat_75": {
+    "add": {
+     "component_groups": [
+      "morph:seat_75"
+     ]
+    }
+   },
+   "morph:seat_76": {
+    "add": {
+     "component_groups": [
+      "morph:seat_76"
+     ]
+    }
+   },
+   "morph:seat_77": {
+    "add": {
+     "component_groups": [
+      "morph:seat_77"
+     ]
+    }
+   },
+   "morph:seat_78": {
+    "add": {
+     "component_groups": [
+      "morph:seat_78"
+     ]
+    }
+   },
+   "morph:seat_79": {
+    "add": {
+     "component_groups": [
+      "morph:seat_79"
+     ]
+    }
+   },
+   "morph:seat_80": {
+    "add": {
+     "component_groups": [
+      "morph:seat_80"
+     ]
+    }
+   },
+   "morph:seat_81": {
+    "add": {
+     "component_groups": [
+      "morph:seat_81"
+     ]
+    }
+   },
+   "morph:seat_82": {
+    "add": {
+     "component_groups": [
+      "morph:seat_82"
+     ]
+    }
+   },
+   "morph:seat_83": {
+    "add": {
+     "component_groups": [
+      "morph:seat_83"
+     ]
+    }
+   },
+   "morph:seat_84": {
+    "add": {
+     "component_groups": [
+      "morph:seat_84"
+     ]
+    }
+   },
+   "morph:seat_85": {
+    "add": {
+     "component_groups": [
+      "morph:seat_85"
+     ]
+    }
+   },
+   "morph:seat_86": {
+    "add": {
+     "component_groups": [
+      "morph:seat_86"
+     ]
+    }
+   },
+   "morph:seat_87": {
+    "add": {
+     "component_groups": [
+      "morph:seat_87"
+     ]
+    }
+   },
+   "morph:seat_88": {
+    "add": {
+     "component_groups": [
+      "morph:seat_88"
+     ]
+    }
+   },
+   "morph:seat_89": {
+    "add": {
+     "component_groups": [
+      "morph:seat_89"
+     ]
+    }
+   },
+   "morph:seat_90": {
+    "add": {
+     "component_groups": [
+      "morph:seat_90"
+     ]
+    }
+   },
+   "morph:seat_91": {
+    "add": {
+     "component_groups": [
+      "morph:seat_91"
+     ]
+    }
+   },
+   "morph:seat_92": {
+    "add": {
+     "component_groups": [
+      "morph:seat_92"
+     ]
+    }
+   },
+   "morph:seat_93": {
+    "add": {
+     "component_groups": [
+      "morph:seat_93"
+     ]
+    }
+   },
+   "morph:seat_94": {
+    "add": {
+     "component_groups": [
+      "morph:seat_94"
+     ]
+    }
+   },
+   "morph:seat_95": {
+    "add": {
+     "component_groups": [
+      "morph:seat_95"
+     ]
+    }
+   },
+   "morph:seat_96": {
+    "add": {
+     "component_groups": [
+      "morph:seat_96"
+     ]
+    }
+   },
+   "morph:seat_97": {
+    "add": {
+     "component_groups": [
+      "morph:seat_97"
+     ]
+    }
+   },
+   "morph:seat_98": {
+    "add": {
+     "component_groups": [
+      "morph:seat_98"
+     ]
+    }
+   },
+   "morph:seat_99": {
+    "add": {
+     "component_groups": [
+      "morph:seat_99"
+     ]
+    }
+   },
+   "morph:seat_100": {
+    "add": {
+     "component_groups": [
+      "morph:seat_100"
+     ]
+    }
+   },
+   "morph:seat_101": {
+    "add": {
+     "component_groups": [
+      "morph:seat_101"
+     ]
+    }
+   },
+   "morph:seat_102": {
+    "add": {
+     "component_groups": [
+      "morph:seat_102"
+     ]
+    }
+   },
+   "morph:seat_103": {
+    "add": {
+     "component_groups": [
+      "morph:seat_103"
+     ]
+    }
+   },
+   "morph:seat_104": {
+    "add": {
+     "component_groups": [
+      "morph:seat_104"
+     ]
+    }
+   },
+   "morph:seat_105": {
+    "add": {
+     "component_groups": [
+      "morph:seat_105"
+     ]
+    }
+   },
+   "morph:seat_106": {
+    "add": {
+     "component_groups": [
+      "morph:seat_106"
+     ]
+    }
+   },
+   "morph:seat_107": {
+    "add": {
+     "component_groups": [
+      "morph:seat_107"
+     ]
+    }
+   },
+   "morph:seat_108": {
+    "add": {
+     "component_groups": [
+      "morph:seat_108"
+     ]
+    }
+   },
+   "morph:seat_109": {
+    "add": {
+     "component_groups": [
+      "morph:seat_109"
+     ]
+    }
+   },
+   "morph:seat_110": {
+    "add": {
+     "component_groups": [
+      "morph:seat_110"
+     ]
+    }
+   },
+   "morph:seat_111": {
+    "add": {
+     "component_groups": [
+      "morph:seat_111"
+     ]
+    }
+   },
+   "morph:seat_112": {
+    "add": {
+     "component_groups": [
+      "morph:seat_112"
+     ]
+    }
+   },
+   "morph:seat_113": {
+    "add": {
+     "component_groups": [
+      "morph:seat_113"
+     ]
+    }
+   },
+   "morph:seat_114": {
+    "add": {
+     "component_groups": [
+      "morph:seat_114"
+     ]
+    }
+   },
+   "morph:seat_115": {
+    "add": {
+     "component_groups": [
+      "morph:seat_115"
+     ]
+    }
+   },
+   "morph:seat_116": {
+    "add": {
+     "component_groups": [
+      "morph:seat_116"
+     ]
+    }
+   },
+   "morph:seat_117": {
+    "add": {
+     "component_groups": [
+      "morph:seat_117"
+     ]
+    }
+   },
+   "morph:seat_118": {
+    "add": {
+     "component_groups": [
+      "morph:seat_118"
+     ]
+    }
+   },
+   "morph:seat_119": {
+    "add": {
+     "component_groups": [
+      "morph:seat_119"
+     ]
+    }
+   },
+   "morph:seat_120": {
+    "add": {
+     "component_groups": [
+      "morph:seat_120"
+     ]
+    }
+   },
+   "morph:seat_121": {
+    "add": {
+     "component_groups": [
+      "morph:seat_121"
+     ]
+    }
+   },
+   "morph:seat_122": {
+    "add": {
+     "component_groups": [
+      "morph:seat_122"
+     ]
+    }
+   },
+   "morph:seat_123": {
+    "add": {
+     "component_groups": [
+      "morph:seat_123"
+     ]
+    }
+   },
+   "morph:seat_124": {
+    "add": {
+     "component_groups": [
+      "morph:seat_124"
+     ]
+    }
+   },
+   "morph:seat_125": {
+    "add": {
+     "component_groups": [
+      "morph:seat_125"
+     ]
+    }
+   },
+   "morph:seat_126": {
+    "add": {
+     "component_groups": [
+      "morph:seat_126"
+     ]
+    }
+   },
+   "morph:seat_127": {
+    "add": {
+     "component_groups": [
+      "morph:seat_127"
+     ]
+    }
+   },
+   "morph:seat_128": {
+    "add": {
+     "component_groups": [
+      "morph:seat_128"
+     ]
+    }
+   },
+   "morph:seat_129": {
+    "add": {
+     "component_groups": [
+      "morph:seat_129"
+     ]
+    }
+   },
+   "morph:seat_130": {
+    "add": {
+     "component_groups": [
+      "morph:seat_130"
+     ]
+    }
+   },
+   "morph:seat_131": {
+    "add": {
+     "component_groups": [
+      "morph:seat_131"
+     ]
+    }
+   },
+   "morph:seat_132": {
+    "add": {
+     "component_groups": [
+      "morph:seat_132"
+     ]
+    }
+   },
+   "morph:seat_133": {
+    "add": {
+     "component_groups": [
+      "morph:seat_133"
+     ]
+    }
+   },
+   "morph:seat_134": {
+    "add": {
+     "component_groups": [
+      "morph:seat_134"
+     ]
+    }
+   },
+   "morph:seat_135": {
+    "add": {
+     "component_groups": [
+      "morph:seat_135"
+     ]
+    }
+   },
+   "morph:seat_136": {
+    "add": {
+     "component_groups": [
+      "morph:seat_136"
+     ]
+    }
+   },
+   "morph:seat_137": {
+    "add": {
+     "component_groups": [
+      "morph:seat_137"
+     ]
+    }
+   },
+   "morph:seat_138": {
+    "add": {
+     "component_groups": [
+      "morph:seat_138"
+     ]
+    }
+   },
+   "morph:seat_139": {
+    "add": {
+     "component_groups": [
+      "morph:seat_139"
+     ]
+    }
+   },
+   "morph:seat_140": {
+    "add": {
+     "component_groups": [
+      "morph:seat_140"
+     ]
+    }
+   },
+   "morph:seat_141": {
+    "add": {
+     "component_groups": [
+      "morph:seat_141"
+     ]
+    }
+   },
+   "morph:seat_142": {
+    "add": {
+     "component_groups": [
+      "morph:seat_142"
+     ]
+    }
+   },
+   "morph:seat_143": {
+    "add": {
+     "component_groups": [
+      "morph:seat_143"
+     ]
+    }
+   },
+   "morph:seat_144": {
+    "add": {
+     "component_groups": [
+      "morph:seat_144"
+     ]
+    }
+   },
+   "morph:seat_145": {
+    "add": {
+     "component_groups": [
+      "morph:seat_145"
+     ]
+    }
+   },
+   "morph:seat_146": {
+    "add": {
+     "component_groups": [
+      "morph:seat_146"
+     ]
+    }
+   },
+   "morph:seat_147": {
+    "add": {
+     "component_groups": [
+      "morph:seat_147"
+     ]
+    }
+   },
+   "morph:seat_148": {
+    "add": {
+     "component_groups": [
+      "morph:seat_148"
+     ]
+    }
+   },
+   "morph:seat_149": {
+    "add": {
+     "component_groups": [
+      "morph:seat_149"
+     ]
+    }
+   },
+   "morph:seat_150": {
+    "add": {
+     "component_groups": [
+      "morph:seat_150"
+     ]
+    }
+   },
+   "morph:seat_151": {
+    "add": {
+     "component_groups": [
+      "morph:seat_151"
+     ]
+    }
+   },
+   "morph:seat_152": {
+    "add": {
+     "component_groups": [
+      "morph:seat_152"
+     ]
+    }
+   },
+   "morph:seat_153": {
+    "add": {
+     "component_groups": [
+      "morph:seat_153"
+     ]
+    }
+   },
+   "morph:seat_154": {
+    "add": {
+     "component_groups": [
+      "morph:seat_154"
+     ]
+    }
+   },
+   "morph:seat_155": {
+    "add": {
+     "component_groups": [
+      "morph:seat_155"
+     ]
+    }
+   },
+   "morph:seat_156": {
+    "add": {
+     "component_groups": [
+      "morph:seat_156"
+     ]
+    }
+   },
+   "morph:seat_157": {
+    "add": {
+     "component_groups": [
+      "morph:seat_157"
+     ]
+    }
+   },
+   "morph:seat_158": {
+    "add": {
+     "component_groups": [
+      "morph:seat_158"
+     ]
+    }
+   },
+   "morph:seat_159": {
+    "add": {
+     "component_groups": [
+      "morph:seat_159"
+     ]
+    }
+   },
+   "morph:seat_160": {
+    "add": {
+     "component_groups": [
+      "morph:seat_160"
+     ]
+    }
+   },
+   "morph:seat_161": {
+    "add": {
+     "component_groups": [
+      "morph:seat_161"
+     ]
+    }
+   },
+   "morph:seat_162": {
+    "add": {
+     "component_groups": [
+      "morph:seat_162"
+     ]
+    }
+   },
+   "morph:seat_163": {
+    "add": {
+     "component_groups": [
+      "morph:seat_163"
+     ]
+    }
+   },
+   "morph:seat_164": {
+    "add": {
+     "component_groups": [
+      "morph:seat_164"
+     ]
+    }
+   },
+   "morph:seat_165": {
+    "add": {
+     "component_groups": [
+      "morph:seat_165"
+     ]
+    }
+   },
+   "morph:seat_166": {
+    "add": {
+     "component_groups": [
+      "morph:seat_166"
+     ]
+    }
+   },
+   "morph:seat_167": {
+    "add": {
+     "component_groups": [
+      "morph:seat_167"
+     ]
+    }
+   },
+   "morph:seat_168": {
+    "add": {
+     "component_groups": [
+      "morph:seat_168"
+     ]
+    }
+   },
+   "morph:seat_169": {
+    "add": {
+     "component_groups": [
+      "morph:seat_169"
+     ]
+    }
+   },
+   "morph:seat_170": {
+    "add": {
+     "component_groups": [
+      "morph:seat_170"
+     ]
+    }
+   },
+   "morph:seat_171": {
+    "add": {
+     "component_groups": [
+      "morph:seat_171"
+     ]
+    }
+   },
+   "morph:seat_172": {
+    "add": {
+     "component_groups": [
+      "morph:seat_172"
+     ]
+    }
+   },
+   "morph:seat_173": {
+    "add": {
+     "component_groups": [
+      "morph:seat_173"
+     ]
+    }
+   },
+   "morph:seat_174": {
+    "add": {
+     "component_groups": [
+      "morph:seat_174"
+     ]
+    }
+   },
+   "morph:seat_175": {
+    "add": {
+     "component_groups": [
+      "morph:seat_175"
+     ]
+    }
+   },
+   "morph:seat_176": {
+    "add": {
+     "component_groups": [
+      "morph:seat_176"
+     ]
+    }
+   },
+   "morph:seat_177": {
+    "add": {
+     "component_groups": [
+      "morph:seat_177"
+     ]
+    }
+   },
+   "morph:seat_178": {
+    "add": {
+     "component_groups": [
+      "morph:seat_178"
+     ]
+    }
+   },
+   "morph:seat_179": {
+    "add": {
+     "component_groups": [
+      "morph:seat_179"
+     ]
+    }
+   },
+   "morph:seat_180": {
+    "add": {
+     "component_groups": [
+      "morph:seat_180"
+     ]
+    }
+   },
+   "morph:seat_181": {
+    "add": {
+     "component_groups": [
+      "morph:seat_181"
+     ]
+    }
+   },
+   "morph:seat_182": {
+    "add": {
+     "component_groups": [
+      "morph:seat_182"
+     ]
+    }
+   },
+   "morph:seat_183": {
+    "add": {
+     "component_groups": [
+      "morph:seat_183"
+     ]
+    }
+   },
+   "morph:seat_184": {
+    "add": {
+     "component_groups": [
+      "morph:seat_184"
+     ]
+    }
+   },
+   "morph:seat_185": {
+    "add": {
+     "component_groups": [
+      "morph:seat_185"
+     ]
+    }
+   },
+   "morph:seat_186": {
+    "add": {
+     "component_groups": [
+      "morph:seat_186"
+     ]
+    }
+   },
+   "morph:seat_187": {
+    "add": {
+     "component_groups": [
+      "morph:seat_187"
+     ]
+    }
+   },
+   "morph:seat_188": {
+    "add": {
+     "component_groups": [
+      "morph:seat_188"
+     ]
+    }
+   },
+   "morph:seat_189": {
+    "add": {
+     "component_groups": [
+      "morph:seat_189"
+     ]
+    }
+   },
+   "morph:seat_190": {
+    "add": {
+     "component_groups": [
+      "morph:seat_190"
+     ]
+    }
+   },
+   "morph:seat_191": {
+    "add": {
+     "component_groups": [
+      "morph:seat_191"
+     ]
+    }
+   },
+   "morph:seat_192": {
+    "add": {
+     "component_groups": [
+      "morph:seat_192"
+     ]
+    }
+   },
+   "morph:seat_193": {
+    "add": {
+     "component_groups": [
+      "morph:seat_193"
+     ]
+    }
+   },
+   "morph:seat_194": {
+    "add": {
+     "component_groups": [
+      "morph:seat_194"
+     ]
+    }
+   },
+   "morph:seat_195": {
+    "add": {
+     "component_groups": [
+      "morph:seat_195"
+     ]
+    }
+   },
+   "morph:seat_196": {
+    "add": {
+     "component_groups": [
+      "morph:seat_196"
+     ]
+    }
+   },
+   "morph:seat_197": {
+    "add": {
+     "component_groups": [
+      "morph:seat_197"
+     ]
+    }
+   },
+   "morph:seat_198": {
+    "add": {
+     "component_groups": [
+      "morph:seat_198"
+     ]
+    }
+   },
+   "morph:seat_199": {
+    "add": {
+     "component_groups": [
+      "morph:seat_199"
+     ]
+    }
+   },
+   "morph:seat_200": {
+    "add": {
+     "component_groups": [
+      "morph:seat_200"
+     ]
+    }
+   },
+   "morph:seat_201": {
+    "add": {
+     "component_groups": [
+      "morph:seat_201"
+     ]
+    }
+   },
+   "morph:seat_202": {
+    "add": {
+     "component_groups": [
+      "morph:seat_202"
+     ]
+    }
+   },
+   "morph:seat_203": {
+    "add": {
+     "component_groups": [
+      "morph:seat_203"
+     ]
+    }
+   },
+   "morph:seat_204": {
+    "add": {
+     "component_groups": [
+      "morph:seat_204"
+     ]
+    }
+   },
+   "morph:seat_205": {
+    "add": {
+     "component_groups": [
+      "morph:seat_205"
+     ]
+    }
+   },
+   "morph:seat_206": {
+    "add": {
+     "component_groups": [
+      "morph:seat_206"
+     ]
+    }
+   },
+   "morph:seat_207": {
+    "add": {
+     "component_groups": [
+      "morph:seat_207"
+     ]
+    }
+   },
+   "morph:seat_208": {
+    "add": {
+     "component_groups": [
+      "morph:seat_208"
+     ]
+    }
+   },
+   "morph:seat_209": {
+    "add": {
+     "component_groups": [
+      "morph:seat_209"
+     ]
+    }
+   },
+   "morph:seat_210": {
+    "add": {
+     "component_groups": [
+      "morph:seat_210"
+     ]
+    }
+   },
+   "morph:seat_211": {
+    "add": {
+     "component_groups": [
+      "morph:seat_211"
+     ]
+    }
+   },
+   "morph:seat_212": {
+    "add": {
+     "component_groups": [
+      "morph:seat_212"
+     ]
+    }
+   },
+   "morph:seat_213": {
+    "add": {
+     "component_groups": [
+      "morph:seat_213"
+     ]
+    }
+   },
+   "morph:seat_214": {
+    "add": {
+     "component_groups": [
+      "morph:seat_214"
+     ]
+    }
+   },
+   "morph:seat_215": {
+    "add": {
+     "component_groups": [
+      "morph:seat_215"
+     ]
+    }
+   },
+   "morph:seat_216": {
+    "add": {
+     "component_groups": [
+      "morph:seat_216"
+     ]
+    }
+   },
+   "morph:seat_217": {
+    "add": {
+     "component_groups": [
+      "morph:seat_217"
+     ]
+    }
+   },
+   "morph:seat_218": {
+    "add": {
+     "component_groups": [
+      "morph:seat_218"
+     ]
+    }
+   },
+   "morph:seat_219": {
+    "add": {
+     "component_groups": [
+      "morph:seat_219"
+     ]
+    }
+   },
+   "morph:seat_220": {
+    "add": {
+     "component_groups": [
+      "morph:seat_220"
+     ]
+    }
+   },
+   "morph:seat_221": {
+    "add": {
+     "component_groups": [
+      "morph:seat_221"
+     ]
+    }
+   },
+   "morph:seat_222": {
+    "add": {
+     "component_groups": [
+      "morph:seat_222"
+     ]
+    }
+   },
+   "morph:seat_223": {
+    "add": {
+     "component_groups": [
+      "morph:seat_223"
+     ]
+    }
+   },
+   "morph:seat_224": {
+    "add": {
+     "component_groups": [
+      "morph:seat_224"
+     ]
+    }
+   },
+   "morph:seat_225": {
+    "add": {
+     "component_groups": [
+      "morph:seat_225"
+     ]
+    }
+   },
+   "morph:seat_226": {
+    "add": {
+     "component_groups": [
+      "morph:seat_226"
+     ]
+    }
+   },
+   "morph:seat_227": {
+    "add": {
+     "component_groups": [
+      "morph:seat_227"
+     ]
+    }
+   },
+   "morph:seat_228": {
+    "add": {
+     "component_groups": [
+      "morph:seat_228"
+     ]
+    }
+   },
+   "morph:seat_229": {
+    "add": {
+     "component_groups": [
+      "morph:seat_229"
+     ]
+    }
+   },
+   "morph:seat_230": {
+    "add": {
+     "component_groups": [
+      "morph:seat_230"
+     ]
+    }
+   },
+   "morph:seat_231": {
+    "add": {
+     "component_groups": [
+      "morph:seat_231"
+     ]
+    }
+   },
+   "morph:seat_232": {
+    "add": {
+     "component_groups": [
+      "morph:seat_232"
+     ]
+    }
+   },
+   "morph:seat_233": {
+    "add": {
+     "component_groups": [
+      "morph:seat_233"
+     ]
+    }
+   },
+   "morph:seat_234": {
+    "add": {
+     "component_groups": [
+      "morph:seat_234"
+     ]
+    }
+   },
+   "morph:seat_235": {
+    "add": {
+     "component_groups": [
+      "morph:seat_235"
+     ]
+    }
+   },
+   "morph:seat_236": {
+    "add": {
+     "component_groups": [
+      "morph:seat_236"
+     ]
+    }
+   },
+   "morph:seat_237": {
+    "add": {
+     "component_groups": [
+      "morph:seat_237"
+     ]
+    }
+   },
+   "morph:seat_238": {
+    "add": {
+     "component_groups": [
+      "morph:seat_238"
+     ]
+    }
+   },
+   "morph:seat_239": {
+    "add": {
+     "component_groups": [
+      "morph:seat_239"
+     ]
+    }
+   },
+   "morph:seat_240": {
+    "add": {
+     "component_groups": [
+      "morph:seat_240"
+     ]
+    }
+   },
+   "morph:size_60_180": {
+    "add": {
+     "component_groups": [
+      "morph:size_60_180"
+     ]
+    }
+   },
+   "morph:size_35_60": {
+    "add": {
+     "component_groups": [
+      "morph:size_35_60"
+     ]
+    }
+   },
+   "morph:size_70_65": {
+    "add": {
+     "component_groups": [
+      "morph:size_70_65"
+     ]
+    }
+   },
+   "morph:size_75_42": {
+    "add": {
+     "component_groups": [
+      "morph:size_75_42"
+     ]
+    }
+   },
+   "morph:size_50_90": {
+    "add": {
+     "component_groups": [
+      "morph:size_50_90"
+     ]
+    }
+   },
+   "morph:size_55_50": {
+    "add": {
+     "component_groups": [
+      "morph:size_55_50"
+     ]
+    }
+   },
+   "morph:size_50_180": {
+    "add": {
+     "component_groups": [
+      "morph:size_50_180"
+     ]
+    }
+   },
+   "morph:size_60_190": {
+    "add": {
+     "component_groups": [
+      "morph:size_60_190"
+     ]
+    }
+   },
+   "morph:size_60_177": {
+    "add": {
+     "component_groups": [
+      "morph:size_60_177"
+     ]
+    }
+   },
+   "morph:size_170_238": {
+    "add": {
+     "component_groups": [
+      "morph:size_170_238"
+     ]
+    }
+   },
+   "morph:size_60_70": {
+    "add": {
+     "component_groups": [
+      "morph:size_60_70"
+     ]
+    }
+   },
+   "morph:size_70_50": {
+    "add": {
+     "component_groups": [
+      "morph:size_70_50"
+     ]
+    }
+   },
+   "morph:size_60_80": {
+    "add": {
+     "component_groups": [
+      "morph:size_60_80"
+     ]
+    }
+   },
+   "morph:size_60_30": {
+    "add": {
+     "component_groups": [
+      "morph:size_60_30"
+     ]
+    }
+   },
+   "morph:size_60_98": {
+    "add": {
+     "component_groups": [
+      "morph:size_60_98"
+     ]
+    }
+   },
+   "morph:size_90_130": {
+    "add": {
+     "component_groups": [
+      "morph:size_90_130"
+     ]
+    }
+   },
+   "morph:size_90_60": {
+    "add": {
+     "component_groups": [
+      "morph:size_90_60"
+     ]
+    }
+   },
+   "morph:size_140_160": {
+    "add": {
+     "component_groups": [
+      "morph:size_140_160"
+     ]
+    }
+   },
+   "morph:size_199_199": {
+    "add": {
+     "component_groups": [
+      "morph:size_199_199"
+     ]
+    }
+   },
+   "morph:size_300_400": {
+    "add": {
+     "component_groups": [
+      "morph:size_300_400"
+     ]
+    }
+   },
+   "morph:size_60_290": {
+    "add": {
+     "component_groups": [
+      "morph:size_60_290"
+     ]
+    }
+   },
+   "morph:size_40_30": {
+    "add": {
+     "component_groups": [
+      "morph:size_40_30"
+     ]
+    }
+   },
+   "morph:size_50_55": {
+    "add": {
+     "component_groups": [
+      "morph:size_50_55"
+     ]
+    }
+   },
+   "morph:size_80_80": {
+    "add": {
+     "component_groups": [
+      "morph:size_80_80"
+     ]
+    }
+   },
+   "morph:size_85_85": {
+    "add": {
+     "component_groups": [
+      "morph:size_85_85"
+     ]
+    }
+   },
+   "morph:size_140_290": {
+    "add": {
+     "component_groups": [
+      "morph:size_140_290"
+     ]
+    }
+   },
+   "morph:size_90_187": {
+    "add": {
+     "component_groups": [
+      "morph:size_90_187"
+     ]
+    }
+   },
+   "morph:size_208_208": {
+    "add": {
+     "component_groups": [
+      "morph:size_208_208"
+     ]
+    }
+   },
+   "morph:size_88_95": {
+    "add": {
+     "component_groups": [
+      "morph:size_88_95"
+     ]
+    }
+   },
+   "morph:size_130_125": {
+    "add": {
+     "component_groups": [
+      "morph:size_130_125"
+     ]
+    }
+   },
+   "morph:size_50_100": {
+    "add": {
+     "component_groups": [
+      "morph:size_50_100"
+     ]
+    }
+   },
+   "morph:size_90_50": {
+    "add": {
+     "component_groups": [
+      "morph:size_90_50"
+     ]
+    }
+   },
+   "morph:size_90_90": {
+    "add": {
+     "component_groups": [
+      "morph:size_90_90"
+     ]
+    }
+   },
+   "morph:size_140_140": {
+    "add": {
+     "component_groups": [
+      "morph:size_140_140"
+     ]
+    }
+   },
+   "morph:size_82_100": {
+    "add": {
+     "component_groups": [
+      "morph:size_82_100"
+     ]
+    }
+   },
+   "morph:size_195_220": {
+    "add": {
+     "component_groups": [
+      "morph:size_195_220"
+     ]
+    }
+   },
+   "morph:size_50_50": {
+    "add": {
+     "component_groups": [
+      "morph:size_50_50"
+     ]
+    }
+   },
+   "morph:size_190_175": {
+    "add": {
+     "component_groups": [
+      "morph:size_190_175"
+     ]
+    }
+   },
+   "morph:size_40_180": {
+    "add": {
+     "component_groups": [
+      "morph:size_40_180"
+     ]
+    }
+   },
+   "morph:size_140_90": {
+    "add": {
+     "component_groups": [
+      "morph:size_140_90"
+     ]
+    }
+   },
+   "morph:size_90_170": {
+    "add": {
+     "component_groups": [
+      "morph:size_90_170"
+     ]
+    }
+   },
+   "morph:size_98_98": {
+    "add": {
+     "component_groups": [
+      "morph:size_98_98"
+     ]
+    }
+   },
+   "morph:size_80_60": {
+    "add": {
+     "component_groups": [
+      "morph:size_80_60"
+     ]
+    }
+   },
+   "morph:size_40_40": {
+    "add": {
+     "component_groups": [
+      "morph:size_40_40"
+     ]
+    }
+   },
+   "morph:size_120_40": {
+    "add": {
+     "component_groups": [
+      "morph:size_120_40"
+     ]
+    }
+   },
+   "morph:size_40_80": {
+    "add": {
+     "component_groups": [
+      "morph:size_40_80"
+     ]
+    }
+   },
+   "morph:size_90_290": {
+    "add": {
+     "component_groups": [
+      "morph:size_90_290"
+     ]
+    }
+   },
+   "morph:size_100_300": {
+    "add": {
+     "component_groups": [
+      "morph:size_100_300"
+     ]
+    }
+   },
+   "morph:size_72_200": {
+    "add": {
+     "component_groups": [
+      "morph:size_72_200"
+     ]
+    }
+   },
+   "morph:despawn": {
+    "add": {
+     "component_groups": [
+      "morph:despawn"
+     ]
+    }
+   }
+  }
+ }
+}

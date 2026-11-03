@@ -54,6 +54,11 @@ ALWAYS_HIDDEN = ["Saddle", "ReinsL", "ReinsR", "Bridle", "BitL", "BitR", "BagL",
                  "brim"]
 MULE_EARS = {"donkey", "mule"}
 FP_TARGET = [-5.0, 22.0, 0.0]
+SEAT_MIN, SEAT_STEP, SEAT_COUNT = -2.5, 0.05, 241   # seat heights -2.5 .. 9.5 blocks
+
+
+def seat_index(y):
+    return int(min(max(round((y - SEAT_MIN) / SEAT_STEP), 0), SEAT_COUNT - 1))
 
 
 def lname(b):
@@ -354,6 +359,10 @@ def main(vanilla):
             gen_anims[fa] = {"loop": True, "bones": {"rightArm": {"scale": fit}}}
             m["anim_map"][f"f{fid}_fpfit"] = fa
             state_anims.append({f"f{fid}_fpfit": "variable.is_first_person"})
+        ro = f"animation.morph.gen.rideoff.{key}"
+        gen_anims[ro] = {"loop": True, "bones": {t: {"position": [0, "-query.property('morph:ride_off') * 16.0 / math.max(query.property('morph:r'), 0.01)", 0]} for t in top_bones(m)}}
+        m["anim_map"][f"f{fid}_rideoff"] = ro
+        state_anims.append({f"f{fid}_rideoff": "!variable.is_first_person"})
         pk = f"animation.morph.gen.peel.{key}"
         gen_anims[pk] = peel_anim(m)
         m["peel"] = pk
@@ -361,12 +370,10 @@ def main(vanilla):
         states[f"form_{fid}"] = {"animations": state_anims,
                                  "transitions": [{"router": f"variable.morph_form != {fid}"}]}
         states["router"]["transitions"].append({f"form_{fid}": f"variable.morph_form == {fid}"})
-        for bn in head_bones(m["bones"]):
-            hidden_by_bone.setdefault(bn, []).append(fid)
 
         eye = 1.62 if key == "shapeshifter" else round(m["height"] * 0.85, 3)
         data.append({"id": fid, "type": m["type"], "key": key, "name": m["name"], "hp": int(math.ceil(m["hp"])),
-                     "eye": eye, "height": m["height"], "r": round(m["natural_scale"], 4), "families": m["families"]})
+                     "eye": eye, "height": m["height"], "width": m["width"], "r": round(m["natural_scale"], 4), "families": m["families"]})
 
     # ---------------- RP: geometry
     with open(os.path.join(RP, "models", "entity", "morph_fp_generated.geo.json"), "w") as f:
@@ -396,10 +403,12 @@ def main(vanilla):
     s["pre_animation"] += [
         "variable.morph_form = query.property('morph:form');",
         "variable.morph_absorb = query.property('morph:absorb');",
-        "variable.morph_pov = query.property('morph:pov');",
         "variable.morph_glow = variable.morph_absorb ? (0.35 + 0.25 * math.sin(query.life_time * 900.0)) : 0.0;",
     ]
     s["animate"] = ["root", "morph_forms"]
+    # while riding our invisible body the vanilla sitting pose must not play
+    for k in ("riding.arms", "riding.legs", "riding.root"):
+        desc["animations"][k] = "animation.morph.noop"
     rcs = []
     for r in desc["render_controllers"]:
         k = next(iter(r))
@@ -438,9 +447,6 @@ def main(vanilla):
     is_mule = " || ".join(f"variable.morph_form == {i}" for i in mule_ids) or "0"
     vis = [{"*": True}] + [{b: False} for b in ALWAYS_HIDDEN]
     vis += [{"MuleEarL": is_mule}, {"MuleEarR": is_mule}, {"EarL": f"!({is_mule})"}, {"EarR": f"!({is_mule})"}]
-    for bn, ids in sorted(hidden_by_bone.items()):
-        cond = " || ".join(f"variable.morph_form == {i}" for i in ids)
-        vis.append({bn: f"!(variable.morph_pov == 0 && query.property('morph:camera_on') && ({cond}))"})
     rc = {"format_version": "1.8.0", "render_controllers": {
         "controller.render.morph.third_person": {
             "arrays": {"geometries": {"Array.morph_geo": geo_arr}, "textures": tex_arr},
@@ -474,8 +480,7 @@ def main(vanilla):
         "morph:form": {"type": "int", "range": [0, n], "default": 0, "client_sync": True},
         "morph:absorb": {"type": "bool", "default": False, "client_sync": True},
         "morph:r": {"type": "float", "range": [0.0, 16.0], "default": 0.9375, "client_sync": True},
-        "morph:pov": {"type": "int", "range": [0, 2], "default": 0, "client_sync": True},
-        "morph:camera_on": {"type": "bool", "default": False, "client_sync": True},
+        "morph:ride_off": {"type": "float", "range": [-20.0, 20.0], "default": 0.0, "client_sync": True},
     }
     hps = sorted({d["hp"] for d in data})
     groups = {f"morph:hp_{h}": {"minecraft:health": {"value": h, "max": h}} for h in hps}
@@ -494,9 +499,54 @@ def main(vanilla):
     with open(os.path.join(BP, "entities", "stolen_skin.json"), "w") as f:
         json.dump(sk, f, indent=2)
 
+    # ---------------- BP + RP: the invisible "body" the player rides so the real camera sits at mob eye height
+    seats = {f"morph:seat_{i}": {"minecraft:rideable": {
+        "seat_count": 1, "family_types": ["player"], "crouching_skip_interact": True, "pull_in_entities": False,
+        "seats": [{"position": [0.0, round(SEAT_MIN + i * SEAT_STEP, 3), 0.0]}]}}
+        for i in range(SEAT_COUNT)}
+    sizes = {}
+    for d in data:
+        w = round(min(max(d["width"], 0.2), 3.0), 2)
+        h = round(min(max(d["height"], 0.2), 4.5), 2)
+        d["size"] = f"{int(w * 100)}_{int(h * 100)}"
+        sizes[f"morph:size_{d['size']}"] = {"minecraft:collision_box": {"width": w, "height": h}}
+    groups = dict(seats, **sizes)
+    groups["morph:despawn"] = {"minecraft:instant_despawn": {}}
+    body = {"format_version": "1.26.0", "minecraft:entity": {
+        "description": {"identifier": "morph:body", "is_spawnable": False, "is_summonable": True},
+        "component_groups": groups,
+        "components": {
+            "minecraft:type_family": {"family": ["morph_body", "inanimate"]},
+            "minecraft:collision_box": {"width": 0.6, "height": 1.8},
+            "minecraft:physics": {},
+            "minecraft:movement": {"value": 0.13},
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:input_ground_controlled": {},
+            "minecraft:behavior.player_ride_tamed": {},
+            "minecraft:is_tamed": {},
+            "minecraft:is_saddled": {},
+            "minecraft:rideable": seats[f"morph:seat_{seat_index(0.6)}"]["minecraft:rideable"],
+            "minecraft:health": {"value": 1000, "max": 1000},
+            "minecraft:damage_sensor": {"triggers": {"cause": "all", "deals_damage": "no"}},
+            "minecraft:fire_immune": {},
+            "minecraft:breathable": {"breathes_air": True, "breathes_water": True, "suffocate_time": -1, "total_supply": 15},
+            "minecraft:knockback_resistance": {"value": 1.0},
+            "minecraft:pushable": {"is_pushable": False, "is_pushable_by_piston": True},
+            "minecraft:conditional_bandwidth_optimization": {},
+        },
+        "events": dict({k: {"add": {"component_groups": [k]}} for k in groups})}}
+    with open(os.path.join(BP, "entities", "morph_body.json"), "w") as f:
+        json.dump(body, f, indent=1)
+    with open(os.path.join(RP, "entity", "morph_body.entity.json"), "w") as f:
+        json.dump({"format_version": "1.10.0", "minecraft:client_entity": {"description": {
+            "identifier": "morph:body", "materials": {"default": "entity_alphatest"},
+            "textures": {}, "geometry": {}, "render_controllers": []}}}, f, indent=1)
+
     with open(os.path.join(BP, "scripts", "forms_data.js"), "w") as f:
         f.write("// Generated by tools/generate_forms.py - do not edit by hand.\n")
         f.write("export const FORM_DATA = " + json.dumps(data, indent=1) + ";\n")
+        f.write(f"export const SEAT = {{ min: {SEAT_MIN}, step: {SEAT_STEP}, count: {SEAT_COUNT} }};\n")
     print(f"{len(forms)} forms, {len(gen_anims)} generated animations, hp values {hps}")
 
 

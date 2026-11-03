@@ -6,8 +6,8 @@ All **89 vanilla mobs** can be stolen, from chickens and cod to wardens, the Wit
 
 ## Install (phone / tablet)
 
-1. Download **`dist/Morph_v2.1.mcaddon`** and tap it. Minecraft imports both packs.
-2. In world settings, turn on **Morph: Shapeshifter v2.1 (Behavior)**. The resource pack turns on with it.
+1. Download **`dist/Morph_v3.mcaddon`** and tap it. Minecraft imports both packs.
+2. In world settings, turn on **Morph: Shapeshifter v3 (Behavior)**. The resource pack turns on with it.
 3. You need **Minecraft Bedrock 1.26.30 or newer**. No experimental toggles are needed.
 
 You get a **Morph Core** when you join.
@@ -18,13 +18,23 @@ You get a **Morph Core** when you join.
 | --- | --- |
 | **Kill a mob** | Steal its skin and become it. This is the only way to transform. |
 | **Use (long-press) the Morph Core** | Your form's ability |
-| **Sneak + use the Morph Core** | Cycle the camera: **Mob Eyes**, then **Mob Third Person**, then **Classic** |
+| **Sneak + use the Morph Core** | Show your form's info |
 
-## Camera at the mob's height
+## First person (and third person) at the mob's height
 
-* **Mob Eyes** (the default) is a first-person view from the mob's real eye height. As a chicken you're low to the ground, and as a ghast or the Ender Dragon you tower over everything. The mob's head is hidden so it doesn't block the view, and you see your own mob body below you.
-* **Mob Third Person** is an orbit camera centred on the mob's head height. Big mobs get a wider orbit.
-* **Classic** is Minecraft's normal camera. In this view the first-person hand is the mob's own arm, leg, wing, fin or tentacle, but the camera stays at normal player height. That's a game engine limit: add-ons can't move the built-in first-person camera.
+First person works exactly like vanilla. The game's normal first-person camera shows a **special hand for every mob**: its arm, leg, wing, fin, tentacle or blaze rod, depending on the mob. Like vanilla, the hand shows when your main hand is empty. The normal perspective button (third person front and back) works too.
+
+The camera sits at the **mob's real eye height**, low as a chicken and high as a ghast or the Ender Dragon. Bedrock doesn't let add-ons change the player's eye height, so the add-on uses the one thing that does move your camera, which is riding. When you become a mob that isn't human-height, you sit in an invisible, mob-sized **body**. Its seat is set so your eyes land at the mob's eye height, and its hitbox is the mob's size. You steer it exactly like walking:
+
+* **Jump** jumps (higher with Jump Boost forms).
+* **Flying mobs**: hold jump to rise. You glide down otherwise.
+* **Spiders**: walk into a wall to climb it.
+* **Swimmers**: swim where you look. Hold jump to rise.
+* If you get knocked off (sneak or the dismount button), you snap straight back in.
+
+Human-height mobs (zombies, skeletons, villagers, pillagers and so on) don't need a body, so you play them normally, including sprinting and sneaking.
+
+The first time you morph, the add-on measures where the game placed your eyes and corrects the seat. After that it remembers the measurement for the world.
 
 ## Health
 
@@ -138,7 +148,7 @@ Mobs that can fly get **hold jump to fly up** and slow falling otherwise. Swimme
 
 * `tools/generate_forms.py` reads Mojang's official vanilla files ([bedrock-samples](https://github.com/Mojang/bedrock-samples)) and generates a form for every mob. It uses each mob's own model, texture and animations, plus a first-person hand made from the mob's limb, its health and its eye height. The output files are `forms_data.js`, the player entity files, the render and animation controllers, and the first-person models.
 * `packs/MorphBP/scripts/main.js` handles detecting kills, the steal sequence, abilities, passives, cameras and health.
-* Health uses one component group per health value in `player.json`. Cameras use the presets in `packs/MorphBP/cameras/presets`, which are follow-orbit cameras with an offset set to each mob's eye height.
+* Health uses one component group per health value in `player.json`. The invisible body is `morph:body` (`entities/morph_body.json`), with one group per seat height and one per mob size.
 
 Rebuild:
 
@@ -146,13 +156,13 @@ Rebuild:
 git clone --depth 1 https://github.com/Mojang/bedrock-samples /tmp/bedrock-samples
 python3 tools/generate_assets.py
 python3 tools/generate_forms.py /tmp/bedrock-samples
-python3 tools/build.py      # -> dist/Morph_v2.1.mcaddon
+python3 tools/build.py      # -> dist/Morph_v3.mcaddon
 ```
 
 ## Known limitations
 
-* Your hitbox stays player-sized in every form.
-* In Mob Eyes and Mob Third Person, you aim and mine from your real player head height (1.62 blocks). The crosshair can therefore be slightly off for very tall or very small mobs. Switch to Classic for precise building.
+* In a body you can't sprint or sneak, and ladders don't work. Flying, climbing and jumping go through the body instead.
+* As in vanilla, the first-person mob hand is only drawn when your main hand is empty.
 * Mobs with colour variants (cats, horses, axolotls, tropical fish, and so on) use their default texture. Saddles, chests and armor layers aren't shown.
 * Player armor is drawn for a human shape, so it floats on non-humanoid forms.
 * This pack replaces `player.json` and `player.entity.json`, so it conflicts with other add-ons that do the same.

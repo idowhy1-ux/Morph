@@ -1,0 +1,14 @@
+{
+ "format_version": "1.10.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "morph:body",
+   "materials": {
+    "default": "entity_alphatest"
+   },
+   "textures": {},
+   "geometry": {},
+   "render_controllers": []
+  }
+ }
+}

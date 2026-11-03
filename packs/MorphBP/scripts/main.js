@@ -6,23 +6,28 @@
 //
 // Controls (touch friendly):
 //   * Use (long-press) the Morph Core          -> your form's ability
-//   * Sneak + use the Morph Core                -> cycle camera: Mob Eyes / Mob Third Person / Classic
+//   * Sneak + use the Morph Core                -> form info
+//
+// Camera height: Bedrock hard-codes the player's eye height, so for any mob whose eyes are not at
+// player height you ride an invisible, mob-sized "body" (morph:body). Its seat is placed so your real
+// vanilla camera (first AND third person) sits exactly at the mob's eye height, and the body's hitbox
+// is the mob's size. You steer it like walking; jump/fly/climb/swim go through the body.
 
-import { world, system, ItemStack, MolangVariableMap, EntityDamageCause } from "@minecraft/server";
-import { FORM_DATA } from "./forms_data.js";
+import { world, system, ItemStack, MolangVariableMap, EntityDamageCause, InputButton, ButtonState } from "@minecraft/server";
+import { FORM_DATA, SEAT } from "./forms_data.js";
 
 const CORE_ID = "morph:morph_core";
 const SKIN_ENTITY = "morph:stolen_skin";
 const P_FORM = "morph:form";
 const P_ABSORB = "morph:absorb";
 const P_R = "morph:r";
-const P_POV = "morph:pov";
-const P_CAM = "morph:camera_on";
-const DP_CAM = "morph:camera_mode";
+const P_RIDE = "morph:ride_off";
+const BODY_ID = "morph:body";
+const DP_K = "morph:seat_k"; // world: measured (head height - seat height) for a rider
 const DP_DIED = "morph:died";
 const PLAYER_EYE = 1.62;
 
-/** @typedef {{id:number,type:string|null,key:string,name:string,hp:number,eye:number,height:number,r:number,families:string[]}} Form */
+/** @typedef {{id:number,type:string|null,key:string,name:string,hp:number,eye:number,height:number,width:number,size:string,r:number,families:string[]}} Form */
 /** @type {Form[]} */
 const FORMS = FORM_DATA;
 const FORM_BY_TYPE = new Map();
@@ -91,7 +96,7 @@ function bar(p, text) {
 
 /** Mobs near p, excluding p and morph helper entities. */
 function nearby(p, radius, players = false) {
-  const opts = { location: p.location, maxDistance: radius, excludeTypes: ["minecraft:item", "minecraft:xp_orb", SKIN_ENTITY] };
+  const opts = { location: feet(p), maxDistance: radius, excludeTypes: ["minecraft:item", "minecraft:xp_orb", SKIN_ENTITY] };
   return (safe(() => p.dimension.getEntities(opts)) ?? []).filter(
     (e) => e.id !== p.id && (players || e.typeId !== "minecraft:player") && safe(() => e.getComponent("minecraft:health"))
   );
@@ -110,7 +115,7 @@ function shoot(p, type, speed, spread = 0, at) {
   const d = p.getViewDirection();
   const right = { x: -d.z, y: 0, z: d.x };
   const dir = add(d, scale(right, spread));
-  const from = at ?? add(up(p.location, getForm(p).eye), scale(dir, 1.3));
+  const from = at ?? add(p.getHeadLocation(), scale(dir, 1.3));
   const e = safe(() => p.dimension.spawnEntity(type, from));
   if (!e) return undefined;
   const proj = safe(() => e.getComponent("minecraft:projectile"));
@@ -127,7 +132,19 @@ function shoot(p, type, speed, spread = 0, at) {
 function dash(p, power, vertical = 0.25) {
   const d = p.getViewDirection();
   const len = Math.hypot(d.x, d.z) || 1;
-  safe(() => p.applyKnockback({ x: (d.x / len) * power, z: (d.z / len) * power }, vertical));
+  push(p, (d.x / len) * power, (d.z / len) * power, vertical);
+}
+
+/** Knock the player (or the body they ride) around. */
+function push(p, x, z, y) {
+  const b = ridingBody(p);
+  if (b) safe(() => b.applyImpulse({ x: x * 0.5, y: y * 0.9, z: z * 0.5 }));
+  else safe(() => p.applyKnockback({ x, z }, y));
+}
+
+/** Where the player's feet really are (the body's feet when riding one). */
+function feet(p) {
+  return ridingBody(p)?.location ?? p.location;
 }
 
 // ---------------------------------------------------------------------------
@@ -189,7 +206,7 @@ const AB = {
       s.fusing = false;
       if (!p.isValid) return;
       safe(() => p.addEffect("resistance", 30, { amplifier: 4, showParticles: false }));
-      system.run(() => safe(() => p.dimension.createExplosion(p.location, 4, { source: p, breaksBlocks: true, causesFire: false })));
+      system.run(() => safe(() => p.dimension.createExplosion(feet(p), 4, { source: p, breaksBlocks: true, causesFire: false })));
     }, 30);
   } },
   web: { label: "Web Shot", cd: 80, run: (p) => {
@@ -252,7 +269,7 @@ const AB = {
   } },
   sonic: { label: "Sonic Boom", cd: 200, run: (p) => {
     const d = p.getViewDirection();
-    const from = up(p.location, getForm(p).eye);
+    const from = p.getHeadLocation();
     for (let i = 1; i <= 15; i++) particle(p.dimension, "minecraft:sonic_explosion", add(from, scale(d, i)));
     sound(p, "mob.warden.sonic_boom", 1, 2);
     const hit = safe(() => p.getEntitiesFromViewDirection({ maxDistance: 15 })) ?? [];
@@ -265,7 +282,8 @@ const AB = {
     for (let i = 2; i < 14; i++) {
       system.runTimeout(() => {
         if (!p.isValid) return;
-        const at = { x: p.location.x + (d.x / len) * i, y: p.location.y, z: p.location.z + (d.z / len) * i };
+        const f0 = feet(p);
+        const at = { x: f0.x + (d.x / len) * i, y: f0.y, z: f0.z + (d.z / len) * i };
         safe(() => p.dimension.spawnEntity("minecraft:evocation_fang", at));
       }, i);
     }
@@ -299,7 +317,7 @@ const AB = {
     }, 6);
   } },
   leap: { label: "Super Leap", cd: 40, run: (p) => {
-    safe(() => p.applyKnockback({ x: 0, z: 0 }, 1.6));
+    push(p, 0, 0, 1.6);
     safe(() => p.addEffect("slow_falling", 60, { showParticles: false }));
     sound(p, "mob.slime.big", 1);
   } },
@@ -317,7 +335,7 @@ const AB = {
   laser: { label: "Guardian Beam", cd: 60, run: (p) => {
     const t = lookTarget(p, 16);
     if (!t) return false;
-    const from = up(p.location, getForm(p).eye);
+    const from = p.getHeadLocation();
     for (let i = 1; i <= 10; i++) particle(p.dimension, "morph:skin_flake", lerp(from, up(t.location, 1), i / 10), { red: 0.4, green: 1, blue: 0.9 });
     hurt(p, t, getForm(p).key === "elder_guardian" ? 10 : 6, EntityDamageCause.magic);
     if (getForm(p).key === "elder_guardian") for (const e of nearby(p, 12, true)) safe(() => e.addEffect("mining_fatigue", 600, { amplifier: 2 }));
@@ -341,7 +359,7 @@ const AB = {
     sound(p, "mob.sheep.say", 1);
   } },
   dig: { label: "Sniff Out Seeds", cd: 400, run: (p) => {
-    safe(() => p.dimension.spawnItem(new ItemStack(Math.random() < 0.5 ? "minecraft:torchflower_seeds" : "minecraft:pitcher_pod", 1), p.location));
+    safe(() => p.dimension.spawnItem(new ItemStack(Math.random() < 0.5 ? "minecraft:torchflower_seeds" : "minecraft:pitcher_pod", 1), feet(p)));
     sound(p, "mob.sniffer.digging", 1);
   } },
   shell: { label: "Shell Up", cd: 300, run: (p) => {
@@ -360,13 +378,13 @@ const AB = {
   } },
   swoop: { label: "Swoop", cd: 40, run: (p) => {
     const d = p.getViewDirection();
-    safe(() => p.applyKnockback({ x: d.x * 2.5, z: d.z * 2.5 }, d.y * 1.2 + 0.2));
+    push(p, d.x * 2.5, d.z * 2.5, d.y * 1.2 + 0.2);
     system.runTimeout(() => p.isValid && nearby(p, 2.5).forEach((e) => hurt(p, e, 5)), 8);
     sound(p, "mob.phantom.swoop", 1);
   } },
   collect: { label: "Collect Items", cd: 100, run: (p) => {
     const items = safe(() => p.dimension.getEntities({ location: p.location, maxDistance: 16, type: "minecraft:item" })) ?? [];
-    for (const it of items) safe(() => it.teleport(p.location));
+    for (const it of items) safe(() => it.teleport(feet(p)));
     sound(p, "mob.allay.item_given", 1);
     if (!items.length) return false;
   } },
@@ -381,7 +399,7 @@ const AB = {
   } },
   swimDash: { label: "Torpedo", cd: 30, run: (p) => {
     const d = p.getViewDirection();
-    safe(() => p.applyKnockback({ x: d.x * 2.5, z: d.z * 2.5 }, d.y * 1.5));
+    push(p, d.x * 2.5, d.z * 2.5, d.y * 1.5);
     sound(p, "mob.dolphin.attack", 1);
   } },
   healAura: { label: "Soothing Aura", cd: 300, run: (p) => {
@@ -402,7 +420,7 @@ const AB = {
   } },
   vex: { label: "Vex Charge", cd: 40, run: (p) => {
     const d = p.getViewDirection();
-    safe(() => p.applyKnockback({ x: d.x * 3, z: d.z * 3 }, d.y * 2));
+    push(p, d.x * 3, d.z * 3, d.y * 2);
     system.runTimeout(() => p.isValid && nearby(p, 2.5).forEach((e) => hurt(p, e, 7)), 6);
     sound(p, "mob.vex.charge", 1);
   } },
@@ -413,7 +431,7 @@ const AB = {
   tongue: { label: "Tongue Snatch", cd: 60, run: (p) => {
     const t = lookTarget(p, 8);
     if (!t) return false;
-    safe(() => t.teleport(add(p.location, scale(p.getViewDirection(), 1.2))));
+    safe(() => t.teleport(add(feet(p), scale(p.getViewDirection(), 1.2))));
     hurt(p, t, 4);
     sound(p, "mob.frog.tongue", 1);
   } },
@@ -440,7 +458,7 @@ function blinkTo(p, range) {
     const a2 = safe(() => p.dimension.getBlock({ x: b.x, y: b.y + dy + 1, z: b.z }));
     if (a?.isAir && a2?.isAir) {
       particle(p.dimension, "morph:absorb_burst", up(p.location, 1));
-      safe(() => p.teleport({ x: b.x + 0.5, y: b.y + dy, z: b.z + 0.5 }));
+      moveTo(p, { x: b.x + 0.5, y: b.y + dy, z: b.z + 0.5 });
       sound(p, "mob.endermen.portal", 1);
       return;
     }
@@ -557,41 +575,13 @@ function clearPassives(p) {
 function applyPassives(p, f) {
   const k = kit(f);
   for (const [id, amp] of k.fx ?? []) safe(() => p.addEffect(id, id === "night_vision" ? 400 : 300, { amplifier: amp, showParticles: false }));
+  const body = ridingBody(p);
+  for (const [id, amp] of k.fx ?? []) if (body && id === "speed") safe(() => body.addEffect(id, 300, { amplifier: amp, showParticles: false }));
   if (k.water) {
     safe(() => p.addEffect("water_breathing", 300, { showParticles: false }));
     if (p.isInWater) safe(() => p.addEffect("conduit_power", 300, { showParticles: false }));
   }
   if (k.nowither) safe(() => p.removeEffect("wither"));
-}
-
-// ---------------------------------------------------------------------------
-// Camera: eye height follows the mob
-// ---------------------------------------------------------------------------
-const CAM_NAMES = ["§dMob Eyes §7(first person at mob height)", "§dMob Third Person", "§7Classic camera"];
-
-/** @param {import("@minecraft/server").Player} p */
-function camMode(p) {
-  const v = p.getDynamicProperty(DP_CAM);
-  return typeof v === "number" && v >= 0 && v <= 2 ? v : 0;
-}
-
-/** @param {import("@minecraft/server").Player} p */
-function applyCamera(p) {
-  const f = getForm(p);
-  const mode = camMode(p);
-  const offset = { x: 0, y: f.eye - PLAYER_EYE, z: 0 };
-  safe(() => p.setProperty(P_POV, mode));
-  if (mode === 2) {
-    safe(() => p.camera.clear());
-    safe(() => p.setProperty(P_CAM, false));
-    return;
-  }
-  const preset = mode === 0 ? "morph:eyes" : f.height > 2.6 ? "morph:third_far" : "morph:third";
-  const ok = safe(() => {
-    p.camera.setCamera(preset, { entityOffset: offset });
-    return true;
-  });
-  safe(() => p.setProperty(P_CAM, !!ok));
 }
 
 // ---------------------------------------------------------------------------
@@ -610,7 +600,7 @@ function setForm(p, f, freshBody = true) {
   s.cooldownUntil = 0;
   s.lastForm = f.id;
   applyPassives(p, f);
-  applyCamera(p);
+  syncBody(p);
 }
 
 /**
@@ -644,7 +634,7 @@ function stealSkin(p, f, from) {
     system.runTimeout(() => {
       if (!p.isValid || s.animToken !== token) return;
       const t = i / DURATION;
-      const pos = up(lerp(from, up(p.location, 0.9), easeInOut(t)), Math.sin(Math.PI * t) * 1.8);
+      const pos = up(lerp(from, up(feet(p), getForm(p).eye * 0.6), easeInOut(t)), Math.sin(Math.PI * t) * 1.8);
       if (skin?.isValid) safe(() => skin.teleport(pos, { rotation: { x: 0, y: t * 720 } }));
       if (i % 2 === 0) particle(dim, "morph:skin_flake", pos, color);
       if (i === DURATION / 2) sound(p, "mob.endermen.portal", 1.4, 0.8);
@@ -653,7 +643,7 @@ function stealSkin(p, f, from) {
   system.runTimeout(() => {
     if (skin?.isValid) safe(() => skin.remove());
     if (!p.isValid || s.animToken !== token) return;
-    const chest = up(p.location, 1);
+    const chest = up(feet(p), Math.min(f.eye, 3) * 0.6);
     particle(dim, "morph:absorb_burst", chest);
     particle(dim, "morph:skin_flake", chest, color);
     safe(() => p.camera.fade({ fadeColor: { red: 0.35, green: 0.05, blue: 0.55 }, fadeTime: { fadeInTime: 0.1, holdTime: 0.15, fadeOutTime: 0.6 } }));
@@ -677,6 +667,7 @@ world.afterEvents.entityDie.subscribe((ev) => {
   const dead = ev.deadEntity;
   if (dead.typeId === "minecraft:player") {
     safe(() => dead.setDynamicProperty(DP_DIED, true));
+    removeBody(dead.id);
     return;
   }
   const killer = ev.damageSource.damagingEntity;
@@ -699,28 +690,174 @@ function isSolid(b) {
   return !!b && !b.isAir && !b.isLiquid && b.typeId !== "minecraft:web";
 }
 
+// ---------------------------------------------------------------------------
+// The invisible mob-sized body (puts the real camera at the mob's eye height)
+// ---------------------------------------------------------------------------
+/** playerId -> { body, formId, seat, mountedAt, calibrated } */
+const bodies = new Map();
+const needsBody = (f) => f.id !== 0 && Math.abs(f.eye - PLAYER_EYE) > 0.08;
+const seatIndex = (y) => Math.min(Math.max(Math.round((y - SEAT.min) / SEAT.step), 0), SEAT.count - 1);
+
+/** head height above the seat for a rider (measured once per world, then remembered) */
+function riderK() {
+  const v = world.getDynamicProperty(DP_K);
+  return typeof v === "number" ? v : 1.1;
+}
+
+/** @param {import("@minecraft/server").Player} p */
+function ridingBody(p) {
+  const r = safe(() => p.getComponent("minecraft:riding")?.entityRidingOn);
+  return r && r.typeId === BODY_ID ? r : undefined;
+}
+
+function removeBody(playerId) {
+  const rec = bodies.get(playerId);
+  if (rec?.body?.isValid) safe(() => rec.body.remove());
+  bodies.delete(playerId);
+}
+
+/** @param {import("@minecraft/server").Player} p @param {import("@minecraft/server").Vector3} loc */
+function moveTo(p, loc) {
+  const rec = bodies.get(p.id);
+  if (rec?.body?.isValid) safe(() => rec.body.teleport(loc));
+  safe(() => p.teleport(loc));
+}
+
+/**
+ * Make sure the player rides a body of the right size whose seat puts their eyes at the mob's
+ * eye height. A fresh body is spawned for every form/seat change (component groups only add).
+ * @param {import("@minecraft/server").Player} p
+ */
+function syncBody(p, seatOverride) {
+  const f = getForm(p);
+  if (!needsBody(f)) {
+    removeBody(p.id);
+    safe(() => p.setProperty(P_RIDE, 0));
+    return;
+  }
+  const seat = seatOverride ?? f.eye - riderK();
+  const rec = bodies.get(p.id);
+  if (rec?.body?.isValid && rec.formId === f.id && Math.abs(rec.seat - seat) < SEAT.step / 2 && rec.body.dimension.id === p.dimension.id) return;
+  const at = rec?.body?.isValid && rec.body.dimension.id === p.dimension.id ? rec.body.location : p.location;
+  removeBody(p.id);
+  const body = safe(() => p.dimension.spawnEntity(BODY_ID, at));
+  if (!body) return;
+  safe(() => body.triggerEvent(`morph:size_${f.size}`));
+  safe(() => body.triggerEvent(`morph:seat_${seatIndex(seat)}`));
+  safe(() => body.setDynamicProperty("owner", p.id));
+  bodies.set(p.id, { body, formId: f.id, seat: SEAT.min + seatIndex(seat) * SEAT.step, mountedAt: -1, calibrated: seatOverride !== undefined });
+  system.run(() => mount(p));
+}
+
+/** @param {import("@minecraft/server").Player} p */
+function mount(p) {
+  const rec = bodies.get(p.id);
+  if (!rec?.body?.isValid || !p.isValid) return;
+  const rideable = safe(() => rec.body.getComponent("minecraft:rideable"));
+  if (!rideable) return;
+  // nobody else may sit in your body
+  for (const r of safe(() => rideable.getRiders()) ?? []) if (r.id !== p.id) safe(() => rideable.ejectRider(r));
+  if (ridingBody(p)?.id === rec.body.id) return;
+  safe(() => rec.body.teleport(p.location));
+  if (safe(() => rideable.addRider(p))) rec.mountedAt = system.currentTick;
+}
+
+/** Runs every tick for players wearing a body: keep them seated, calibrate, and drive jump/fly/climb/swim. */
+function driveBody(p) {
+  const rec = bodies.get(p.id);
+  const f = getForm(p);
+  if (!rec?.body?.isValid || rec.body.dimension.id !== p.dimension.id) {
+    syncBody(p);
+    return;
+  }
+  const b = rec.body;
+  if (ridingBody(p)?.id !== b.id) {
+    // dismounted (sneak, dismount button, teleport...): hop straight back in
+    if (system.currentTick % 2 === 0) mount(p);
+    return;
+  }
+  const k = kit(f);
+  // calibrate once: measure where the engine actually put the rider's eyes
+  if (!rec.calibrated && rec.mountedAt >= 0 && system.currentTick - rec.mountedAt > 6) {
+    rec.calibrated = true;
+    const head = safe(() => p.getHeadLocation().y);
+    if (typeof head === "number") {
+      const measuredK = head - b.location.y - rec.seat;
+      if (Math.abs(measuredK - riderK()) > 0.03) world.setDynamicProperty(DP_K, measuredK);
+      const want = f.eye - measuredK;
+      if (Math.abs(want - rec.seat) >= SEAT.step / 2) {
+        system.run(() => syncBody(p, want));
+        return;
+      }
+    }
+  }
+  if (system.currentTick % 10 === 0) safe(() => p.setProperty(P_RIDE, Math.round((p.location.y - b.location.y) * 100) / 100));
+
+  const jump = safe(() => p.inputInfo.getButtonState(InputButton.Jump)) === ButtonState.Pressed;
+  const v = safe(() => b.getVelocity()) ?? { x: 0, y: 0, z: 0 };
+  const move = safe(() => p.inputInfo.getMovementVector()) ?? { x: 0, y: 0 };
+  const inWater = b.isInWater;
+  if (k.fly) {
+    if (jump && v.y < 0.45) safe(() => b.applyImpulse({ x: 0, y: 0.12, z: 0 }));
+    else if (!b.isOnGround && v.y < -0.12) safe(() => b.applyImpulse({ x: 0, y: 0.07, z: 0 }));
+    if (!b.isOnGround && move.y > 0.2) {
+      const d = p.getViewDirection();
+      const len = Math.hypot(d.x, d.z) || 1;
+      if (Math.hypot(v.x, v.z) < 0.5) safe(() => b.applyImpulse({ x: (d.x / len) * 0.06, y: 0, z: (d.z / len) * 0.06 }));
+    }
+  } else if (inWater) {
+    if (jump && v.y < 0.25) safe(() => b.applyImpulse({ x: 0, y: 0.08, z: 0 }));
+    if (k.water && move.y > 0.2) {
+      const d = p.getViewDirection();
+      if (Math.hypot(v.x, v.y, v.z) < 0.6) safe(() => b.applyImpulse(scale(d, 0.07)));
+    }
+  } else if (jump && b.isOnGround && system.currentTick - (rec.jumpAt ?? 0) > 5) {
+    rec.jumpAt = system.currentTick;
+    const boost = (k.fx ?? []).find(([id]) => id === "jump_boost");
+    safe(() => b.applyImpulse({ x: 0, y: 0.5 + (boost ? (boost[1] + 1) * 0.1 : 0), z: 0 }));
+  }
+  if (k.climb && move.y > 0.2) {
+    const d = p.getViewDirection();
+    const len = Math.hypot(d.x, d.z) || 1;
+    const reach = Math.max(f.width / 2 + 0.3, 0.5);
+    const at = (y) => safe(() => p.dimension.getBlock({ x: b.location.x + (d.x / len) * reach, y: b.location.y + y, z: b.location.z + (d.z / len) * reach }));
+    if ((isSolid(at(0.2)) || isSolid(at(0.8))) && v.y < 0.25) safe(() => b.applyImpulse({ x: 0, y: 0.12, z: 0 }));
+  }
+}
+
+/** Legacy path for player-height forms (no body): flying and climbing through effects. */
+function drivePlayer(p) {
+  const k = kit(getForm(p));
+  if (k.fly) {
+    if (p.isJumping && !p.isOnGround) safe(() => p.addEffect("levitation", 3, { amplifier: 2, showParticles: false }));
+    else if (!p.isOnGround && !p.isSneaking) safe(() => p.addEffect("slow_falling", 3, { showParticles: false }));
+  }
+  if (k.climb) {
+    const v = p.getViewDirection();
+    const len = Math.hypot(v.x, v.z) || 1;
+    const at = (y) => safe(() => p.dimension.getBlock({ x: p.location.x + (v.x / len) * 0.6, y: p.location.y + y, z: p.location.z + (v.z / len) * 0.6 }));
+    if ((isSolid(at(0.2)) || isSolid(at(1.1))) && !p.isSneaking) safe(() => p.addEffect("levitation", 3, { amplifier: 3, showParticles: false }));
+  }
+}
+
 system.runInterval(() => {
   for (const p of world.getPlayers()) {
-    const k = kit(getForm(p));
-    if (k.climb) climb(p);
-    if (k.fly) fly(p);
+    if (needsBody(getForm(p))) driveBody(p);
+    else {
+      if (bodies.has(p.id)) syncBody(p);
+      drivePlayer(p);
+    }
   }
 }, 1);
 
-function climb(p) {
-  const v = p.getViewDirection();
-  const len = Math.hypot(v.x, v.z) || 1;
-  const at = (y) => safe(() => p.dimension.getBlock({ x: p.location.x + (v.x / len) * 0.6, y: p.location.y + y, z: p.location.z + (v.z / len) * 0.6 }));
-  if (!isSolid(at(0.2)) && !isSolid(at(1.1))) return;
-  const move = safe(() => p.inputInfo.getMovementVector());
-  if (p.isSneaking) safe(() => p.addEffect("slow_falling", 3, { showParticles: false }));
-  else if (move ? move.y > 0.2 : true) safe(() => p.addEffect("levitation", 3, { amplifier: 3, showParticles: false }));
-}
-
-function fly(p) {
-  if (p.isJumping && !p.isOnGround) safe(() => p.addEffect("levitation", 3, { amplifier: 2, showParticles: false }));
-  else if (!p.isOnGround && !p.isSneaking) safe(() => p.addEffect("slow_falling", 3, { showParticles: false }));
-}
+// Clean up bodies whose owner is gone (e.g. after a crash or rejoin).
+system.runInterval(() => {
+  const live = new Set([...bodies.values()].map((r) => r.body?.isValid && r.body.id));
+  for (const dimId of ["overworld", "nether", "the_end"]) {
+    const list = safe(() => world.getDimension(dimId).getEntities({ type: BODY_ID })) ?? [];
+    for (const e of list) if (!live.has(e.id)) safe(() => e.remove());
+  }
+}, 200);
 
 system.runInterval(() => {
   for (const p of world.getPlayers()) {
@@ -736,7 +873,7 @@ system.runInterval(() => {
     if (held?.typeId === CORE_ID && !s.busy) {
       const left = Math.max(0, s.cooldownUntil - system.currentTick);
       const status = left > 0 ? `§c${(left / 20).toFixed(1)}s` : "§aREADY";
-      bar(p, `§5${f.name} §8| §7${AB[kit(f).ab].label}: ${status} §8| §7Sneak+use: camera`);
+      bar(p, `§5${f.name} §8| §c${Math.ceil(safe(() => p.getComponent("minecraft:health").currentValue) ?? 0)}/${f.hp} HP §8| §7${AB[kit(f).ab].label}: ${status}`);
     }
   }
 }, 20);
@@ -751,14 +888,15 @@ world.afterEvents.entityHurt.subscribe((ev) => {
     for (let tries = 0; tries < 16; tries++) {
       const a = Math.random() * Math.PI * 2;
       const r = 4 + Math.random() * 6;
-      const x = Math.floor(p.location.x + Math.cos(a) * r) + 0.5;
-      const z = Math.floor(p.location.z + Math.sin(a) * r) + 0.5;
+      const base = feet(p);
+      const x = Math.floor(base.x + Math.cos(a) * r) + 0.5;
+      const z = Math.floor(base.z + Math.sin(a) * r) + 0.5;
       for (let dy = 4; dy >= -4; dy--) {
-        const y = Math.floor(p.location.y) + dy;
+        const y = Math.floor(base.y) + dy;
         const g = (yy) => safe(() => p.dimension.getBlock({ x, y: yy, z }));
         if (isSolid(g(y - 1)) && g(y)?.isAir && g(y + 1)?.isAir) {
           particle(p.dimension, "morph:absorb_burst", up(p.location, 1));
-          safe(() => p.teleport({ x, y, z }));
+          moveTo(p, { x, y, z });
           sound(p, "mob.endermen.portal", 1);
           return;
         }
@@ -774,10 +912,9 @@ world.afterEvents.itemUse.subscribe((ev) => {
   if (ev.itemStack.typeId !== CORE_ID) return;
   const p = ev.source;
   if (p.isSneaking) {
-    const next = (camMode(p) + 1) % 3;
-    p.setDynamicProperty(DP_CAM, next);
-    applyCamera(p);
-    bar(p, `§5Camera: ${CAM_NAMES[next]}`);
+    const f = getForm(p);
+    const k = kit(f);
+    safe(() => p.sendMessage(`§5[Morph] §d${f.name}§r §7- Health ${f.hp}, eye height ${f.eye.toFixed(2)} blocks\n§7Passive: §f${k.text}\n§7Ability: §f${AB[k.ab].label}\n§7Kill another mob to change shape.`));
     return;
   }
   const s = st(p);
@@ -801,7 +938,7 @@ function ensureCore(p) {
   if (!inv) return;
   for (let i = 0; i < inv.size; i++) if (inv.getItem(i)?.typeId === CORE_ID) return;
   const item = new ItemStack(CORE_ID, 1);
-  item.setLore(["§7Use: form ability", "§7Sneak + use: change camera"]);
+  item.setLore(["§7Use: form ability", "§7Sneak + use: form info"]);
   safe(() => inv.addItem(item));
 }
 
@@ -830,4 +967,7 @@ world.afterEvents.playerSpawn.subscribe((ev) => {
   }, 20);
 });
 
-world.afterEvents.playerLeave.subscribe((ev) => state.delete(ev.playerId));
+world.afterEvents.playerLeave.subscribe((ev) => {
+  removeBody(ev.playerId);
+  state.delete(ev.playerId);
+});

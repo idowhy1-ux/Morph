@@ -288,6 +288,9 @@
       },
       {
        "f0_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f0_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -309,6 +312,9 @@
       },
       {
        "f1_fpfit": "variable.is_first_person"
+      },
+      {
+       "f1_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -330,6 +336,9 @@
       },
       {
        "f2_fpfit": "variable.is_first_person"
+      },
+      {
+       "f2_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -354,6 +363,9 @@
       },
       {
        "f3_fpfit": "variable.is_first_person"
+      },
+      {
+       "f3_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -375,6 +387,9 @@
       },
       {
        "f4_fpfit": "variable.is_first_person"
+      },
+      {
+       "f4_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -399,6 +414,9 @@
       },
       {
        "f5_fpfit": "variable.is_first_person"
+      },
+      {
+       "f5_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -420,6 +438,9 @@
       },
       {
        "f6_fpfit": "variable.is_first_person"
+      },
+      {
+       "f6_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -435,6 +456,9 @@
       },
       {
        "f7_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f7_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -456,6 +480,9 @@
       },
       {
        "f8_fpfit": "variable.is_first_person"
+      },
+      {
+       "f8_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -477,6 +504,9 @@
       },
       {
        "f9_fpfit": "variable.is_first_person"
+      },
+      {
+       "f9_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -498,6 +528,9 @@
       },
       {
        "f10_fpfit": "variable.is_first_person"
+      },
+      {
+       "f10_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -519,6 +552,9 @@
       },
       {
        "f11_fpfit": "variable.is_first_person"
+      },
+      {
+       "f11_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -543,6 +579,9 @@
       },
       {
        "f12_fpfit": "variable.is_first_person"
+      },
+      {
+       "f12_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -567,6 +606,9 @@
       },
       {
        "f13_fpfit": "variable.is_first_person"
+      },
+      {
+       "f13_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -588,6 +630,9 @@
       },
       {
        "f14_fpfit": "variable.is_first_person"
+      },
+      {
+       "f14_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -609,6 +654,9 @@
       },
       {
        "f15_fpfit": "variable.is_first_person"
+      },
+      {
+       "f15_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -633,6 +681,9 @@
       },
       {
        "f16_fpfit": "variable.is_first_person"
+      },
+      {
+       "f16_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -654,6 +705,9 @@
       },
       {
        "f17_fpfit": "variable.is_first_person"
+      },
+      {
+       "f17_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -678,6 +732,9 @@
       },
       {
        "f18_fpfit": "variable.is_first_person"
+      },
+      {
+       "f18_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -702,6 +759,9 @@
       },
       {
        "f19_fpfit": "variable.is_first_person"
+      },
+      {
+       "f19_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -720,6 +780,9 @@
       },
       {
        "f20_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f20_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -747,6 +810,9 @@
       },
       {
        "f21_fpfit": "variable.is_first_person"
+      },
+      {
+       "f21_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -768,6 +834,9 @@
       },
       {
        "f22_fpfit": "variable.is_first_person"
+      },
+      {
+       "f22_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -792,6 +861,9 @@
       },
       {
        "f23_fpfit": "variable.is_first_person"
+      },
+      {
+       "f23_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -813,6 +885,9 @@
       },
       {
        "f24_fpfit": "variable.is_first_person"
+      },
+      {
+       "f24_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -834,6 +909,9 @@
       },
       {
        "f25_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f25_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -861,6 +939,9 @@
       },
       {
        "f26_fpfit": "variable.is_first_person"
+      },
+      {
+       "f26_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -882,6 +963,9 @@
       },
       {
        "f27_fpfit": "variable.is_first_person"
+      },
+      {
+       "f27_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -903,6 +987,9 @@
       },
       {
        "f28_fpfit": "variable.is_first_person"
+      },
+      {
+       "f28_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -924,6 +1011,9 @@
       },
       {
        "f29_fpfit": "variable.is_first_person"
+      },
+      {
+       "f29_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -942,6 +1032,9 @@
       },
       {
        "f30_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f30_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -969,6 +1062,9 @@
       },
       {
        "f31_fpfit": "variable.is_first_person"
+      },
+      {
+       "f31_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -990,6 +1086,9 @@
       },
       {
        "f32_fpfit": "variable.is_first_person"
+      },
+      {
+       "f32_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1011,6 +1110,9 @@
       },
       {
        "f33_fpfit": "variable.is_first_person"
+      },
+      {
+       "f33_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1035,6 +1137,9 @@
       },
       {
        "f34_fpfit": "variable.is_first_person"
+      },
+      {
+       "f34_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1053,6 +1158,9 @@
       },
       {
        "f35_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f35_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1077,6 +1185,9 @@
       },
       {
        "f36_fpfit": "variable.is_first_person"
+      },
+      {
+       "f36_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1101,6 +1212,9 @@
       },
       {
        "f37_fpfit": "variable.is_first_person"
+      },
+      {
+       "f37_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1119,6 +1233,9 @@
       },
       {
        "f38_fpfit": "variable.is_first_person"
+      },
+      {
+       "f38_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1143,6 +1260,9 @@
       },
       {
        "f39_fpfit": "variable.is_first_person"
+      },
+      {
+       "f39_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1167,6 +1287,9 @@
       },
       {
        "f40_fpfit": "variable.is_first_person"
+      },
+      {
+       "f40_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1188,6 +1311,9 @@
       },
       {
        "f41_fpfit": "variable.is_first_person"
+      },
+      {
+       "f41_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1209,6 +1335,9 @@
       },
       {
        "f42_fpfit": "variable.is_first_person"
+      },
+      {
+       "f42_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1230,6 +1359,9 @@
       },
       {
        "f43_fpfit": "variable.is_first_person"
+      },
+      {
+       "f43_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1248,6 +1380,9 @@
       },
       {
        "f44_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f44_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1272,6 +1407,9 @@
       },
       {
        "f45_fpfit": "variable.is_first_person"
+      },
+      {
+       "f45_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1296,6 +1434,9 @@
       },
       {
        "f46_fpfit": "variable.is_first_person"
+      },
+      {
+       "f46_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1320,6 +1461,9 @@
       },
       {
        "f47_fpfit": "variable.is_first_person"
+      },
+      {
+       "f47_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1338,6 +1482,9 @@
       },
       {
        "f48_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f48_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1356,6 +1503,9 @@
       },
       {
        "f49_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f49_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1371,6 +1521,9 @@
       },
       {
        "f50_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f50_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1392,6 +1545,9 @@
       },
       {
        "f51_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f51_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1413,6 +1569,9 @@
       },
       {
        "f52_fpfit": "variable.is_first_person"
+      },
+      {
+       "f52_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1437,6 +1596,9 @@
       },
       {
        "f53_fpfit": "variable.is_first_person"
+      },
+      {
+       "f53_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1458,6 +1620,9 @@
       },
       {
        "f54_fpfit": "variable.is_first_person"
+      },
+      {
+       "f54_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1479,6 +1644,9 @@
       },
       {
        "f55_fpfit": "variable.is_first_person"
+      },
+      {
+       "f55_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1500,6 +1668,9 @@
       },
       {
        "f56_fpfit": "variable.is_first_person"
+      },
+      {
+       "f56_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1518,6 +1689,9 @@
       },
       {
        "f57_fpfit": "variable.is_first_person"
+      },
+      {
+       "f57_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1539,6 +1713,9 @@
       },
       {
        "f58_fpfit": "variable.is_first_person"
+      },
+      {
+       "f58_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1554,6 +1731,9 @@
       },
       {
        "f59_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f59_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1578,6 +1758,9 @@
       },
       {
        "f60_fpfit": "variable.is_first_person"
+      },
+      {
+       "f60_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1596,6 +1779,9 @@
       },
       {
        "f61_fpfit": "variable.is_first_person"
+      },
+      {
+       "f61_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1617,6 +1803,9 @@
       },
       {
        "f62_fpfit": "variable.is_first_person"
+      },
+      {
+       "f62_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1641,6 +1830,9 @@
       },
       {
        "f63_fpfit": "variable.is_first_person"
+      },
+      {
+       "f63_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1665,6 +1857,9 @@
       },
       {
        "f64_fpfit": "variable.is_first_person"
+      },
+      {
+       "f64_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1686,6 +1881,9 @@
       },
       {
        "f65_fpfit": "variable.is_first_person"
+      },
+      {
+       "f65_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1701,6 +1899,9 @@
       },
       {
        "f66_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f66_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1722,6 +1923,9 @@
       },
       {
        "f67_fpfit": "variable.is_first_person"
+      },
+      {
+       "f67_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1740,6 +1944,9 @@
       },
       {
        "f68_fpfit": "variable.is_first_person"
+      },
+      {
+       "f68_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1761,6 +1968,9 @@
       },
       {
        "f69_fpfit": "variable.is_first_person"
+      },
+      {
+       "f69_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1785,6 +1995,9 @@
       },
       {
        "f70_fpfit": "variable.is_first_person"
+      },
+      {
+       "f70_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1806,6 +2019,9 @@
       },
       {
        "f71_fpfit": "variable.is_first_person"
+      },
+      {
+       "f71_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1830,6 +2046,9 @@
       },
       {
        "f72_fpfit": "variable.is_first_person"
+      },
+      {
+       "f72_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1851,6 +2070,9 @@
       },
       {
        "f73_fpfit": "variable.is_first_person"
+      },
+      {
+       "f73_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1875,6 +2097,9 @@
       },
       {
        "f74_fpfit": "variable.is_first_person"
+      },
+      {
+       "f74_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1899,6 +2124,9 @@
       },
       {
        "f75_fpfit": "variable.is_first_person"
+      },
+      {
+       "f75_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1920,6 +2148,9 @@
       },
       {
        "f76_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f76_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1944,6 +2175,9 @@
       },
       {
        "f77_fpfit": "variable.is_first_person"
+      },
+      {
+       "f77_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1965,6 +2199,9 @@
       },
       {
        "f78_fpfit": "variable.is_first_person"
+      },
+      {
+       "f78_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1989,6 +2226,9 @@
       },
       {
        "f79_fpfit": "variable.is_first_person"
+      },
+      {
+       "f79_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2007,6 +2247,9 @@
       },
       {
        "f80_fpfit": "variable.is_first_person"
+      },
+      {
+       "f80_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2022,6 +2265,9 @@
       },
       {
        "f81_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f81_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2046,6 +2292,9 @@
       },
       {
        "f82_fpfit": "variable.is_first_person"
+      },
+      {
+       "f82_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2067,6 +2316,9 @@
       },
       {
        "f83_fpfit": "variable.is_first_person"
+      },
+      {
+       "f83_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2085,6 +2337,9 @@
       },
       {
        "f84_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f84_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2109,6 +2364,9 @@
       },
       {
        "f85_fpfit": "variable.is_first_person"
+      },
+      {
+       "f85_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2130,6 +2388,9 @@
       },
       {
        "f86_fpfit": "variable.is_first_person"
+      },
+      {
+       "f86_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2148,6 +2409,9 @@
       },
       {
        "f87_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f87_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2166,6 +2430,9 @@
       },
       {
        "f88_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f88_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2181,6 +2448,9 @@
       },
       {
        "f89_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f89_rideoff": "!variable.is_first_person"
       }
      ],
      "transitions": [

@@ -30,18 +30,13 @@
      "default": 0.9375,
      "client_sync": true
     },
-    "morph:pov": {
-     "type": "int",
+    "morph:ride_off": {
+     "type": "float",
      "range": [
-      0,
-      2
+      -20.0,
+      20.0
      ],
-     "default": 0,
-     "client_sync": true
-    },
-    "morph:camera_on": {
-     "type": "bool",
-     "default": false,
+     "default": 0.0,
      "client_sync": true
     }
    }

@@ -8,8 +8,10 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.62,
   "height": 1.8,
+  "width": 0.6,
   "r": 0.9375,
-  "families": []
+  "families": [],
+  "size": "60_180"
  },
  {
   "id": 1,
@@ -19,11 +21,13 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 0.51,
   "height": 0.6,
+  "width": 0.35,
   "r": 1.0,
   "families": [
    "allay",
    "mob"
-  ]
+  ],
+  "size": "35_60"
  },
  {
   "id": 2,
@@ -33,11 +37,13 @@ export const FORM_DATA = [
   "hp": 12,
   "eye": 0.552,
   "height": 0.65,
+  "width": 0.7,
   "r": 1.0,
   "families": [
    "armadillo",
    "mob"
-  ]
+  ],
+  "size": "70_65"
  },
  {
   "id": 3,
@@ -47,12 +53,14 @@ export const FORM_DATA = [
   "hp": 14,
   "eye": 0.357,
   "height": 0.42,
+  "width": 0.75,
   "r": 1.0,
   "families": [
    "aquatic",
    "axolotl",
    "mob"
-  ]
+  ],
+  "size": "75_42"
  },
  {
   "id": 4,
@@ -62,11 +70,13 @@ export const FORM_DATA = [
   "hp": 6,
   "eye": 0.765,
   "height": 0.9,
+  "width": 0.5,
   "r": 1.0,
   "families": [
    "bat",
    "mob"
-  ]
+  ],
+  "size": "50_90"
  },
  {
   "id": 5,
@@ -76,12 +86,14 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 0.425,
   "height": 0.5,
+  "width": 0.55,
   "r": 1.0,
   "families": [
    "bee",
    "mob",
    "arthropod"
-  ]
+  ],
+  "size": "55_50"
  },
  {
   "id": 6,
@@ -91,12 +103,14 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.53,
   "height": 1.8,
+  "width": 0.5,
   "r": 1.0,
   "families": [
    "blaze",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "50_180"
  },
  {
   "id": 7,
@@ -106,6 +120,7 @@ export const FORM_DATA = [
   "hp": 16,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "bogged",
@@ -113,7 +128,8 @@ export const FORM_DATA = [
    "monster",
    "mob",
    "undead"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 8,
@@ -123,12 +139,14 @@ export const FORM_DATA = [
   "hp": 30,
   "eye": 1.504,
   "height": 1.77,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "breeze",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "60_177"
  },
  {
   "id": 9,
@@ -138,11 +156,13 @@ export const FORM_DATA = [
   "hp": 32,
   "eye": 2.019,
   "height": 2.375,
+  "width": 1.7,
   "r": 1.0,
   "families": [
    "camel",
    "mob"
-  ]
+  ],
+  "size": "170_238"
  },
  {
   "id": 10,
@@ -152,12 +172,14 @@ export const FORM_DATA = [
   "hp": 32,
   "eye": 2.019,
   "height": 2.375,
+  "width": 1.7,
   "r": 1.0,
   "families": [
    "camel_husk",
    "mob",
    "undead"
-  ]
+  ],
+  "size": "170_238"
  },
  {
   "id": 11,
@@ -167,11 +189,13 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 0.595,
   "height": 0.7,
+  "width": 0.6,
   "r": 0.8,
   "families": [
    "cat",
    "mob"
-  ]
+  ],
+  "size": "60_70"
  },
  {
   "id": 12,
@@ -181,13 +205,15 @@ export const FORM_DATA = [
   "hp": 12,
   "eye": 0.425,
   "height": 0.5,
+  "width": 0.7,
   "r": 0.7,
   "families": [
    "cavespider",
    "monster",
    "arthropod",
    "mob"
-  ]
+  ],
+  "size": "70_50"
  },
  {
   "id": 13,
@@ -197,11 +223,13 @@ export const FORM_DATA = [
   "hp": 4,
   "eye": 0.68,
   "height": 0.8,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "chicken",
    "mob"
-  ]
+  ],
+  "size": "60_80"
  },
  {
   "id": 14,
@@ -211,12 +239,14 @@ export const FORM_DATA = [
   "hp": 3,
   "eye": 0.255,
   "height": 0.3,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "aquatic",
    "cod",
    "fish"
-  ]
+  ],
+  "size": "60_30"
  },
  {
   "id": 15,
@@ -226,11 +256,13 @@ export const FORM_DATA = [
   "hp": 12,
   "eye": 0.833,
   "height": 0.98,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "copper_golem",
    "mob"
-  ]
+  ],
+  "size": "60_98"
  },
  {
   "id": 16,
@@ -240,11 +272,13 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 1.105,
   "height": 1.3,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "cow",
    "mob"
-  ]
+  ],
+  "size": "90_130"
  },
  {
   "id": 17,
@@ -254,12 +288,14 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.53,
   "height": 1.8,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "creeper",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "60_180"
  },
  {
   "id": 18,
@@ -269,12 +305,14 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 0.51,
   "height": 0.6,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "aquatic",
    "dolphin",
    "mob"
-  ]
+  ],
+  "size": "90_60"
  },
  {
   "id": 19,
@@ -284,11 +322,13 @@ export const FORM_DATA = [
   "hp": 30,
   "eye": 1.36,
   "height": 1.6,
+  "width": 1.4,
   "r": 0.87,
   "families": [
    "donkey",
    "mob"
-  ]
+  ],
+  "size": "140_160"
  },
  {
   "id": 20,
@@ -298,8 +338,10 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
-  "families": []
+  "families": [],
+  "size": "60_190"
  },
  {
   "id": 21,
@@ -309,13 +351,15 @@ export const FORM_DATA = [
   "hp": 80,
   "eye": 1.692,
   "height": 1.99,
+  "width": 1.99,
   "r": 2.35,
   "families": [
    "aquatic",
    "guardian_elder",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "199_199"
  },
  {
   "id": 22,
@@ -325,11 +369,13 @@ export const FORM_DATA = [
   "hp": 200,
   "eye": 3.4,
   "height": 4,
+  "width": 13,
   "r": 1.0,
   "families": [
    "dragon",
    "mob"
-  ]
+  ],
+  "size": "300_400"
  },
  {
   "id": 23,
@@ -339,12 +385,14 @@ export const FORM_DATA = [
   "hp": 40,
   "eye": 2.465,
   "height": 2.9,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "enderman",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "60_290"
  },
  {
   "id": 24,
@@ -354,13 +402,15 @@ export const FORM_DATA = [
   "hp": 8,
   "eye": 0.255,
   "height": 0.3,
+  "width": 0.4,
   "r": 1.0,
   "families": [
    "endermite",
    "arthropod",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "40_30"
  },
  {
   "id": 25,
@@ -370,13 +420,15 @@ export const FORM_DATA = [
   "hp": 24,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 0.9375,
   "families": [
    "evocation_illager",
    "monster",
    "illager",
    "mob"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 26,
@@ -386,11 +438,13 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 0.595,
   "height": 0.7,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "fox",
    "mob"
-  ]
+  ],
+  "size": "60_70"
  },
  {
   "id": 27,
@@ -400,11 +454,13 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 0.468,
   "height": 0.55,
+  "width": 0.5,
   "r": 1.0,
   "families": [
    "frog",
    "mob"
-  ]
+  ],
+  "size": "50_55"
  },
  {
   "id": 28,
@@ -414,12 +470,14 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 3.4,
   "height": 4,
+  "width": 4.02,
   "r": 1.0,
   "families": [
    "ghast",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "300_400"
  },
  {
   "id": 29,
@@ -429,12 +487,14 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 0.68,
   "height": 0.8,
+  "width": 0.8,
   "r": 1.0,
   "families": [
    "aquatic",
    "squid",
    "mob"
-  ]
+  ],
+  "size": "80_80"
  },
  {
   "id": 30,
@@ -444,11 +504,13 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 1.105,
   "height": 1.3,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "goat",
    "animal"
-  ]
+  ],
+  "size": "90_130"
  },
  {
   "id": 31,
@@ -458,13 +520,15 @@ export const FORM_DATA = [
   "hp": 30,
   "eye": 0.722,
   "height": 0.85,
+  "width": 0.85,
   "r": 1.0,
   "families": [
    "aquatic",
    "guardian",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "85_85"
  },
  {
   "id": 32,
@@ -474,11 +538,13 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 3.4,
   "height": 4.0,
+  "width": 4.0,
   "r": 1.0,
   "families": [
    "happy_ghast",
    "mob"
-  ]
+  ],
+  "size": "300_400"
  },
  {
   "id": 33,
@@ -488,8 +554,10 @@ export const FORM_DATA = [
   "hp": 40,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
-  "families": []
+  "families": [],
+  "size": "60_190"
  },
  {
   "id": 34,
@@ -499,11 +567,13 @@ export const FORM_DATA = [
   "hp": 30,
   "eye": 1.36,
   "height": 1.6,
+  "width": 1.4,
   "r": 1.0,
   "families": [
    "horse",
    "mob"
-  ]
+  ],
+  "size": "140_160"
  },
  {
   "id": 35,
@@ -513,6 +583,7 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "husk",
@@ -520,7 +591,8 @@ export const FORM_DATA = [
    "undead",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 36,
@@ -530,11 +602,13 @@ export const FORM_DATA = [
   "hp": 100,
   "eye": 2.465,
   "height": 2.9,
+  "width": 1.4,
   "r": 1.0,
   "families": [
    "irongolem",
    "mob"
-  ]
+  ],
+  "size": "140_290"
  },
  {
   "id": 37,
@@ -544,11 +618,13 @@ export const FORM_DATA = [
   "hp": 30,
   "eye": 1.59,
   "height": 1.87,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "llama",
    "mob"
-  ]
+  ],
+  "size": "90_187"
  },
  {
   "id": 38,
@@ -558,12 +634,14 @@ export const FORM_DATA = [
   "hp": 16,
   "eye": 1.768,
   "height": 2.08,
+  "width": 2.08,
   "r": 1.0,
   "families": [
    "magmacube",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "208_208"
  },
  {
   "id": 39,
@@ -573,11 +651,13 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 1.105,
   "height": 1.3,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "mushroomcow",
    "mob"
-  ]
+  ],
+  "size": "90_130"
  },
  {
   "id": 40,
@@ -587,11 +667,13 @@ export const FORM_DATA = [
   "hp": 30,
   "eye": 1.36,
   "height": 1.6,
+  "width": 1.4,
   "r": 0.92,
   "families": [
    "mule",
    "mob"
-  ]
+  ],
+  "size": "140_160"
  },
  {
   "id": 41,
@@ -601,12 +683,14 @@ export const FORM_DATA = [
   "hp": 15,
   "eye": 0.807,
   "height": 0.95,
+  "width": 0.875,
   "r": 1.0,
   "families": [
    "aquatic",
    "nautilus",
    "mob"
-  ]
+  ],
+  "size": "88_95"
  },
  {
   "id": 42,
@@ -616,11 +700,13 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 0.595,
   "height": 0.7,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "ocelot",
    "mob"
-  ]
+  ],
+  "size": "60_70"
  },
  {
   "id": 43,
@@ -630,10 +716,12 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.062,
   "height": 1.25,
+  "width": 1.3,
   "r": 1.0,
   "families": [
    "panda"
-  ]
+  ],
+  "size": "130_125"
  },
  {
   "id": 44,
@@ -643,6 +731,7 @@ export const FORM_DATA = [
   "hp": 16,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "parched",
@@ -650,7 +739,8 @@ export const FORM_DATA = [
    "monster",
    "mob",
    "undead"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 45,
@@ -660,8 +750,10 @@ export const FORM_DATA = [
   "hp": 6,
   "eye": 0.85,
   "height": 1,
+  "width": 0.5,
   "r": 1.0,
-  "families": []
+  "families": [],
+  "size": "50_100"
  },
  {
   "id": 46,
@@ -671,13 +763,15 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 0.425,
   "height": 0.5,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "phantom",
    "undead",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "90_50"
  },
  {
   "id": 47,
@@ -687,11 +781,13 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 0.765,
   "height": 0.9,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "pig",
    "mob"
-  ]
+  ],
+  "size": "90_90"
  },
  {
   "id": 48,
@@ -701,8 +797,10 @@ export const FORM_DATA = [
   "hp": 16,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
-  "families": []
+  "families": [],
+  "size": "60_190"
  },
  {
   "id": 49,
@@ -712,13 +810,15 @@ export const FORM_DATA = [
   "hp": 50,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "piglin",
    "adult_piglin",
    "piglin_brute",
    "monster"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 50,
@@ -728,13 +828,15 @@ export const FORM_DATA = [
   "hp": 24,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "pillager",
    "monster",
    "illager",
    "mob"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 51,
@@ -744,11 +846,13 @@ export const FORM_DATA = [
   "hp": 30,
   "eye": 1.19,
   "height": 1.4,
+  "width": 1.4,
   "r": 1.2,
   "families": [
    "polarbear",
    "mob"
-  ]
+  ],
+  "size": "140_140"
  },
  {
   "id": 52,
@@ -758,12 +862,14 @@ export const FORM_DATA = [
   "hp": 3,
   "eye": 0.68,
   "height": 0.8,
+  "width": 0.8,
   "r": 1.2,
   "families": [
    "aquatic",
    "pufferfish",
    "fish"
-  ]
+  ],
+  "size": "80_80"
  },
  {
   "id": 53,
@@ -773,11 +879,13 @@ export const FORM_DATA = [
   "hp": 3,
   "eye": 0.85,
   "height": 1.0,
+  "width": 0.81666666,
   "r": 1.0,
   "families": [
    "rabbit",
    "mob"
-  ]
+  ],
+  "size": "82_100"
  },
  {
   "id": 54,
@@ -787,12 +895,14 @@ export const FORM_DATA = [
   "hp": 100,
   "eye": 1.87,
   "height": 2.2,
+  "width": 1.95,
   "r": 1.0,
   "families": [
    "monster",
    "ravager",
    "mob"
-  ]
+  ],
+  "size": "195_220"
  },
  {
   "id": 55,
@@ -802,12 +912,14 @@ export const FORM_DATA = [
   "hp": 3,
   "eye": 0.425,
   "height": 0.5,
+  "width": 0.5,
   "r": 1.0,
   "families": [
    "aquatic",
    "salmon",
    "fish"
-  ]
+  ],
+  "size": "50_50"
  },
  {
   "id": 56,
@@ -817,11 +929,13 @@ export const FORM_DATA = [
   "hp": 8,
   "eye": 1.105,
   "height": 1.3,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "sheep",
    "mob"
-  ]
+  ],
+  "size": "90_130"
  },
  {
   "id": 57,
@@ -831,12 +945,14 @@ export const FORM_DATA = [
   "hp": 30,
   "eye": 1.53,
   "height": 1.8,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "shulker",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "60_180"
  },
  {
   "id": 58,
@@ -846,13 +962,15 @@ export const FORM_DATA = [
   "hp": 8,
   "eye": 0.255,
   "height": 0.3,
+  "width": 0.4,
   "r": 1.0,
   "families": [
    "silverfish",
    "monster",
    "mob",
    "arthropod"
-  ]
+  ],
+  "size": "40_30"
  },
  {
   "id": 59,
@@ -862,13 +980,15 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "skeleton",
    "undead",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 60,
@@ -878,12 +998,14 @@ export const FORM_DATA = [
   "hp": 15,
   "eye": 1.36,
   "height": 1.6,
+  "width": 1.4,
   "r": 1.0,
   "families": [
    "skeletonhorse",
    "undead",
    "mob"
-  ]
+  ],
+  "size": "140_160"
  },
  {
   "id": 61,
@@ -893,12 +1015,14 @@ export const FORM_DATA = [
   "hp": 16,
   "eye": 1.768,
   "height": 2.08,
+  "width": 2.08,
   "r": 1.0,
   "families": [
    "slime",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "208_208"
  },
  {
   "id": 62,
@@ -908,11 +1032,13 @@ export const FORM_DATA = [
   "hp": 14,
   "eye": 1.488,
   "height": 1.75,
+  "width": 1.9,
   "r": 1.0,
   "families": [
    "sniffer",
    "mob"
-  ]
+  ],
+  "size": "190_175"
  },
  {
   "id": 63,
@@ -922,11 +1048,13 @@ export const FORM_DATA = [
   "hp": 4,
   "eye": 1.53,
   "height": 1.8,
+  "width": 0.4,
   "r": 1.0,
   "families": [
    "snowgolem",
    "mob"
-  ]
+  ],
+  "size": "40_180"
  },
  {
   "id": 64,
@@ -936,13 +1064,15 @@ export const FORM_DATA = [
   "hp": 16,
   "eye": 0.765,
   "height": 0.9,
+  "width": 1.4,
   "r": 1.0,
   "families": [
    "spider",
    "monster",
    "mob",
    "arthropod"
-  ]
+  ],
+  "size": "140_90"
  },
  {
   "id": 65,
@@ -952,12 +1082,14 @@ export const FORM_DATA = [
   "hp": 10,
   "eye": 0.68,
   "height": 0.8,
+  "width": 0.8,
   "r": 1.0,
   "families": [
    "aquatic",
    "squid",
    "mob"
-  ]
+  ],
+  "size": "80_80"
  },
  {
   "id": 66,
@@ -967,6 +1099,7 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "stray",
@@ -974,7 +1107,8 @@ export const FORM_DATA = [
    "monster",
    "mob",
    "undead"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 67,
@@ -984,11 +1118,13 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.445,
   "height": 1.7,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "strider",
    "mob"
-  ]
+  ],
+  "size": "90_170"
  },
  {
   "id": 68,
@@ -998,12 +1134,14 @@ export const FORM_DATA = [
   "hp": 4,
   "eye": 0.833,
   "height": 0.98,
+  "width": 0.98,
   "r": 1.0,
   "families": [
    "sulfur_cube",
    "animal",
    "mob"
-  ]
+  ],
+  "size": "98_98"
  },
  {
   "id": 69,
@@ -1013,12 +1151,14 @@ export const FORM_DATA = [
   "hp": 6,
   "eye": 0.51,
   "height": 0.6,
+  "width": 0.8,
   "r": 1.0,
   "families": [
    "aquatic",
    "tadpole",
    "mob"
-  ]
+  ],
+  "size": "80_60"
  },
  {
   "id": 70,
@@ -1028,12 +1168,14 @@ export const FORM_DATA = [
   "hp": 30,
   "eye": 1.59,
   "height": 1.87,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "trader_llama",
    "llama",
    "mob"
-  ]
+  ],
+  "size": "90_187"
  },
  {
   "id": 71,
@@ -1043,12 +1185,14 @@ export const FORM_DATA = [
   "hp": 3,
   "eye": 0.34,
   "height": 0.4,
+  "width": 0.4,
   "r": 1.3,
   "families": [
    "aquatic",
    "tropicalfish",
    "fish"
-  ]
+  ],
+  "size": "40_40"
  },
  {
   "id": 72,
@@ -1058,8 +1202,10 @@ export const FORM_DATA = [
   "hp": 30,
   "eye": 0.34,
   "height": 0.4,
+  "width": 1.2,
   "r": 1.0,
-  "families": []
+  "families": [],
+  "size": "120_40"
  },
  {
   "id": 73,
@@ -1069,12 +1215,14 @@ export const FORM_DATA = [
   "hp": 14,
   "eye": 0.68,
   "height": 0.8,
+  "width": 0.4,
   "r": 1.0,
   "families": [
    "vex",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "40_80"
  },
  {
   "id": 74,
@@ -1084,11 +1232,13 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 0.9375,
   "families": [
    "villager",
    "mob"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 75,
@@ -1098,11 +1248,13 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 0.9375,
   "families": [
    "villager",
    "mob"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 76,
@@ -1112,13 +1264,15 @@ export const FORM_DATA = [
   "hp": 24,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 0.9375,
   "families": [
    "vindicator",
    "monster",
    "illager",
    "mob"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 77,
@@ -1128,11 +1282,13 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 0.9375,
   "families": [
    "wandering_trader",
    "mob"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 78,
@@ -1142,12 +1298,14 @@ export const FORM_DATA = [
   "hp": 500,
   "eye": 2.465,
   "height": 2.9,
+  "width": 0.9,
   "r": 1.0,
   "families": [
    "warden",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "90_290"
  },
  {
   "id": 79,
@@ -1157,12 +1315,14 @@ export const FORM_DATA = [
   "hp": 26,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 0.9375,
   "families": [
    "witch",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 80,
@@ -1172,6 +1332,7 @@ export const FORM_DATA = [
   "hp": 600,
   "eye": 2.55,
   "height": 3,
+  "width": 1,
   "r": 1.0,
   "families": [
    "wither",
@@ -1179,7 +1340,8 @@ export const FORM_DATA = [
    "monster",
    "undead",
    "mob"
-  ]
+  ],
+  "size": "100_300"
  },
  {
   "id": 81,
@@ -1189,6 +1351,7 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.708,
   "height": 2.01,
+  "width": 0.72,
   "r": 1.2,
   "families": [
    "wither",
@@ -1196,7 +1359,8 @@ export const FORM_DATA = [
    "undead",
    "skeleton",
    "mob"
-  ]
+  ],
+  "size": "72_200"
  },
  {
   "id": 82,
@@ -1206,11 +1370,13 @@ export const FORM_DATA = [
   "hp": 8,
   "eye": 0.68,
   "height": 0.8,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "wolf",
    "mob"
-  ]
+  ],
+  "size": "60_80"
  },
  {
   "id": 83,
@@ -1220,8 +1386,10 @@ export const FORM_DATA = [
   "hp": 40,
   "eye": 1.19,
   "height": 1.4,
+  "width": 1.4,
   "r": 1.0,
-  "families": []
+  "families": [],
+  "size": "140_140"
  },
  {
   "id": 84,
@@ -1231,13 +1399,15 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
   "families": [
    "zombie",
    "undead",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "60_190"
  },
  {
   "id": 85,
@@ -1247,12 +1417,14 @@ export const FORM_DATA = [
   "hp": 25,
   "eye": 1.36,
   "height": 1.6,
+  "width": 1.4,
   "r": 1.0,
   "families": [
    "zombiehorse",
    "undead",
    "mob"
-  ]
+  ],
+  "size": "140_160"
  },
  {
   "id": 86,
@@ -1262,6 +1434,7 @@ export const FORM_DATA = [
   "hp": 15,
   "eye": 0.807,
   "height": 0.95,
+  "width": 0.875,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -1269,7 +1442,8 @@ export const FORM_DATA = [
    "undead",
    "monster",
    "mob"
-  ]
+  ],
+  "size": "88_95"
  },
  {
   "id": 87,
@@ -1279,8 +1453,10 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
-  "families": []
+  "families": [],
+  "size": "60_190"
  },
  {
   "id": 88,
@@ -1290,8 +1466,10 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
-  "families": []
+  "families": [],
+  "size": "60_190"
  },
  {
   "id": 89,
@@ -1301,7 +1479,10 @@ export const FORM_DATA = [
   "hp": 20,
   "eye": 1.615,
   "height": 1.9,
+  "width": 0.6,
   "r": 1.0,
-  "families": []
+  "families": [],
+  "size": "60_190"
  }
 ];
+export const SEAT = { min: -2.5, step: 0.05, count: 241 };
