@@ -1,0 +1,6181 @@
+{
+ "format_version": "1.12.0",
+ "minecraft:geometry": [
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.allay",
+    "texture_width": 32,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_right_arm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -5.75,
+        18.5,
+        -1.0
+       ],
+       "size": [
+        1,
+        4,
+        2
+       ],
+       "uv": [
+        23,
+        0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.armadillo",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_right_front_leg",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        19.0,
+        -1.0
+       ],
+       "size": [
+        2,
+        3,
+        2
+       ],
+       "uv": [
+        51,
+        43
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.axolotl",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_right_arm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "rotation": [
+      0,
+      -90,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        17.0,
+        0.0
+       ],
+       "size": [
+        3,
+        5,
+        0
+       ],
+       "uv": [
+        2,
+        13
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.bat",
+    "texture_width": 32,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      -90
+     ]
+    },
+    {
+     "name": "fp_rightWing",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        17.0,
+        0.0
+       ],
+       "size": [
+        2,
+        7,
+        0
+       ],
+       "uv": [
+        12,
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "fp_rightWingTip",
+     "pivot": [
+      -7.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_rightWing",
+     "cubes": [
+      {
+       "origin": [
+        -13.0,
+        16.0,
+        0.0
+       ],
+       "size": [
+        6,
+        8,
+        0
+       ],
+       "uv": [
+        16,
+        0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.bee",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      -90
+     ]
+    },
+    {
+     "name": "fp_leg_front",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -10.0,
+        20.0,
+        0.0
+       ],
+       "size": [
+        7,
+        2,
+        0
+       ],
+       "uv": [
+        26,
+        1
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.bogged",
+    "texture_width": 64,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        12.0,
+        -1.0
+       ],
+       "size": [
+        2,
+        12,
+        2
+       ],
+       "uv": [
+        40,
+        16
+       ]
+      }
+     ]
+    },
+    {
+     "name": "fp_rightItem",
+     "pivot": [
+      -6.0,
+      15.0,
+      1.0
+     ],
+     "parent": "fp_rightArm"
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.breeze",
+    "texture_width": 32,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_rods",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        17.0,
+        -6.0
+       ],
+       "size": [
+        2,
+        8,
+        2
+       ],
+       "pivot": [
+        -5.0,
+        25.0,
+        -3.0
+       ],
+       "rotation": [
+        22.5,
+        0,
+        0
+       ],
+       "uv": [
+        0,
+        17
+       ]
+      },
+      {
+       "origin": [
+        -8.5981,
+        17.0,
+        -1.5
+       ],
+       "size": [
+        2,
+        8,
+        2
+       ],
+       "pivot": [
+        -7.5981,
+        25.0,
+        1.5
+       ],
+       "rotation": [
+        -157.5,
+        60,
+        180
+       ],
+       "uv": [
+        0,
+        17
+       ]
+      },
+      {
+       "origin": [
+        -3.4019,
+        17.0,
+        -1.5
+       ],
+       "size": [
+        2,
+        8,
+        2
+       ],
+       "pivot": [
+        -2.4019,
+        25.0,
+        1.5
+       ],
+       "rotation": [
+        -157.5,
+        -60,
+        180
+       ],
+       "uv": [
+        0,
+        17
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.camel",
+    "texture_width": 128,
+    "texture_height": 128,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_right_front_leg",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.5,
+        -1.0,
+        -2.5
+       ],
+       "size": [
+        5,
+        21,
+        5
+       ],
+       "uv": [
+        0,
+        26
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.camel_husk",
+    "texture_width": 128,
+    "texture_height": 128,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_right_front_leg",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.5,
+        -1.0,
+        -2.5
+       ],
+       "size": [
+        5,
+        21,
+        5
+       ],
+       "uv": [
+        0,
+        26
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.cat",
+    "texture_width": 64,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_frontLegR",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        12.2,
+        -1.0
+       ],
+       "size": [
+        2,
+        10,
+        2
+       ],
+       "uv": [
+        40,
+        0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.chicken",
+    "texture_width": 64.0,
+    "texture_height": 32.0,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg0",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        17.0,
+        -3.0
+       ],
+       "size": [
+        3.0,
+        5.0,
+        3.0
+       ],
+       "uv": [
+        26.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.copper_golem",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_right_arm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -8.0,
+        13.0,
+        -2.0
+       ],
+       "size": [
+        3,
+        10,
+        4
+       ],
+       "uv": [
+        36,
+        16
+       ]
+      }
+     ]
+    },
+    {
+     "name": "fp_rightItem",
+     "pivot": [
+      -6.0,
+      14.6,
+      -1.0
+     ],
+     "parent": "fp_right_arm"
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.cow",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg2",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        10.0,
+        -1.0
+       ],
+       "size": [
+        4,
+        12,
+        4
+       ],
+       "uv": [
+        0,
+        16
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.dolphin",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      -90
+     ]
+    },
+    {
+     "name": "fp_right_fin",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "rotation": [
+      0,
+      25,
+      -20
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -13.0,
+        22.0,
+        -1.5
+       ],
+       "size": [
+        8,
+        1,
+        4
+       ],
+       "uv": [
+        40,
+        6
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.donkey",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_LegFR",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        11.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        11,
+        4
+       ],
+       "uv": [
+        48,
+        21
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.drowned",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -8.0,
+        12.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        12,
+        4
+       ],
+       "uv": [
+        0,
+        16
+       ]
+      }
+     ]
+    },
+    {
+     "name": "fp_rightItem",
+     "pivot": [
+      -6.0,
+      15.0,
+      1.0
+     ],
+     "parent": "fp_rightArm"
+    },
+    {
+     "name": "fp_rightSleeve",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_rightArm",
+     "cubes": [
+      {
+       "origin": [
+        -8.0,
+        12.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        12,
+        4
+       ],
+       "inflate": 0.25,
+       "uv": [
+        48,
+        48
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.ender_dragon",
+    "texture_width": 256,
+    "texture_height": 256,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_frontlegtip",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -8.0,
+        -1.0,
+        -3.0
+       ],
+       "size": [
+        6.0,
+        24.0,
+        6.0
+       ],
+       "uv": [
+        226,
+        138
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.fox",
+    "texture_width": 64,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg2",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -5.005,
+        16.0,
+        -1.0
+       ],
+       "size": [
+        2,
+        6,
+        2
+       ],
+       "uv": [
+        14,
+        24
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.frog",
+    "texture_width": 48,
+    "texture_height": 48,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      90
+     ]
+    },
+    {
+     "name": "fp_right_arm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        19.0,
+        -1.0
+       ],
+       "size": [
+        2,
+        3,
+        3
+       ],
+       "uv": [
+        0,
+        38
+       ]
+      },
+      {
+       "origin": [
+        -9.0,
+        18.99,
+        -5.0
+       ],
+       "size": [
+        8,
+        0,
+        8
+       ],
+       "uv": [
+        2,
+        40
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.ghast",
+    "texture_width": 64,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_tentacles_3",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -9.5,
+        -18.5,
+        -4.5
+       ],
+       "size": [
+        9,
+        40.5,
+        9
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          2,
+          2
+         ],
+         "uv_size": [
+          2,
+          9
+         ]
+        },
+        "east": {
+         "uv": [
+          0,
+          2
+         ],
+         "uv_size": [
+          2,
+          9
+         ]
+        },
+        "south": {
+         "uv": [
+          6,
+          2
+         ],
+         "uv_size": [
+          2,
+          9
+         ]
+        },
+        "west": {
+         "uv": [
+          4,
+          2
+         ],
+         "uv_size": [
+          2,
+          9
+         ]
+        },
+        "up": {
+         "uv": [
+          2,
+          0
+         ],
+         "uv_size": [
+          2,
+          2
+         ]
+        },
+        "down": {
+         "uv": [
+          4,
+          2
+         ],
+         "uv_size": [
+          2,
+          -2
+         ]
+        }
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.glow_squid",
+    "texture_width": 64,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_tentacle5",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "rotation": [
+      0,
+      -90,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        4.0,
+        -1.0
+       ],
+       "size": [
+        2,
+        18,
+        2
+       ],
+       "uv": [
+        48,
+        0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.goat",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_right_front_leg",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -5.0,
+        12.0,
+        0.0
+       ],
+       "size": [
+        3,
+        10,
+        3
+       ],
+       "uv": [
+        49,
+        2
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.happy_ghast",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_tentacles_3",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -9.0,
+        2.0,
+        -4.0
+       ],
+       "size": [
+        8,
+        20,
+        8
+       ],
+       "uv": {
+        "north": {
+         "uv": [
+          2,
+          2
+         ],
+         "uv_size": [
+          2,
+          5
+         ]
+        },
+        "east": {
+         "uv": [
+          0,
+          2
+         ],
+         "uv_size": [
+          2,
+          5
+         ]
+        },
+        "south": {
+         "uv": [
+          6,
+          2
+         ],
+         "uv_size": [
+          2,
+          5
+         ]
+        },
+        "west": {
+         "uv": [
+          4,
+          2
+         ],
+         "uv_size": [
+          2,
+          5
+         ]
+        },
+        "up": {
+         "uv": [
+          2,
+          0
+         ],
+         "uv_size": [
+          2,
+          2
+         ]
+        },
+        "down": {
+         "uv": [
+          4,
+          2
+         ],
+         "uv_size": [
+          2,
+          -2
+         ]
+        }
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.hoglin",
+    "texture_width": 128,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg_front_right",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        10.0,
+        -3.0
+       ],
+       "size": [
+        6,
+        14,
+        6
+       ],
+       "uv": [
+        66,
+        42
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.horse",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_LegFR",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        11.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        11,
+        4
+       ],
+       "uv": [
+        48,
+        21
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.iron_golem",
+    "texture_width": 128,
+    "texture_height": 128,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_arm0",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -18.0,
+        -5.5,
+        -3.0
+       ],
+       "size": [
+        4,
+        30,
+        6
+       ],
+       "uv": [
+        60,
+        21
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.llama",
+    "texture_width": 128,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg2",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        8.0,
+        -2.0
+       ],
+       "size": [
+        4.0,
+        14.0,
+        4.0
+       ],
+       "uv": [
+        29,
+        29
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.mooshroom",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg2",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        10.0,
+        -1.0
+       ],
+       "size": [
+        4,
+        12,
+        4
+       ],
+       "uv": [
+        0,
+        16
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.mule",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_LegFR",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        11.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        11,
+        4
+       ],
+       "uv": [
+        48,
+        21
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.nautilus",
+    "texture_width": 128,
+    "texture_height": 128,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_head",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -12.0,
+        22.0,
+        -7.0
+       ],
+       "size": [
+        14,
+        10,
+        16
+       ],
+       "uv": [
+        0,
+        0
+       ]
+      },
+      {
+       "origin": [
+        -12.0,
+        14.0,
+        -7.0
+       ],
+       "size": [
+        14,
+        8,
+        20
+       ],
+       "uv": [
+        0,
+        26
+       ]
+      },
+      {
+       "origin": [
+        -12.0,
+        14.0,
+        6.0
+       ],
+       "size": [
+        14,
+        8,
+        0
+       ],
+       "uv": [
+        48,
+        26
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.ocelot",
+    "texture_width": 64,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_frontLegR",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        12.2,
+        -1.0
+       ],
+       "size": [
+        2.0,
+        10.0,
+        2.0
+       ],
+       "uv": [
+        40.0,
+        0.0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.parched",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        12.0,
+        -1.0
+       ],
+       "size": [
+        2,
+        12,
+        2
+       ],
+       "uv": [
+        40,
+        16
+       ]
+      },
+      {
+       "origin": [
+        -6.55,
+        12.025,
+        -1.5
+       ],
+       "size": [
+        3,
+        12,
+        3
+       ],
+       "uv": [
+        42,
+        33
+       ]
+      }
+     ]
+    },
+    {
+     "name": "fp_rightItem",
+     "pivot": [
+      -6.0,
+      15.0,
+      1.0
+     ],
+     "parent": "fp_rightArm"
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.parrot",
+    "texture_width": 32,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg1",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        20.5,
+        -1.0
+       ],
+       "size": [
+        1.0,
+        2.0,
+        1.0
+       ],
+       "uv": [
+        14,
+        18
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.pig",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg2",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        16.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        6,
+        4
+       ],
+       "uv": [
+        0,
+        16
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.piglin",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_rightarm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -8.0,
+        12.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        12,
+        4
+       ],
+       "uv": [
+        40,
+        16
+       ]
+      },
+      {
+       "origin": [
+        -8.0,
+        12.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        12,
+        4
+       ],
+       "uv": [
+        40,
+        32
+       ],
+       "inflate": 0.25
+      }
+     ]
+    },
+    {
+     "name": "fp_rightItem",
+     "pivot": [
+      -6.0,
+      15.0,
+      1.0
+     ],
+     "parent": "fp_rightarm"
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.piglin_brute",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_rightarm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -8.0,
+        12.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        12,
+        4
+       ],
+       "uv": [
+        40,
+        16
+       ]
+      },
+      {
+       "origin": [
+        -8.0,
+        12.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        12,
+        4
+       ],
+       "uv": [
+        40,
+        32
+       ],
+       "inflate": 0.25
+      }
+     ]
+    },
+    {
+     "name": "fp_rightItem",
+     "pivot": [
+      -6.0,
+      15.0,
+      1.0
+     ],
+     "parent": "fp_rightarm"
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.polar_bear",
+    "texture_width": 128,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg2",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        12.0,
+        -2.0
+       ],
+       "size": [
+        4.0,
+        10.0,
+        6.0
+       ],
+       "uv": [
+        50,
+        40
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.rabbit",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      90
+     ]
+    },
+    {
+     "name": "fp_frontlegs",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount"
+    },
+    {
+     "name": "fp_leftFrontLeg",
+     "pivot": [
+      -3.0,
+      20.0761,
+      0.4827
+     ],
+     "parent": "fp_frontlegs",
+     "rotation": [
+      22.5,
+      0,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -4.0,
+        17.0761,
+        -0.5173
+       ],
+       "size": [
+        2,
+        4,
+        2
+       ],
+       "uv": [
+        44,
+        18
+       ]
+      }
+     ]
+    },
+    {
+     "name": "fp_rightFrontLeg",
+     "pivot": [
+      -7.0,
+      20.0761,
+      0.3827
+     ],
+     "parent": "fp_frontlegs",
+     "rotation": [
+      22.5,
+      0,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -7.9,
+        17.0761,
+        -0.5173
+       ],
+       "size": [
+        2,
+        4,
+        2
+       ],
+       "uv": [
+        36,
+        18
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.skeleton_horse",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_LegFR",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        11.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        11,
+        4
+       ],
+       "uv": [
+        48,
+        21
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.sniffer",
+    "texture_width": 192,
+    "texture_height": 192,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_right_front_leg",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -8.5,
+        13.0,
+        -4.0
+       ],
+       "size": [
+        7,
+        10,
+        8
+       ],
+       "uv": [
+        32,
+        87
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.snow_golem",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      90
+     ]
+    },
+    {
+     "name": "fp_arm1",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -4.0,
+        24.0,
+        -1.0
+       ],
+       "size": [
+        12,
+        2,
+        2
+       ],
+       "uv": [
+        32,
+        0
+       ],
+       "inflate": -0.5
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.squid",
+    "texture_width": 64,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_tentacle5",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "rotation": [
+      0,
+      -90,
+      0
+     ],
+     "cubes": [
+      {
+       "origin": [
+        -6.0,
+        4.0,
+        -1.0
+       ],
+       "size": [
+        2,
+        18,
+        2
+       ],
+       "uv": [
+        48,
+        0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.strider",
+    "texture_width": 64,
+    "texture_height": 128,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_right_leg",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        6.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        16,
+        4
+       ],
+       "uv": [
+        0,
+        32
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.sulfur_cube",
+    "texture_width": 128,
+    "texture_height": 128,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      90
+     ]
+    },
+    {
+     "name": "fp_sulfur_cube",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -14.0,
+        22.0,
+        -9.0
+       ],
+       "size": [
+        18,
+        18,
+        18
+       ],
+       "uv": [
+        0,
+        0
+       ]
+      },
+      {
+       "origin": [
+        -13.0,
+        23.0,
+        -8.0
+       ],
+       "size": [
+        16,
+        16,
+        16
+       ],
+       "inflate": -0.05,
+       "uv": [
+        0,
+        36
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.tadpole",
+    "texture_width": 16,
+    "texture_height": 16,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_tail",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -5.0,
+        25.0,
+        -1.5
+       ],
+       "size": [
+        0,
+        2,
+        7
+       ],
+       "uv": [
+        0,
+        0
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.trader_llama",
+    "texture_width": 128,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg2",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        8.0,
+        -2.0
+       ],
+       "size": [
+        4.0,
+        14.0,
+        4.0
+       ],
+       "uv": [
+        29,
+        29
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.vex",
+    "texture_width": 32,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -6.25,
+        18.5,
+        -1.0
+       ],
+       "size": [
+        2,
+        4,
+        2
+       ],
+       "inflate": -0.1,
+       "uv": [
+        23,
+        0
+       ]
+      }
+     ]
+    },
+    {
+     "name": "fp_rightItem",
+     "pivot": [
+      -5.25,
+      19.25,
+      0.0
+     ],
+     "parent": "fp_rightArm"
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.villager_v2",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      90
+     ]
+    },
+    {
+     "name": "fp_arms",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -9.0,
+        16.0,
+        -2.0
+       ],
+       "size": [
+        8,
+        4,
+        4
+       ],
+       "uv": [
+        40,
+        38
+       ]
+      },
+      {
+       "origin": [
+        -13.0,
+        16.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        8,
+        4
+       ],
+       "uv": [
+        44,
+        22
+       ]
+      },
+      {
+       "origin": [
+        -1.0,
+        16.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        8,
+        4
+       ],
+       "uv": [
+        44,
+        22
+       ],
+       "mirror": true
+      }
+     ]
+    },
+    {
+     "name": "fp_held_item",
+     "pivot": [
+      -5.0,
+      0.0,
+      0.0
+     ],
+     "parent": "fp_arms"
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.wandering_trader",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      90
+     ]
+    },
+    {
+     "name": "fp_arms",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -9.0,
+        16.0,
+        -2.0
+       ],
+       "size": [
+        8,
+        4,
+        4
+       ],
+       "uv": [
+        40,
+        38
+       ]
+      },
+      {
+       "origin": [
+        -13.0,
+        16.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        8,
+        4
+       ],
+       "uv": [
+        44,
+        22
+       ]
+      },
+      {
+       "origin": [
+        -1.0,
+        16.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        8,
+        4
+       ],
+       "uv": [
+        44,
+        22
+       ],
+       "mirror": true
+      }
+     ]
+    },
+    {
+     "name": "fp_held_item",
+     "pivot": [
+      -5.0,
+      0.0,
+      0.0
+     ],
+     "parent": "fp_arms"
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.warden",
+    "texture_width": 128,
+    "texture_height": 128,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_right_arm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -9.0,
+        -6.0,
+        -4.0
+       ],
+       "size": [
+        8,
+        28,
+        8
+       ],
+       "uv": [
+        44,
+        50
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.wolf",
+    "texture_width": 64,
+    "texture_height": 32,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg2",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -5.0,
+        14.0,
+        -1.0
+       ],
+       "size": [
+        2,
+        8,
+        2
+       ],
+       "uv": [
+        0,
+        18
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.zoglin",
+    "texture_width": 128,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_leg_front_right",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        10.0,
+        -3.0
+       ],
+       "size": [
+        6,
+        14,
+        6
+       ],
+       "uv": [
+        66,
+        42
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.zombie_horse",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_LegFR",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -7.0,
+        11.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        11,
+        4
+       ],
+       "uv": [
+        48,
+        21
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.zombie_nautilus",
+    "texture_width": 128,
+    "texture_height": 128,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      -90,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_head",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -12.0,
+        22.0,
+        -7.0
+       ],
+       "size": [
+        14,
+        10,
+        16
+       ],
+       "uv": [
+        0,
+        0
+       ]
+      },
+      {
+       "origin": [
+        -12.0,
+        14.0,
+        -7.0
+       ],
+       "size": [
+        14,
+        8,
+        20
+       ],
+       "uv": [
+        0,
+        26
+       ]
+      },
+      {
+       "origin": [
+        -12.0,
+        14.0,
+        6.0
+       ],
+       "size": [
+        14,
+        8,
+        0
+       ],
+       "uv": [
+        48,
+        26
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "description": {
+    "identifier": "geometry.morph.fp.zombie_pigman",
+    "texture_width": 64,
+    "texture_height": 64,
+    "visible_bounds_width": 2,
+    "visible_bounds_height": 3,
+    "visible_bounds_offset": [
+     0,
+     1.5,
+     0
+    ]
+   },
+   "bones": [
+    {
+     "name": "root",
+     "pivot": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "waist",
+     "parent": "root",
+     "pivot": [
+      0,
+      12,
+      0
+     ]
+    },
+    {
+     "name": "body",
+     "parent": "waist",
+     "pivot": [
+      0,
+      24,
+      0
+     ]
+    },
+    {
+     "name": "rightArm",
+     "parent": "body",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ]
+    },
+    {
+     "name": "rightItem",
+     "parent": "rightArm",
+     "pivot": [
+      -6,
+      15,
+      1
+     ]
+    },
+    {
+     "name": "fp_mount",
+     "parent": "rightArm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "rotation": [
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "name": "fp_rightarm",
+     "pivot": [
+      -5.0,
+      22.0,
+      0.0
+     ],
+     "parent": "fp_mount",
+     "cubes": [
+      {
+       "origin": [
+        -8.0,
+        12.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        12,
+        4
+       ],
+       "uv": [
+        40,
+        16
+       ]
+      },
+      {
+       "origin": [
+        -8.0,
+        12.0,
+        -2.0
+       ],
+       "size": [
+        4,
+        12,
+        4
+       ],
+       "uv": [
+        40,
+        32
+       ],
+       "inflate": 0.25
+      }
+     ]
+    },
+    {
+     "name": "fp_rightItem",
+     "pivot": [
+      -6.0,
+      15.0,
+      1.0
+     ],
+     "parent": "fp_rightarm"
+    }
+   ]
+  }
+ ]
+}

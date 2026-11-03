@@ -1,0 +1,2195 @@
+{
+ "format_version": "1.10.0",
+ "animation_controllers": {
+  "controller.animation.morph.forms": {
+   "initial_state": "router",
+   "states": {
+    "router": {
+     "transitions": [
+      {
+       "form_0": "variable.morph_form == 0"
+      },
+      {
+       "form_1": "variable.morph_form == 1"
+      },
+      {
+       "form_2": "variable.morph_form == 2"
+      },
+      {
+       "form_3": "variable.morph_form == 3"
+      },
+      {
+       "form_4": "variable.morph_form == 4"
+      },
+      {
+       "form_5": "variable.morph_form == 5"
+      },
+      {
+       "form_6": "variable.morph_form == 6"
+      },
+      {
+       "form_7": "variable.morph_form == 7"
+      },
+      {
+       "form_8": "variable.morph_form == 8"
+      },
+      {
+       "form_9": "variable.morph_form == 9"
+      },
+      {
+       "form_10": "variable.morph_form == 10"
+      },
+      {
+       "form_11": "variable.morph_form == 11"
+      },
+      {
+       "form_12": "variable.morph_form == 12"
+      },
+      {
+       "form_13": "variable.morph_form == 13"
+      },
+      {
+       "form_14": "variable.morph_form == 14"
+      },
+      {
+       "form_15": "variable.morph_form == 15"
+      },
+      {
+       "form_16": "variable.morph_form == 16"
+      },
+      {
+       "form_17": "variable.morph_form == 17"
+      },
+      {
+       "form_18": "variable.morph_form == 18"
+      },
+      {
+       "form_19": "variable.morph_form == 19"
+      },
+      {
+       "form_20": "variable.morph_form == 20"
+      },
+      {
+       "form_21": "variable.morph_form == 21"
+      },
+      {
+       "form_22": "variable.morph_form == 22"
+      },
+      {
+       "form_23": "variable.morph_form == 23"
+      },
+      {
+       "form_24": "variable.morph_form == 24"
+      },
+      {
+       "form_25": "variable.morph_form == 25"
+      },
+      {
+       "form_26": "variable.morph_form == 26"
+      },
+      {
+       "form_27": "variable.morph_form == 27"
+      },
+      {
+       "form_28": "variable.morph_form == 28"
+      },
+      {
+       "form_29": "variable.morph_form == 29"
+      },
+      {
+       "form_30": "variable.morph_form == 30"
+      },
+      {
+       "form_31": "variable.morph_form == 31"
+      },
+      {
+       "form_32": "variable.morph_form == 32"
+      },
+      {
+       "form_33": "variable.morph_form == 33"
+      },
+      {
+       "form_34": "variable.morph_form == 34"
+      },
+      {
+       "form_35": "variable.morph_form == 35"
+      },
+      {
+       "form_36": "variable.morph_form == 36"
+      },
+      {
+       "form_37": "variable.morph_form == 37"
+      },
+      {
+       "form_38": "variable.morph_form == 38"
+      },
+      {
+       "form_39": "variable.morph_form == 39"
+      },
+      {
+       "form_40": "variable.morph_form == 40"
+      },
+      {
+       "form_41": "variable.morph_form == 41"
+      },
+      {
+       "form_42": "variable.morph_form == 42"
+      },
+      {
+       "form_43": "variable.morph_form == 43"
+      },
+      {
+       "form_44": "variable.morph_form == 44"
+      },
+      {
+       "form_45": "variable.morph_form == 45"
+      },
+      {
+       "form_46": "variable.morph_form == 46"
+      },
+      {
+       "form_47": "variable.morph_form == 47"
+      },
+      {
+       "form_48": "variable.morph_form == 48"
+      },
+      {
+       "form_49": "variable.morph_form == 49"
+      },
+      {
+       "form_50": "variable.morph_form == 50"
+      },
+      {
+       "form_51": "variable.morph_form == 51"
+      },
+      {
+       "form_52": "variable.morph_form == 52"
+      },
+      {
+       "form_53": "variable.morph_form == 53"
+      },
+      {
+       "form_54": "variable.morph_form == 54"
+      },
+      {
+       "form_55": "variable.morph_form == 55"
+      },
+      {
+       "form_56": "variable.morph_form == 56"
+      },
+      {
+       "form_57": "variable.morph_form == 57"
+      },
+      {
+       "form_58": "variable.morph_form == 58"
+      },
+      {
+       "form_59": "variable.morph_form == 59"
+      },
+      {
+       "form_60": "variable.morph_form == 60"
+      },
+      {
+       "form_61": "variable.morph_form == 61"
+      },
+      {
+       "form_62": "variable.morph_form == 62"
+      },
+      {
+       "form_63": "variable.morph_form == 63"
+      },
+      {
+       "form_64": "variable.morph_form == 64"
+      },
+      {
+       "form_65": "variable.morph_form == 65"
+      },
+      {
+       "form_66": "variable.morph_form == 66"
+      },
+      {
+       "form_67": "variable.morph_form == 67"
+      },
+      {
+       "form_68": "variable.morph_form == 68"
+      },
+      {
+       "form_69": "variable.morph_form == 69"
+      },
+      {
+       "form_70": "variable.morph_form == 70"
+      },
+      {
+       "form_71": "variable.morph_form == 71"
+      },
+      {
+       "form_72": "variable.morph_form == 72"
+      },
+      {
+       "form_73": "variable.morph_form == 73"
+      },
+      {
+       "form_74": "variable.morph_form == 74"
+      },
+      {
+       "form_75": "variable.morph_form == 75"
+      },
+      {
+       "form_76": "variable.morph_form == 76"
+      },
+      {
+       "form_77": "variable.morph_form == 77"
+      },
+      {
+       "form_78": "variable.morph_form == 78"
+      },
+      {
+       "form_79": "variable.morph_form == 79"
+      },
+      {
+       "form_80": "variable.morph_form == 80"
+      },
+      {
+       "form_81": "variable.morph_form == 81"
+      },
+      {
+       "form_82": "variable.morph_form == 82"
+      },
+      {
+       "form_83": "variable.morph_form == 83"
+      },
+      {
+       "form_84": "variable.morph_form == 84"
+      },
+      {
+       "form_85": "variable.morph_form == 85"
+      },
+      {
+       "form_86": "variable.morph_form == 86"
+      },
+      {
+       "form_87": "variable.morph_form == 87"
+      },
+      {
+       "form_88": "variable.morph_form == 88"
+      },
+      {
+       "form_89": "variable.morph_form == 89"
+      }
+     ]
+    },
+    "form_0": {
+     "animations": [
+      {
+       "f0_morph_shapeshifter_aura": "!variable.is_first_person"
+      },
+      {
+       "f0_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f0_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 0"
+      }
+     ]
+    },
+    "form_1": {
+     "animations": [
+      {
+       "f1_walk": "!variable.is_first_person"
+      },
+      {
+       "f1_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f1_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f1_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 1"
+      }
+     ]
+    },
+    "form_2": {
+     "animations": [
+      {
+       "f2_walk": "!variable.is_first_person"
+      },
+      {
+       "f2_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f2_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f2_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 2"
+      }
+     ]
+    },
+    "form_3": {
+     "animations": [
+      {
+       "f3_axolotl_idle_floor": "!variable.is_first_person"
+      },
+      {
+       "f3_axolotl_walk_floor": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f3_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f3_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f3_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 3"
+      }
+     ]
+    },
+    "form_4": {
+     "animations": [
+      {
+       "f4_bat_flying": "!variable.is_first_person"
+      },
+      {
+       "f4_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f4_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f4_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 4"
+      }
+     ]
+    },
+    "form_5": {
+     "animations": [
+      {
+       "f5_bee_flying": "!variable.is_first_person"
+      },
+      {
+       "f5_bee_fly_bobbing": "!variable.is_first_person"
+      },
+      {
+       "f5_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f5_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f5_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 5"
+      }
+     ]
+    },
+    "form_6": {
+     "animations": [
+      {
+       "f6_blaze_move": "!variable.is_first_person"
+      },
+      {
+       "f6_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f6_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f6_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 6"
+      }
+     ]
+    },
+    "form_7": {
+     "animations": [
+      {
+       "f7_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f7_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 7"
+      }
+     ]
+    },
+    "form_8": {
+     "animations": [
+      {
+       "f8_breeze_idle": "!variable.is_first_person"
+      },
+      {
+       "f8_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f8_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f8_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 8"
+      }
+     ]
+    },
+    "form_9": {
+     "animations": [
+      {
+       "f9_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f9_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f9_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f9_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 9"
+      }
+     ]
+    },
+    "form_10": {
+     "animations": [
+      {
+       "f10_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f10_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f10_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f10_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 10"
+      }
+     ]
+    },
+    "form_11": {
+     "animations": [
+      {
+       "f11_cat_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f11_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f11_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f11_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 11"
+      }
+     ]
+    },
+    "form_12": {
+     "animations": [
+      {
+       "f12_spider_default_leg_pose": "!variable.is_first_person"
+      },
+      {
+       "f12_spider_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f12_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f12_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f12_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 12"
+      }
+     ]
+    },
+    "form_13": {
+     "animations": [
+      {
+       "f13_chicken_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f13_walk": "!variable.is_first_person"
+      },
+      {
+       "f13_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f13_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f13_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 13"
+      }
+     ]
+    },
+    "form_14": {
+     "animations": [
+      {
+       "f14_walk": "!variable.is_first_person"
+      },
+      {
+       "f14_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f14_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f14_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 14"
+      }
+     ]
+    },
+    "form_15": {
+     "animations": [
+      {
+       "f15_copper_golem_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f15_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f15_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f15_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 15"
+      }
+     ]
+    },
+    "form_16": {
+     "animations": [
+      {
+       "f16_cow_setup": "!variable.is_first_person"
+      },
+      {
+       "f16_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f16_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f16_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f16_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 16"
+      }
+     ]
+    },
+    "form_17": {
+     "animations": [
+      {
+       "f17_walk": "!variable.is_first_person"
+      },
+      {
+       "f17_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f17_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f17_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 17"
+      }
+     ]
+    },
+    "form_18": {
+     "animations": [
+      {
+       "f18_dolphin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f18_walk": "!variable.is_first_person"
+      },
+      {
+       "f18_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f18_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f18_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 18"
+      }
+     ]
+    },
+    "form_19": {
+     "animations": [
+      {
+       "f19_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f19_walk": "!variable.is_first_person"
+      },
+      {
+       "f19_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f19_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f19_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 19"
+      }
+     ]
+    },
+    "form_20": {
+     "animations": [
+      {
+       "f20_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f20_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f20_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 20"
+      }
+     ]
+    },
+    "form_21": {
+     "animations": [
+      {
+       "f21_guardian_setup": "!variable.is_first_person"
+      },
+      {
+       "f21_guardian_move_eye": "!variable.is_first_person"
+      },
+      {
+       "f21_walk": "!variable.is_first_person"
+      },
+      {
+       "f21_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f21_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f21_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 21"
+      }
+     ]
+    },
+    "form_22": {
+     "animations": [
+      {
+       "f22_walk": "!variable.is_first_person"
+      },
+      {
+       "f22_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f22_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f22_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 22"
+      }
+     ]
+    },
+    "form_23": {
+     "animations": [
+      {
+       "f23_enderman_base_pose": "!variable.is_first_person"
+      },
+      {
+       "f23_enderman_arms_legs": "!variable.is_first_person"
+      },
+      {
+       "f23_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f23_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f23_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 23"
+      }
+     ]
+    },
+    "form_24": {
+     "animations": [
+      {
+       "f24_endermite_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f24_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f24_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f24_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 24"
+      }
+     ]
+    },
+    "form_25": {
+     "animations": [
+      {
+       "f25_evoker_general": "!variable.is_first_person"
+      },
+      {
+       "f25_evoker_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f25_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f25_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 25"
+      }
+     ]
+    },
+    "form_26": {
+     "animations": [
+      {
+       "f26_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f26_fox_setup": "!variable.is_first_person"
+      },
+      {
+       "f26_walk": "!variable.is_first_person"
+      },
+      {
+       "f26_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f26_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f26_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 26"
+      }
+     ]
+    },
+    "form_27": {
+     "animations": [
+      {
+       "f27_frog_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f27_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f27_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f27_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 27"
+      }
+     ]
+    },
+    "form_28": {
+     "animations": [
+      {
+       "f28_ghast_move": "!variable.is_first_person"
+      },
+      {
+       "f28_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f28_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f28_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 28"
+      }
+     ]
+    },
+    "form_29": {
+     "animations": [
+      {
+       "f29_walk": "!variable.is_first_person"
+      },
+      {
+       "f29_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f29_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f29_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 29"
+      }
+     ]
+    },
+    "form_30": {
+     "animations": [
+      {
+       "f30_walk": "!variable.is_first_person"
+      },
+      {
+       "f30_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f30_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 30"
+      }
+     ]
+    },
+    "form_31": {
+     "animations": [
+      {
+       "f31_guardian_setup": "!variable.is_first_person"
+      },
+      {
+       "f31_guardian_move_eye": "!variable.is_first_person"
+      },
+      {
+       "f31_walk": "!variable.is_first_person"
+      },
+      {
+       "f31_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f31_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f31_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 31"
+      }
+     ]
+    },
+    "form_32": {
+     "animations": [
+      {
+       "f32_happy_ghast_move": "!variable.is_first_person"
+      },
+      {
+       "f32_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f32_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f32_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 32"
+      }
+     ]
+    },
+    "form_33": {
+     "animations": [
+      {
+       "f33_walk": "!variable.is_first_person"
+      },
+      {
+       "f33_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f33_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f33_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 33"
+      }
+     ]
+    },
+    "form_34": {
+     "animations": [
+      {
+       "f34_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f34_walk": "!variable.is_first_person"
+      },
+      {
+       "f34_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f34_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f34_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 34"
+      }
+     ]
+    },
+    "form_35": {
+     "animations": [
+      {
+       "f35_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f35_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f35_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 35"
+      }
+     ]
+    },
+    "form_36": {
+     "animations": [
+      {
+       "f36_iron_golem_walk_to_target": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f36_walk": "!variable.is_first_person"
+      },
+      {
+       "f36_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f36_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f36_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 36"
+      }
+     ]
+    },
+    "form_37": {
+     "animations": [
+      {
+       "f37_llama_setup": "!variable.is_first_person"
+      },
+      {
+       "f37_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f37_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f37_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f37_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 37"
+      }
+     ]
+    },
+    "form_38": {
+     "animations": [
+      {
+       "f38_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f38_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f38_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 38"
+      }
+     ]
+    },
+    "form_39": {
+     "animations": [
+      {
+       "f39_mooshroom_setup": "!variable.is_first_person"
+      },
+      {
+       "f39_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f39_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f39_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f39_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 39"
+      }
+     ]
+    },
+    "form_40": {
+     "animations": [
+      {
+       "f40_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f40_walk": "!variable.is_first_person"
+      },
+      {
+       "f40_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f40_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f40_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 40"
+      }
+     ]
+    },
+    "form_41": {
+     "animations": [
+      {
+       "f41_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f41_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f41_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f41_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 41"
+      }
+     ]
+    },
+    "form_42": {
+     "animations": [
+      {
+       "f42_ocelot_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f42_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f42_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f42_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 42"
+      }
+     ]
+    },
+    "form_43": {
+     "animations": [
+      {
+       "f43_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f43_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f43_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f43_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 43"
+      }
+     ]
+    },
+    "form_44": {
+     "animations": [
+      {
+       "f44_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f44_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f44_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 44"
+      }
+     ]
+    },
+    "form_45": {
+     "animations": [
+      {
+       "f45_parrot_base": "!variable.is_first_person"
+      },
+      {
+       "f45_parrot_standing": "!variable.is_first_person"
+      },
+      {
+       "f45_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f45_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f45_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 45"
+      }
+     ]
+    },
+    "form_46": {
+     "animations": [
+      {
+       "f46_phantom_base_pose": "!variable.is_first_person"
+      },
+      {
+       "f46_phantom_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f46_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f46_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f46_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 46"
+      }
+     ]
+    },
+    "form_47": {
+     "animations": [
+      {
+       "f47_pig_setup": "!variable.is_first_person"
+      },
+      {
+       "f47_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f47_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f47_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f47_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 47"
+      }
+     ]
+    },
+    "form_48": {
+     "animations": [
+      {
+       "f48_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f48_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f48_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 48"
+      }
+     ]
+    },
+    "form_49": {
+     "animations": [
+      {
+       "f49_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f49_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f49_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 49"
+      }
+     ]
+    },
+    "form_50": {
+     "animations": [
+      {
+       "f50_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f50_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 50"
+      }
+     ]
+    },
+    "form_51": {
+     "animations": [
+      {
+       "f51_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f51_polarbear_move": "!variable.is_first_person"
+      },
+      {
+       "f51_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f51_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 51"
+      }
+     ]
+    },
+    "form_52": {
+     "animations": [
+      {
+       "f52_walk": "!variable.is_first_person"
+      },
+      {
+       "f52_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f52_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f52_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 52"
+      }
+     ]
+    },
+    "form_53": {
+     "animations": [
+      {
+       "f53_rabbit_move_v2": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f53_rabbit_idle_head_tilt": "!variable.is_first_person"
+      },
+      {
+       "f53_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f53_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f53_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 53"
+      }
+     ]
+    },
+    "form_54": {
+     "animations": [
+      {
+       "f54_ravager_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f54_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f54_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f54_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 54"
+      }
+     ]
+    },
+    "form_55": {
+     "animations": [
+      {
+       "f55_walk": "!variable.is_first_person"
+      },
+      {
+       "f55_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f55_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f55_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 55"
+      }
+     ]
+    },
+    "form_56": {
+     "animations": [
+      {
+       "f56_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f56_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f56_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f56_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 56"
+      }
+     ]
+    },
+    "form_57": {
+     "animations": [
+      {
+       "f57_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f57_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f57_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 57"
+      }
+     ]
+    },
+    "form_58": {
+     "animations": [
+      {
+       "f58_silverfish_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f58_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f58_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f58_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 58"
+      }
+     ]
+    },
+    "form_59": {
+     "animations": [
+      {
+       "f59_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f59_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 59"
+      }
+     ]
+    },
+    "form_60": {
+     "animations": [
+      {
+       "f60_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f60_walk": "!variable.is_first_person"
+      },
+      {
+       "f60_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f60_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f60_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 60"
+      }
+     ]
+    },
+    "form_61": {
+     "animations": [
+      {
+       "f61_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f61_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f61_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 61"
+      }
+     ]
+    },
+    "form_62": {
+     "animations": [
+      {
+       "f62_walk": "!variable.is_first_person"
+      },
+      {
+       "f62_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f62_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f62_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 62"
+      }
+     ]
+    },
+    "form_63": {
+     "animations": [
+      {
+       "f63_snowgolem_move_v1_8": "!variable.is_first_person"
+      },
+      {
+       "f63_walk": "!variable.is_first_person"
+      },
+      {
+       "f63_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f63_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f63_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 63"
+      }
+     ]
+    },
+    "form_64": {
+     "animations": [
+      {
+       "f64_spider_default_leg_pose": "!variable.is_first_person"
+      },
+      {
+       "f64_spider_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f64_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f64_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f64_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 64"
+      }
+     ]
+    },
+    "form_65": {
+     "animations": [
+      {
+       "f65_walk": "!variable.is_first_person"
+      },
+      {
+       "f65_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f65_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f65_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 65"
+      }
+     ]
+    },
+    "form_66": {
+     "animations": [
+      {
+       "f66_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f66_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 66"
+      }
+     ]
+    },
+    "form_67": {
+     "animations": [
+      {
+       "f67_walk": "!variable.is_first_person"
+      },
+      {
+       "f67_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f67_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f67_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 67"
+      }
+     ]
+    },
+    "form_68": {
+     "animations": [
+      {
+       "f68_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f68_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f68_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 68"
+      }
+     ]
+    },
+    "form_69": {
+     "animations": [
+      {
+       "f69_tadpole_swim": "!variable.is_first_person"
+      },
+      {
+       "f69_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f69_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f69_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 69"
+      }
+     ]
+    },
+    "form_70": {
+     "animations": [
+      {
+       "f70_llama_setup": "!variable.is_first_person"
+      },
+      {
+       "f70_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f70_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f70_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f70_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 70"
+      }
+     ]
+    },
+    "form_71": {
+     "animations": [
+      {
+       "f71_walk": "!variable.is_first_person"
+      },
+      {
+       "f71_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f71_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f71_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 71"
+      }
+     ]
+    },
+    "form_72": {
+     "animations": [
+      {
+       "f72_turtle_general": "!variable.is_first_person"
+      },
+      {
+       "f72_turtle_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f72_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f72_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f72_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 72"
+      }
+     ]
+    },
+    "form_73": {
+     "animations": [
+      {
+       "f73_vex_idle": "!variable.is_first_person"
+      },
+      {
+       "f73_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f73_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f73_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 73"
+      }
+     ]
+    },
+    "form_74": {
+     "animations": [
+      {
+       "f74_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f74_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f74_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f74_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f74_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 74"
+      }
+     ]
+    },
+    "form_75": {
+     "animations": [
+      {
+       "f75_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f75_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f75_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f75_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f75_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 75"
+      }
+     ]
+    },
+    "form_76": {
+     "animations": [
+      {
+       "f76_vindicator_base": "!variable.is_first_person"
+      },
+      {
+       "f76_vindicator_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f76_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f76_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 76"
+      }
+     ]
+    },
+    "form_77": {
+     "animations": [
+      {
+       "f77_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f77_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f77_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f77_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f77_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 77"
+      }
+     ]
+    },
+    "form_78": {
+     "animations": [
+      {
+       "f78_walk": "!variable.is_first_person"
+      },
+      {
+       "f78_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f78_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f78_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 78"
+      }
+     ]
+    },
+    "form_79": {
+     "animations": [
+      {
+       "f79_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f79_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f79_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f79_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f79_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 79"
+      }
+     ]
+    },
+    "form_80": {
+     "animations": [
+      {
+       "f80_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f80_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f80_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 80"
+      }
+     ]
+    },
+    "form_81": {
+     "animations": [
+      {
+       "f81_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f81_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 81"
+      }
+     ]
+    },
+    "form_82": {
+     "animations": [
+      {
+       "f82_wolf_setup": "!variable.is_first_person"
+      },
+      {
+       "f82_wolf_leg_default": "!variable.is_first_person"
+      },
+      {
+       "f82_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f82_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f82_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 82"
+      }
+     ]
+    },
+    "form_83": {
+     "animations": [
+      {
+       "f83_walk": "!variable.is_first_person"
+      },
+      {
+       "f83_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f83_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f83_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 83"
+      }
+     ]
+    },
+    "form_84": {
+     "animations": [
+      {
+       "f84_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f84_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f84_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 84"
+      }
+     ]
+    },
+    "form_85": {
+     "animations": [
+      {
+       "f85_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f85_walk": "!variable.is_first_person"
+      },
+      {
+       "f85_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f85_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f85_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 85"
+      }
+     ]
+    },
+    "form_86": {
+     "animations": [
+      {
+       "f86_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f86_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f86_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f86_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 86"
+      }
+     ]
+    },
+    "form_87": {
+     "animations": [
+      {
+       "f87_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f87_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f87_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 87"
+      }
+     ]
+    },
+    "form_88": {
+     "animations": [
+      {
+       "f88_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f88_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f88_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 88"
+      }
+     ]
+    },
+    "form_89": {
+     "animations": [
+      {
+       "f89_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f89_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 89"
+      }
+     ]
+    }
+   }
+  }
+ }
+}

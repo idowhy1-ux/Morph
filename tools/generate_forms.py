@@ -1,0 +1,504 @@
+#!/usr/bin/env python3
+"""Builds every morph form (all vanilla mobs) from a checkout of Mojang's bedrock-samples.
+
+Usage (from repo root):
+    git clone --depth 1 https://github.com/Mojang/bedrock-samples /tmp/bedrock-samples
+    python3 tools/generate_assets.py           # shapeshifter textures/models
+    python3 tools/generate_forms.py /tmp/bedrock-samples
+
+Writes, into packs/:
+  RP  entity/player.entity.json, entity/stolen_skin.entity.json
+      render_controllers/morph.render_controllers.json
+      animation_controllers/morph.animation_controllers.json
+      animations/morph_generated.animation.json
+      models/entity/morph_fp_generated.geo.json (+ legacy variant)
+  BP  entities/player.json, entities/stolen_skin.json
+      scripts/forms_data.js
+"""
+import copy
+import json
+import math
+import os
+import sys
+
+from vanilla_index import index, load
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RP = os.path.join(ROOT, "packs", "MorphRP")
+BP = os.path.join(ROOT, "packs", "MorphBP")
+
+# --------------------------------------------------------------------------- tweaks
+DROP_ANIMS = {
+    "axolotl": {"animation.axolotl.idle_underwater", "animation.axolotl.idle_floor_underwater",
+                "animation.axolotl.swim", "animation.axolotl.walk_floor_underwater"},
+    "bat": {"animation.bat.resting"},
+    "bee": {"animation.bee.no_stinger"},
+    "breeze": {"animation.breeze.whirl_sound", "animation.breeze.slide"},
+    "camel": {"animation.camel.stand_up"}, "camel_husk": {"animation.camel.stand_up"},
+    "cat": {"animation.cat.sprint"}, "ocelot": {"animation.ocelot.sprint"},
+    "copper_golem": {"animation.copper_golem.spin", "animation.copper_golem.spin.oxidized"},
+    "frog": {"animation.frog.swim", "animation.frog.idle.water"},
+    "fox": {"animation.fox.wiggle", "animation.fox.stuck"},
+    "panda": {"animation.panda.unhappy", "animation.panda.sneezing", "animation.panda.lying"},
+    "parrot": {"animation.parrot.flying"},
+    "iron_golem": {"animation.iron_golem.move_to_target"},
+    "wither": {"animation.wither_boss.scale"},
+}
+FORCE_SPEED = {"animation.rabbit.move.v2", "animation.copper_golem.walk", "animation.frog.walk",
+               "animation.piglin.move", "animation.endermite.move", "animation.dolphin.move"}
+TEXTURE_OVERRIDE = {"elder_guardian": "textures/entity/guardian_elder"}
+ZOMBIE_ARMS = {"zombie", "husk", "drowned", "zombie_villager", "zombie_villager_v2", "parched"}
+# bones that only make sense with extra layers/equipment the player never has
+ALWAYS_HIDDEN = ["Saddle", "ReinsL", "ReinsR", "Bridle", "BitL", "BitR", "BagL", "BagR", "body_rolled_up",
+                 "tongue", "croaking_body", "tornado_body", "tornado_bottom", "tornado_mid", "tornado_top",
+                 "brim"]
+MULE_EARS = {"donkey", "mule"}
+FP_TARGET = [-5.0, 22.0, 0.0]
+
+
+def lname(b):
+    return b["name"].lower()
+
+
+def children_map(bones):
+    ch = {}
+    for b in bones:
+        p = (b.get("parent") or "").lower()
+        ch.setdefault(p, []).append(b)
+    return ch
+
+
+def subtree(bones, root):
+    ch = children_map(bones)
+    out, stack = [], [root]
+    while stack:
+        b = stack.pop()
+        out.append(b)
+        stack.extend(ch.get(lname(b), []))
+    return out
+
+
+def cubes_of(bs):
+    return [c for b in bs for c in b.get("cubes", [])]
+
+
+def renderable(b):
+    return not b.get("neverRender") and b["name"] not in ALWAYS_HIDDEN and "poly_mesh" not in b
+
+
+def pick_limb(bones):
+    vis = [b for b in bones if renderable(b)]
+    names = {lname(b) for b in vis}
+    piv = lambda b: b.get("pivot", [0, 0, 0])
+
+    def has_cubes(b):
+        return bool(cubes_of(subtree(bones, b)))
+
+    def top_level(cands, word):
+        # drop bones whose parent also matches (e.g. leg tips)
+        return [b for b in cands if not (b.get("parent") and word in (b.get("parent") or "").lower())]
+
+    groups = [
+        ("arm", lambda n: "arm" in n and "armor" not in n),
+        ("leg", lambda n: "leg" in n and "legging" not in n),
+        ("wing", lambda n: "wing" in n),
+        ("tentacle", lambda n: "tentacle" in n),
+        ("fin", lambda n: "fin" in n and "tail" not in n),
+        ("upperbodypart", lambda n: "upperbodypart" in n or n.startswith("rod")),
+        ("tail", lambda n: "tail" in n),
+    ]
+    for word, test in groups:
+        c = top_level([b for b in vis if test(lname(b)) and has_cubes(b)], word)
+        if not c:
+            continue
+        right = [b for b in c if "right" in lname(b) or lname(b).endswith("r") or lname(b).endswith("fr")]
+        pool = right or c
+        # front-most (lowest z), then right-most (lowest x)
+        pool.sort(key=lambda b: (0 if "front" in lname(b) else 1, round(piv(b)[2], 2) if word == "leg" else 0, piv(b)[0]))
+        return pool[0]
+    for b in vis:
+        if b.get("cubes"):
+            return b
+    return None
+
+
+def bbox(cs):
+    lo = [1e9] * 3
+    hi = [-1e9] * 3
+    for c in cs:
+        o, s = c["origin"], c["size"]
+        for i in range(3):
+            lo[i] = min(lo[i], o[i]); hi[i] = max(hi[i], o[i] + s[i])
+    return lo, hi
+
+
+def shift(v, d):
+    return [round(v[i] + d[i], 4) for i in range(3)]
+
+
+def make_fp(mob):
+    """First-person arm: the mob's arm/leg/wing/etc. re-hung at the player's shoulder."""
+    bones = mob["bones"]
+    limb = pick_limb(bones)
+    base = [{"name": "root", "pivot": [0, 0, 0]},
+            {"name": "waist", "parent": "root", "pivot": [0, 12, 0]},
+            {"name": "body", "parent": "waist", "pivot": [0, 24, 0]},
+            {"name": "rightArm", "parent": "body", "pivot": FP_TARGET},
+            {"name": "rightItem", "parent": "rightArm", "pivot": [-6, 15, 1]}]
+    if not limb:
+        return base, 1.0, None
+    tree = [b for b in subtree(bones, limb) if renderable(b)]
+    cs = cubes_of(tree)
+    pivot = limb.get("pivot", [0, 0, 0])
+    lo, hi = bbox(cs)
+    ext = [hi[i] - lo[i] for i in range(3)]
+    axis = max(range(3), key=lambda i: ext[i])
+    centre = (lo[axis] + hi[axis]) / 2
+    toward_neg = centre < pivot[axis]
+    if axis == 1:
+        rot = [0, 0, 0] if toward_neg else [180, 0, 0]
+    elif axis == 0:
+        rot = [0, 0, -90] if toward_neg else [0, 0, 90]
+    else:
+        rot = [90, 0, 0] if toward_neg else [-90, 0, 0]
+    length = max(abs(lo[axis] - pivot[axis]), abs(hi[axis] - pivot[axis]), 1)
+    cross = max(ext[i] for i in range(3) if i != axis) or 1
+    fit = min(max(10.0 / length, 0.3), 2.0)
+    fit = min(fit, 7.0 / cross) if cross * fit > 7 else fit
+    fit = round(max(fit, 0.2), 3)
+    d = [FP_TARGET[i] - pivot[i] for i in range(3)]
+    base.append({"name": "fp_mount", "parent": "rightArm", "pivot": FP_TARGET, "rotation": rot})
+    keep = {lname(b) for b in tree}
+    for b in tree:
+        nb = {"name": "fp_" + b["name"], "pivot": shift(b.get("pivot", [0, 0, 0]), d)}
+        par = (b.get("parent") or "").lower()
+        nb["parent"] = "fp_mount" if b is limb or par not in keep else "fp_" + next(x["name"] for x in tree if lname(x) == par)
+        for k in ("rotation", "mirror", "inflate"):
+            if k in b and not (k == "rotation" and b is limb and False):
+                nb[k] = b[k]
+        if b.get("bind_pose_rotation") and "rotation" not in nb:
+            nb["rotation"] = b["bind_pose_rotation"]
+        cubes = []
+        for c in b.get("cubes", []):
+            nc = copy.deepcopy(c)
+            nc["origin"] = shift(c["origin"], d)
+            if "pivot" in c:
+                nc["pivot"] = shift(c["pivot"], d)
+            cubes.append(nc)
+        if cubes:
+            nb["cubes"] = cubes
+        base.append(nb)
+    return base, fit, limb["name"]
+
+
+def head_bones(bones):
+    heads = [b for b in bones if lname(b) == "head" or lname(b) == "head1"]
+    out = set()
+    for h in heads:
+        out |= {b["name"] for b in subtree(bones, h)}
+    return out
+
+
+# --------------------------------------------------------------------------- animations
+def bone_set(anim):
+    return {k.lower() for k in anim.get("bones", {})}
+
+
+def generic_motion(mob, animated):
+    """Walk cycle / flapping for bones no vanilla animation handles."""
+    bones = [b for b in mob["bones"] if renderable(b)]
+    player_handled = {"rightarm", "leftarm", "rightleg", "leftleg", "head", "body"}
+    out = {}
+    for b in bones:
+        n = lname(b)
+        if n in animated or n in player_handled:
+            continue
+        if b.get("parent") and any(w in (b.get("parent") or "").lower() for w in ("leg", "arm", "wing")):
+            continue
+        p = b.get("pivot", [0, 0, 0])
+        side = -1 if p[0] < 0 else 1
+        front = -1 if p[2] < 0 else 1
+        if ("leg" in n and "legging" not in n) or n in ("frontlegs", "backlegs"):
+            sign = side * front
+            out[b["name"]] = {"rotation": [f"variable.tcos0 * {1.2 * sign}", 0, 0]}
+        elif "arm" in n and "armor" not in n:
+            out[b["name"]] = {"rotation": [f"variable.tcos0 * {-1.0 * side}", 0, 0]}
+        elif "wing" in n:
+            out[b["name"]] = {"rotation": [0, 0, f"math.sin(query.life_time * 1100.0) * {35 * side}"]}
+        elif "tentacle" in n:
+            out[b["name"]] = {"rotation": [f"math.sin(query.life_time * 200.0 + {abs(hash(n)) % 360}) * 12.0", 0, 0]}
+        elif "fin" in n or "tail" in n:
+            out[b["name"]] = {"rotation": [0, "math.sin(query.life_time * 400.0) * 15.0", 0]}
+    return out
+
+
+def top_bones(mob):
+    return [b["name"] for b in mob["bones"] if not b.get("parent") and renderable(b)]
+
+
+def find(mob, *names):
+    for b in mob["bones"]:
+        if lname(b) in names:
+            return b["name"]
+    return None
+
+
+def absorb_anim(mob):
+    bones = {}
+    for t in top_bones(mob):
+        bones[t] = {"position": ["math.sin(query.life_time * 2100.0) * 0.35", "6.0 + math.sin(query.life_time * 360.0)",
+                                 "math.cos(query.life_time * 1900.0) * 0.35"],
+                    "scale": "1.0 + math.sin(query.life_time * 1080.0) * 0.07"}
+    h = find(mob, "head")
+    if h:
+        bones.setdefault(h, {})["rotation"] = [-30.0, 0.0, "math.sin(query.life_time * 1500.0) * 6.0"]
+    ra = find(mob, "rightarm", "right_arm", "arm0")
+    la = find(mob, "leftarm", "left_arm", "arm1")
+    if ra:
+        bones.setdefault(ra, {})["rotation"] = ["-20.0 + math.sin(query.life_time * 1700.0) * 8.0", 0.0, "100.0 + math.sin(query.life_time * 1300.0) * 10.0"]
+    if la:
+        bones.setdefault(la, {})["rotation"] = ["-20.0 - math.sin(query.life_time * 1600.0) * 8.0", 0.0, "-100.0 - math.sin(query.life_time * 1250.0) * 10.0"]
+    return {"loop": True, "bones": bones}
+
+
+def peel_anim(mob):
+    bones = {}
+    for i, t in enumerate(top_bones(mob)):
+        bones[t] = {"rotation": [f"math.sin(query.life_time * {500 + i * 37}.0) * 25.0", 0.0,
+                                 f"math.cos(query.life_time * {420 + i * 29}.0) * 30.0"]}
+    for b in mob["bones"]:
+        n = lname(b)
+        if renderable(b) and any(w in n for w in ("arm", "leg", "wing", "tentacle")) and "armor" not in n:
+            side = -1 if b.get("pivot", [0, 0, 0])[0] < 0 else 1
+            bones[b["name"]] = {"rotation": [f"math.sin(query.life_time * 900.0) * {35 * side}", 0.0, f"{30 * side * -1}"]}
+    return {"loop": True, "bones": bones}
+
+
+# --------------------------------------------------------------------------- main
+def main(vanilla):
+    mobs = index(vanilla)
+    anims_src = {}
+    import glob
+    for f in glob.glob(os.path.join(vanilla, "resource_pack", "animations", "*.json")):
+        try:
+            anims_src.update(load(f).get("animations", {}))
+        except Exception:
+            pass
+
+    shapeshifter_geo = json.load(open(os.path.join(RP, "models", "entity", "morph_forms.geo.json")))["minecraft:geometry"][0]
+    shapeshifter = {
+        "type": None, "key": "shapeshifter", "name": "Shapeshifter", "hp": 20, "height": 1.8, "width": 0.6,
+        "natural_scale": 0.9375, "texture": "textures/entity/morph/shapeshifter",
+        "geometry": "geometry.morph.shapeshifter", "tw": 64, "th": 64, "legacy": False,
+        "bones": shapeshifter_geo["bones"], "anims": [{"id": "animation.morph.shapeshifter.aura", "speed": False}],
+        "families": [],
+    }
+    forms = [shapeshifter] + sorted(mobs, key=lambda m: m["name"])
+
+    gen_anims = {}
+    fp_new, fp_legacy = [], {}
+    states = {"router": {"transitions": []}}
+    hidden_by_bone = {}  # bone name -> list of form ids where it is part of the head (pov hide)
+    data = []
+    for fid, m in enumerate(forms):
+        key = m["key"]
+        tex = TEXTURE_OVERRIDE.get(key, m["texture"])
+        # first-person geometry
+        if key == "shapeshifter":
+            fp_id, fit, limb = "geometry.morph.fp.shapeshifter", 1.0, "rightArm"
+        else:
+            fp_bones, fit, limb = make_fp(m)
+            fp_id = f"geometry.morph.fp.{key}"
+            if m["legacy"]:
+                fp_legacy[fp_id] = {"texturewidth": m["tw"], "textureheight": m["th"],
+                                    "visible_bounds_width": 2, "visible_bounds_height": 3,
+                                    "visible_bounds_offset": [0, 1.5, 0], "bones": fp_bones}
+            else:
+                fp_new.append({"description": {"identifier": fp_id, "texture_width": m["tw"], "texture_height": m["th"],
+                                               "visible_bounds_width": 2, "visible_bounds_height": 3,
+                                               "visible_bounds_offset": [0, 1.5, 0]}, "bones": fp_bones})
+        m["fp_geometry"], m["texture_final"] = fp_id, tex
+
+        # third-person animations for this form
+        state_anims = []
+        animated = set()
+        for a in m["anims"]:
+            if a["id"] in DROP_ANIMS.get(key, set()):
+                continue
+            short = f"f{fid}_" + a["id"].replace("animation.", "").replace(".", "_")
+            m.setdefault("anim_map", {})[short] = a["id"]
+            speed = a["speed"] or a["id"] in FORCE_SPEED
+            w = "!variable.is_first_person"
+            if speed:
+                w += " * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+            state_anims.append({short: w})
+            animated |= bone_set(anims_src.get(a["id"], {}))
+        if key in ZOMBIE_ARMS:
+            m.setdefault("anim_map", {})[f"f{fid}_zombie_arms"] = "animation.morph.zombie.arms"
+            state_anims.append({f"f{fid}_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"})
+        if key != "shapeshifter":
+            motion = generic_motion(m, animated)
+            if motion:
+                aid = f"animation.morph.gen.walk.{key}"
+                gen_anims[aid] = {"loop": True, "bones": motion}
+                m.setdefault("anim_map", {})[f"f{fid}_walk"] = aid
+                state_anims.append({f"f{fid}_walk": "!variable.is_first_person"})
+        ab = f"animation.morph.gen.absorb.{key}"
+        gen_anims[ab] = absorb_anim(m)
+        m.setdefault("anim_map", {})[f"f{fid}_absorb"] = ab
+        state_anims.append({f"f{fid}_absorb": "variable.morph_absorb && !variable.is_first_person"})
+        m["anim_map"][f"f{fid}_absorb_fp"] = "animation.morph.absorb.first_person"
+        state_anims.append({f"f{fid}_absorb_fp": "variable.morph_absorb && variable.is_first_person"})
+        if abs(fit - 1.0) > 0.01:
+            fa = f"animation.morph.gen.fpfit.{key}"
+            gen_anims[fa] = {"loop": True, "bones": {"rightArm": {"scale": fit}}}
+            m["anim_map"][f"f{fid}_fpfit"] = fa
+            state_anims.append({f"f{fid}_fpfit": "variable.is_first_person"})
+        pk = f"animation.morph.gen.peel.{key}"
+        gen_anims[pk] = peel_anim(m)
+        m["peel"] = pk
+
+        states[f"form_{fid}"] = {"animations": state_anims,
+                                 "transitions": [{"router": f"variable.morph_form != {fid}"}]}
+        states["router"]["transitions"].append({f"form_{fid}": f"variable.morph_form == {fid}"})
+        for bn in head_bones(m["bones"]):
+            hidden_by_bone.setdefault(bn, []).append(fid)
+
+        eye = 1.62 if key == "shapeshifter" else round(m["height"] * 0.85, 3)
+        data.append({"id": fid, "type": m["type"], "key": key, "name": m["name"], "hp": int(math.ceil(m["hp"])),
+                     "eye": eye, "height": m["height"], "r": round(m["natural_scale"], 4), "families": m["families"]})
+
+    # ---------------- RP: geometry
+    with open(os.path.join(RP, "models", "entity", "morph_fp_generated.geo.json"), "w") as f:
+        json.dump({"format_version": "1.12.0", "minecraft:geometry": fp_new}, f, indent=1)
+    with open(os.path.join(RP, "models", "entity", "morph_fp_generated_legacy.geo.json"), "w") as f:
+        json.dump(dict({"format_version": "1.8.0"}, **fp_legacy), f, indent=1)
+
+    # ---------------- RP: animations + controller
+    with open(os.path.join(RP, "animations", "morph_generated.animation.json"), "w") as f:
+        json.dump({"format_version": "1.8.0", "animations": gen_anims}, f, indent=1)
+    os.makedirs(os.path.join(RP, "animation_controllers"), exist_ok=True)
+    with open(os.path.join(RP, "animation_controllers", "morph.animation_controllers.json"), "w") as f:
+        json.dump({"format_version": "1.10.0", "animation_controllers": {
+            "controller.animation.morph.forms": {"initial_state": "router", "states": states}}}, f, indent=1)
+
+    # ---------------- RP: client entities
+    pe = load(os.path.join(vanilla, "resource_pack", "entity", "player.entity.json"))
+    desc = pe["minecraft:client_entity"]["description"]
+    for m in forms:
+        desc["textures"][f"morph_{m['key']}"] = m["texture_final"]
+        desc["geometry"][f"morph_{m['key']}"] = m["geometry"]
+        desc["geometry"][f"morph_fp_{m['key']}"] = m["fp_geometry"]
+        desc["animations"].update(m.get("anim_map", {}))
+    desc["animations"]["morph_forms"] = "controller.animation.morph.forms"
+    s = desc["scripts"]
+    s["scale"] = "variable.is_first_person ? 0.9375 : query.property('morph:r')"
+    s["pre_animation"] += [
+        "variable.morph_form = query.property('morph:form');",
+        "variable.morph_absorb = query.property('morph:absorb');",
+        "variable.morph_pov = query.property('morph:pov');",
+        "variable.morph_glow = variable.morph_absorb ? (0.35 + 0.25 * math.sin(query.life_time * 900.0)) : 0.0;",
+    ]
+    s["animate"] = ["root", "morph_forms"]
+    rcs = []
+    for r in desc["render_controllers"]:
+        k = next(iter(r))
+        k = {"controller.render.player.first_person": "controller.render.morph.first_person",
+             "controller.render.player.third_person": "controller.render.morph.third_person"}.get(k, k)
+        rcs.append({k: next(iter(r.values()))})
+    desc["render_controllers"] = rcs
+    with open(os.path.join(RP, "entity", "player.entity.json"), "w") as f:
+        json.dump(pe, f, indent=1)
+
+    skin = {"format_version": "1.10.0", "minecraft:client_entity": {"description": {
+        "identifier": "morph:stolen_skin",
+        "materials": {"default": "entity_alphatest"},
+        "textures": {f"morph_{m['key']}": m["texture_final"] for m in forms},
+        "geometry": {f"morph_{m['key']}": m["geometry"] for m in forms},
+        "scripts": {
+            "scale": "query.property('morph:r') * math.clamp(1.0 - math.pow(query.life_time / 1.6, 2.0), 0.12, 1.0)",
+            "pre_animation": ["variable.morph_form = query.property('morph:form');",
+                              "variable.morph_glow = math.clamp(query.life_time * 0.7, 0.15, 0.85);",
+                              "variable.morph_pov = 0;"],
+            "animate": [{f"peel{m['id_']}": f"variable.morph_form == {m['id_']}"} for m in
+                        [dict(x, id_=i) for i, x in enumerate(forms)]],
+        },
+        "animations": {f"peel{i}": m["peel"] for i, m in enumerate(forms)},
+        "render_controllers": ["controller.render.morph.stolen_skin"],
+    }}}
+    with open(os.path.join(RP, "entity", "stolen_skin.entity.json"), "w") as f:
+        json.dump(skin, f, indent=1)
+
+    # ---------------- RP: render controllers
+    empty = "(query.get_equipped_item_name(0, 1) == '' || query.get_equipped_item_name(0, 1) == 'filled_map')"
+    geo_arr = ["Geometry.morph_" + m["key"] for m in forms]
+    tex_arr = {"Array.morph_tex": ["Texture.morph_" + m["key"] for m in forms]}
+    overlay = {"r": "0.62", "g": "0.18", "b": "1.0", "a": "variable.morph_glow"}
+    mule_ids = [i for i, m in enumerate(forms) if m["key"] in MULE_EARS]
+    is_mule = " || ".join(f"variable.morph_form == {i}" for i in mule_ids) or "0"
+    vis = [{"*": True}] + [{b: False} for b in ALWAYS_HIDDEN]
+    vis += [{"MuleEarL": is_mule}, {"MuleEarR": is_mule}, {"EarL": f"!({is_mule})"}, {"EarR": f"!({is_mule})"}]
+    for bn, ids in sorted(hidden_by_bone.items()):
+        cond = " || ".join(f"variable.morph_form == {i}" for i in ids)
+        vis.append({bn: f"!(variable.morph_pov == 0 && query.property('morph:camera_on') && ({cond}))"})
+    rc = {"format_version": "1.8.0", "render_controllers": {
+        "controller.render.morph.third_person": {
+            "arrays": {"geometries": {"Array.morph_geo": geo_arr}, "textures": tex_arr},
+            "geometry": "Array.morph_geo[variable.morph_form]",
+            "materials": [{"*": "Material.default"}],
+            "textures": ["Array.morph_tex[variable.morph_form]"],
+            "overlay_color": overlay, "part_visibility": vis},
+        "controller.render.morph.first_person": {
+            "arrays": {"geometries": {"Array.morph_fp_geo": ["Geometry.morph_fp_" + m["key"] for m in forms]}, "textures": tex_arr},
+            "geometry": "Array.morph_fp_geo[variable.morph_form]",
+            "materials": [{"*": "Material.default"}],
+            "textures": ["Array.morph_tex[variable.morph_form]"],
+            "overlay_color": overlay, "part_visibility": [{"*": empty}]},
+        "controller.render.morph.stolen_skin": {
+            "arrays": {"geometries": {"Array.morph_geo": geo_arr}, "textures": tex_arr},
+            "geometry": "Array.morph_geo[variable.morph_form]",
+            "materials": [{"*": "Material.default"}],
+            "textures": ["Array.morph_tex[variable.morph_form]"],
+            "overlay_color": overlay, "part_visibility": [{"*": True}] + [{b: False} for b in ALWAYS_HIDDEN],
+            "is_hurt_color": {"r": "0", "g": "0", "b": "0", "a": "0"},
+            "on_fire_color": {"r": "0", "g": "0", "b": "0", "a": "0"}},
+    }}
+    with open(os.path.join(RP, "render_controllers", "morph.render_controllers.json"), "w") as f:
+        json.dump(rc, f, indent=1)
+
+    # ---------------- BP: player + skin entity
+    pj = load(os.path.join(vanilla, "behavior_pack", "entities", "player.json"))
+    ent = pj["minecraft:entity"]
+    n = len(forms) - 1
+    ent["description"]["properties"] = {
+        "morph:form": {"type": "int", "range": [0, n], "default": 0, "client_sync": True},
+        "morph:absorb": {"type": "bool", "default": False, "client_sync": True},
+        "morph:r": {"type": "float", "range": [0.0, 16.0], "default": 0.9375, "client_sync": True},
+        "morph:pov": {"type": "int", "range": [0, 2], "default": 0, "client_sync": True},
+        "morph:camera_on": {"type": "bool", "default": False, "client_sync": True},
+    }
+    hps = sorted({d["hp"] for d in data})
+    groups = {f"morph:hp_{h}": {"minecraft:health": {"value": h, "max": h}} for h in hps}
+    ent.setdefault("component_groups", {}).update(groups)
+    for h in hps:
+        ent.setdefault("events", {})[f"morph:hp_{h}"] = {"sequence": [
+            {"remove": {"component_groups": [g for g in groups]}},
+            {"add": {"component_groups": [f"morph:hp_{h}"]}}]}
+    with open(os.path.join(BP, "entities", "player.json"), "w") as f:
+        json.dump(pj, f, indent=1)
+
+    sk = json.load(open(os.path.join(BP, "entities", "stolen_skin.json")))
+    props = sk["minecraft:entity"]["description"]["properties"]
+    props["morph:form"]["range"] = [0, n]
+    props["morph:r"] = {"type": "float", "range": [0.0, 16.0], "default": 1.0, "client_sync": True}
+    with open(os.path.join(BP, "entities", "stolen_skin.json"), "w") as f:
+        json.dump(sk, f, indent=2)
+
+    with open(os.path.join(BP, "scripts", "forms_data.js"), "w") as f:
+        f.write("// Generated by tools/generate_forms.py - do not edit by hand.\n")
+        f.write("export const FORM_DATA = " + json.dumps(data, indent=1) + ";\n")
+    print(f"{len(forms)} forms, {len(gen_anims)} generated animations, hp values {hps}")
+
+
+if __name__ == "__main__":
+    main(sys.argv[1] if len(sys.argv) > 1 else "/tmp/bedrock-samples")

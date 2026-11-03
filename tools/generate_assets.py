@@ -190,71 +190,6 @@ def third_person_geos():
             cube([-3, 27, 6], [1, 1, 1], [56, 0]),
         ]),
     ]))
-    # --- Zombie (vanilla 64x32 humanoid layout)
-    g.append(geo("geometry.morph.zombie", 64, 32, humanoid_core() + [
-        bone("body", [0, 24, 0], "waist", [cube([-4, 12, -2], [8, 12, 4], [16, 16])]),
-        bone("head", [0, 24, 0], "body", [cube([-4, 24, -4], [8, 8, 8], [0, 0])]),
-        bone("hat", [0, 24, 0], "head", [cube([-4, 24, -4], [8, 8, 8], [32, 0], 0.5)]),
-        bone("rightArm", [-5, 22, 0], "body", [cube([-8, 12, -2], [4, 12, 4], [40, 16])]),
-        bone("rightItem", [-6, 15, 1], "rightArm"),
-        bone("leftArm", [5, 22, 0], "body", [cube([4, 12, -2], [4, 12, 4], [40, 16])], mirror=True),
-        bone("leftItem", [6, 15, 1], "leftArm"),
-        bone("rightLeg", [-1.9, 12, 0], "root", [cube([-3.9, 0, -2], [4, 12, 4], [0, 16])]),
-        bone("leftLeg", [1.9, 12, 0], "root", [cube([-0.1, 0, -2], [4, 12, 4], [0, 16])], mirror=True),
-    ]))
-    # --- Skeleton
-    g.append(geo("geometry.morph.skeleton", 64, 32, humanoid_core() + [
-        bone("body", [0, 24, 0], "waist", [cube([-4, 12, -2], [8, 12, 4], [16, 16])]),
-        bone("head", [0, 24, 0], "body", [cube([-4, 24, -4], [8, 8, 8], [0, 0])]),
-        bone("rightArm", [-5, 22, 0], "body", [cube([-6, 12, -1], [2, 12, 2], [40, 16])]),
-        bone("rightItem", [-6, 15, 1], "rightArm"),
-        bone("leftArm", [5, 22, 0], "body", [cube([4, 12, -1], [2, 12, 2], [40, 16])], mirror=True),
-        bone("leftItem", [6, 15, 1], "leftArm"),
-        bone("rightLeg", [-2, 12, 0], "root", [cube([-3, 0, -1], [2, 12, 2], [0, 16])]),
-        bone("leftLeg", [2, 12, 0], "root", [cube([1, 0, -1], [2, 12, 2], [0, 16])], mirror=True),
-    ]))
-    # --- Creeper
-    g.append(geo("geometry.morph.creeper", 64, 32, [
-        bone("root", [0, 0, 0]),
-        bone("body", [0, 12, 0], "root", [cube([-4, 6, -2], [8, 12, 4], [16, 16])]),
-        bone("head", [0, 18, 0], "body", [cube([-4, 18, -4], [8, 8, 8], [0, 0])]),
-        bone("leg0", [-2, 6, 4], "root", [cube([-4, 0, 2], [4, 6, 4], [0, 16])]),
-        bone("leg1", [2, 6, 4], "root", [cube([0, 0, 2], [4, 6, 4], [0, 16])]),
-        bone("leg2", [-2, 6, -4], "root", [cube([-4, 0, -6], [4, 6, 4], [0, 16])]),
-        bone("leg3", [2, 6, -4], "root", [cube([0, 0, -6], [4, 6, 4], [0, 16])]),
-        bone("rightItem", [-4, 12, -2], "body"),
-        bone("leftItem", [4, 12, -2], "body"),
-    ]))
-    # --- Spider
-    spider = [bone("root", [0, 0, 0]),
-              bone("body0", [0, 9, 0], "root", [cube([-3, 6, -3], [6, 6, 6], [0, 0])]),
-              bone("head", [0, 9, -3], "body0", [cube([-4, 5, -11], [8, 8, 8], [32, 4])]),
-              bone("body1", [0, 9, 9], "body0", [cube([-5, 5, 3], [10, 8, 12], [0, 12])])]
-    for i, z in enumerate((2, 1, 0, -1)):
-        spider.append(bone(f"leg{i*2}", [-4, 9, z], "body0", [cube([-19, 8, z - 1], [16, 2, 2], [18, 0])]))
-        spider.append(bone(f"leg{i*2+1}", [4, 9, z], "body0", [cube([3, 8, z - 1], [16, 2, 2], [18, 0])]))
-    spider += [bone("rightItem", [-4, 10, -6], "head"), bone("leftItem", [4, 10, -6], "head")]
-    g.append(geo("geometry.morph.spider", 64, 32, spider, (3, 2, (0, 0.5, 0))))
-    # --- Enderman (rest pose baked in: legs 0-30, body 30-42, head 42-50)
-    g.append(geo("geometry.morph.enderman", 64, 32, humanoid_core() + [
-        bone("body", [0, 42, 0], "waist", [cube([-4, 30, -2], [8, 12, 4], [32, 16])]),
-        bone("head", [0, 42, 0], "body", [cube([-4, 42, -4], [8, 8, 8], [0, 0])]),
-        bone("hat", [0, 42, 0], "head", [cube([-4, 41.5, -4], [8, 8, 8], [0, 16], -0.5)]),
-        bone("rightArm", [-5, 40, 0], "body", [cube([-6, 12, -1], [2, 30, 2], [56, 0])]),
-        bone("rightItem", [-5, 13, 1], "rightArm"),
-        bone("leftArm", [5, 40, 0], "body", [cube([4, 12, -1], [2, 30, 2], [56, 0])], mirror=True),
-        bone("leftItem", [5, 13, 1], "leftArm"),
-        bone("rightLeg", [-2, 30, 0], "root", [cube([-3, 0, -1], [2, 30, 2], [56, 0])]),
-        bone("leftLeg", [2, 30, 0], "root", [cube([1, 0, -1], [2, 30, 2], [56, 0])], mirror=True),
-    ], (2, 4, (0, 2, 0))))
-    # --- Blaze (rod bones are placed every frame by the vanilla "animation.blaze.move")
-    blaze = [bone("root", [0, 0, 0]),
-             bone("body", [0, 24, 0], "root"),
-             bone("head", [0, 24, 0], "body", [cube([-4, 20, -4], [8, 8, 8], [0, 0])])]
-    for i in range(12):
-        blaze.append(bone(f"upperBodyParts{i}", [0, 24, 0], "body", [cube([0, 16, 0], [2, 8, 2], [0, 16])]))
-    blaze += [bone("rightItem", [-6, 16, 0], "body"), bone("leftItem", [6, 16, 0], "body")]
-    g.append(geo("geometry.morph.blaze", 64, 32, blaze, (2, 3, (0, 1.2, 0))))
     return g
 
 
@@ -273,27 +208,7 @@ def first_person_geos():
         return geo(identifier, tw, th, bones)
 
     return [
-        fp("geometry.morph.fp.shapeshifter", 64, 64,
-           [cube([-7, 9, -1.5], [3, 15, 3], [40, 16])], [cube([4, 9, -1.5], [3, 15, 3], [16, 34])]),
-        fp("geometry.morph.fp.zombie", 64, 32,
-           [cube([-8, 12, -2], [4, 12, 4], [40, 16])], [cube([4, 12, -2], [4, 12, 4], [40, 16], mirror=True)]),
-        fp("geometry.morph.fp.skeleton", 64, 32,
-           [cube([-6, 12, -1], [2, 12, 2], [40, 16])], [cube([4, 12, -1], [2, 12, 2], [40, 16], mirror=True)]),
-        # creeper has no arms: you see a stubby creeper leg-limb as your "hand"
-        fp("geometry.morph.fp.creeper", 64, 32,
-           [cube([-8, 12, -2], [4, 6, 4], [0, 16]), cube([-8, 18, -2], [4, 6, 4], [0, 16])],
-           [cube([4, 12, -2], [4, 6, 4], [0, 16]), cube([4, 18, -2], [4, 6, 4], [0, 16])]),
-        # spider: a hairy spider leg, rotated upright
-        fp("geometry.morph.fp.spider", 64, 32, [], None, [
-            bone("spiderLeg", [-6, 12, 0], "rightArm", [cube([-6, 11, -1], [16, 2, 2], [18, 0])], rotation=[0, 0, -90]),
-            bone("spiderClaw", [-6, 12, 0], "rightArm", [cube([-7, 9, -1], [2, 4, 2], [18, 0])]),
-        ]),
-        fp("geometry.morph.fp.enderman", 64, 32,
-           [cube([-6, 9, -1], [2, 15, 2], [56, 0])], [cube([4, 9, -1], [2, 15, 2], [56, 0], mirror=True)]),
-        # blaze: two burning rods
-        fp("geometry.morph.fp.blaze", 64, 32,
-           [cube([-7, 12, -1], [2, 8, 2], [0, 16]), cube([-5.5, 17, 0], [2, 8, 2], [0, 16])],
-           [cube([5, 12, -1], [2, 8, 2], [0, 16]), cube([3.5, 17, 0], [2, 8, 2], [0, 16])]),
+        fp("geometry.morph.fp.shapeshifter", 64, 64, [cube([-7, 9, -1.5], [3, 15, 3], [40, 16])]),
     ]
 
 

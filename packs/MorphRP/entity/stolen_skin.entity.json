@@ -1,54 +1,570 @@
 {
-  "format_version": "1.10.0",
-  "minecraft:client_entity": {
-    "description": {
-      "identifier": "morph:stolen_skin",
-      "materials": {
-        "default": "entity_alphatest"
-      },
-      "textures": {
-        "morph_shapeshifter": "textures/entity/morph/shapeshifter",
-        "morph_zombie": "textures/entity/zombie/zombie",
-        "morph_skeleton": "textures/entity/skeleton/skeleton",
-        "morph_creeper": "textures/entity/creeper/creeper",
-        "morph_spider": "textures/entity/spider/spider",
-        "morph_enderman": "textures/entity/enderman/enderman",
-        "morph_blaze": "textures/entity/blaze"
-      },
-      "geometry": {
-        "morph_shapeshifter": "geometry.morph.shapeshifter",
-        "morph_zombie": "geometry.morph.zombie",
-        "morph_skeleton": "geometry.morph.skeleton",
-        "morph_creeper": "geometry.morph.creeper",
-        "morph_spider": "geometry.morph.spider",
-        "morph_enderman": "geometry.morph.enderman",
-        "morph_blaze": "geometry.morph.blaze"
-      },
-      "scripts": {
-        "scale": "math.clamp(1.0 - math.pow(query.life_time / 1.6, 2.0), 0.12, 1.0)",
-        "pre_animation": [
-          "variable.morph_form = query.property('morph:form');",
-          "variable.morph_glow = math.clamp(query.life_time * 0.7, 0.15, 0.85);",
-          "variable.is_first_person = 0.0;"
-        ],
-        "animate": [
-          "peel",
-          {
-            "blaze_rods": "variable.morph_form == 6"
-          },
-          {
-            "spider_pose": "variable.morph_form == 4"
-          }
-        ]
-      },
-      "animations": {
-        "peel": "animation.morph.skin.peel",
-        "blaze_rods": "animation.blaze.move",
-        "spider_pose": "animation.spider.default_leg_pose"
-      },
-      "render_controllers": [
-        "controller.render.morph.stolen_skin"
-      ]
-    }
+ "format_version": "1.10.0",
+ "minecraft:client_entity": {
+  "description": {
+   "identifier": "morph:stolen_skin",
+   "materials": {
+    "default": "entity_alphatest"
+   },
+   "textures": {
+    "morph_shapeshifter": "textures/entity/morph/shapeshifter",
+    "morph_allay": "textures/entity/allay/allay",
+    "morph_armadillo": "textures/entity/armadillo",
+    "morph_axolotl": "textures/entity/axolotl/axolotl_blue",
+    "morph_bat": "textures/entity/bat_v2",
+    "morph_bee": "textures/entity/bee/bee",
+    "morph_blaze": "textures/entity/blaze",
+    "morph_bogged": "textures/entity/skeleton/bogged",
+    "morph_breeze": "textures/entity/breeze/breeze",
+    "morph_camel": "textures/entity/camel/camel",
+    "morph_camel_husk": "textures/entity/camel_husk/camel_husk",
+    "morph_cat": "textures/entity/cat/white",
+    "morph_cave_spider": "textures/entity/spider/cave_spider",
+    "morph_chicken": "textures/entity/chicken/chicken",
+    "morph_cod": "textures/entity/fish/cod",
+    "morph_copper_golem": "textures/entity/copper_golem/copper_golem",
+    "morph_cow": "textures/entity/cow/cow_v2",
+    "morph_creeper": "textures/entity/creeper/creeper",
+    "morph_dolphin": "textures/entity/dolphin",
+    "morph_donkey": "textures/entity/horse2/donkey",
+    "morph_drowned": "textures/entity/zombie/drowned",
+    "morph_elder_guardian": "textures/entity/guardian_elder",
+    "morph_ender_dragon": "textures/entity/dragon/dragon",
+    "morph_enderman": "textures/entity/enderman/enderman",
+    "morph_endermite": "textures/entity/endermite",
+    "morph_evocation_illager": "textures/entity/illager/evoker",
+    "morph_fox": "textures/entity/fox/fox",
+    "morph_frog": "textures/entity/frog/temperate_frog",
+    "morph_ghast": "textures/entity/ghast/ghast",
+    "morph_glow_squid": "textures/entity/glow_squid/glow_squid",
+    "morph_goat": "textures/entity/goat/goat",
+    "morph_guardian": "textures/entity/guardian",
+    "morph_happy_ghast": "textures/entity/happy_ghast/ghastling",
+    "morph_hoglin": "textures/entity/hoglin/hoglin",
+    "morph_horse": "textures/entity/horse2/horse_brown",
+    "morph_husk": "textures/entity/zombie/husk",
+    "morph_iron_golem": "textures/entity/iron_golem",
+    "morph_llama": "textures/entity/llama/llama_creamy",
+    "morph_magma_cube": "textures/entity/slime/magmacube_v2",
+    "morph_mooshroom": "textures/entity/cow/mooshroom_v2",
+    "morph_mule": "textures/entity/horse2/mule",
+    "morph_nautilus": "textures/entity/nautilus/nautilus",
+    "morph_ocelot": "textures/entity/cat/blackcat",
+    "morph_panda": "textures/entity/panda/panda",
+    "morph_parched": "textures/entity/parched/parched",
+    "morph_parrot": "textures/entity/parrot/parrot_blue",
+    "morph_phantom": "textures/entity/phantom",
+    "morph_pig": "textures/entity/pig/pig_v3",
+    "morph_piglin": "textures/entity/piglin/piglin",
+    "morph_piglin_brute": "textures/entity/piglin/piglin_brute",
+    "morph_pillager": "textures/entity/pillager",
+    "morph_polar_bear": "textures/entity/polar_bear",
+    "morph_pufferfish": "textures/entity/fish/pufferfish",
+    "morph_rabbit": "textures/entity/rabbit/rabbit_brown",
+    "morph_ravager": "textures/entity/illager/ravager",
+    "morph_salmon": "textures/entity/fish/salmon",
+    "morph_sheep": "textures/entity/sheep/sheep",
+    "morph_shulker": "textures/entity/shulker/shulker_undyed",
+    "morph_silverfish": "textures/entity/silverfish",
+    "morph_skeleton": "textures/entity/skeleton/skeleton",
+    "morph_skeleton_horse": "textures/entity/horse2/horse_skeleton",
+    "morph_slime": "textures/entity/slime/slime",
+    "morph_sniffer": "textures/entity/sniffer/sniffer",
+    "morph_snow_golem": "textures/entity/snow_golem",
+    "morph_spider": "textures/entity/spider/spider",
+    "morph_squid": "textures/entity/squid",
+    "morph_stray": "textures/entity/skeleton/stray",
+    "morph_strider": "textures/entity/strider/strider",
+    "morph_sulfur_cube": "textures/entity/sulfur_cube/sulfur_cube_inner",
+    "morph_tadpole": "textures/entity/tadpole/tadpole",
+    "morph_trader_llama": "textures/entity/llama/llama_creamy",
+    "morph_tropicalfish": "textures/entity/fish/tropical_a",
+    "morph_turtle": "textures/entity/sea_turtle",
+    "morph_vex": "textures/entity/vex/vex",
+    "morph_villager": "textures/entity/villager/farmer",
+    "morph_villager_v2": "textures/entity/villager2/villager",
+    "morph_vindicator": "textures/entity/vindicator",
+    "morph_wandering_trader": "textures/entity/wandering_trader",
+    "morph_warden": "textures/entity/warden/warden",
+    "morph_witch": "textures/entity/witch",
+    "morph_wither": "textures/entity/wither_boss/wither",
+    "morph_wither_skeleton": "textures/entity/skeleton/wither_skeleton",
+    "morph_wolf": "textures/entity/wolf/wolf",
+    "morph_zoglin": "textures/entity/zoglin/zoglin",
+    "morph_zombie": "textures/entity/zombie/zombie",
+    "morph_zombie_horse": "textures/entity/horse2/horse_zombie",
+    "morph_zombie_nautilus": "textures/entity/nautilus/zombie_nautilus",
+    "morph_zombie_villager": "textures/entity/zombie_villager/zombie_smith",
+    "morph_zombie_villager_v2": "textures/entity/zombie_villager2/zombie-villager",
+    "morph_zombie_pigman": "textures/entity/piglin/zombie_piglin"
+   },
+   "geometry": {
+    "morph_shapeshifter": "geometry.morph.shapeshifter",
+    "morph_allay": "geometry.allay",
+    "morph_armadillo": "geometry.armadillo",
+    "morph_axolotl": "geometry.axolotl",
+    "morph_bat": "geometry.bat_v2",
+    "morph_bee": "geometry.bee",
+    "morph_blaze": "geometry.blaze",
+    "morph_bogged": "geometry.skeleton.bogged",
+    "morph_breeze": "geometry.breeze",
+    "morph_camel": "geometry.camel",
+    "morph_camel_husk": "geometry.camel_husk",
+    "morph_cat": "geometry.cat",
+    "morph_cave_spider": "geometry.spider.v1.8",
+    "morph_chicken": "geometry.chicken.v1.12",
+    "morph_cod": "geometry.cod",
+    "morph_copper_golem": "geometry.copper_golem",
+    "morph_cow": "geometry.cow.v2",
+    "morph_creeper": "geometry.creeper.v1.8",
+    "morph_dolphin": "geometry.dolphin",
+    "morph_donkey": "geometry.horse.v3",
+    "morph_drowned": "geometry.zombie.drowned.v1.16",
+    "morph_elder_guardian": "geometry.guardian.v1.8",
+    "morph_ender_dragon": "geometry.dragon",
+    "morph_enderman": "geometry.enderman.v1.8",
+    "morph_endermite": "geometry.endermite",
+    "morph_evocation_illager": "geometry.evoker.v1.8",
+    "morph_fox": "geometry.fox",
+    "morph_frog": "geometry.frog",
+    "morph_ghast": "geometry.ghast",
+    "morph_glow_squid": "geometry.squid",
+    "morph_goat": "geometry.goat",
+    "morph_guardian": "geometry.guardian.v1.8",
+    "morph_happy_ghast": "geometry.happy_ghast",
+    "morph_hoglin": "geometry.hoglin",
+    "morph_horse": "geometry.horse.v3",
+    "morph_husk": "geometry.zombie.husk.v1.8",
+    "morph_iron_golem": "geometry.irongolem",
+    "morph_llama": "geometry.llama.v1.8",
+    "morph_magma_cube": "geometry.magma_cube_v2",
+    "morph_mooshroom": "geometry.mooshroom.v2",
+    "morph_mule": "geometry.horse.v3",
+    "morph_nautilus": "geometry.nautilus",
+    "morph_ocelot": "geometry.ocelot.v1.8",
+    "morph_panda": "geometry.panda",
+    "morph_parched": "geometry.parched",
+    "morph_parrot": "geometry.parrot",
+    "morph_phantom": "geometry.phantom",
+    "morph_pig": "geometry.pig.v3",
+    "morph_piglin": "geometry.piglin",
+    "morph_piglin_brute": "geometry.piglin",
+    "morph_pillager": "geometry.pillager",
+    "morph_polar_bear": "geometry.polarbear",
+    "morph_pufferfish": "geometry.pufferfish.small.v1.8",
+    "morph_rabbit": "geometry.rabbit.v2",
+    "morph_ravager": "geometry.ravager",
+    "morph_salmon": "geometry.salmon",
+    "morph_sheep": "geometry.sheep.v1.8",
+    "morph_shulker": "geometry.shulker.v1.8",
+    "morph_silverfish": "geometry.silverfish",
+    "morph_skeleton": "geometry.skeleton.v1.8",
+    "morph_skeleton_horse": "geometry.horse.v3",
+    "morph_slime": "geometry.slime",
+    "morph_sniffer": "geometry.sniffer",
+    "morph_snow_golem": "geometry.snowgolem.v1.8",
+    "morph_spider": "geometry.spider.v1.8",
+    "morph_squid": "geometry.squid",
+    "morph_stray": "geometry.skeleton.stray.v1.8",
+    "morph_strider": "geometry.strider",
+    "morph_sulfur_cube": "geometry.sulfur_cube",
+    "morph_tadpole": "geometry.tadpole",
+    "morph_trader_llama": "geometry.llama.v1.8",
+    "morph_tropicalfish": "geometry.tropicalfish_a",
+    "morph_turtle": "geometry.turtle",
+    "morph_vex": "geometry.vex.v1.8",
+    "morph_villager": "geometry.villager.v1.8",
+    "morph_villager_v2": "geometry.villager_v2",
+    "morph_vindicator": "geometry.vindicator.v1.8",
+    "morph_wandering_trader": "geometry.villager_v2",
+    "morph_warden": "geometry.warden",
+    "morph_witch": "geometry.villager.witch.v1.8",
+    "morph_wither": "geometry.witherBoss",
+    "morph_wither_skeleton": "geometry.skeleton.wither.v1.8",
+    "morph_wolf": "geometry.wolf",
+    "morph_zoglin": "geometry.hoglin",
+    "morph_zombie": "geometry.zombie.v1.8",
+    "morph_zombie_horse": "geometry.horse.v3",
+    "morph_zombie_nautilus": "geometry.nautilus",
+    "morph_zombie_villager": "geometry.zombie.villager.v1.8",
+    "morph_zombie_villager_v2": "geometry.zombie.villager_v2",
+    "morph_zombie_pigman": "geometry.piglin"
+   },
+   "scripts": {
+    "scale": "query.property('morph:r') * math.clamp(1.0 - math.pow(query.life_time / 1.6, 2.0), 0.12, 1.0)",
+    "pre_animation": [
+     "variable.morph_form = query.property('morph:form');",
+     "variable.morph_glow = math.clamp(query.life_time * 0.7, 0.15, 0.85);",
+     "variable.morph_pov = 0;"
+    ],
+    "animate": [
+     {
+      "peel0": "variable.morph_form == 0"
+     },
+     {
+      "peel1": "variable.morph_form == 1"
+     },
+     {
+      "peel2": "variable.morph_form == 2"
+     },
+     {
+      "peel3": "variable.morph_form == 3"
+     },
+     {
+      "peel4": "variable.morph_form == 4"
+     },
+     {
+      "peel5": "variable.morph_form == 5"
+     },
+     {
+      "peel6": "variable.morph_form == 6"
+     },
+     {
+      "peel7": "variable.morph_form == 7"
+     },
+     {
+      "peel8": "variable.morph_form == 8"
+     },
+     {
+      "peel9": "variable.morph_form == 9"
+     },
+     {
+      "peel10": "variable.morph_form == 10"
+     },
+     {
+      "peel11": "variable.morph_form == 11"
+     },
+     {
+      "peel12": "variable.morph_form == 12"
+     },
+     {
+      "peel13": "variable.morph_form == 13"
+     },
+     {
+      "peel14": "variable.morph_form == 14"
+     },
+     {
+      "peel15": "variable.morph_form == 15"
+     },
+     {
+      "peel16": "variable.morph_form == 16"
+     },
+     {
+      "peel17": "variable.morph_form == 17"
+     },
+     {
+      "peel18": "variable.morph_form == 18"
+     },
+     {
+      "peel19": "variable.morph_form == 19"
+     },
+     {
+      "peel20": "variable.morph_form == 20"
+     },
+     {
+      "peel21": "variable.morph_form == 21"
+     },
+     {
+      "peel22": "variable.morph_form == 22"
+     },
+     {
+      "peel23": "variable.morph_form == 23"
+     },
+     {
+      "peel24": "variable.morph_form == 24"
+     },
+     {
+      "peel25": "variable.morph_form == 25"
+     },
+     {
+      "peel26": "variable.morph_form == 26"
+     },
+     {
+      "peel27": "variable.morph_form == 27"
+     },
+     {
+      "peel28": "variable.morph_form == 28"
+     },
+     {
+      "peel29": "variable.morph_form == 29"
+     },
+     {
+      "peel30": "variable.morph_form == 30"
+     },
+     {
+      "peel31": "variable.morph_form == 31"
+     },
+     {
+      "peel32": "variable.morph_form == 32"
+     },
+     {
+      "peel33": "variable.morph_form == 33"
+     },
+     {
+      "peel34": "variable.morph_form == 34"
+     },
+     {
+      "peel35": "variable.morph_form == 35"
+     },
+     {
+      "peel36": "variable.morph_form == 36"
+     },
+     {
+      "peel37": "variable.morph_form == 37"
+     },
+     {
+      "peel38": "variable.morph_form == 38"
+     },
+     {
+      "peel39": "variable.morph_form == 39"
+     },
+     {
+      "peel40": "variable.morph_form == 40"
+     },
+     {
+      "peel41": "variable.morph_form == 41"
+     },
+     {
+      "peel42": "variable.morph_form == 42"
+     },
+     {
+      "peel43": "variable.morph_form == 43"
+     },
+     {
+      "peel44": "variable.morph_form == 44"
+     },
+     {
+      "peel45": "variable.morph_form == 45"
+     },
+     {
+      "peel46": "variable.morph_form == 46"
+     },
+     {
+      "peel47": "variable.morph_form == 47"
+     },
+     {
+      "peel48": "variable.morph_form == 48"
+     },
+     {
+      "peel49": "variable.morph_form == 49"
+     },
+     {
+      "peel50": "variable.morph_form == 50"
+     },
+     {
+      "peel51": "variable.morph_form == 51"
+     },
+     {
+      "peel52": "variable.morph_form == 52"
+     },
+     {
+      "peel53": "variable.morph_form == 53"
+     },
+     {
+      "peel54": "variable.morph_form == 54"
+     },
+     {
+      "peel55": "variable.morph_form == 55"
+     },
+     {
+      "peel56": "variable.morph_form == 56"
+     },
+     {
+      "peel57": "variable.morph_form == 57"
+     },
+     {
+      "peel58": "variable.morph_form == 58"
+     },
+     {
+      "peel59": "variable.morph_form == 59"
+     },
+     {
+      "peel60": "variable.morph_form == 60"
+     },
+     {
+      "peel61": "variable.morph_form == 61"
+     },
+     {
+      "peel62": "variable.morph_form == 62"
+     },
+     {
+      "peel63": "variable.morph_form == 63"
+     },
+     {
+      "peel64": "variable.morph_form == 64"
+     },
+     {
+      "peel65": "variable.morph_form == 65"
+     },
+     {
+      "peel66": "variable.morph_form == 66"
+     },
+     {
+      "peel67": "variable.morph_form == 67"
+     },
+     {
+      "peel68": "variable.morph_form == 68"
+     },
+     {
+      "peel69": "variable.morph_form == 69"
+     },
+     {
+      "peel70": "variable.morph_form == 70"
+     },
+     {
+      "peel71": "variable.morph_form == 71"
+     },
+     {
+      "peel72": "variable.morph_form == 72"
+     },
+     {
+      "peel73": "variable.morph_form == 73"
+     },
+     {
+      "peel74": "variable.morph_form == 74"
+     },
+     {
+      "peel75": "variable.morph_form == 75"
+     },
+     {
+      "peel76": "variable.morph_form == 76"
+     },
+     {
+      "peel77": "variable.morph_form == 77"
+     },
+     {
+      "peel78": "variable.morph_form == 78"
+     },
+     {
+      "peel79": "variable.morph_form == 79"
+     },
+     {
+      "peel80": "variable.morph_form == 80"
+     },
+     {
+      "peel81": "variable.morph_form == 81"
+     },
+     {
+      "peel82": "variable.morph_form == 82"
+     },
+     {
+      "peel83": "variable.morph_form == 83"
+     },
+     {
+      "peel84": "variable.morph_form == 84"
+     },
+     {
+      "peel85": "variable.morph_form == 85"
+     },
+     {
+      "peel86": "variable.morph_form == 86"
+     },
+     {
+      "peel87": "variable.morph_form == 87"
+     },
+     {
+      "peel88": "variable.morph_form == 88"
+     },
+     {
+      "peel89": "variable.morph_form == 89"
+     }
+    ]
+   },
+   "animations": {
+    "peel0": "animation.morph.gen.peel.shapeshifter",
+    "peel1": "animation.morph.gen.peel.allay",
+    "peel2": "animation.morph.gen.peel.armadillo",
+    "peel3": "animation.morph.gen.peel.axolotl",
+    "peel4": "animation.morph.gen.peel.bat",
+    "peel5": "animation.morph.gen.peel.bee",
+    "peel6": "animation.morph.gen.peel.blaze",
+    "peel7": "animation.morph.gen.peel.bogged",
+    "peel8": "animation.morph.gen.peel.breeze",
+    "peel9": "animation.morph.gen.peel.camel",
+    "peel10": "animation.morph.gen.peel.camel_husk",
+    "peel11": "animation.morph.gen.peel.cat",
+    "peel12": "animation.morph.gen.peel.cave_spider",
+    "peel13": "animation.morph.gen.peel.chicken",
+    "peel14": "animation.morph.gen.peel.cod",
+    "peel15": "animation.morph.gen.peel.copper_golem",
+    "peel16": "animation.morph.gen.peel.cow",
+    "peel17": "animation.morph.gen.peel.creeper",
+    "peel18": "animation.morph.gen.peel.dolphin",
+    "peel19": "animation.morph.gen.peel.donkey",
+    "peel20": "animation.morph.gen.peel.drowned",
+    "peel21": "animation.morph.gen.peel.elder_guardian",
+    "peel22": "animation.morph.gen.peel.ender_dragon",
+    "peel23": "animation.morph.gen.peel.enderman",
+    "peel24": "animation.morph.gen.peel.endermite",
+    "peel25": "animation.morph.gen.peel.evocation_illager",
+    "peel26": "animation.morph.gen.peel.fox",
+    "peel27": "animation.morph.gen.peel.frog",
+    "peel28": "animation.morph.gen.peel.ghast",
+    "peel29": "animation.morph.gen.peel.glow_squid",
+    "peel30": "animation.morph.gen.peel.goat",
+    "peel31": "animation.morph.gen.peel.guardian",
+    "peel32": "animation.morph.gen.peel.happy_ghast",
+    "peel33": "animation.morph.gen.peel.hoglin",
+    "peel34": "animation.morph.gen.peel.horse",
+    "peel35": "animation.morph.gen.peel.husk",
+    "peel36": "animation.morph.gen.peel.iron_golem",
+    "peel37": "animation.morph.gen.peel.llama",
+    "peel38": "animation.morph.gen.peel.magma_cube",
+    "peel39": "animation.morph.gen.peel.mooshroom",
+    "peel40": "animation.morph.gen.peel.mule",
+    "peel41": "animation.morph.gen.peel.nautilus",
+    "peel42": "animation.morph.gen.peel.ocelot",
+    "peel43": "animation.morph.gen.peel.panda",
+    "peel44": "animation.morph.gen.peel.parched",
+    "peel45": "animation.morph.gen.peel.parrot",
+    "peel46": "animation.morph.gen.peel.phantom",
+    "peel47": "animation.morph.gen.peel.pig",
+    "peel48": "animation.morph.gen.peel.piglin",
+    "peel49": "animation.morph.gen.peel.piglin_brute",
+    "peel50": "animation.morph.gen.peel.pillager",
+    "peel51": "animation.morph.gen.peel.polar_bear",
+    "peel52": "animation.morph.gen.peel.pufferfish",
+    "peel53": "animation.morph.gen.peel.rabbit",
+    "peel54": "animation.morph.gen.peel.ravager",
+    "peel55": "animation.morph.gen.peel.salmon",
+    "peel56": "animation.morph.gen.peel.sheep",
+    "peel57": "animation.morph.gen.peel.shulker",
+    "peel58": "animation.morph.gen.peel.silverfish",
+    "peel59": "animation.morph.gen.peel.skeleton",
+    "peel60": "animation.morph.gen.peel.skeleton_horse",
+    "peel61": "animation.morph.gen.peel.slime",
+    "peel62": "animation.morph.gen.peel.sniffer",
+    "peel63": "animation.morph.gen.peel.snow_golem",
+    "peel64": "animation.morph.gen.peel.spider",
+    "peel65": "animation.morph.gen.peel.squid",
+    "peel66": "animation.morph.gen.peel.stray",
+    "peel67": "animation.morph.gen.peel.strider",
+    "peel68": "animation.morph.gen.peel.sulfur_cube",
+    "peel69": "animation.morph.gen.peel.tadpole",
+    "peel70": "animation.morph.gen.peel.trader_llama",
+    "peel71": "animation.morph.gen.peel.tropicalfish",
+    "peel72": "animation.morph.gen.peel.turtle",
+    "peel73": "animation.morph.gen.peel.vex",
+    "peel74": "animation.morph.gen.peel.villager",
+    "peel75": "animation.morph.gen.peel.villager_v2",
+    "peel76": "animation.morph.gen.peel.vindicator",
+    "peel77": "animation.morph.gen.peel.wandering_trader",
+    "peel78": "animation.morph.gen.peel.warden",
+    "peel79": "animation.morph.gen.peel.witch",
+    "peel80": "animation.morph.gen.peel.wither",
+    "peel81": "animation.morph.gen.peel.wither_skeleton",
+    "peel82": "animation.morph.gen.peel.wolf",
+    "peel83": "animation.morph.gen.peel.zoglin",
+    "peel84": "animation.morph.gen.peel.zombie",
+    "peel85": "animation.morph.gen.peel.zombie_horse",
+    "peel86": "animation.morph.gen.peel.zombie_nautilus",
+    "peel87": "animation.morph.gen.peel.zombie_villager",
+    "peel88": "animation.morph.gen.peel.zombie_villager_v2",
+    "peel89": "animation.morph.gen.peel.zombie_pigman"
+   },
+   "render_controllers": [
+    "controller.render.morph.stolen_skin"
+   ]
   }
+ }
 }
