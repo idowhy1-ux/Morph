@@ -5,7 +5,7 @@
     "description": "pack.description",
     "uuid": "9a8b7c6d-5e4f-4a3b-8c2d-1e0f9a8b7c65",
     "version": [
-      1,
+      2,
       0,
       0
     ],
@@ -20,7 +20,7 @@
       "type": "resources",
       "uuid": "1f2e3d4c-5b6a-4978-8a9b-0c1d2e3f4a5b",
       "version": [
-        1,
+        2,
         0,
         0
       ]
@@ -30,7 +30,7 @@
     {
       "uuid": "6b1f3c2a-8e4d-4b7a-9c51-2f0a7d3e9b10",
       "version": [
-        1,
+        2,
         0,
         0
       ]

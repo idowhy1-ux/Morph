@@ -6,7 +6,7 @@ All **89 vanilla mobs** can be stolen, from chickens and cod to wardens, the Wit
 
 ## Install (phone / tablet)
 
-1. Download **`dist/Morph.mcaddon`** and tap it. Minecraft imports both packs.
+1. Download **`dist/Morph_v2.mcaddon`** and tap it. Minecraft imports both packs.
 2. In world settings, turn on **Morph: Shapeshifter (Behavior)**. The resource pack turns on with it.
 3. You need **Minecraft Bedrock 1.26.30 or newer**. No experimental toggles are needed.
 
@@ -146,7 +146,7 @@ Rebuild:
 git clone --depth 1 https://github.com/Mojang/bedrock-samples /tmp/bedrock-samples
 python3 tools/generate_assets.py
 python3 tools/generate_forms.py /tmp/bedrock-samples
-python3 tools/build.py      # -> dist/Morph.mcaddon
+python3 tools/build.py      # -> dist/Morph_v2.mcaddon
 ```
 
 ## Known limitations
