@@ -1,5 +1,5 @@
-pack.name=Morph: Shapeshifter v2 (Resources)
-pack.description=v2.0.0 - All mobs, mob health, mob-height camera. Kill mobs, steal their skin, become them.
+pack.name=Morph: Shapeshifter v2.1 (Resources)
+pack.description=v2.1.0 - All mobs, mob health, mob-height camera. Kill mobs, steal their skin, become them.
 item.morph:morph_core=Morph Core
 item.morph:morph_core.name=Morph Core
 entity.morph:stolen_skin.name=Stolen Skin
