@@ -21,7 +21,7 @@ const SKIN_ENTITY = "morph:stolen_skin";
 const P_FORM = "morph:form";
 const P_ABSORB = "morph:absorb";
 const P_R = "morph:r";
-const P_RIDE = "morph:ride_off";
+const P_IN_BODY = "morph:in_body";
 const BODY_ID = "morph:body";
 const DP_K = "morph:seat_k"; // world: measured (head height - seat height) for a rider
 const DP_DIED = "morph:died";
@@ -710,6 +710,11 @@ function ridingBody(p) {
   return r && r.typeId === BODY_ID ? r : undefined;
 }
 
+/** @param {import("@minecraft/server").Player} p @param {boolean} v */
+function setInBody(p, v) {
+  if ((safe(() => p.getProperty(P_IN_BODY)) === true) !== v) safe(() => p.setProperty(P_IN_BODY, v));
+}
+
 function removeBody(playerId) {
   const rec = bodies.get(playerId);
   if (rec?.body?.isValid) safe(() => rec.body.remove());
@@ -732,7 +737,7 @@ function syncBody(p, seatOverride) {
   const f = getForm(p);
   if (!needsBody(f)) {
     removeBody(p.id);
-    safe(() => p.setProperty(P_RIDE, 0));
+    setInBody(p, false);
     return;
   }
   const seat = seatOverride ?? f.eye - riderK();
@@ -740,11 +745,16 @@ function syncBody(p, seatOverride) {
   if (rec?.body?.isValid && rec.formId === f.id && Math.abs(rec.seat - seat) < SEAT.step / 2 && rec.body.dimension.id === p.dimension.id) return;
   const at = rec?.body?.isValid && rec.body.dimension.id === p.dimension.id ? rec.body.location : p.location;
   removeBody(p.id);
+  setInBody(p, false);
   const body = safe(() => p.dimension.spawnEntity(BODY_ID, at));
   if (!body) return;
   safe(() => body.triggerEvent(`morph:size_${f.size}`));
   safe(() => body.triggerEvent(`morph:seat_${seatIndex(seat)}`));
   safe(() => body.setDynamicProperty("owner", p.id));
+  safe(() => body.setProperty("morph:form", f.id));
+  safe(() => body.setProperty("morph:r", f.r));
+  // the camera ends up exactly eye-height above the body's feet; the body hides itself from that camera
+  safe(() => body.setProperty("morph:eye", Math.min(Math.max(f.eye, 0), 16)));
   bodies.set(p.id, { body, formId: f.id, seat: SEAT.min + seatIndex(seat) * SEAT.step, mountedAt: -1, calibrated: seatOverride !== undefined });
   system.run(() => mount(p));
 }
@@ -773,6 +783,7 @@ function driveBody(p) {
   const b = rec.body;
   if (ridingBody(p)?.id !== b.id) {
     // dismounted (sneak, dismount button, teleport...): hop straight back in
+    setInBody(p, false);
     if (system.currentTick % 2 === 0) mount(p);
     return;
   }
@@ -791,7 +802,18 @@ function driveBody(p) {
       }
     }
   }
-  if (system.currentTick % 10 === 0) safe(() => p.setProperty(P_RIDE, Math.round((p.location.y - b.location.y) * 100) / 100));
+  setInBody(p, true);
+  // the body draws the mob: keep its head looking where you look, and its glow in sync
+  const pitch = Math.round(safe(() => p.getRotation().x) ?? 0);
+  if (Math.abs(pitch - (rec.pitch ?? 999)) >= 3) {
+    rec.pitch = pitch;
+    safe(() => b.setProperty("morph:pitch", Math.max(-90, Math.min(90, pitch))));
+  }
+  const absorbing = safe(() => p.getProperty(P_ABSORB)) === true;
+  if (absorbing !== rec.absorb) {
+    rec.absorb = absorbing;
+    safe(() => b.setProperty("morph:absorb", absorbing));
+  }
 
   const jump = safe(() => p.inputInfo.getButtonState(InputButton.Jump)) === ButtonState.Pressed;
   const v = safe(() => b.getVelocity()) ?? { x: 0, y: 0, z: 0 };

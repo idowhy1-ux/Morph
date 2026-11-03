@@ -6,8 +6,8 @@ All **89 vanilla mobs** can be stolen, from chickens and cod to wardens, the Wit
 
 ## Install (phone / tablet)
 
-1. Download **`dist/Morph_v4.mcaddon`** and tap it. Minecraft imports both packs.
-2. In world settings, turn on **Morph: Shapeshifter v4 (Behavior)**. The resource pack turns on with it.
+1. Download **`dist/Morph_v5.mcaddon`** and tap it. Minecraft imports both packs.
+2. In world settings, turn on **Morph: Shapeshifter v5 (Behavior)**. The resource pack turns on with it.
 3. You need **Minecraft Bedrock 1.26.30 or newer**. No experimental toggles are needed.
 
 You get a **Morph Core** when you join.
@@ -31,6 +31,8 @@ The camera sits at the **mob's real eye height**, low as a chicken and high as a
 * **Spiders**: walk into a wall to climb it.
 * **Swimmers**: swim where you look. Hold jump to rise.
 * If you get knocked off (sneak or the dismount button), you snap straight back in.
+
+In third person (and for other players), the mob is drawn standing on the ground at the body's position. Your own first-person camera stays at the mob's eye height, and the body hides itself from that camera so it never blocks your view.
 
 Human-height mobs (zombies, skeletons, villagers, pillagers and so on) don't need a body, so you play them normally, including sprinting and sneaking.
 
@@ -156,7 +158,7 @@ Rebuild:
 git clone --depth 1 https://github.com/Mojang/bedrock-samples /tmp/bedrock-samples
 python3 tools/generate_assets.py
 python3 tools/generate_forms.py /tmp/bedrock-samples
-python3 tools/build.py      # -> dist/Morph_v4.mcaddon
+python3 tools/build.py      # -> dist/Morph_v5.mcaddon
 ```
 
 ## Known limitations

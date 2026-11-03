@@ -30,13 +30,9 @@
      "default": 0.9375,
      "client_sync": true
     },
-    "morph:ride_off": {
-     "type": "float",
-     "range": [
-      -20.0,
-      20.0
-     ],
-     "default": 0.0,
+    "morph:in_body": {
+     "type": "bool",
+     "default": false,
      "client_sync": true
     }
    }

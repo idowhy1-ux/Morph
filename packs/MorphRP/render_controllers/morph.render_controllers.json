@@ -485,6 +485,278 @@
     }
    ]
   },
+  "controller.render.morph.body": {
+   "arrays": {
+    "geometries": {
+     "Array.morph_geo": [
+      "Geometry.morph_shapeshifter",
+      "Geometry.morph_allay",
+      "Geometry.morph_armadillo",
+      "Geometry.morph_axolotl",
+      "Geometry.morph_bat",
+      "Geometry.morph_bee",
+      "Geometry.morph_blaze",
+      "Geometry.morph_bogged",
+      "Geometry.morph_breeze",
+      "Geometry.morph_camel",
+      "Geometry.morph_camel_husk",
+      "Geometry.morph_cat",
+      "Geometry.morph_cave_spider",
+      "Geometry.morph_chicken",
+      "Geometry.morph_cod",
+      "Geometry.morph_copper_golem",
+      "Geometry.morph_cow",
+      "Geometry.morph_creeper",
+      "Geometry.morph_dolphin",
+      "Geometry.morph_donkey",
+      "Geometry.morph_drowned",
+      "Geometry.morph_elder_guardian",
+      "Geometry.morph_ender_dragon",
+      "Geometry.morph_enderman",
+      "Geometry.morph_endermite",
+      "Geometry.morph_evocation_illager",
+      "Geometry.morph_fox",
+      "Geometry.morph_frog",
+      "Geometry.morph_ghast",
+      "Geometry.morph_glow_squid",
+      "Geometry.morph_goat",
+      "Geometry.morph_guardian",
+      "Geometry.morph_happy_ghast",
+      "Geometry.morph_hoglin",
+      "Geometry.morph_horse",
+      "Geometry.morph_husk",
+      "Geometry.morph_iron_golem",
+      "Geometry.morph_llama",
+      "Geometry.morph_magma_cube",
+      "Geometry.morph_mooshroom",
+      "Geometry.morph_mule",
+      "Geometry.morph_nautilus",
+      "Geometry.morph_ocelot",
+      "Geometry.morph_panda",
+      "Geometry.morph_parched",
+      "Geometry.morph_parrot",
+      "Geometry.morph_phantom",
+      "Geometry.morph_pig",
+      "Geometry.morph_piglin",
+      "Geometry.morph_piglin_brute",
+      "Geometry.morph_pillager",
+      "Geometry.morph_polar_bear",
+      "Geometry.morph_pufferfish",
+      "Geometry.morph_rabbit",
+      "Geometry.morph_ravager",
+      "Geometry.morph_salmon",
+      "Geometry.morph_sheep",
+      "Geometry.morph_shulker",
+      "Geometry.morph_silverfish",
+      "Geometry.morph_skeleton",
+      "Geometry.morph_skeleton_horse",
+      "Geometry.morph_slime",
+      "Geometry.morph_sniffer",
+      "Geometry.morph_snow_golem",
+      "Geometry.morph_spider",
+      "Geometry.morph_squid",
+      "Geometry.morph_stray",
+      "Geometry.morph_strider",
+      "Geometry.morph_sulfur_cube",
+      "Geometry.morph_tadpole",
+      "Geometry.morph_trader_llama",
+      "Geometry.morph_tropicalfish",
+      "Geometry.morph_turtle",
+      "Geometry.morph_vex",
+      "Geometry.morph_villager",
+      "Geometry.morph_villager_v2",
+      "Geometry.morph_vindicator",
+      "Geometry.morph_wandering_trader",
+      "Geometry.morph_warden",
+      "Geometry.morph_witch",
+      "Geometry.morph_wither",
+      "Geometry.morph_wither_skeleton",
+      "Geometry.morph_wolf",
+      "Geometry.morph_zoglin",
+      "Geometry.morph_zombie",
+      "Geometry.morph_zombie_horse",
+      "Geometry.morph_zombie_nautilus",
+      "Geometry.morph_zombie_villager",
+      "Geometry.morph_zombie_villager_v2",
+      "Geometry.morph_zombie_pigman"
+     ]
+    },
+    "textures": {
+     "Array.morph_tex": [
+      "Texture.morph_shapeshifter",
+      "Texture.morph_allay",
+      "Texture.morph_armadillo",
+      "Texture.morph_axolotl",
+      "Texture.morph_bat",
+      "Texture.morph_bee",
+      "Texture.morph_blaze",
+      "Texture.morph_bogged",
+      "Texture.morph_breeze",
+      "Texture.morph_camel",
+      "Texture.morph_camel_husk",
+      "Texture.morph_cat",
+      "Texture.morph_cave_spider",
+      "Texture.morph_chicken",
+      "Texture.morph_cod",
+      "Texture.morph_copper_golem",
+      "Texture.morph_cow",
+      "Texture.morph_creeper",
+      "Texture.morph_dolphin",
+      "Texture.morph_donkey",
+      "Texture.morph_drowned",
+      "Texture.morph_elder_guardian",
+      "Texture.morph_ender_dragon",
+      "Texture.morph_enderman",
+      "Texture.morph_endermite",
+      "Texture.morph_evocation_illager",
+      "Texture.morph_fox",
+      "Texture.morph_frog",
+      "Texture.morph_ghast",
+      "Texture.morph_glow_squid",
+      "Texture.morph_goat",
+      "Texture.morph_guardian",
+      "Texture.morph_happy_ghast",
+      "Texture.morph_hoglin",
+      "Texture.morph_horse",
+      "Texture.morph_husk",
+      "Texture.morph_iron_golem",
+      "Texture.morph_llama",
+      "Texture.morph_magma_cube",
+      "Texture.morph_mooshroom",
+      "Texture.morph_mule",
+      "Texture.morph_nautilus",
+      "Texture.morph_ocelot",
+      "Texture.morph_panda",
+      "Texture.morph_parched",
+      "Texture.morph_parrot",
+      "Texture.morph_phantom",
+      "Texture.morph_pig",
+      "Texture.morph_piglin",
+      "Texture.morph_piglin_brute",
+      "Texture.morph_pillager",
+      "Texture.morph_polar_bear",
+      "Texture.morph_pufferfish",
+      "Texture.morph_rabbit",
+      "Texture.morph_ravager",
+      "Texture.morph_salmon",
+      "Texture.morph_sheep",
+      "Texture.morph_shulker",
+      "Texture.morph_silverfish",
+      "Texture.morph_skeleton",
+      "Texture.morph_skeleton_horse",
+      "Texture.morph_slime",
+      "Texture.morph_sniffer",
+      "Texture.morph_snow_golem",
+      "Texture.morph_spider",
+      "Texture.morph_squid",
+      "Texture.morph_stray",
+      "Texture.morph_strider",
+      "Texture.morph_sulfur_cube",
+      "Texture.morph_tadpole",
+      "Texture.morph_trader_llama",
+      "Texture.morph_tropicalfish",
+      "Texture.morph_turtle",
+      "Texture.morph_vex",
+      "Texture.morph_villager",
+      "Texture.morph_villager_v2",
+      "Texture.morph_vindicator",
+      "Texture.morph_wandering_trader",
+      "Texture.morph_warden",
+      "Texture.morph_witch",
+      "Texture.morph_wither",
+      "Texture.morph_wither_skeleton",
+      "Texture.morph_wolf",
+      "Texture.morph_zoglin",
+      "Texture.morph_zombie",
+      "Texture.morph_zombie_horse",
+      "Texture.morph_zombie_nautilus",
+      "Texture.morph_zombie_villager",
+      "Texture.morph_zombie_villager_v2",
+      "Texture.morph_zombie_pigman"
+     ]
+    }
+   },
+   "geometry": "Array.morph_geo[variable.morph_form]",
+   "materials": [
+    {
+     "*": "Material.default"
+    }
+   ],
+   "textures": [
+    "Array.morph_tex[variable.morph_form]"
+   ],
+   "overlay_color": {
+    "r": "0.62",
+    "g": "0.18",
+    "b": "1.0",
+    "a": "variable.morph_glow"
+   },
+   "part_visibility": [
+    {
+     "*": "(math.abs(query.distance_from_camera - query.property('morph:eye')) > 0.35)"
+    },
+    {
+     "Saddle": false
+    },
+    {
+     "ReinsL": false
+    },
+    {
+     "ReinsR": false
+    },
+    {
+     "Bridle": false
+    },
+    {
+     "BitL": false
+    },
+    {
+     "BitR": false
+    },
+    {
+     "BagL": false
+    },
+    {
+     "BagR": false
+    },
+    {
+     "body_rolled_up": false
+    },
+    {
+     "tongue": false
+    },
+    {
+     "croaking_body": false
+    },
+    {
+     "tornado_body": false
+    },
+    {
+     "tornado_bottom": false
+    },
+    {
+     "tornado_mid": false
+    },
+    {
+     "tornado_top": false
+    },
+    {
+     "brim": false
+    },
+    {
+     "MuleEarL": "(variable.morph_form == 19 || variable.morph_form == 40) && (math.abs(query.distance_from_camera - query.property('morph:eye')) > 0.35)"
+    },
+    {
+     "MuleEarR": "(variable.morph_form == 19 || variable.morph_form == 40) && (math.abs(query.distance_from_camera - query.property('morph:eye')) > 0.35)"
+    },
+    {
+     "EarL": "!(variable.morph_form == 19 || variable.morph_form == 40) && (math.abs(query.distance_from_camera - query.property('morph:eye')) > 0.35)"
+    },
+    {
+     "EarR": "!(variable.morph_form == 19 || variable.morph_form == 40) && (math.abs(query.distance_from_camera - query.property('morph:eye')) > 0.35)"
+    }
+   ]
+  },
   "controller.render.morph.stolen_skin": {
    "arrays": {
     "geometries": {

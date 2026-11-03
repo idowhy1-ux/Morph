@@ -4,7 +4,50 @@
   "description": {
    "identifier": "morph:body",
    "is_spawnable": false,
-   "is_summonable": true
+   "is_summonable": true,
+   "properties": {
+    "morph:form": {
+     "type": "int",
+     "range": [
+      0,
+      89
+     ],
+     "default": 0,
+     "client_sync": true
+    },
+    "morph:r": {
+     "type": "float",
+     "range": [
+      0.0,
+      16.0
+     ],
+     "default": 1.0,
+     "client_sync": true
+    },
+    "morph:eye": {
+     "type": "float",
+     "range": [
+      0.0,
+      16.0
+     ],
+     "default": 1.62,
+     "client_sync": true
+    },
+    "morph:pitch": {
+     "type": "float",
+     "range": [
+      -90.0,
+      90.0
+     ],
+     "default": 0.0,
+     "client_sync": true
+    },
+    "morph:absorb": {
+     "type": "bool",
+     "default": false,
+     "client_sync": true
+    }
+   }
   },
   "component_groups": {
    "morph:seat_0": {

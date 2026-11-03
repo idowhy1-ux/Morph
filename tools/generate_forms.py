@@ -303,6 +303,7 @@ def main(vanilla):
     gen_anims = {}
     fp_new, fp_legacy = [], {}
     states = {"router": {"transitions": []}}
+    body_states = {"router": {"transitions": []}}
     hidden_by_bone = {}  # bone name -> list of form ids where it is part of the head (pov hide)
     data = []
     for fid, m in enumerate(forms):
@@ -359,10 +360,6 @@ def main(vanilla):
             gen_anims[fa] = {"loop": True, "bones": {"rightArm": {"scale": fit}}}
             m["anim_map"][f"f{fid}_fpfit"] = fa
             state_anims.append({f"f{fid}_fpfit": "variable.is_first_person"})
-        ro = f"animation.morph.gen.rideoff.{key}"
-        gen_anims[ro] = {"loop": True, "bones": {t: {"position": [0, "-query.property('morph:ride_off') * 16.0 / math.max(query.property('morph:r'), 0.01)", 0]} for t in top_bones(m)}}
-        m["anim_map"][f"f{fid}_rideoff"] = ro
-        state_anims.append({f"f{fid}_rideoff": "!variable.is_first_person"})
         pk = f"animation.morph.gen.peel.{key}"
         gen_anims[pk] = peel_anim(m)
         m["peel"] = pk
@@ -370,6 +367,15 @@ def main(vanilla):
         states[f"form_{fid}"] = {"animations": state_anims,
                                  "transitions": [{"router": f"variable.morph_form != {fid}"}]}
         states["router"]["transitions"].append({f"form_{fid}": f"variable.morph_form == {fid}"})
+        # the same form, drawn on the invisible body the player rides (third person / other players)
+        body_anims = [a for a in state_anims if not any(x in next(iter(a)) for x in ("_absorb_fp", "_fpfit"))]
+        hb = find(m, "head")
+        if hb:
+            m["anim_map"]["morph_body_pitch"] = "animation.morph.body.pitch"
+            body_anims.append({"morph_body_pitch": "1.0"})
+        body_states[f"form_{fid}"] = {"animations": body_anims,
+                                      "transitions": [{"router": f"variable.morph_form != {fid}"}]}
+        body_states["router"]["transitions"].append({f"form_{fid}": f"variable.morph_form == {fid}"})
 
         eye = 1.62 if key == "shapeshifter" else round(m["height"] * 0.85, 3)
         data.append({"id": fid, "type": m["type"], "key": key, "name": m["name"], "hp": int(math.ceil(m["hp"])),
@@ -381,13 +387,15 @@ def main(vanilla):
     with open(os.path.join(RP, "models", "entity", "morph_fp_generated_legacy.geo.json"), "w") as f:
         json.dump(dict({"format_version": "1.8.0"}, **fp_legacy), f, indent=1)
 
+    gen_anims["animation.morph.body.pitch"] = {"loop": True, "bones": {"head": {"rotation": ["query.property('morph:pitch')", 0, 0]}}}
     # ---------------- RP: animations + controller
     with open(os.path.join(RP, "animations", "morph_generated.animation.json"), "w") as f:
         json.dump({"format_version": "1.8.0", "animations": gen_anims}, f, indent=1)
     os.makedirs(os.path.join(RP, "animation_controllers"), exist_ok=True)
     with open(os.path.join(RP, "animation_controllers", "morph.animation_controllers.json"), "w") as f:
         json.dump({"format_version": "1.10.0", "animation_controllers": {
-            "controller.animation.morph.forms": {"initial_state": "router", "states": states}}}, f, indent=1)
+            "controller.animation.morph.forms": {"initial_state": "router", "states": states},
+            "controller.animation.morph.body_forms": {"initial_state": "router", "states": body_states}}}, f, indent=1)
 
     # ---------------- RP: client entities
     pe = load(os.path.join(vanilla, "resource_pack", "entity", "player.entity.json"))
@@ -412,9 +420,13 @@ def main(vanilla):
     rcs = []
     for r in desc["render_controllers"]:
         k = next(iter(r))
+        cond = next(iter(r.values()))
+        if k == "controller.render.player.third_person":
+            # inside a body the body draws the mob (standing on the ground); hide the shifted player model
+            cond = f"({cond}) && !query.property('morph:in_body')"
         k = {"controller.render.player.first_person": "controller.render.morph.first_person",
              "controller.render.player.third_person": "controller.render.morph.third_person"}.get(k, k)
-        rcs.append({k: next(iter(r.values()))})
+        rcs.append({k: cond})
     desc["render_controllers"] = rcs
     with open(os.path.join(RP, "entity", "player.entity.json"), "w") as f:
         json.dump(pe, f, indent=1)
@@ -447,6 +459,8 @@ def main(vanilla):
     is_mule = " || ".join(f"variable.morph_form == {i}" for i in mule_ids) or "0"
     vis = [{"*": True}] + [{b: False} for b in ALWAYS_HIDDEN]
     vis += [{"MuleEarL": is_mule}, {"MuleEarR": is_mule}, {"EarL": f"!({is_mule})"}, {"EarR": f"!({is_mule})"}]
+    # the rider's own first-person camera sits exactly eye-height above the body's feet
+    OWN_CAM = "(math.abs(query.distance_from_camera - query.property('morph:eye')) > 0.35)"
     rc = {"format_version": "1.8.0", "render_controllers": {
         "controller.render.morph.third_person": {
             "arrays": {"geometries": {"Array.morph_geo": geo_arr}, "textures": tex_arr},
@@ -460,6 +474,15 @@ def main(vanilla):
             "materials": [{"*": "Material.default"}],
             "textures": ["Array.morph_tex[variable.morph_form]"],
             "overlay_color": overlay, "part_visibility": [{"*": empty}]},
+        "controller.render.morph.body": {
+            "arrays": {"geometries": {"Array.morph_geo": geo_arr}, "textures": tex_arr},
+            "geometry": "Array.morph_geo[variable.morph_form]",
+            "materials": [{"*": "Material.default"}],
+            "textures": ["Array.morph_tex[variable.morph_form]"],
+            "overlay_color": overlay,
+            "part_visibility": [{"*": OWN_CAM}] + [{b: False} for b in ALWAYS_HIDDEN] + [
+                {"MuleEarL": f"({is_mule}) && {OWN_CAM}"}, {"MuleEarR": f"({is_mule}) && {OWN_CAM}"},
+                {"EarL": f"!({is_mule}) && {OWN_CAM}"}, {"EarR": f"!({is_mule}) && {OWN_CAM}"}]},
         "controller.render.morph.stolen_skin": {
             "arrays": {"geometries": {"Array.morph_geo": geo_arr}, "textures": tex_arr},
             "geometry": "Array.morph_geo[variable.morph_form]",
@@ -480,7 +503,7 @@ def main(vanilla):
         "morph:form": {"type": "int", "range": [0, n], "default": 0, "client_sync": True},
         "morph:absorb": {"type": "bool", "default": False, "client_sync": True},
         "morph:r": {"type": "float", "range": [0.0, 16.0], "default": 0.9375, "client_sync": True},
-        "morph:ride_off": {"type": "float", "range": [-20.0, 20.0], "default": 0.0, "client_sync": True},
+        "morph:in_body": {"type": "bool", "default": False, "client_sync": True},
     }
     hps = sorted({d["hp"] for d in data})
     groups = {f"morph:hp_{h}": {"minecraft:health": {"value": h, "max": h}} for h in hps}
@@ -538,12 +561,37 @@ def main(vanilla):
             "minecraft:conditional_bandwidth_optimization": {},
         },
         "events": dict({k: {"add": {"component_groups": [k]}} for k in groups})}}
+    body["minecraft:entity"]["description"]["properties"] = {
+        "morph:form": {"type": "int", "range": [0, n], "default": 0, "client_sync": True},
+        "morph:r": {"type": "float", "range": [0.0, 16.0], "default": 1.0, "client_sync": True},
+        "morph:eye": {"type": "float", "range": [0.0, 16.0], "default": 1.62, "client_sync": True},
+        "morph:pitch": {"type": "float", "range": [-90.0, 90.0], "default": 0.0, "client_sync": True},
+        "morph:absorb": {"type": "bool", "default": False, "client_sync": True},
+    }
     with open(os.path.join(BP, "entities", "morph_body.json"), "w") as f:
         json.dump(body, f, indent=1)
+    body_anim_map = {}
+    for m in forms:
+        body_anim_map.update({k: v for k, v in m.get("anim_map", {}).items() if not k.endswith(("_absorb_fp", "_fpfit"))})
+    body_anim_map["morph_body_forms"] = "controller.animation.morph.body_forms"
     with open(os.path.join(RP, "entity", "morph_body.entity.json"), "w") as f:
         json.dump({"format_version": "1.10.0", "minecraft:client_entity": {"description": {
             "identifier": "morph:body", "materials": {"default": "entity_alphatest"},
-            "textures": {}, "geometry": {}, "render_controllers": []}}}, f, indent=1)
+            "textures": {f"morph_{m['key']}": m["texture_final"] for m in forms},
+            "geometry": {f"morph_{m['key']}": m["geometry"] for m in forms},
+            "scripts": {
+                "scale": "query.property('morph:r')",
+                "pre_animation": [
+                    "variable.is_first_person = 0.0;",
+                    "variable.attack_time = 0.0;",
+                    "variable.morph_form = query.property('morph:form');",
+                    "variable.morph_absorb = query.property('morph:absorb');",
+                    "variable.morph_glow = variable.morph_absorb ? (0.35 + 0.25 * math.sin(query.life_time * 900.0)) : 0.0;",
+                    "variable.tcos0 = math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed * 57.3;",
+                ],
+                "animate": ["morph_body_forms"]},
+            "animations": body_anim_map,
+            "render_controllers": ["controller.render.morph.body"]}}}, f, indent=1)
 
     with open(os.path.join(BP, "scripts", "forms_data.js"), "w") as f:
         f.write("// Generated by tools/generate_forms.py - do not edit by hand.\n")
