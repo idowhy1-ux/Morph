@@ -1,5 +1,7 @@
-pack.name=Morph: Shapeshifter v3 (Resources)
-pack.description=v3.0.0 - Real first person at mob height with a mob hand for every mob. Kill mobs, steal their skin, become them.
+pack.name=Morph: Shapeshifter v4 (Resources)
+pack.description=v4.0.0 - Real first person at mob height with a mob hand for every mob. Kill mobs, steal their skin, become them.
 item.morph:morph_core=Morph Core
 item.morph:morph_core.name=Morph Core
 entity.morph:stolen_skin.name=Stolen Skin
+action.hint.exit.morph:body=§5Shapeshifter body
+entity.morph:body.name=Shapeshifter Body

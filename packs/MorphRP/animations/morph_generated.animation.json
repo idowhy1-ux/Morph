@@ -3439,56 +3439,56 @@
    "bones": {
     "tentacle1": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 320) * 12.0",
+      "math.sin(query.life_time * 200.0 + 127) * 12.0",
       0,
       0
      ]
     },
     "tentacle2": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 81) * 12.0",
+      "math.sin(query.life_time * 200.0 + 321) * 12.0",
       0,
       0
      ]
     },
     "tentacle3": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 334) * 12.0",
+      "math.sin(query.life_time * 200.0 + 120) * 12.0",
       0,
       0
      ]
     },
     "tentacle4": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 59) * 12.0",
+      "math.sin(query.life_time * 200.0 + 64) * 12.0",
       0,
       0
      ]
     },
     "tentacle5": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 59) * 12.0",
+      "math.sin(query.life_time * 200.0 + 281) * 12.0",
       0,
       0
      ]
     },
     "tentacle6": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 198) * 12.0",
+      "math.sin(query.life_time * 200.0 + 339) * 12.0",
       0,
       0
      ]
     },
     "tentacle7": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 356) * 12.0",
+      "math.sin(query.life_time * 200.0 + 317) * 12.0",
       0,
       0
      ]
     },
     "tentacle8": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 110) * 12.0",
+      "math.sin(query.life_time * 200.0 + 55) * 12.0",
       0,
       0
      ]
@@ -6817,56 +6817,56 @@
    "bones": {
     "tentacle1": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 320) * 12.0",
+      "math.sin(query.life_time * 200.0 + 127) * 12.0",
       0,
       0
      ]
     },
     "tentacle2": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 81) * 12.0",
+      "math.sin(query.life_time * 200.0 + 321) * 12.0",
       0,
       0
      ]
     },
     "tentacle3": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 334) * 12.0",
+      "math.sin(query.life_time * 200.0 + 120) * 12.0",
       0,
       0
      ]
     },
     "tentacle4": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 59) * 12.0",
+      "math.sin(query.life_time * 200.0 + 64) * 12.0",
       0,
       0
      ]
     },
     "tentacle5": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 59) * 12.0",
+      "math.sin(query.life_time * 200.0 + 281) * 12.0",
       0,
       0
      ]
     },
     "tentacle6": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 198) * 12.0",
+      "math.sin(query.life_time * 200.0 + 339) * 12.0",
       0,
       0
      ]
     },
     "tentacle7": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 356) * 12.0",
+      "math.sin(query.life_time * 200.0 + 317) * 12.0",
       0,
       0
      ]
     },
     "tentacle8": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 110) * 12.0",
+      "math.sin(query.life_time * 200.0 + 55) * 12.0",
       0,
       0
      ]

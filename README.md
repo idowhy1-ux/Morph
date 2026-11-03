@@ -6,8 +6,8 @@ All **89 vanilla mobs** can be stolen, from chickens and cod to wardens, the Wit
 
 ## Install (phone / tablet)
 
-1. Download **`dist/Morph_v3.mcaddon`** and tap it. Minecraft imports both packs.
-2. In world settings, turn on **Morph: Shapeshifter v3 (Behavior)**. The resource pack turns on with it.
+1. Download **`dist/Morph_v4.mcaddon`** and tap it. Minecraft imports both packs.
+2. In world settings, turn on **Morph: Shapeshifter v4 (Behavior)**. The resource pack turns on with it.
 3. You need **Minecraft Bedrock 1.26.30 or newer**. No experimental toggles are needed.
 
 You get a **Morph Core** when you join.
@@ -26,7 +26,7 @@ First person works exactly like vanilla. The game's normal first-person camera s
 
 The camera sits at the **mob's real eye height**, low as a chicken and high as a ghast or the Ender Dragon. Bedrock doesn't let add-ons change the player's eye height, so the add-on uses the one thing that does move your camera, which is riding. When you become a mob that isn't human-height, you sit in an invisible, mob-sized **body**. Its seat is set so your eyes land at the mob's eye height, and its hitbox is the mob's size. You steer it exactly like walking:
 
-* **Jump** jumps (higher with Jump Boost forms).
+* **Jump** jumps. Like on a horse, hold the jump button to charge a higher jump. Jump Boost forms jump higher.
 * **Flying mobs**: hold jump to rise. You glide down otherwise.
 * **Spiders**: walk into a wall to climb it.
 * **Swimmers**: swim where you look. Hold jump to rise.
@@ -156,7 +156,7 @@ Rebuild:
 git clone --depth 1 https://github.com/Mojang/bedrock-samples /tmp/bedrock-samples
 python3 tools/generate_assets.py
 python3 tools/generate_forms.py /tmp/bedrock-samples
-python3 tools/build.py      # -> dist/Morph_v3.mcaddon
+python3 tools/build.py      # -> dist/Morph_v4.mcaddon
 ```
 
 ## Known limitations

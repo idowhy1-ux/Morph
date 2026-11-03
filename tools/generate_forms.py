@@ -522,6 +522,8 @@ def main(vanilla):
             "minecraft:movement": {"value": 0.13},
             "minecraft:movement.basic": {},
             "minecraft:jump.static": {},
+            "minecraft:horse.jump_strength": {"value": 0.6},
+            "minecraft:can_power_jump": {},
             "minecraft:input_ground_controlled": {},
             "minecraft:behavior.player_ride_tamed": {},
             "minecraft:is_tamed": {},

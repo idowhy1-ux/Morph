@@ -811,11 +811,13 @@ function driveBody(p) {
       const d = p.getViewDirection();
       if (Math.hypot(v.x, v.y, v.z) < 0.6) safe(() => b.applyImpulse(scale(d, 0.07)));
     }
-  } else if (jump && b.isOnGround && system.currentTick - (rec.jumpAt ?? 0) > 5) {
-    rec.jumpAt = system.currentTick;
+  } else {
+    // the jump itself is the body's own (horse-style) jump so the touch jump button stays a jump
+    // button; Jump Boost forms get an extra push right after take-off
     const boost = (k.fx ?? []).find(([id]) => id === "jump_boost");
-    safe(() => b.applyImpulse({ x: 0, y: 0.5 + (boost ? (boost[1] + 1) * 0.1 : 0), z: 0 }));
+    if (boost && rec.wasOnGround && !b.isOnGround && v.y > 0.1) safe(() => b.applyImpulse({ x: 0, y: (boost[1] + 1) * 0.12, z: 0 }));
   }
+  rec.wasOnGround = b.isOnGround;
   if (k.climb && move.y > 0.2) {
     const d = p.getViewDirection();
     const len = Math.hypot(d.x, d.z) || 1;
