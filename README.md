@@ -6,8 +6,8 @@ All **89 vanilla mobs** can be stolen, from chickens and cod to wardens, the Wit
 
 ## Install (phone / tablet)
 
-1. Download **`dist/Morph_v6.mcaddon`** and tap it. Minecraft imports both packs.
-2. In world settings, turn on **Morph: Shapeshifter v6 (Behavior)**. The resource pack turns on with it.
+1. Download **`dist/Morph_v7.mcaddon`** and tap it. Minecraft imports both packs.
+2. In world settings, turn on **Morph: Shapeshifter v7 (Behavior)**. The resource pack turns on with it.
 3. You need **Minecraft Bedrock 1.26.30 or newer**. No experimental toggles are needed.
 
 You get a **Morph Core** when you join.
@@ -63,7 +63,7 @@ When you steal a body, your maximum health becomes that mob's health and you're 
 | Cod | 3 | 0.26 | Swimmer | Torpedo |
 | Copper Golem | 12 | 0.83 | Item collector | Collect Items |
 | Cow | 10 | 1.10 | Fresh milk | Fresh Milk |
-| Creeper | 20 | 1.53 | Immune to your own blast | Detonate |
+| Creeper | 20 | 1.53 | Detonate takes you with it | Detonate (you die in the blast) |
 | Dolphin | 10 | 0.51 | Fast swimmer | Torpedo |
 | Donkey | 30 | 1.36 | Speed, jump | Gallop |
 | Drowned | 20 | 1.61 | Strength, breathes underwater | Rotting Roar |
@@ -158,7 +158,7 @@ Rebuild:
 git clone --depth 1 https://github.com/Mojang/bedrock-samples /tmp/bedrock-samples
 python3 tools/generate_assets.py
 python3 tools/generate_forms.py /tmp/bedrock-samples
-python3 tools/build.py      # -> dist/Morph_v6.mcaddon
+python3 tools/build.py      # -> dist/Morph_v7.mcaddon
 ```
 
 ## Known limitations

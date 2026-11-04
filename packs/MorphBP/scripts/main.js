@@ -204,9 +204,16 @@ const AB = {
     bar(p, "§aSsssss...");
     system.runTimeout(() => {
       s.fusing = false;
-      if (!p.isValid) return;
-      safe(() => p.addEffect("resistance", 30, { amplifier: 4, showParticles: false }));
-      system.run(() => safe(() => p.dimension.createExplosion(feet(p), 4, { source: p, breaksBlocks: true, causesFire: false })));
+      if (!p.isValid || getForm(p).key !== "creeper") return;
+      // like a real creeper, the blast is the end of you
+      const at = feet(p);
+      removeBody(p.id);
+      safe(() => p.dimension.createExplosion(at, 4, { source: p, breaksBlocks: true, causesFire: false }));
+      system.run(() => {
+        if (!p.isValid) return;
+        safe(() => p.applyDamage(100000, { cause: EntityDamageCause.entityExplosion, damagingEntity: p }));
+        if (safe(() => p.getComponent("minecraft:health")?.currentValue) > 0) safe(() => p.kill());
+      });
     }, 30);
   } },
   web: { label: "Web Shot", cd: 80, run: (p) => {
@@ -489,7 +496,7 @@ const KIT = {
   evocation_illager: { ab: "fangs", text: "Spellcaster" },
   witch: { ab: "potion", fx: [["fire_resistance", 0]], text: "Potion resistance" },
   ravager: { ab: "ravage", fx: [["strength", 1], ["resistance", 0]], text: "Strength II, Resistance" },
-  creeper: { ab: "explode", text: "Immune to your own blast" },
+  creeper: { ab: "explode", text: "Detonate takes you with it" },
   spider: { ab: "web", fx: [["night_vision", 0]], climb: true, text: "Wall climbing, night vision" },
   cave_spider: { ab: "web", fx: [["night_vision", 0]], climb: true, text: "Wall climbing, poison webs" },
   enderman: { ab: "blink", fx: [["night_vision", 0]], hurtBlink: true, text: "Teleports away when hurt" },
@@ -728,10 +735,23 @@ function setInBody(p, v) {
   if ((safe(() => p.getProperty(P_IN_BODY)) === true) !== v) safe(() => p.setProperty(P_IN_BODY, v));
 }
 
+/**
+ * Get rid of a body for sure: throw its rider off first (the game can refuse to remove an entity
+ * that is being ridden), then despawn it through its own event and remove it.
+ * @param {import("@minecraft/server").Entity | undefined} e
+ */
+function destroyBody(e) {
+  if (!e?.isValid) return;
+  safe(() => e.getComponent("minecraft:rideable")?.ejectRiders());
+  safe(() => e.triggerEvent("morph:despawn"));
+  safe(() => e.remove());
+}
+
 function removeBody(playerId, keepSpot = false) {
   const rec = bodies.get(playerId);
-  if (rec?.body?.isValid) safe(() => rec.body.remove());
-  if (keepSpot && rec) bodies.set(playerId, { lastFeet: rec.body?.isValid ? rec.body.location : rec.lastFeet, dim: rec.dim });
+  const spot = rec?.body?.isValid ? rec.body.location : rec?.lastFeet;
+  destroyBody(rec?.body);
+  if (keepSpot && rec) bodies.set(playerId, { lastFeet: spot, dim: rec.dim });
   else bodies.delete(playerId);
 }
 
@@ -782,7 +802,13 @@ function mount(p) {
   if (!rideable) return;
   // nobody else may sit in your body
   for (const r of safe(() => rideable.getRiders()) ?? []) if (r.id !== p.id) safe(() => rideable.ejectRider(r));
-  if (ridingBody(p)?.id === rec.body.id) return;
+  const current = ridingBody(p);
+  if (current?.id === rec.body.id) return;
+  // still sitting on an old body (e.g. the previous form's): get off it and get rid of it first
+  if (current) {
+    destroyBody(current);
+    return; // mount on the next try, once the player is free
+  }
   // only fetch the body if the player wandered off (e.g. teleported); never to the rider's shifted position
   const b = rec.body.location;
   const pl = p.location;
@@ -794,7 +820,7 @@ function mount(p) {
 function driveBody(p) {
   const rec = bodies.get(p.id);
   const f = getForm(p);
-  if (!rec?.body?.isValid || rec.body.dimension.id !== p.dimension.id) {
+  if (!rec?.body?.isValid || rec.body.dimension.id !== p.dimension.id || rec.formId !== f.id) {
     syncBody(p);
     return;
   }
@@ -901,7 +927,7 @@ system.runInterval(() => {
   const live = new Set([...bodies.values()].map((r) => r.body?.isValid && r.body.id));
   for (const dimId of ["overworld", "nether", "the_end"]) {
     const list = safe(() => world.getDimension(dimId).getEntities({ type: BODY_ID })) ?? [];
-    for (const e of list) if (!live.has(e.id)) safe(() => e.remove());
+    for (const e of list) if (!live.has(e.id)) destroyBody(e);
   }
 }, 200);
 
