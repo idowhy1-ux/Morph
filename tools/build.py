@@ -6,12 +6,12 @@ import zipfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIST = os.path.join(ROOT, "dist")
 os.makedirs(DIST, exist_ok=True)
-out = os.path.join(DIST, "Morph_v7.mcaddon")
+out = os.path.join(DIST, "Morph_v8.mcaddon")
 with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED) as z:
     for pack in ("MorphBP", "MorphRP"):
         base = os.path.join(ROOT, "packs", pack)
         for dirpath, _, files in os.walk(base):
             for f in sorted(files):
                 full = os.path.join(dirpath, f)
-                z.write(full, os.path.join(pack.replace("Morph", "Morph_v7_"), os.path.relpath(full, base)))
+                z.write(full, os.path.join(pack.replace("Morph", "Morph_v8_"), os.path.relpath(full, base)))
 print("wrote", out, os.path.getsize(out), "bytes")

@@ -9,6 +9,7 @@ export const FORM_DATA = [
   "eye": 1.62,
   "height": 1.8,
   "width": 0.6,
+  "baby": false,
   "r": 0.9375,
   "families": [],
   "size": "60_180"
@@ -22,6 +23,7 @@ export const FORM_DATA = [
   "eye": 0.51,
   "height": 0.6,
   "width": 0.35,
+  "baby": false,
   "r": 1.0,
   "families": [
    "allay",
@@ -38,6 +40,7 @@ export const FORM_DATA = [
   "eye": 0.552,
   "height": 0.65,
   "width": 0.7,
+  "baby": false,
   "r": 1.0,
   "families": [
    "armadillo",
@@ -54,6 +57,7 @@ export const FORM_DATA = [
   "eye": 0.357,
   "height": 0.42,
   "width": 0.75,
+  "baby": false,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -64,6 +68,726 @@ export const FORM_DATA = [
  },
  {
   "id": 4,
+  "type": "minecraft:armadillo",
+  "key": "baby_armadillo",
+  "name": "Baby Armadillo",
+  "hp": 12,
+  "eye": 0.332,
+  "height": 0.39,
+  "width": 0.42,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "armadillo",
+   "mob"
+  ],
+  "size": "42_39"
+ },
+ {
+  "id": 5,
+  "type": "minecraft:axolotl",
+  "key": "baby_axolotl",
+  "name": "Baby Axolotl",
+  "hp": 14,
+  "eye": 0.178,
+  "height": 0.21,
+  "width": 0.375,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "aquatic",
+   "axolotl",
+   "mob"
+  ],
+  "size": "38_21"
+ },
+ {
+  "id": 6,
+  "type": "minecraft:bee",
+  "key": "baby_bee",
+  "name": "Baby Bee",
+  "hp": 10,
+  "eye": 0.212,
+  "height": 0.25,
+  "width": 0.275,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "bee",
+   "mob",
+   "arthropod"
+  ],
+  "size": "28_25"
+ },
+ {
+  "id": 7,
+  "type": "minecraft:camel",
+  "key": "baby_camel",
+  "name": "Baby Camel",
+  "hp": 32,
+  "eye": 0.908,
+  "height": 1.06875,
+  "width": 0.765,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "camel",
+   "mob"
+  ],
+  "size": "77_107"
+ },
+ {
+  "id": 8,
+  "type": "minecraft:cat",
+  "key": "baby_cat",
+  "name": "Baby Cat",
+  "hp": 10,
+  "eye": 0.238,
+  "height": 0.27999999999999997,
+  "width": 0.24,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "cat",
+   "mob"
+  ],
+  "size": "24_28"
+ },
+ {
+  "id": 9,
+  "type": "minecraft:chicken",
+  "key": "baby_chicken",
+  "name": "Baby Chicken",
+  "hp": 4,
+  "eye": 0.34,
+  "height": 0.4,
+  "width": 0.3,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "chicken",
+   "mob"
+  ],
+  "size": "30_40"
+ },
+ {
+  "id": 10,
+  "type": "minecraft:cow",
+  "key": "baby_cow",
+  "name": "Baby Cow",
+  "hp": 10,
+  "eye": 0.552,
+  "height": 0.65,
+  "width": 0.45,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "cow",
+   "mob"
+  ],
+  "size": "45_65"
+ },
+ {
+  "id": 11,
+  "type": "minecraft:dolphin",
+  "key": "baby_dolphin",
+  "name": "Baby Dolphin",
+  "hp": 10,
+  "eye": 0.332,
+  "height": 0.39,
+  "width": 0.5850000000000001,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "aquatic",
+   "dolphin",
+   "mob"
+  ],
+  "size": "59_39"
+ },
+ {
+  "id": 12,
+  "type": "minecraft:donkey",
+  "key": "baby_donkey",
+  "name": "Baby Donkey",
+  "hp": 30,
+  "eye": 0.68,
+  "height": 0.8,
+  "width": 0.7,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "donkey",
+   "mob"
+  ],
+  "size": "70_80"
+ },
+ {
+  "id": 13,
+  "type": "minecraft:drowned",
+  "key": "baby_drowned",
+  "name": "Baby Drowned",
+  "hp": 20,
+  "eye": 0.833,
+  "height": 0.98,
+  "width": 0.49,
+  "baby": true,
+  "r": 1.0,
+  "families": [],
+  "size": "49_98"
+ },
+ {
+  "id": 14,
+  "type": "minecraft:fox",
+  "key": "baby_fox",
+  "name": "Baby Fox",
+  "hp": 10,
+  "eye": 0.357,
+  "height": 0.42,
+  "width": 0.36,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "fox",
+   "mob"
+  ],
+  "size": "36_42"
+ },
+ {
+  "id": 15,
+  "type": "minecraft:glow_squid",
+  "key": "baby_glow_squid",
+  "name": "Baby Glow Squid",
+  "hp": 10,
+  "eye": 0.425,
+  "height": 0.5,
+  "width": 0.5,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "aquatic",
+   "squid",
+   "mob"
+  ],
+  "size": "50_50"
+ },
+ {
+  "id": 16,
+  "type": "minecraft:goat",
+  "key": "baby_goat",
+  "name": "Baby Goat",
+  "hp": 10,
+  "eye": 0.552,
+  "height": 0.65,
+  "width": 0.45,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "goat",
+   "animal"
+  ],
+  "size": "45_65"
+ },
+ {
+  "id": 17,
+  "type": "minecraft:happy_ghast",
+  "key": "baby_happy_ghast",
+  "name": "Baby Happy Ghast",
+  "hp": 20,
+  "eye": 0.807,
+  "height": 0.95,
+  "width": 0.95,
+  "baby": true,
+  "r": 0.2375,
+  "families": [
+   "happy_ghast",
+   "mob"
+  ],
+  "size": "95_95"
+ },
+ {
+  "id": 18,
+  "type": "minecraft:hoglin",
+  "key": "baby_hoglin",
+  "name": "Baby Hoglin",
+  "hp": 40,
+  "eye": 0.722,
+  "height": 0.85,
+  "width": 0.75,
+  "baby": true,
+  "r": 1.0,
+  "families": [],
+  "size": "75_85"
+ },
+ {
+  "id": 19,
+  "type": "minecraft:horse",
+  "key": "baby_horse",
+  "name": "Baby Horse",
+  "hp": 30,
+  "eye": 0.952,
+  "height": 1.12,
+  "width": 0.98,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "horse",
+   "mob"
+  ],
+  "size": "98_112"
+ },
+ {
+  "id": 20,
+  "type": "minecraft:husk",
+  "key": "baby_husk",
+  "name": "Baby Husk",
+  "hp": 20,
+  "eye": 0.833,
+  "height": 0.98,
+  "width": 0.49,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "husk",
+   "zombie",
+   "undead",
+   "monster",
+   "mob"
+  ],
+  "size": "49_98"
+ },
+ {
+  "id": 21,
+  "type": "minecraft:llama",
+  "key": "baby_llama",
+  "name": "Baby Llama",
+  "hp": 30,
+  "eye": 0.795,
+  "height": 0.935,
+  "width": 0.45,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "llama",
+   "mob"
+  ],
+  "size": "45_94"
+ },
+ {
+  "id": 22,
+  "type": "minecraft:mooshroom",
+  "key": "baby_mooshroom",
+  "name": "Baby Mooshroom",
+  "hp": 10,
+  "eye": 0.552,
+  "height": 0.65,
+  "width": 0.45,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "mushroomcow",
+   "mob"
+  ],
+  "size": "45_65"
+ },
+ {
+  "id": 23,
+  "type": "minecraft:mule",
+  "key": "baby_mule",
+  "name": "Baby Mule",
+  "hp": 30,
+  "eye": 0.68,
+  "height": 0.8,
+  "width": 0.7,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "mule",
+   "mob"
+  ],
+  "size": "70_80"
+ },
+ {
+  "id": 24,
+  "type": "minecraft:nautilus",
+  "key": "baby_nautilus",
+  "name": "Baby Nautilus",
+  "hp": 15,
+  "eye": 0.212,
+  "height": 0.25,
+  "width": 0.22,
+  "baby": true,
+  "r": 0.5,
+  "families": [
+   "aquatic",
+   "nautilus",
+   "mob"
+  ],
+  "size": "22_25"
+ },
+ {
+  "id": 25,
+  "type": "minecraft:ocelot",
+  "key": "baby_ocelot",
+  "name": "Baby Ocelot",
+  "hp": 10,
+  "eye": 0.297,
+  "height": 0.35,
+  "width": 0.3,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "ocelot",
+   "mob"
+  ],
+  "size": "30_35"
+ },
+ {
+  "id": 26,
+  "type": "minecraft:panda",
+  "key": "baby_panda",
+  "name": "Baby Panda",
+  "hp": 20,
+  "eye": 0.425,
+  "height": 0.5,
+  "width": 0.52,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "panda"
+  ],
+  "size": "52_50"
+ },
+ {
+  "id": 27,
+  "type": "minecraft:pig",
+  "key": "baby_pig",
+  "name": "Baby Pig",
+  "hp": 10,
+  "eye": 0.383,
+  "height": 0.45,
+  "width": 0.45,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "pig",
+   "mob"
+  ],
+  "size": "45_45"
+ },
+ {
+  "id": 28,
+  "type": "minecraft:piglin",
+  "key": "baby_piglin",
+  "name": "Baby Piglin",
+  "hp": 16,
+  "eye": 0.833,
+  "height": 0.98,
+  "width": 0.49,
+  "baby": true,
+  "r": 1.0,
+  "families": [],
+  "size": "49_98"
+ },
+ {
+  "id": 29,
+  "type": "minecraft:polar_bear",
+  "key": "baby_polar_bear",
+  "name": "Baby Polar Bear",
+  "hp": 30,
+  "eye": 0.595,
+  "height": 0.7,
+  "width": 0.7,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "polarbear",
+   "mob"
+  ],
+  "size": "70_70"
+ },
+ {
+  "id": 30,
+  "type": "minecraft:rabbit",
+  "key": "baby_rabbit",
+  "name": "Baby Rabbit",
+  "hp": 3,
+  "eye": 0.34,
+  "height": 0.4,
+  "width": 0.24,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "rabbit",
+   "mob"
+  ],
+  "size": "24_40"
+ },
+ {
+  "id": 31,
+  "type": "minecraft:sheep",
+  "key": "baby_sheep",
+  "name": "Baby Sheep",
+  "hp": 8,
+  "eye": 0.552,
+  "height": 0.65,
+  "width": 0.45,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "sheep",
+   "mob"
+  ],
+  "size": "45_65"
+ },
+ {
+  "id": 32,
+  "type": "minecraft:skeleton_horse",
+  "key": "baby_skeleton_horse",
+  "name": "Baby Skeleton Horse",
+  "hp": 15,
+  "eye": 0.952,
+  "height": 1.12,
+  "width": 0.98,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "skeletonhorse",
+   "undead",
+   "mob"
+  ],
+  "size": "98_112"
+ },
+ {
+  "id": 33,
+  "type": "minecraft:sniffer",
+  "key": "baby_sniffer",
+  "name": "Baby Sniffer",
+  "hp": 14,
+  "eye": 0.669,
+  "height": 0.7875,
+  "width": 0.855,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "sniffer",
+   "mob"
+  ],
+  "size": "85_79"
+ },
+ {
+  "id": 34,
+  "type": "minecraft:squid",
+  "key": "baby_squid",
+  "name": "Baby Squid",
+  "hp": 10,
+  "eye": 0.425,
+  "height": 0.5,
+  "width": 0.5,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "aquatic",
+   "squid",
+   "mob"
+  ],
+  "size": "50_50"
+ },
+ {
+  "id": 35,
+  "type": "minecraft:strider",
+  "key": "baby_strider",
+  "name": "Baby Strider",
+  "hp": 20,
+  "eye": 0.722,
+  "height": 0.85,
+  "width": 0.45,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "strider",
+   "mob"
+  ],
+  "size": "45_85"
+ },
+ {
+  "id": 36,
+  "type": "minecraft:trader_llama",
+  "key": "baby_trader_llama",
+  "name": "Baby Trader Llama",
+  "hp": 30,
+  "eye": 0.795,
+  "height": 0.935,
+  "width": 0.45,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "trader_llama",
+   "llama",
+   "mob"
+  ],
+  "size": "45_94"
+ },
+ {
+  "id": 37,
+  "type": "minecraft:turtle",
+  "key": "baby_turtle",
+  "name": "Baby Turtle",
+  "hp": 30,
+  "eye": 0.181,
+  "height": 0.21333328000000001,
+  "width": 0.64,
+  "baby": true,
+  "r": 1.0,
+  "families": [],
+  "size": "64_21"
+ },
+ {
+  "id": 38,
+  "type": "minecraft:villager",
+  "key": "baby_villager",
+  "name": "Baby Villager",
+  "hp": 20,
+  "eye": 0.807,
+  "height": 0.95,
+  "width": 0.3,
+  "baby": true,
+  "r": 0.4688,
+  "families": [
+   "villager",
+   "mob"
+  ],
+  "size": "30_95"
+ },
+ {
+  "id": 39,
+  "type": "minecraft:villager_v2",
+  "key": "baby_villager_v2",
+  "name": "Baby Villager",
+  "hp": 20,
+  "eye": 0.833,
+  "height": 0.98,
+  "width": 0.49,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "villager",
+   "mob"
+  ],
+  "size": "49_98"
+ },
+ {
+  "id": 40,
+  "type": "minecraft:wolf",
+  "key": "baby_wolf",
+  "name": "Baby Wolf",
+  "hp": 8,
+  "eye": 0.34,
+  "height": 0.4,
+  "width": 0.3,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "wolf",
+   "mob"
+  ],
+  "size": "30_40"
+ },
+ {
+  "id": 41,
+  "type": "minecraft:zoglin",
+  "key": "baby_zoglin",
+  "name": "Baby Zoglin",
+  "hp": 40,
+  "eye": 0.722,
+  "height": 0.85,
+  "width": 0.75,
+  "baby": true,
+  "r": 1.0,
+  "families": [],
+  "size": "75_85"
+ },
+ {
+  "id": 42,
+  "type": "minecraft:zombie",
+  "key": "baby_zombie",
+  "name": "Baby Zombie",
+  "hp": 20,
+  "eye": 0.833,
+  "height": 0.98,
+  "width": 0.49,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "zombie",
+   "undead",
+   "monster",
+   "mob"
+  ],
+  "size": "49_98"
+ },
+ {
+  "id": 43,
+  "type": "minecraft:zombie_horse",
+  "key": "baby_zombie_horse",
+  "name": "Baby Zombie Horse",
+  "hp": 25,
+  "eye": 0.952,
+  "height": 1.12,
+  "width": 0.98,
+  "baby": true,
+  "r": 1.0,
+  "families": [
+   "zombiehorse",
+   "undead",
+   "mob"
+  ],
+  "size": "98_112"
+ },
+ {
+  "id": 44,
+  "type": "minecraft:zombie_villager",
+  "key": "baby_zombie_villager",
+  "name": "Baby Zombie Villager",
+  "hp": 20,
+  "eye": 0.807,
+  "height": 0.95,
+  "width": 0.3,
+  "baby": true,
+  "r": 0.5,
+  "families": [],
+  "size": "30_95"
+ },
+ {
+  "id": 45,
+  "type": "minecraft:zombie_villager_v2",
+  "key": "baby_zombie_villager_v2",
+  "name": "Baby Zombie Villager",
+  "hp": 20,
+  "eye": 0.833,
+  "height": 0.98,
+  "width": 0.49,
+  "baby": true,
+  "r": 1.0,
+  "families": [],
+  "size": "49_98"
+ },
+ {
+  "id": 46,
+  "type": "minecraft:zombie_pigman",
+  "key": "baby_zombie_pigman",
+  "name": "Baby Zombified Piglin",
+  "hp": 20,
+  "eye": 0.833,
+  "height": 0.98,
+  "width": 0.49,
+  "baby": true,
+  "r": 1.0,
+  "families": [],
+  "size": "49_98"
+ },
+ {
+  "id": 47,
   "type": "minecraft:bat",
   "key": "bat",
   "name": "Bat",
@@ -71,6 +795,7 @@ export const FORM_DATA = [
   "eye": 0.765,
   "height": 0.9,
   "width": 0.5,
+  "baby": false,
   "r": 1.0,
   "families": [
    "bat",
@@ -79,7 +804,7 @@ export const FORM_DATA = [
   "size": "50_90"
  },
  {
-  "id": 5,
+  "id": 48,
   "type": "minecraft:bee",
   "key": "bee",
   "name": "Bee",
@@ -87,6 +812,7 @@ export const FORM_DATA = [
   "eye": 0.425,
   "height": 0.5,
   "width": 0.55,
+  "baby": false,
   "r": 1.0,
   "families": [
    "bee",
@@ -96,7 +822,7 @@ export const FORM_DATA = [
   "size": "55_50"
  },
  {
-  "id": 6,
+  "id": 49,
   "type": "minecraft:blaze",
   "key": "blaze",
   "name": "Blaze",
@@ -104,6 +830,7 @@ export const FORM_DATA = [
   "eye": 1.53,
   "height": 1.8,
   "width": 0.5,
+  "baby": false,
   "r": 1.0,
   "families": [
    "blaze",
@@ -113,7 +840,7 @@ export const FORM_DATA = [
   "size": "50_180"
  },
  {
-  "id": 7,
+  "id": 50,
   "type": "minecraft:bogged",
   "key": "bogged",
   "name": "Bogged",
@@ -121,6 +848,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "bogged",
@@ -132,7 +860,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 8,
+  "id": 51,
   "type": "minecraft:breeze",
   "key": "breeze",
   "name": "Breeze",
@@ -140,6 +868,7 @@ export const FORM_DATA = [
   "eye": 1.504,
   "height": 1.77,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "breeze",
@@ -149,7 +878,7 @@ export const FORM_DATA = [
   "size": "60_177"
  },
  {
-  "id": 9,
+  "id": 52,
   "type": "minecraft:camel",
   "key": "camel",
   "name": "Camel",
@@ -157,6 +886,7 @@ export const FORM_DATA = [
   "eye": 2.019,
   "height": 2.375,
   "width": 1.7,
+  "baby": false,
   "r": 1.0,
   "families": [
    "camel",
@@ -165,7 +895,7 @@ export const FORM_DATA = [
   "size": "170_238"
  },
  {
-  "id": 10,
+  "id": 53,
   "type": "minecraft:camel_husk",
   "key": "camel_husk",
   "name": "Camel Husk",
@@ -173,6 +903,7 @@ export const FORM_DATA = [
   "eye": 2.019,
   "height": 2.375,
   "width": 1.7,
+  "baby": false,
   "r": 1.0,
   "families": [
    "camel_husk",
@@ -182,7 +913,7 @@ export const FORM_DATA = [
   "size": "170_238"
  },
  {
-  "id": 11,
+  "id": 54,
   "type": "minecraft:cat",
   "key": "cat",
   "name": "Cat",
@@ -190,6 +921,7 @@ export const FORM_DATA = [
   "eye": 0.595,
   "height": 0.7,
   "width": 0.6,
+  "baby": false,
   "r": 0.8,
   "families": [
    "cat",
@@ -198,7 +930,7 @@ export const FORM_DATA = [
   "size": "60_70"
  },
  {
-  "id": 12,
+  "id": 55,
   "type": "minecraft:cave_spider",
   "key": "cave_spider",
   "name": "Cave Spider",
@@ -206,6 +938,7 @@ export const FORM_DATA = [
   "eye": 0.425,
   "height": 0.5,
   "width": 0.7,
+  "baby": false,
   "r": 0.7,
   "families": [
    "cavespider",
@@ -216,7 +949,7 @@ export const FORM_DATA = [
   "size": "70_50"
  },
  {
-  "id": 13,
+  "id": 56,
   "type": "minecraft:chicken",
   "key": "chicken",
   "name": "Chicken",
@@ -224,6 +957,7 @@ export const FORM_DATA = [
   "eye": 0.68,
   "height": 0.8,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "chicken",
@@ -232,7 +966,7 @@ export const FORM_DATA = [
   "size": "60_80"
  },
  {
-  "id": 14,
+  "id": 57,
   "type": "minecraft:cod",
   "key": "cod",
   "name": "Cod",
@@ -240,6 +974,7 @@ export const FORM_DATA = [
   "eye": 0.255,
   "height": 0.3,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -249,7 +984,7 @@ export const FORM_DATA = [
   "size": "60_30"
  },
  {
-  "id": 15,
+  "id": 58,
   "type": "minecraft:copper_golem",
   "key": "copper_golem",
   "name": "Copper Golem",
@@ -257,6 +992,7 @@ export const FORM_DATA = [
   "eye": 0.833,
   "height": 0.98,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "copper_golem",
@@ -265,7 +1001,7 @@ export const FORM_DATA = [
   "size": "60_98"
  },
  {
-  "id": 16,
+  "id": 59,
   "type": "minecraft:cow",
   "key": "cow",
   "name": "Cow",
@@ -273,6 +1009,7 @@ export const FORM_DATA = [
   "eye": 1.105,
   "height": 1.3,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "cow",
@@ -281,7 +1018,7 @@ export const FORM_DATA = [
   "size": "90_130"
  },
  {
-  "id": 17,
+  "id": 60,
   "type": "minecraft:creeper",
   "key": "creeper",
   "name": "Creeper",
@@ -289,6 +1026,7 @@ export const FORM_DATA = [
   "eye": 1.53,
   "height": 1.8,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "creeper",
@@ -298,7 +1036,7 @@ export const FORM_DATA = [
   "size": "60_180"
  },
  {
-  "id": 18,
+  "id": 61,
   "type": "minecraft:dolphin",
   "key": "dolphin",
   "name": "Dolphin",
@@ -306,6 +1044,7 @@ export const FORM_DATA = [
   "eye": 0.51,
   "height": 0.6,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -315,7 +1054,7 @@ export const FORM_DATA = [
   "size": "90_60"
  },
  {
-  "id": 19,
+  "id": 62,
   "type": "minecraft:donkey",
   "key": "donkey",
   "name": "Donkey",
@@ -323,6 +1062,7 @@ export const FORM_DATA = [
   "eye": 1.36,
   "height": 1.6,
   "width": 1.4,
+  "baby": false,
   "r": 0.87,
   "families": [
    "donkey",
@@ -331,7 +1071,7 @@ export const FORM_DATA = [
   "size": "140_160"
  },
  {
-  "id": 20,
+  "id": 63,
   "type": "minecraft:drowned",
   "key": "drowned",
   "name": "Drowned",
@@ -339,12 +1079,13 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [],
   "size": "60_190"
  },
  {
-  "id": 21,
+  "id": 64,
   "type": "minecraft:elder_guardian",
   "key": "elder_guardian",
   "name": "Elder Guardian",
@@ -352,6 +1093,7 @@ export const FORM_DATA = [
   "eye": 1.692,
   "height": 1.99,
   "width": 1.99,
+  "baby": false,
   "r": 2.35,
   "families": [
    "aquatic",
@@ -362,7 +1104,7 @@ export const FORM_DATA = [
   "size": "199_199"
  },
  {
-  "id": 22,
+  "id": 65,
   "type": "minecraft:ender_dragon",
   "key": "ender_dragon",
   "name": "Ender Dragon",
@@ -370,6 +1112,7 @@ export const FORM_DATA = [
   "eye": 3.4,
   "height": 4,
   "width": 13,
+  "baby": false,
   "r": 1.0,
   "families": [
    "dragon",
@@ -378,7 +1121,7 @@ export const FORM_DATA = [
   "size": "300_400"
  },
  {
-  "id": 23,
+  "id": 66,
   "type": "minecraft:enderman",
   "key": "enderman",
   "name": "Enderman",
@@ -386,6 +1129,7 @@ export const FORM_DATA = [
   "eye": 2.465,
   "height": 2.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "enderman",
@@ -395,7 +1139,7 @@ export const FORM_DATA = [
   "size": "60_290"
  },
  {
-  "id": 24,
+  "id": 67,
   "type": "minecraft:endermite",
   "key": "endermite",
   "name": "Endermite",
@@ -403,6 +1147,7 @@ export const FORM_DATA = [
   "eye": 0.255,
   "height": 0.3,
   "width": 0.4,
+  "baby": false,
   "r": 1.0,
   "families": [
    "endermite",
@@ -413,7 +1158,7 @@ export const FORM_DATA = [
   "size": "40_30"
  },
  {
-  "id": 25,
+  "id": 68,
   "type": "minecraft:evocation_illager",
   "key": "evocation_illager",
   "name": "Evoker",
@@ -421,6 +1166,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 0.9375,
   "families": [
    "evocation_illager",
@@ -431,7 +1177,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 26,
+  "id": 69,
   "type": "minecraft:fox",
   "key": "fox",
   "name": "Fox",
@@ -439,6 +1185,7 @@ export const FORM_DATA = [
   "eye": 0.595,
   "height": 0.7,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "fox",
@@ -447,7 +1194,7 @@ export const FORM_DATA = [
   "size": "60_70"
  },
  {
-  "id": 27,
+  "id": 70,
   "type": "minecraft:frog",
   "key": "frog",
   "name": "Frog",
@@ -455,6 +1202,7 @@ export const FORM_DATA = [
   "eye": 0.468,
   "height": 0.55,
   "width": 0.5,
+  "baby": false,
   "r": 1.0,
   "families": [
    "frog",
@@ -463,7 +1211,7 @@ export const FORM_DATA = [
   "size": "50_55"
  },
  {
-  "id": 28,
+  "id": 71,
   "type": "minecraft:ghast",
   "key": "ghast",
   "name": "Ghast",
@@ -471,6 +1219,7 @@ export const FORM_DATA = [
   "eye": 3.4,
   "height": 4,
   "width": 4.02,
+  "baby": false,
   "r": 1.0,
   "families": [
    "ghast",
@@ -480,7 +1229,7 @@ export const FORM_DATA = [
   "size": "300_400"
  },
  {
-  "id": 29,
+  "id": 72,
   "type": "minecraft:glow_squid",
   "key": "glow_squid",
   "name": "Glow Squid",
@@ -488,6 +1237,7 @@ export const FORM_DATA = [
   "eye": 0.68,
   "height": 0.8,
   "width": 0.8,
+  "baby": false,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -497,7 +1247,7 @@ export const FORM_DATA = [
   "size": "80_80"
  },
  {
-  "id": 30,
+  "id": 73,
   "type": "minecraft:goat",
   "key": "goat",
   "name": "Goat",
@@ -505,6 +1255,7 @@ export const FORM_DATA = [
   "eye": 1.105,
   "height": 1.3,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "goat",
@@ -513,7 +1264,7 @@ export const FORM_DATA = [
   "size": "90_130"
  },
  {
-  "id": 31,
+  "id": 74,
   "type": "minecraft:guardian",
   "key": "guardian",
   "name": "Guardian",
@@ -521,6 +1272,7 @@ export const FORM_DATA = [
   "eye": 0.722,
   "height": 0.85,
   "width": 0.85,
+  "baby": false,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -531,7 +1283,7 @@ export const FORM_DATA = [
   "size": "85_85"
  },
  {
-  "id": 32,
+  "id": 75,
   "type": "minecraft:happy_ghast",
   "key": "happy_ghast",
   "name": "Happy Ghast",
@@ -539,6 +1291,7 @@ export const FORM_DATA = [
   "eye": 3.4,
   "height": 4.0,
   "width": 4.0,
+  "baby": false,
   "r": 1.0,
   "families": [
    "happy_ghast",
@@ -547,7 +1300,7 @@ export const FORM_DATA = [
   "size": "300_400"
  },
  {
-  "id": 33,
+  "id": 76,
   "type": "minecraft:hoglin",
   "key": "hoglin",
   "name": "Hoglin",
@@ -555,12 +1308,13 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [],
   "size": "60_190"
  },
  {
-  "id": 34,
+  "id": 77,
   "type": "minecraft:horse",
   "key": "horse",
   "name": "Horse",
@@ -568,6 +1322,7 @@ export const FORM_DATA = [
   "eye": 1.36,
   "height": 1.6,
   "width": 1.4,
+  "baby": false,
   "r": 1.0,
   "families": [
    "horse",
@@ -576,7 +1331,7 @@ export const FORM_DATA = [
   "size": "140_160"
  },
  {
-  "id": 35,
+  "id": 78,
   "type": "minecraft:husk",
   "key": "husk",
   "name": "Husk",
@@ -584,6 +1339,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "husk",
@@ -595,7 +1351,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 36,
+  "id": 79,
   "type": "minecraft:iron_golem",
   "key": "iron_golem",
   "name": "Iron Golem",
@@ -603,6 +1359,7 @@ export const FORM_DATA = [
   "eye": 2.465,
   "height": 2.9,
   "width": 1.4,
+  "baby": false,
   "r": 1.0,
   "families": [
    "irongolem",
@@ -611,7 +1368,7 @@ export const FORM_DATA = [
   "size": "140_290"
  },
  {
-  "id": 37,
+  "id": 80,
   "type": "minecraft:llama",
   "key": "llama",
   "name": "Llama",
@@ -619,6 +1376,7 @@ export const FORM_DATA = [
   "eye": 1.59,
   "height": 1.87,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "llama",
@@ -627,7 +1385,7 @@ export const FORM_DATA = [
   "size": "90_187"
  },
  {
-  "id": 38,
+  "id": 81,
   "type": "minecraft:magma_cube",
   "key": "magma_cube",
   "name": "Magma Cube",
@@ -635,6 +1393,7 @@ export const FORM_DATA = [
   "eye": 1.768,
   "height": 2.08,
   "width": 2.08,
+  "baby": false,
   "r": 1.0,
   "families": [
    "magmacube",
@@ -644,7 +1403,7 @@ export const FORM_DATA = [
   "size": "208_208"
  },
  {
-  "id": 39,
+  "id": 82,
   "type": "minecraft:mooshroom",
   "key": "mooshroom",
   "name": "Mooshroom",
@@ -652,6 +1411,7 @@ export const FORM_DATA = [
   "eye": 1.105,
   "height": 1.3,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "mushroomcow",
@@ -660,7 +1420,7 @@ export const FORM_DATA = [
   "size": "90_130"
  },
  {
-  "id": 40,
+  "id": 83,
   "type": "minecraft:mule",
   "key": "mule",
   "name": "Mule",
@@ -668,6 +1428,7 @@ export const FORM_DATA = [
   "eye": 1.36,
   "height": 1.6,
   "width": 1.4,
+  "baby": false,
   "r": 0.92,
   "families": [
    "mule",
@@ -676,7 +1437,7 @@ export const FORM_DATA = [
   "size": "140_160"
  },
  {
-  "id": 41,
+  "id": 84,
   "type": "minecraft:nautilus",
   "key": "nautilus",
   "name": "Nautilus",
@@ -684,6 +1445,7 @@ export const FORM_DATA = [
   "eye": 0.807,
   "height": 0.95,
   "width": 0.875,
+  "baby": false,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -693,7 +1455,7 @@ export const FORM_DATA = [
   "size": "88_95"
  },
  {
-  "id": 42,
+  "id": 85,
   "type": "minecraft:ocelot",
   "key": "ocelot",
   "name": "Ocelot",
@@ -701,6 +1463,7 @@ export const FORM_DATA = [
   "eye": 0.595,
   "height": 0.7,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "ocelot",
@@ -709,7 +1472,7 @@ export const FORM_DATA = [
   "size": "60_70"
  },
  {
-  "id": 43,
+  "id": 86,
   "type": "minecraft:panda",
   "key": "panda",
   "name": "Panda",
@@ -717,6 +1480,7 @@ export const FORM_DATA = [
   "eye": 1.062,
   "height": 1.25,
   "width": 1.3,
+  "baby": false,
   "r": 1.0,
   "families": [
    "panda"
@@ -724,7 +1488,7 @@ export const FORM_DATA = [
   "size": "130_125"
  },
  {
-  "id": 44,
+  "id": 87,
   "type": "minecraft:parched",
   "key": "parched",
   "name": "Parched",
@@ -732,6 +1496,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "parched",
@@ -743,7 +1508,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 45,
+  "id": 88,
   "type": "minecraft:parrot",
   "key": "parrot",
   "name": "Parrot",
@@ -751,12 +1516,13 @@ export const FORM_DATA = [
   "eye": 0.85,
   "height": 1,
   "width": 0.5,
+  "baby": false,
   "r": 1.0,
   "families": [],
   "size": "50_100"
  },
  {
-  "id": 46,
+  "id": 89,
   "type": "minecraft:phantom",
   "key": "phantom",
   "name": "Phantom",
@@ -764,6 +1530,7 @@ export const FORM_DATA = [
   "eye": 0.425,
   "height": 0.5,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "phantom",
@@ -774,7 +1541,7 @@ export const FORM_DATA = [
   "size": "90_50"
  },
  {
-  "id": 47,
+  "id": 90,
   "type": "minecraft:pig",
   "key": "pig",
   "name": "Pig",
@@ -782,6 +1549,7 @@ export const FORM_DATA = [
   "eye": 0.765,
   "height": 0.9,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "pig",
@@ -790,7 +1558,7 @@ export const FORM_DATA = [
   "size": "90_90"
  },
  {
-  "id": 48,
+  "id": 91,
   "type": "minecraft:piglin",
   "key": "piglin",
   "name": "Piglin",
@@ -798,12 +1566,13 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [],
   "size": "60_190"
  },
  {
-  "id": 49,
+  "id": 92,
   "type": "minecraft:piglin_brute",
   "key": "piglin_brute",
   "name": "Piglin Brute",
@@ -811,6 +1580,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "piglin",
@@ -821,7 +1591,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 50,
+  "id": 93,
   "type": "minecraft:pillager",
   "key": "pillager",
   "name": "Pillager",
@@ -829,6 +1599,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "pillager",
@@ -839,7 +1610,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 51,
+  "id": 94,
   "type": "minecraft:polar_bear",
   "key": "polar_bear",
   "name": "Polar Bear",
@@ -847,6 +1618,7 @@ export const FORM_DATA = [
   "eye": 1.19,
   "height": 1.4,
   "width": 1.4,
+  "baby": false,
   "r": 1.2,
   "families": [
    "polarbear",
@@ -855,7 +1627,7 @@ export const FORM_DATA = [
   "size": "140_140"
  },
  {
-  "id": 52,
+  "id": 95,
   "type": "minecraft:pufferfish",
   "key": "pufferfish",
   "name": "Pufferfish",
@@ -863,6 +1635,7 @@ export const FORM_DATA = [
   "eye": 0.68,
   "height": 0.8,
   "width": 0.8,
+  "baby": false,
   "r": 1.2,
   "families": [
    "aquatic",
@@ -872,7 +1645,7 @@ export const FORM_DATA = [
   "size": "80_80"
  },
  {
-  "id": 53,
+  "id": 96,
   "type": "minecraft:rabbit",
   "key": "rabbit",
   "name": "Rabbit",
@@ -880,6 +1653,7 @@ export const FORM_DATA = [
   "eye": 0.85,
   "height": 1.0,
   "width": 0.81666666,
+  "baby": false,
   "r": 1.0,
   "families": [
    "rabbit",
@@ -888,7 +1662,7 @@ export const FORM_DATA = [
   "size": "82_100"
  },
  {
-  "id": 54,
+  "id": 97,
   "type": "minecraft:ravager",
   "key": "ravager",
   "name": "Ravager",
@@ -896,6 +1670,7 @@ export const FORM_DATA = [
   "eye": 1.87,
   "height": 2.2,
   "width": 1.95,
+  "baby": false,
   "r": 1.0,
   "families": [
    "monster",
@@ -905,7 +1680,7 @@ export const FORM_DATA = [
   "size": "195_220"
  },
  {
-  "id": 55,
+  "id": 98,
   "type": "minecraft:salmon",
   "key": "salmon",
   "name": "Salmon",
@@ -913,6 +1688,7 @@ export const FORM_DATA = [
   "eye": 0.425,
   "height": 0.5,
   "width": 0.5,
+  "baby": false,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -922,7 +1698,7 @@ export const FORM_DATA = [
   "size": "50_50"
  },
  {
-  "id": 56,
+  "id": 99,
   "type": "minecraft:sheep",
   "key": "sheep",
   "name": "Sheep",
@@ -930,6 +1706,7 @@ export const FORM_DATA = [
   "eye": 1.105,
   "height": 1.3,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "sheep",
@@ -938,7 +1715,7 @@ export const FORM_DATA = [
   "size": "90_130"
  },
  {
-  "id": 57,
+  "id": 100,
   "type": "minecraft:shulker",
   "key": "shulker",
   "name": "Shulker",
@@ -946,6 +1723,7 @@ export const FORM_DATA = [
   "eye": 1.53,
   "height": 1.8,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "shulker",
@@ -955,7 +1733,7 @@ export const FORM_DATA = [
   "size": "60_180"
  },
  {
-  "id": 58,
+  "id": 101,
   "type": "minecraft:silverfish",
   "key": "silverfish",
   "name": "Silverfish",
@@ -963,6 +1741,7 @@ export const FORM_DATA = [
   "eye": 0.255,
   "height": 0.3,
   "width": 0.4,
+  "baby": false,
   "r": 1.0,
   "families": [
    "silverfish",
@@ -973,7 +1752,7 @@ export const FORM_DATA = [
   "size": "40_30"
  },
  {
-  "id": 59,
+  "id": 102,
   "type": "minecraft:skeleton",
   "key": "skeleton",
   "name": "Skeleton",
@@ -981,6 +1760,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "skeleton",
@@ -991,7 +1771,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 60,
+  "id": 103,
   "type": "minecraft:skeleton_horse",
   "key": "skeleton_horse",
   "name": "Skeleton Horse",
@@ -999,6 +1779,7 @@ export const FORM_DATA = [
   "eye": 1.36,
   "height": 1.6,
   "width": 1.4,
+  "baby": false,
   "r": 1.0,
   "families": [
    "skeletonhorse",
@@ -1008,7 +1789,7 @@ export const FORM_DATA = [
   "size": "140_160"
  },
  {
-  "id": 61,
+  "id": 104,
   "type": "minecraft:slime",
   "key": "slime",
   "name": "Slime",
@@ -1016,6 +1797,7 @@ export const FORM_DATA = [
   "eye": 1.768,
   "height": 2.08,
   "width": 2.08,
+  "baby": false,
   "r": 1.0,
   "families": [
    "slime",
@@ -1025,7 +1807,7 @@ export const FORM_DATA = [
   "size": "208_208"
  },
  {
-  "id": 62,
+  "id": 105,
   "type": "minecraft:sniffer",
   "key": "sniffer",
   "name": "Sniffer",
@@ -1033,6 +1815,7 @@ export const FORM_DATA = [
   "eye": 1.488,
   "height": 1.75,
   "width": 1.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "sniffer",
@@ -1041,7 +1824,7 @@ export const FORM_DATA = [
   "size": "190_175"
  },
  {
-  "id": 63,
+  "id": 106,
   "type": "minecraft:snow_golem",
   "key": "snow_golem",
   "name": "Snow Golem",
@@ -1049,6 +1832,7 @@ export const FORM_DATA = [
   "eye": 1.53,
   "height": 1.8,
   "width": 0.4,
+  "baby": false,
   "r": 1.0,
   "families": [
    "snowgolem",
@@ -1057,7 +1841,7 @@ export const FORM_DATA = [
   "size": "40_180"
  },
  {
-  "id": 64,
+  "id": 107,
   "type": "minecraft:spider",
   "key": "spider",
   "name": "Spider",
@@ -1065,6 +1849,7 @@ export const FORM_DATA = [
   "eye": 0.765,
   "height": 0.9,
   "width": 1.4,
+  "baby": false,
   "r": 1.0,
   "families": [
    "spider",
@@ -1075,7 +1860,7 @@ export const FORM_DATA = [
   "size": "140_90"
  },
  {
-  "id": 65,
+  "id": 108,
   "type": "minecraft:squid",
   "key": "squid",
   "name": "Squid",
@@ -1083,6 +1868,7 @@ export const FORM_DATA = [
   "eye": 0.68,
   "height": 0.8,
   "width": 0.8,
+  "baby": false,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -1092,7 +1878,7 @@ export const FORM_DATA = [
   "size": "80_80"
  },
  {
-  "id": 66,
+  "id": 109,
   "type": "minecraft:stray",
   "key": "stray",
   "name": "Stray",
@@ -1100,6 +1886,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "stray",
@@ -1111,7 +1898,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 67,
+  "id": 110,
   "type": "minecraft:strider",
   "key": "strider",
   "name": "Strider",
@@ -1119,6 +1906,7 @@ export const FORM_DATA = [
   "eye": 1.445,
   "height": 1.7,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "strider",
@@ -1127,7 +1915,7 @@ export const FORM_DATA = [
   "size": "90_170"
  },
  {
-  "id": 68,
+  "id": 111,
   "type": "minecraft:sulfur_cube",
   "key": "sulfur_cube",
   "name": "Sulfur Cube",
@@ -1135,6 +1923,7 @@ export const FORM_DATA = [
   "eye": 0.833,
   "height": 0.98,
   "width": 0.98,
+  "baby": false,
   "r": 1.0,
   "families": [
    "sulfur_cube",
@@ -1144,7 +1933,7 @@ export const FORM_DATA = [
   "size": "98_98"
  },
  {
-  "id": 69,
+  "id": 112,
   "type": "minecraft:tadpole",
   "key": "tadpole",
   "name": "Tadpole",
@@ -1152,6 +1941,7 @@ export const FORM_DATA = [
   "eye": 0.51,
   "height": 0.6,
   "width": 0.8,
+  "baby": false,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -1161,7 +1951,7 @@ export const FORM_DATA = [
   "size": "80_60"
  },
  {
-  "id": 70,
+  "id": 113,
   "type": "minecraft:trader_llama",
   "key": "trader_llama",
   "name": "Trader Llama",
@@ -1169,6 +1959,7 @@ export const FORM_DATA = [
   "eye": 1.59,
   "height": 1.87,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "trader_llama",
@@ -1178,7 +1969,7 @@ export const FORM_DATA = [
   "size": "90_187"
  },
  {
-  "id": 71,
+  "id": 114,
   "type": "minecraft:tropicalfish",
   "key": "tropicalfish",
   "name": "Tropical Fish",
@@ -1186,6 +1977,7 @@ export const FORM_DATA = [
   "eye": 0.34,
   "height": 0.4,
   "width": 0.4,
+  "baby": false,
   "r": 1.3,
   "families": [
    "aquatic",
@@ -1195,7 +1987,7 @@ export const FORM_DATA = [
   "size": "40_40"
  },
  {
-  "id": 72,
+  "id": 115,
   "type": "minecraft:turtle",
   "key": "turtle",
   "name": "Turtle",
@@ -1203,12 +1995,13 @@ export const FORM_DATA = [
   "eye": 0.34,
   "height": 0.4,
   "width": 1.2,
+  "baby": false,
   "r": 1.0,
   "families": [],
   "size": "120_40"
  },
  {
-  "id": 73,
+  "id": 116,
   "type": "minecraft:vex",
   "key": "vex",
   "name": "Vex",
@@ -1216,6 +2009,7 @@ export const FORM_DATA = [
   "eye": 0.68,
   "height": 0.8,
   "width": 0.4,
+  "baby": false,
   "r": 1.0,
   "families": [
    "vex",
@@ -1225,7 +2019,7 @@ export const FORM_DATA = [
   "size": "40_80"
  },
  {
-  "id": 74,
+  "id": 117,
   "type": "minecraft:villager",
   "key": "villager",
   "name": "Villager",
@@ -1233,6 +2027,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 0.9375,
   "families": [
    "villager",
@@ -1241,7 +2036,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 75,
+  "id": 118,
   "type": "minecraft:villager_v2",
   "key": "villager_v2",
   "name": "Villager",
@@ -1249,6 +2044,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 0.9375,
   "families": [
    "villager",
@@ -1257,7 +2053,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 76,
+  "id": 119,
   "type": "minecraft:vindicator",
   "key": "vindicator",
   "name": "Vindicator",
@@ -1265,6 +2061,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 0.9375,
   "families": [
    "vindicator",
@@ -1275,7 +2072,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 77,
+  "id": 120,
   "type": "minecraft:wandering_trader",
   "key": "wandering_trader",
   "name": "Wandering Trader",
@@ -1283,6 +2080,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 0.9375,
   "families": [
    "wandering_trader",
@@ -1291,7 +2089,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 78,
+  "id": 121,
   "type": "minecraft:warden",
   "key": "warden",
   "name": "Warden",
@@ -1299,6 +2097,7 @@ export const FORM_DATA = [
   "eye": 2.465,
   "height": 2.9,
   "width": 0.9,
+  "baby": false,
   "r": 1.0,
   "families": [
    "warden",
@@ -1308,7 +2107,7 @@ export const FORM_DATA = [
   "size": "90_290"
  },
  {
-  "id": 79,
+  "id": 122,
   "type": "minecraft:witch",
   "key": "witch",
   "name": "Witch",
@@ -1316,6 +2115,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 0.9375,
   "families": [
    "witch",
@@ -1325,7 +2125,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 80,
+  "id": 123,
   "type": "minecraft:wither",
   "key": "wither",
   "name": "Wither",
@@ -1333,6 +2133,7 @@ export const FORM_DATA = [
   "eye": 2.55,
   "height": 3,
   "width": 1,
+  "baby": false,
   "r": 1.0,
   "families": [
    "wither",
@@ -1344,7 +2145,7 @@ export const FORM_DATA = [
   "size": "100_300"
  },
  {
-  "id": 81,
+  "id": 124,
   "type": "minecraft:wither_skeleton",
   "key": "wither_skeleton",
   "name": "Wither Skeleton",
@@ -1352,6 +2153,7 @@ export const FORM_DATA = [
   "eye": 1.708,
   "height": 2.01,
   "width": 0.72,
+  "baby": false,
   "r": 1.2,
   "families": [
    "wither",
@@ -1363,7 +2165,7 @@ export const FORM_DATA = [
   "size": "72_200"
  },
  {
-  "id": 82,
+  "id": 125,
   "type": "minecraft:wolf",
   "key": "wolf",
   "name": "Wolf",
@@ -1371,6 +2173,7 @@ export const FORM_DATA = [
   "eye": 0.68,
   "height": 0.8,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "wolf",
@@ -1379,7 +2182,7 @@ export const FORM_DATA = [
   "size": "60_80"
  },
  {
-  "id": 83,
+  "id": 126,
   "type": "minecraft:zoglin",
   "key": "zoglin",
   "name": "Zoglin",
@@ -1387,12 +2190,13 @@ export const FORM_DATA = [
   "eye": 1.19,
   "height": 1.4,
   "width": 1.4,
+  "baby": false,
   "r": 1.0,
   "families": [],
   "size": "140_140"
  },
  {
-  "id": 84,
+  "id": 127,
   "type": "minecraft:zombie",
   "key": "zombie",
   "name": "Zombie",
@@ -1400,6 +2204,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [
    "zombie",
@@ -1410,7 +2215,7 @@ export const FORM_DATA = [
   "size": "60_190"
  },
  {
-  "id": 85,
+  "id": 128,
   "type": "minecraft:zombie_horse",
   "key": "zombie_horse",
   "name": "Zombie Horse",
@@ -1418,6 +2223,7 @@ export const FORM_DATA = [
   "eye": 1.36,
   "height": 1.6,
   "width": 1.4,
+  "baby": false,
   "r": 1.0,
   "families": [
    "zombiehorse",
@@ -1427,7 +2233,7 @@ export const FORM_DATA = [
   "size": "140_160"
  },
  {
-  "id": 86,
+  "id": 129,
   "type": "minecraft:zombie_nautilus",
   "key": "zombie_nautilus",
   "name": "Zombie Nautilus",
@@ -1435,6 +2241,7 @@ export const FORM_DATA = [
   "eye": 0.807,
   "height": 0.95,
   "width": 0.875,
+  "baby": false,
   "r": 1.0,
   "families": [
    "aquatic",
@@ -1446,7 +2253,7 @@ export const FORM_DATA = [
   "size": "88_95"
  },
  {
-  "id": 87,
+  "id": 130,
   "type": "minecraft:zombie_villager",
   "key": "zombie_villager",
   "name": "Zombie Villager",
@@ -1454,12 +2261,13 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [],
   "size": "60_190"
  },
  {
-  "id": 88,
+  "id": 131,
   "type": "minecraft:zombie_villager_v2",
   "key": "zombie_villager_v2",
   "name": "Zombie Villager",
@@ -1467,12 +2275,13 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [],
   "size": "60_190"
  },
  {
-  "id": 89,
+  "id": 132,
   "type": "minecraft:zombie_pigman",
   "key": "zombie_pigman",
   "name": "Zombified Piglin",
@@ -1480,6 +2289,7 @@ export const FORM_DATA = [
   "eye": 1.615,
   "height": 1.9,
   "width": 0.6,
+  "baby": false,
   "r": 1.0,
   "families": [],
   "size": "60_190"

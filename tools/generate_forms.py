@@ -330,6 +330,7 @@ def main(vanilla):
     data = []
     for fid, m in enumerate(forms):
         key = m["key"]
+        base_key = key[5:] if key.startswith("baby_") else key
         tex = TEXTURE_OVERRIDE.get(key, m["texture"])
         # first-person geometry
         if key == "shapeshifter":
@@ -351,7 +352,7 @@ def main(vanilla):
         state_anims = []
         animated = set()
         for a in m["anims"]:
-            if a["id"] in DROP_ANIMS.get(key, set()):
+            if a["id"] in DROP_ANIMS.get(base_key, set()):
                 continue
             short = f"f{fid}_" + a["id"].replace("animation.", "").replace(".", "_")
             m.setdefault("anim_map", {})[short] = a["id"]
@@ -365,7 +366,7 @@ def main(vanilla):
             body_json = json.dumps(anims_src.get(a["id"], {}))
             if any(q in body_json for q in ("anim_time", "life_time", "modified_distance_moved", "modified_move_speed", "tcos0")):
                 animated |= bone_set(anims_src.get(a["id"], {}))
-        if key in ZOMBIE_ARMS:
+        if base_key in ZOMBIE_ARMS:
             m.setdefault("anim_map", {})[f"f{fid}_zombie_arms"] = "animation.morph.zombie.arms"
             state_anims.append({f"f{fid}_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"})
         if key != "shapeshifter":
@@ -412,7 +413,7 @@ def main(vanilla):
 
         eye = 1.62 if key == "shapeshifter" else round(m["height"] * 0.85, 3)
         data.append({"id": fid, "type": m["type"], "key": key, "name": m["name"], "hp": int(math.ceil(m["hp"])),
-                     "eye": eye, "height": m["height"], "width": m["width"], "r": round(m["natural_scale"], 4), "families": m["families"]})
+                     "eye": eye, "height": m["height"], "width": m["width"], "baby": bool(m.get("baby")), "r": round(m["natural_scale"], 4), "families": m["families"]})
 
     # ---------------- RP: geometry
     with open(os.path.join(RP, "models", "entity", "morph_fp_generated.geo.json"), "w") as f:
@@ -457,8 +458,8 @@ def main(vanilla):
         if k == "controller.render.player.third_person":
             # inside a body the body draws the mob (standing on the ground); hide the shifted player model
             cond = f"({cond}) && !query.property('morph:in_body')"
-        k = {"controller.render.player.first_person": "controller.render.morph.first_person",
-             "controller.render.player.third_person": "controller.render.morph.third_person"}.get(k, k)
+        # keep the vanilla controller names: the game draws the first-person hand through
+        # controller.render.player.first_person specifically, so we override that controller itself
         rcs.append({k: cond})
     desc["render_controllers"] = rcs
     with open(os.path.join(RP, "entity", "player.entity.json"), "w") as f:
@@ -488,20 +489,20 @@ def main(vanilla):
     geo_arr = ["Geometry.morph_" + m["key"] for m in forms]
     tex_arr = {"Array.morph_tex": ["Texture.morph_" + m["key"] for m in forms]}
     overlay = {"r": "0.62", "g": "0.18", "b": "1.0", "a": "variable.morph_glow"}
-    mule_ids = [i for i, m in enumerate(forms) if m["key"] in MULE_EARS]
+    mule_ids = [i for i, m in enumerate(forms) if m["key"].replace("baby_", "") in MULE_EARS]
     is_mule = " || ".join(f"variable.morph_form == {i}" for i in mule_ids) or "0"
     vis = [{"*": True}] + [{b: False} for b in ALWAYS_HIDDEN]
     vis += [{"MuleEarL": is_mule}, {"MuleEarR": is_mule}, {"EarL": f"!({is_mule})"}, {"EarR": f"!({is_mule})"}]
     # the rider's own first-person camera sits exactly eye-height above the body's feet
     OWN_CAM = "(math.abs(query.distance_from_camera - query.property('morph:eye')) > 0.35)"
     rc = {"format_version": "1.8.0", "render_controllers": {
-        "controller.render.morph.third_person": {
+        "controller.render.player.third_person": {
             "arrays": {"geometries": {"Array.morph_geo": geo_arr}, "textures": tex_arr},
             "geometry": "Array.morph_geo[variable.morph_form]",
             "materials": [{"*": "Material.default"}],
             "textures": ["Array.morph_tex[variable.morph_form]"],
             "overlay_color": overlay, "part_visibility": vis},
-        "controller.render.morph.first_person": {
+        "controller.render.player.first_person": {
             "arrays": {"geometries": {"Array.morph_fp_geo": ["Geometry.morph_fp_" + m["key"] for m in forms]}, "textures": tex_arr},
             "geometry": "Array.morph_fp_geo[variable.morph_form]",
             "materials": [{"*": "Material.default"}],

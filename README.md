@@ -2,12 +2,12 @@
 
 You don't have a normal body. You're a faceless shapeshifter: a thin shadow figure with glowing violet veins and two eye slits. The **only** way to change shape is to **kill a mob**. You rip its skin off, pull it into yourself and **become that mob**. You take on its body, its health, its eye height, its first-person hand and its powers. If you die, the stolen body dies with you and you're a shapeshifter again.
 
-All **89 vanilla mobs** can be stolen, from chickens and cod to wardens, the Wither and the Ender Dragon.
+All **89 vanilla mobs and 43 baby mobs** can be stolen. Kill a baby and you become the baby, with its small body, its own baby model and its eye height, from chickens and cod to wardens, the Wither and the Ender Dragon.
 
 ## Install (phone / tablet)
 
-1. Download **`dist/Morph_v7.mcaddon`** and tap it. Minecraft imports both packs.
-2. In world settings, turn on **Morph: Shapeshifter v7 (Behavior)**. The resource pack turns on with it.
+1. Download **`dist/Morph_v8.mcaddon`** and tap it. Minecraft imports both packs.
+2. In world settings, turn on **Morph: Shapeshifter v8 (Behavior)**. The resource pack turns on with it.
 3. You need **Minecraft Bedrock 1.26.30 or newer**. No experimental toggles are needed.
 
 You get a **Morph Core** when you join.
@@ -158,7 +158,7 @@ Rebuild:
 git clone --depth 1 https://github.com/Mojang/bedrock-samples /tmp/bedrock-samples
 python3 tools/generate_assets.py
 python3 tools/generate_forms.py /tmp/bedrock-samples
-python3 tools/build.py      # -> dist/Morph_v7.mcaddon
+python3 tools/build.py      # -> dist/Morph_v8.mcaddon
 ```
 
 ## Known limitations

@@ -275,6 +275,135 @@
       },
       {
        "form_89": "variable.morph_form == 89"
+      },
+      {
+       "form_90": "variable.morph_form == 90"
+      },
+      {
+       "form_91": "variable.morph_form == 91"
+      },
+      {
+       "form_92": "variable.morph_form == 92"
+      },
+      {
+       "form_93": "variable.morph_form == 93"
+      },
+      {
+       "form_94": "variable.morph_form == 94"
+      },
+      {
+       "form_95": "variable.morph_form == 95"
+      },
+      {
+       "form_96": "variable.morph_form == 96"
+      },
+      {
+       "form_97": "variable.morph_form == 97"
+      },
+      {
+       "form_98": "variable.morph_form == 98"
+      },
+      {
+       "form_99": "variable.morph_form == 99"
+      },
+      {
+       "form_100": "variable.morph_form == 100"
+      },
+      {
+       "form_101": "variable.morph_form == 101"
+      },
+      {
+       "form_102": "variable.morph_form == 102"
+      },
+      {
+       "form_103": "variable.morph_form == 103"
+      },
+      {
+       "form_104": "variable.morph_form == 104"
+      },
+      {
+       "form_105": "variable.morph_form == 105"
+      },
+      {
+       "form_106": "variable.morph_form == 106"
+      },
+      {
+       "form_107": "variable.morph_form == 107"
+      },
+      {
+       "form_108": "variable.morph_form == 108"
+      },
+      {
+       "form_109": "variable.morph_form == 109"
+      },
+      {
+       "form_110": "variable.morph_form == 110"
+      },
+      {
+       "form_111": "variable.morph_form == 111"
+      },
+      {
+       "form_112": "variable.morph_form == 112"
+      },
+      {
+       "form_113": "variable.morph_form == 113"
+      },
+      {
+       "form_114": "variable.morph_form == 114"
+      },
+      {
+       "form_115": "variable.morph_form == 115"
+      },
+      {
+       "form_116": "variable.morph_form == 116"
+      },
+      {
+       "form_117": "variable.morph_form == 117"
+      },
+      {
+       "form_118": "variable.morph_form == 118"
+      },
+      {
+       "form_119": "variable.morph_form == 119"
+      },
+      {
+       "form_120": "variable.morph_form == 120"
+      },
+      {
+       "form_121": "variable.morph_form == 121"
+      },
+      {
+       "form_122": "variable.morph_form == 122"
+      },
+      {
+       "form_123": "variable.morph_form == 123"
+      },
+      {
+       "form_124": "variable.morph_form == 124"
+      },
+      {
+       "form_125": "variable.morph_form == 125"
+      },
+      {
+       "form_126": "variable.morph_form == 126"
+      },
+      {
+       "form_127": "variable.morph_form == 127"
+      },
+      {
+       "form_128": "variable.morph_form == 128"
+      },
+      {
+       "form_129": "variable.morph_form == 129"
+      },
+      {
+       "form_130": "variable.morph_form == 130"
+      },
+      {
+       "form_131": "variable.morph_form == 131"
+      },
+      {
+       "form_132": "variable.morph_form == 132"
       }
      ]
     },
@@ -365,9 +494,6 @@
     "form_4": {
      "animations": [
       {
-       "f4_bat_flying": "!variable.is_first_person"
-      },
-      {
        "f4_walk": "!variable.is_first_person"
       },
       {
@@ -389,13 +515,10 @@
     "form_5": {
      "animations": [
       {
-       "f5_bee_flying": "!variable.is_first_person"
+       "f5_axolotl_idle_floor": "!variable.is_first_person"
       },
       {
-       "f5_bee_fly_bobbing": "!variable.is_first_person"
-      },
-      {
-       "f5_walk": "!variable.is_first_person"
+       "f5_axolotl_walk_floor": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f5_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -416,7 +539,13 @@
     "form_6": {
      "animations": [
       {
-       "f6_blaze_move": "!variable.is_first_person"
+       "f6_bee_flying": "!variable.is_first_person"
+      },
+      {
+       "f6_bee_fly_bobbing": "!variable.is_first_person"
+      },
+      {
+       "f6_walk": "!variable.is_first_person"
       },
       {
        "f6_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -437,10 +566,16 @@
     "form_7": {
      "animations": [
       {
+       "f7_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
        "f7_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f7_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f7_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -452,7 +587,7 @@
     "form_8": {
      "animations": [
       {
-       "f8_breeze_idle": "!variable.is_first_person"
+       "f8_cat_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f8_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -473,7 +608,10 @@
     "form_9": {
      "animations": [
       {
-       "f9_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f9_chicken_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f9_walk": "!variable.is_first_person"
       },
       {
        "f9_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -494,7 +632,10 @@
     "form_10": {
      "animations": [
       {
-       "f10_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f10_cow_setup": "!variable.is_first_person"
+      },
+      {
+       "f10_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f10_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -515,7 +656,10 @@
     "form_11": {
      "animations": [
       {
-       "f11_cat_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f11_dolphin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f11_walk": "!variable.is_first_person"
       },
       {
        "f11_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -536,10 +680,10 @@
     "form_12": {
      "animations": [
       {
-       "f12_spider_default_leg_pose": "!variable.is_first_person"
+       "f12_horse_v3_tail": "!variable.is_first_person"
       },
       {
-       "f12_spider_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f12_walk": "!variable.is_first_person"
       },
       {
        "f12_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -560,10 +704,7 @@
     "form_13": {
      "animations": [
       {
-       "f13_chicken_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f13_walk": "!variable.is_first_person"
+       "f13_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
       },
       {
        "f13_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -583,6 +724,12 @@
     },
     "form_14": {
      "animations": [
+      {
+       "f14_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f14_fox_setup": "!variable.is_first_person"
+      },
       {
        "f14_walk": "!variable.is_first_person"
       },
@@ -605,9 +752,6 @@
     "form_15": {
      "animations": [
       {
-       "f15_copper_golem_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
        "f15_walk": "!variable.is_first_person"
       },
       {
@@ -629,10 +773,7 @@
     "form_16": {
      "animations": [
       {
-       "f16_cow_setup": "!variable.is_first_person"
-      },
-      {
-       "f16_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f16_walk": "!variable.is_first_person"
       },
       {
        "f16_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -653,7 +794,7 @@
     "form_17": {
      "animations": [
       {
-       "f17_walk": "!variable.is_first_person"
+       "f17_happy_ghast_move": "!variable.is_first_person"
       },
       {
        "f17_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -673,9 +814,6 @@
     },
     "form_18": {
      "animations": [
-      {
-       "f18_dolphin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
       {
        "f18_walk": "!variable.is_first_person"
       },
@@ -729,6 +867,9 @@
       },
       {
        "f20_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f20_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -740,13 +881,10 @@
     "form_21": {
      "animations": [
       {
-       "f21_guardian_setup": "!variable.is_first_person"
+       "f21_llama_setup": "!variable.is_first_person"
       },
       {
-       "f21_guardian_move_eye": "!variable.is_first_person"
-      },
-      {
-       "f21_walk": "!variable.is_first_person"
+       "f21_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f21_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -767,7 +905,10 @@
     "form_22": {
      "animations": [
       {
-       "f22_walk": "!variable.is_first_person"
+       "f22_mooshroom_setup": "!variable.is_first_person"
+      },
+      {
+       "f22_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f22_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -788,10 +929,10 @@
     "form_23": {
      "animations": [
       {
-       "f23_enderman_base_pose": "!variable.is_first_person"
+       "f23_horse_v3_tail": "!variable.is_first_person"
       },
       {
-       "f23_enderman_arms_legs": "!variable.is_first_person"
+       "f23_walk": "!variable.is_first_person"
       },
       {
        "f23_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -812,7 +953,7 @@
     "form_24": {
      "animations": [
       {
-       "f24_endermite_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f24_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f24_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -833,19 +974,16 @@
     "form_25": {
      "animations": [
       {
-       "f25_evoker_general": "!variable.is_first_person"
-      },
-      {
-       "f25_evoker_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f25_walk": "!variable.is_first_person"
+       "f25_ocelot_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f25_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f25_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f25_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -858,12 +996,6 @@
      "animations": [
       {
        "f26_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f26_fox_setup": "!variable.is_first_person"
-      },
-      {
-       "f26_walk": "!variable.is_first_person"
       },
       {
        "f26_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -884,10 +1016,10 @@
     "form_27": {
      "animations": [
       {
-       "f27_frog_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f27_pig_setup": "!variable.is_first_person"
       },
       {
-       "f27_walk": "!variable.is_first_person"
+       "f27_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f27_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -908,7 +1040,7 @@
     "form_28": {
      "animations": [
       {
-       "f28_ghast_move": "!variable.is_first_person"
+       "f28_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f28_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -929,7 +1061,10 @@
     "form_29": {
      "animations": [
       {
-       "f29_walk": "!variable.is_first_person"
+       "f29_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f29_polarbear_move": "!variable.is_first_person"
       },
       {
        "f29_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -950,6 +1085,12 @@
     "form_30": {
      "animations": [
       {
+       "f30_rabbit_move_v2": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f30_rabbit_idle_head_tilt": "!variable.is_first_person"
+      },
+      {
        "f30_walk": "!variable.is_first_person"
       },
       {
@@ -957,6 +1098,9 @@
       },
       {
        "f30_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f30_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -968,13 +1112,7 @@
     "form_31": {
      "animations": [
       {
-       "f31_guardian_setup": "!variable.is_first_person"
-      },
-      {
-       "f31_guardian_move_eye": "!variable.is_first_person"
-      },
-      {
-       "f31_walk": "!variable.is_first_person"
+       "f31_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f31_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -995,7 +1133,10 @@
     "form_32": {
      "animations": [
       {
-       "f32_happy_ghast_move": "!variable.is_first_person"
+       "f32_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f32_walk": "!variable.is_first_person"
       },
       {
        "f32_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1037,9 +1178,6 @@
     "form_34": {
      "animations": [
       {
-       "f34_horse_v3_tail": "!variable.is_first_person"
-      },
-      {
        "f34_walk": "!variable.is_first_person"
       },
       {
@@ -1061,13 +1199,16 @@
     "form_35": {
      "animations": [
       {
-       "f35_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+       "f35_walk": "!variable.is_first_person"
       },
       {
        "f35_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f35_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f35_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1079,10 +1220,10 @@
     "form_36": {
      "animations": [
       {
-       "f36_iron_golem_walk_to_target": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f36_llama_setup": "!variable.is_first_person"
       },
       {
-       "f36_walk": "!variable.is_first_person"
+       "f36_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f36_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1103,10 +1244,10 @@
     "form_37": {
      "animations": [
       {
-       "f37_llama_setup": "!variable.is_first_person"
+       "f37_turtle_general": "!variable.is_first_person"
       },
       {
-       "f37_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f37_turtle_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f37_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1127,6 +1268,15 @@
     "form_38": {
      "animations": [
       {
+       "f38_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f38_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f38_walk": "!variable.is_first_person"
+      },
+      {
        "f38_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
@@ -1145,10 +1295,13 @@
     "form_39": {
      "animations": [
       {
-       "f39_mooshroom_setup": "!variable.is_first_person"
+       "f39_villager_general": "!variable.is_first_person"
       },
       {
-       "f39_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f39_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f39_walk": "!variable.is_first_person"
       },
       {
        "f39_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1169,7 +1322,10 @@
     "form_40": {
      "animations": [
       {
-       "f40_horse_v3_tail": "!variable.is_first_person"
+       "f40_wolf_setup": "!variable.is_first_person"
+      },
+      {
+       "f40_wolf_leg_default": "!variable.is_first_person"
       },
       {
        "f40_walk": "!variable.is_first_person"
@@ -1193,7 +1349,7 @@
     "form_41": {
      "animations": [
       {
-       "f41_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f41_walk": "!variable.is_first_person"
       },
       {
        "f41_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1214,7 +1370,7 @@
     "form_42": {
      "animations": [
       {
-       "f42_ocelot_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f42_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
       },
       {
        "f42_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1235,7 +1391,10 @@
     "form_43": {
      "animations": [
       {
-       "f43_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f43_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f43_walk": "!variable.is_first_person"
       },
       {
        "f43_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1274,13 +1433,7 @@
     "form_45": {
      "animations": [
       {
-       "f45_parrot_base": "!variable.is_first_person"
-      },
-      {
-       "f45_parrot_flying": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f45_walk": "!variable.is_first_person"
+       "f45_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
       },
       {
        "f45_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1301,12 +1454,6 @@
     "form_46": {
      "animations": [
       {
-       "f46_phantom_base_pose": "!variable.is_first_person"
-      },
-      {
-       "f46_phantom_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
        "f46_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
@@ -1325,10 +1472,10 @@
     "form_47": {
      "animations": [
       {
-       "f47_pig_setup": "!variable.is_first_person"
+       "f47_bat_flying": "!variable.is_first_person"
       },
       {
-       "f47_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f47_walk": "!variable.is_first_person"
       },
       {
        "f47_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1349,13 +1496,22 @@
     "form_48": {
      "animations": [
       {
-       "f48_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f48_bee_flying": "!variable.is_first_person"
+      },
+      {
+       "f48_bee_fly_bobbing": "!variable.is_first_person"
+      },
+      {
+       "f48_walk": "!variable.is_first_person"
       },
       {
        "f48_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f48_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f48_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1367,13 +1523,16 @@
     "form_49": {
      "animations": [
       {
-       "f49_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f49_blaze_move": "!variable.is_first_person"
       },
       {
        "f49_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f49_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f49_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1400,16 +1559,16 @@
     "form_51": {
      "animations": [
       {
-       "f51_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f51_polarbear_move": "!variable.is_first_person"
+       "f51_breeze_idle": "!variable.is_first_person"
       },
       {
        "f51_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f51_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f51_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1421,7 +1580,7 @@
     "form_52": {
      "animations": [
       {
-       "f52_walk": "!variable.is_first_person"
+       "f52_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f52_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1442,13 +1601,7 @@
     "form_53": {
      "animations": [
       {
-       "f53_rabbit_move_v2": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f53_rabbit_idle_head_tilt": "!variable.is_first_person"
-      },
-      {
-       "f53_walk": "!variable.is_first_person"
+       "f53_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f53_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1469,7 +1622,7 @@
     "form_54": {
      "animations": [
       {
-       "f54_ravager_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f54_cat_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f54_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1490,7 +1643,10 @@
     "form_55": {
      "animations": [
       {
-       "f55_walk": "!variable.is_first_person"
+       "f55_spider_default_leg_pose": "!variable.is_first_person"
+      },
+      {
+       "f55_spider_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f55_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1511,7 +1667,10 @@
     "form_56": {
      "animations": [
       {
-       "f56_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f56_chicken_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f56_walk": "!variable.is_first_person"
       },
       {
        "f56_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1532,6 +1691,9 @@
     "form_57": {
      "animations": [
       {
+       "f57_walk": "!variable.is_first_person"
+      },
+      {
        "f57_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
@@ -1550,7 +1712,10 @@
     "form_58": {
      "animations": [
       {
-       "f58_silverfish_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f58_copper_golem_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f58_walk": "!variable.is_first_person"
       },
       {
        "f58_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1571,10 +1736,19 @@
     "form_59": {
      "animations": [
       {
+       "f59_cow_setup": "!variable.is_first_person"
+      },
+      {
+       "f59_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
        "f59_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f59_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f59_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1585,9 +1759,6 @@
     },
     "form_60": {
      "animations": [
-      {
-       "f60_horse_v3_tail": "!variable.is_first_person"
-      },
       {
        "f60_walk": "!variable.is_first_person"
       },
@@ -1610,6 +1781,12 @@
     "form_61": {
      "animations": [
       {
+       "f61_dolphin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f61_walk": "!variable.is_first_person"
+      },
+      {
        "f61_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
@@ -1627,6 +1804,9 @@
     },
     "form_62": {
      "animations": [
+      {
+       "f62_horse_v3_tail": "!variable.is_first_person"
+      },
       {
        "f62_walk": "!variable.is_first_person"
       },
@@ -1649,19 +1829,13 @@
     "form_63": {
      "animations": [
       {
-       "f63_snowgolem_move_v1_8": "!variable.is_first_person"
-      },
-      {
-       "f63_walk": "!variable.is_first_person"
+       "f63_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
       },
       {
        "f63_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f63_absorb_fp": "variable.morph_absorb && variable.is_first_person"
-      },
-      {
-       "f63_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1673,10 +1847,13 @@
     "form_64": {
      "animations": [
       {
-       "f64_spider_default_leg_pose": "!variable.is_first_person"
+       "f64_guardian_setup": "!variable.is_first_person"
       },
       {
-       "f64_spider_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f64_guardian_move_eye": "!variable.is_first_person"
+      },
+      {
+       "f64_walk": "!variable.is_first_person"
       },
       {
        "f64_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1718,10 +1895,19 @@
     "form_66": {
      "animations": [
       {
+       "f66_enderman_base_pose": "!variable.is_first_person"
+      },
+      {
+       "f66_enderman_arms_legs": "!variable.is_first_person"
+      },
+      {
        "f66_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f66_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f66_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1733,7 +1919,7 @@
     "form_67": {
      "animations": [
       {
-       "f67_walk": "!variable.is_first_person"
+       "f67_endermite_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f67_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1754,13 +1940,19 @@
     "form_68": {
      "animations": [
       {
+       "f68_evoker_general": "!variable.is_first_person"
+      },
+      {
+       "f68_evoker_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f68_walk": "!variable.is_first_person"
+      },
+      {
        "f68_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f68_absorb_fp": "variable.morph_absorb && variable.is_first_person"
-      },
-      {
-       "f68_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1772,7 +1964,10 @@
     "form_69": {
      "animations": [
       {
-       "f69_tadpole_swim": "!variable.is_first_person"
+       "f69_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f69_fox_setup": "!variable.is_first_person"
       },
       {
        "f69_walk": "!variable.is_first_person"
@@ -1796,10 +1991,10 @@
     "form_70": {
      "animations": [
       {
-       "f70_llama_setup": "!variable.is_first_person"
+       "f70_frog_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
-       "f70_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f70_walk": "!variable.is_first_person"
       },
       {
        "f70_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1820,7 +2015,7 @@
     "form_71": {
      "animations": [
       {
-       "f71_walk": "!variable.is_first_person"
+       "f71_ghast_move": "!variable.is_first_person"
       },
       {
        "f71_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1841,10 +2036,7 @@
     "form_72": {
      "animations": [
       {
-       "f72_turtle_general": "!variable.is_first_person"
-      },
-      {
-       "f72_turtle_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f72_walk": "!variable.is_first_person"
       },
       {
        "f72_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1865,16 +2057,13 @@
     "form_73": {
      "animations": [
       {
-       "f73_vex_idle": "!variable.is_first_person"
+       "f73_walk": "!variable.is_first_person"
       },
       {
        "f73_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f73_absorb_fp": "variable.morph_absorb && variable.is_first_person"
-      },
-      {
-       "f73_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1886,10 +2075,10 @@
     "form_74": {
      "animations": [
       {
-       "f74_villager_general": "!variable.is_first_person"
+       "f74_guardian_setup": "!variable.is_first_person"
       },
       {
-       "f74_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f74_guardian_move_eye": "!variable.is_first_person"
       },
       {
        "f74_walk": "!variable.is_first_person"
@@ -1913,13 +2102,7 @@
     "form_75": {
      "animations": [
       {
-       "f75_villager_general": "!variable.is_first_person"
-      },
-      {
-       "f75_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f75_walk": "!variable.is_first_person"
+       "f75_happy_ghast_move": "!variable.is_first_person"
       },
       {
        "f75_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -1940,16 +2123,16 @@
     "form_76": {
      "animations": [
       {
-       "f76_vindicator_base": "!variable.is_first_person"
-      },
-      {
-       "f76_vindicator_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f76_walk": "!variable.is_first_person"
       },
       {
        "f76_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f76_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f76_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -1961,10 +2144,7 @@
     "form_77": {
      "animations": [
       {
-       "f77_villager_general": "!variable.is_first_person"
-      },
-      {
-       "f77_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f77_horse_v3_tail": "!variable.is_first_person"
       },
       {
        "f77_walk": "!variable.is_first_person"
@@ -1988,16 +2168,13 @@
     "form_78": {
      "animations": [
       {
-       "f78_walk": "!variable.is_first_person"
+       "f78_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
       },
       {
        "f78_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f78_absorb_fp": "variable.morph_absorb && variable.is_first_person"
-      },
-      {
-       "f78_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2009,10 +2186,7 @@
     "form_79": {
      "animations": [
       {
-       "f79_villager_general": "!variable.is_first_person"
-      },
-      {
-       "f79_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f79_iron_golem_walk_to_target": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f79_walk": "!variable.is_first_person"
@@ -2036,6 +2210,12 @@
     "form_80": {
      "animations": [
       {
+       "f80_llama_setup": "!variable.is_first_person"
+      },
+      {
+       "f80_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
        "f80_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
@@ -2058,6 +2238,9 @@
       },
       {
        "f81_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f81_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2069,13 +2252,10 @@
     "form_82": {
      "animations": [
       {
-       "f82_wolf_setup": "!variable.is_first_person"
+       "f82_mooshroom_setup": "!variable.is_first_person"
       },
       {
-       "f82_wolf_leg_default": "!variable.is_first_person"
-      },
-      {
-       "f82_walk": "!variable.is_first_person"
+       "f82_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f82_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -2095,6 +2275,9 @@
     },
     "form_83": {
      "animations": [
+      {
+       "f83_horse_v3_tail": "!variable.is_first_person"
+      },
       {
        "f83_walk": "!variable.is_first_person"
       },
@@ -2117,13 +2300,16 @@
     "form_84": {
      "animations": [
       {
-       "f84_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+       "f84_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f84_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f84_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f84_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2135,10 +2321,7 @@
     "form_85": {
      "animations": [
       {
-       "f85_horse_v3_tail": "!variable.is_first_person"
-      },
-      {
-       "f85_walk": "!variable.is_first_person"
+       "f85_ocelot_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f85_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -2159,7 +2342,7 @@
     "form_86": {
      "animations": [
       {
-       "f86_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f86_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f86_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -2198,13 +2381,22 @@
     "form_88": {
      "animations": [
       {
-       "f88_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+       "f88_parrot_base": "!variable.is_first_person"
+      },
+      {
+       "f88_parrot_flying": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f88_walk": "!variable.is_first_person"
       },
       {
        "f88_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f88_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f88_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
@@ -2216,15 +2408,930 @@
     "form_89": {
      "animations": [
       {
+       "f89_phantom_base_pose": "!variable.is_first_person"
+      },
+      {
+       "f89_phantom_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
        "f89_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f89_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f89_fpfit": "variable.is_first_person"
       }
      ],
      "transitions": [
       {
        "router": "variable.morph_form != 89"
+      }
+     ]
+    },
+    "form_90": {
+     "animations": [
+      {
+       "f90_pig_setup": "!variable.is_first_person"
+      },
+      {
+       "f90_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f90_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f90_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f90_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 90"
+      }
+     ]
+    },
+    "form_91": {
+     "animations": [
+      {
+       "f91_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f91_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f91_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 91"
+      }
+     ]
+    },
+    "form_92": {
+     "animations": [
+      {
+       "f92_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f92_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f92_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 92"
+      }
+     ]
+    },
+    "form_93": {
+     "animations": [
+      {
+       "f93_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f93_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 93"
+      }
+     ]
+    },
+    "form_94": {
+     "animations": [
+      {
+       "f94_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f94_polarbear_move": "!variable.is_first_person"
+      },
+      {
+       "f94_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f94_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 94"
+      }
+     ]
+    },
+    "form_95": {
+     "animations": [
+      {
+       "f95_walk": "!variable.is_first_person"
+      },
+      {
+       "f95_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f95_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f95_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 95"
+      }
+     ]
+    },
+    "form_96": {
+     "animations": [
+      {
+       "f96_rabbit_move_v2": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f96_rabbit_idle_head_tilt": "!variable.is_first_person"
+      },
+      {
+       "f96_walk": "!variable.is_first_person"
+      },
+      {
+       "f96_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f96_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f96_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 96"
+      }
+     ]
+    },
+    "form_97": {
+     "animations": [
+      {
+       "f97_ravager_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f97_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f97_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f97_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 97"
+      }
+     ]
+    },
+    "form_98": {
+     "animations": [
+      {
+       "f98_walk": "!variable.is_first_person"
+      },
+      {
+       "f98_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f98_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f98_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 98"
+      }
+     ]
+    },
+    "form_99": {
+     "animations": [
+      {
+       "f99_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f99_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f99_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f99_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 99"
+      }
+     ]
+    },
+    "form_100": {
+     "animations": [
+      {
+       "f100_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f100_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f100_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 100"
+      }
+     ]
+    },
+    "form_101": {
+     "animations": [
+      {
+       "f101_silverfish_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f101_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f101_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f101_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 101"
+      }
+     ]
+    },
+    "form_102": {
+     "animations": [
+      {
+       "f102_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f102_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 102"
+      }
+     ]
+    },
+    "form_103": {
+     "animations": [
+      {
+       "f103_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f103_walk": "!variable.is_first_person"
+      },
+      {
+       "f103_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f103_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f103_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 103"
+      }
+     ]
+    },
+    "form_104": {
+     "animations": [
+      {
+       "f104_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f104_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f104_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 104"
+      }
+     ]
+    },
+    "form_105": {
+     "animations": [
+      {
+       "f105_walk": "!variable.is_first_person"
+      },
+      {
+       "f105_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f105_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f105_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 105"
+      }
+     ]
+    },
+    "form_106": {
+     "animations": [
+      {
+       "f106_snowgolem_move_v1_8": "!variable.is_first_person"
+      },
+      {
+       "f106_walk": "!variable.is_first_person"
+      },
+      {
+       "f106_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f106_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f106_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 106"
+      }
+     ]
+    },
+    "form_107": {
+     "animations": [
+      {
+       "f107_spider_default_leg_pose": "!variable.is_first_person"
+      },
+      {
+       "f107_spider_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f107_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f107_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f107_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 107"
+      }
+     ]
+    },
+    "form_108": {
+     "animations": [
+      {
+       "f108_walk": "!variable.is_first_person"
+      },
+      {
+       "f108_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f108_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f108_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 108"
+      }
+     ]
+    },
+    "form_109": {
+     "animations": [
+      {
+       "f109_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f109_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 109"
+      }
+     ]
+    },
+    "form_110": {
+     "animations": [
+      {
+       "f110_walk": "!variable.is_first_person"
+      },
+      {
+       "f110_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f110_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f110_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 110"
+      }
+     ]
+    },
+    "form_111": {
+     "animations": [
+      {
+       "f111_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f111_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f111_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 111"
+      }
+     ]
+    },
+    "form_112": {
+     "animations": [
+      {
+       "f112_tadpole_swim": "!variable.is_first_person"
+      },
+      {
+       "f112_walk": "!variable.is_first_person"
+      },
+      {
+       "f112_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f112_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f112_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 112"
+      }
+     ]
+    },
+    "form_113": {
+     "animations": [
+      {
+       "f113_llama_setup": "!variable.is_first_person"
+      },
+      {
+       "f113_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f113_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f113_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f113_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 113"
+      }
+     ]
+    },
+    "form_114": {
+     "animations": [
+      {
+       "f114_walk": "!variable.is_first_person"
+      },
+      {
+       "f114_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f114_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f114_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 114"
+      }
+     ]
+    },
+    "form_115": {
+     "animations": [
+      {
+       "f115_turtle_general": "!variable.is_first_person"
+      },
+      {
+       "f115_turtle_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f115_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f115_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f115_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 115"
+      }
+     ]
+    },
+    "form_116": {
+     "animations": [
+      {
+       "f116_vex_idle": "!variable.is_first_person"
+      },
+      {
+       "f116_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f116_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f116_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 116"
+      }
+     ]
+    },
+    "form_117": {
+     "animations": [
+      {
+       "f117_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f117_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f117_walk": "!variable.is_first_person"
+      },
+      {
+       "f117_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f117_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f117_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 117"
+      }
+     ]
+    },
+    "form_118": {
+     "animations": [
+      {
+       "f118_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f118_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f118_walk": "!variable.is_first_person"
+      },
+      {
+       "f118_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f118_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f118_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 118"
+      }
+     ]
+    },
+    "form_119": {
+     "animations": [
+      {
+       "f119_vindicator_base": "!variable.is_first_person"
+      },
+      {
+       "f119_vindicator_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f119_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f119_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 119"
+      }
+     ]
+    },
+    "form_120": {
+     "animations": [
+      {
+       "f120_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f120_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f120_walk": "!variable.is_first_person"
+      },
+      {
+       "f120_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f120_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f120_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 120"
+      }
+     ]
+    },
+    "form_121": {
+     "animations": [
+      {
+       "f121_walk": "!variable.is_first_person"
+      },
+      {
+       "f121_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f121_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f121_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 121"
+      }
+     ]
+    },
+    "form_122": {
+     "animations": [
+      {
+       "f122_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f122_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f122_walk": "!variable.is_first_person"
+      },
+      {
+       "f122_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f122_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f122_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 122"
+      }
+     ]
+    },
+    "form_123": {
+     "animations": [
+      {
+       "f123_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f123_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f123_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 123"
+      }
+     ]
+    },
+    "form_124": {
+     "animations": [
+      {
+       "f124_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f124_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 124"
+      }
+     ]
+    },
+    "form_125": {
+     "animations": [
+      {
+       "f125_wolf_setup": "!variable.is_first_person"
+      },
+      {
+       "f125_wolf_leg_default": "!variable.is_first_person"
+      },
+      {
+       "f125_walk": "!variable.is_first_person"
+      },
+      {
+       "f125_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f125_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f125_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 125"
+      }
+     ]
+    },
+    "form_126": {
+     "animations": [
+      {
+       "f126_walk": "!variable.is_first_person"
+      },
+      {
+       "f126_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f126_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f126_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 126"
+      }
+     ]
+    },
+    "form_127": {
+     "animations": [
+      {
+       "f127_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f127_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f127_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 127"
+      }
+     ]
+    },
+    "form_128": {
+     "animations": [
+      {
+       "f128_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f128_walk": "!variable.is_first_person"
+      },
+      {
+       "f128_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f128_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f128_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 128"
+      }
+     ]
+    },
+    "form_129": {
+     "animations": [
+      {
+       "f129_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f129_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f129_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      },
+      {
+       "f129_fpfit": "variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 129"
+      }
+     ]
+    },
+    "form_130": {
+     "animations": [
+      {
+       "f130_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f130_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f130_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 130"
+      }
+     ]
+    },
+    "form_131": {
+     "animations": [
+      {
+       "f131_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f131_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f131_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 131"
+      }
+     ]
+    },
+    "form_132": {
+     "animations": [
+      {
+       "f132_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f132_absorb_fp": "variable.morph_absorb && variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 132"
       }
      ]
     }
@@ -2504,6 +3611,135 @@
       },
       {
        "form_89": "variable.morph_form == 89"
+      },
+      {
+       "form_90": "variable.morph_form == 90"
+      },
+      {
+       "form_91": "variable.morph_form == 91"
+      },
+      {
+       "form_92": "variable.morph_form == 92"
+      },
+      {
+       "form_93": "variable.morph_form == 93"
+      },
+      {
+       "form_94": "variable.morph_form == 94"
+      },
+      {
+       "form_95": "variable.morph_form == 95"
+      },
+      {
+       "form_96": "variable.morph_form == 96"
+      },
+      {
+       "form_97": "variable.morph_form == 97"
+      },
+      {
+       "form_98": "variable.morph_form == 98"
+      },
+      {
+       "form_99": "variable.morph_form == 99"
+      },
+      {
+       "form_100": "variable.morph_form == 100"
+      },
+      {
+       "form_101": "variable.morph_form == 101"
+      },
+      {
+       "form_102": "variable.morph_form == 102"
+      },
+      {
+       "form_103": "variable.morph_form == 103"
+      },
+      {
+       "form_104": "variable.morph_form == 104"
+      },
+      {
+       "form_105": "variable.morph_form == 105"
+      },
+      {
+       "form_106": "variable.morph_form == 106"
+      },
+      {
+       "form_107": "variable.morph_form == 107"
+      },
+      {
+       "form_108": "variable.morph_form == 108"
+      },
+      {
+       "form_109": "variable.morph_form == 109"
+      },
+      {
+       "form_110": "variable.morph_form == 110"
+      },
+      {
+       "form_111": "variable.morph_form == 111"
+      },
+      {
+       "form_112": "variable.morph_form == 112"
+      },
+      {
+       "form_113": "variable.morph_form == 113"
+      },
+      {
+       "form_114": "variable.morph_form == 114"
+      },
+      {
+       "form_115": "variable.morph_form == 115"
+      },
+      {
+       "form_116": "variable.morph_form == 116"
+      },
+      {
+       "form_117": "variable.morph_form == 117"
+      },
+      {
+       "form_118": "variable.morph_form == 118"
+      },
+      {
+       "form_119": "variable.morph_form == 119"
+      },
+      {
+       "form_120": "variable.morph_form == 120"
+      },
+      {
+       "form_121": "variable.morph_form == 121"
+      },
+      {
+       "form_122": "variable.morph_form == 122"
+      },
+      {
+       "form_123": "variable.morph_form == 123"
+      },
+      {
+       "form_124": "variable.morph_form == 124"
+      },
+      {
+       "form_125": "variable.morph_form == 125"
+      },
+      {
+       "form_126": "variable.morph_form == 126"
+      },
+      {
+       "form_127": "variable.morph_form == 127"
+      },
+      {
+       "form_128": "variable.morph_form == 128"
+      },
+      {
+       "form_129": "variable.morph_form == 129"
+      },
+      {
+       "form_130": "variable.morph_form == 130"
+      },
+      {
+       "form_131": "variable.morph_form == 131"
+      },
+      {
+       "form_132": "variable.morph_form == 132"
       }
      ]
     },
@@ -2588,9 +3824,6 @@
     "form_4": {
      "animations": [
       {
-       "f4_bat_flying": "!variable.is_first_person"
-      },
-      {
        "f4_walk": "!variable.is_first_person"
       },
       {
@@ -2609,16 +3842,16 @@
     "form_5": {
      "animations": [
       {
-       "f5_bee_flying": "!variable.is_first_person"
+       "f5_axolotl_idle_floor": "!variable.is_first_person"
       },
       {
-       "f5_bee_fly_bobbing": "!variable.is_first_person"
-      },
-      {
-       "f5_walk": "!variable.is_first_person"
+       "f5_axolotl_walk_floor": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f5_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -2630,13 +3863,16 @@
     "form_6": {
      "animations": [
       {
-       "f6_blaze_move": "!variable.is_first_person"
+       "f6_bee_flying": "!variable.is_first_person"
+      },
+      {
+       "f6_bee_fly_bobbing": "!variable.is_first_person"
+      },
+      {
+       "f6_walk": "!variable.is_first_person"
       },
       {
        "f6_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -2648,10 +3884,10 @@
     "form_7": {
      "animations": [
       {
-       "f7_absorb": "variable.morph_absorb && !variable.is_first_person"
+       "f7_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
-       "f7_bodywalk": "1.0"
+       "f7_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "morph_body_pitch": "1.0"
@@ -2666,13 +3902,10 @@
     "form_8": {
      "animations": [
       {
-       "f8_breeze_idle": "!variable.is_first_person"
+       "f8_cat_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f8_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "f8_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -2687,13 +3920,13 @@
     "form_9": {
      "animations": [
       {
-       "f9_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f9_chicken_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f9_walk": "!variable.is_first_person"
       },
       {
        "f9_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -2705,7 +3938,10 @@
     "form_10": {
      "animations": [
       {
-       "f10_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f10_cow_setup": "!variable.is_first_person"
+      },
+      {
+       "f10_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f10_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -2723,7 +3959,10 @@
     "form_11": {
      "animations": [
       {
-       "f11_cat_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f11_dolphin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f11_walk": "!variable.is_first_person"
       },
       {
        "f11_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -2741,10 +3980,10 @@
     "form_12": {
      "animations": [
       {
-       "f12_spider_default_leg_pose": "!variable.is_first_person"
+       "f12_horse_v3_tail": "!variable.is_first_person"
       },
       {
-       "f12_spider_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f12_walk": "!variable.is_first_person"
       },
       {
        "f12_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -2762,13 +4001,13 @@
     "form_13": {
      "animations": [
       {
-       "f13_chicken_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f13_walk": "!variable.is_first_person"
+       "f13_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
       },
       {
        "f13_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f13_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -2782,6 +4021,12 @@
     },
     "form_14": {
      "animations": [
+      {
+       "f14_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f14_fox_setup": "!variable.is_first_person"
+      },
       {
        "f14_walk": "!variable.is_first_person"
       },
@@ -2801,16 +4046,10 @@
     "form_15": {
      "animations": [
       {
-       "f15_copper_golem_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
        "f15_walk": "!variable.is_first_person"
       },
       {
        "f15_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -2822,10 +4061,7 @@
     "form_16": {
      "animations": [
       {
-       "f16_cow_setup": "!variable.is_first_person"
-      },
-      {
-       "f16_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f16_walk": "!variable.is_first_person"
       },
       {
        "f16_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -2843,13 +4079,10 @@
     "form_17": {
      "animations": [
       {
-       "f17_walk": "!variable.is_first_person"
+       "f17_happy_ghast_move": "!variable.is_first_person"
       },
       {
        "f17_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -2860,9 +4093,6 @@
     },
     "form_18": {
      "animations": [
-      {
-       "f18_dolphin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
       {
        "f18_walk": "!variable.is_first_person"
       },
@@ -2924,13 +4154,10 @@
     "form_21": {
      "animations": [
       {
-       "f21_guardian_setup": "!variable.is_first_person"
+       "f21_llama_setup": "!variable.is_first_person"
       },
       {
-       "f21_guardian_move_eye": "!variable.is_first_person"
-      },
-      {
-       "f21_walk": "!variable.is_first_person"
+       "f21_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f21_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -2948,7 +4175,10 @@
     "form_22": {
      "animations": [
       {
-       "f22_walk": "!variable.is_first_person"
+       "f22_mooshroom_setup": "!variable.is_first_person"
+      },
+      {
+       "f22_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f22_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -2966,16 +4196,13 @@
     "form_23": {
      "animations": [
       {
-       "f23_enderman_base_pose": "!variable.is_first_person"
+       "f23_horse_v3_tail": "!variable.is_first_person"
       },
       {
-       "f23_enderman_arms_legs": "!variable.is_first_person"
+       "f23_walk": "!variable.is_first_person"
       },
       {
        "f23_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "f23_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -2990,10 +4217,13 @@
     "form_24": {
      "animations": [
       {
-       "f24_endermite_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f24_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f24_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3005,19 +4235,10 @@
     "form_25": {
      "animations": [
       {
-       "f25_evoker_general": "!variable.is_first_person"
-      },
-      {
-       "f25_evoker_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f25_walk": "!variable.is_first_person"
+       "f25_ocelot_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f25_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "f25_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -3035,12 +4256,6 @@
        "f26_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
-       "f26_fox_setup": "!variable.is_first_person"
-      },
-      {
-       "f26_walk": "!variable.is_first_person"
-      },
-      {
        "f26_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
@@ -3056,10 +4271,10 @@
     "form_27": {
      "animations": [
       {
-       "f27_frog_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f27_pig_setup": "!variable.is_first_person"
       },
       {
-       "f27_walk": "!variable.is_first_person"
+       "f27_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f27_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3077,10 +4292,13 @@
     "form_28": {
      "animations": [
       {
-       "f28_ghast_move": "!variable.is_first_person"
+       "f28_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f28_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3092,10 +4310,16 @@
     "form_29": {
      "animations": [
       {
-       "f29_walk": "!variable.is_first_person"
+       "f29_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f29_polarbear_move": "!variable.is_first_person"
       },
       {
        "f29_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3106,6 +4330,12 @@
     },
     "form_30": {
      "animations": [
+      {
+       "f30_rabbit_move_v2": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f30_rabbit_idle_head_tilt": "!variable.is_first_person"
+      },
       {
        "f30_walk": "!variable.is_first_person"
       },
@@ -3125,13 +4355,7 @@
     "form_31": {
      "animations": [
       {
-       "f31_guardian_setup": "!variable.is_first_person"
-      },
-      {
-       "f31_guardian_move_eye": "!variable.is_first_person"
-      },
-      {
-       "f31_walk": "!variable.is_first_person"
+       "f31_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f31_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3149,10 +4373,16 @@
     "form_32": {
      "animations": [
       {
-       "f32_happy_ghast_move": "!variable.is_first_person"
+       "f32_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f32_walk": "!variable.is_first_person"
       },
       {
        "f32_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3182,16 +4412,10 @@
     "form_34": {
      "animations": [
       {
-       "f34_horse_v3_tail": "!variable.is_first_person"
-      },
-      {
        "f34_walk": "!variable.is_first_person"
       },
       {
        "f34_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3203,16 +4427,10 @@
     "form_35": {
      "animations": [
       {
-       "f35_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+       "f35_walk": "!variable.is_first_person"
       },
       {
        "f35_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "f35_bodywalk": "1.0"
-      },
-      {
-       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3224,10 +4442,10 @@
     "form_36": {
      "animations": [
       {
-       "f36_iron_golem_walk_to_target": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f36_llama_setup": "!variable.is_first_person"
       },
       {
-       "f36_walk": "!variable.is_first_person"
+       "f36_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f36_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3245,10 +4463,10 @@
     "form_37": {
      "animations": [
       {
-       "f37_llama_setup": "!variable.is_first_person"
+       "f37_turtle_general": "!variable.is_first_person"
       },
       {
-       "f37_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f37_turtle_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f37_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3266,10 +4484,19 @@
     "form_38": {
      "animations": [
       {
+       "f38_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f38_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f38_walk": "!variable.is_first_person"
+      },
+      {
        "f38_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
-       "f38_bodywalk": "1.0"
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3281,10 +4508,13 @@
     "form_39": {
      "animations": [
       {
-       "f39_mooshroom_setup": "!variable.is_first_person"
+       "f39_villager_general": "!variable.is_first_person"
       },
       {
-       "f39_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f39_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f39_walk": "!variable.is_first_person"
       },
       {
        "f39_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3302,7 +4532,10 @@
     "form_40": {
      "animations": [
       {
-       "f40_horse_v3_tail": "!variable.is_first_person"
+       "f40_wolf_setup": "!variable.is_first_person"
+      },
+      {
+       "f40_wolf_leg_default": "!variable.is_first_person"
       },
       {
        "f40_walk": "!variable.is_first_person"
@@ -3323,7 +4556,7 @@
     "form_41": {
      "animations": [
       {
-       "f41_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f41_walk": "!variable.is_first_person"
       },
       {
        "f41_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3341,10 +4574,13 @@
     "form_42": {
      "animations": [
       {
-       "f42_ocelot_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f42_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
       },
       {
        "f42_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f42_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -3359,7 +4595,10 @@
     "form_43": {
      "animations": [
       {
-       "f43_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f43_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f43_walk": "!variable.is_first_person"
       },
       {
        "f43_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3398,16 +4637,13 @@
     "form_45": {
      "animations": [
       {
-       "f45_parrot_base": "!variable.is_first_person"
-      },
-      {
-       "f45_parrot_flying": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f45_walk": "!variable.is_first_person"
+       "f45_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
       },
       {
        "f45_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f45_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -3422,13 +4658,10 @@
     "form_46": {
      "animations": [
       {
-       "f46_phantom_base_pose": "!variable.is_first_person"
-      },
-      {
-       "f46_phantom_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
        "f46_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f46_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -3443,10 +4676,10 @@
     "form_47": {
      "animations": [
       {
-       "f47_pig_setup": "!variable.is_first_person"
+       "f47_bat_flying": "!variable.is_first_person"
       },
       {
-       "f47_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f47_walk": "!variable.is_first_person"
       },
       {
        "f47_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3464,13 +4697,16 @@
     "form_48": {
      "animations": [
       {
-       "f48_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f48_bee_flying": "!variable.is_first_person"
+      },
+      {
+       "f48_bee_fly_bobbing": "!variable.is_first_person"
+      },
+      {
+       "f48_walk": "!variable.is_first_person"
       },
       {
        "f48_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3482,7 +4718,7 @@
     "form_49": {
      "animations": [
       {
-       "f49_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f49_blaze_move": "!variable.is_first_person"
       },
       {
        "f49_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3518,13 +4754,13 @@
     "form_51": {
      "animations": [
       {
-       "f51_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f51_polarbear_move": "!variable.is_first_person"
+       "f51_breeze_idle": "!variable.is_first_person"
       },
       {
        "f51_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f51_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -3539,10 +4775,13 @@
     "form_52": {
      "animations": [
       {
-       "f52_walk": "!variable.is_first_person"
+       "f52_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f52_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3554,13 +4793,7 @@
     "form_53": {
      "animations": [
       {
-       "f53_rabbit_move_v2": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f53_rabbit_idle_head_tilt": "!variable.is_first_person"
-      },
-      {
-       "f53_walk": "!variable.is_first_person"
+       "f53_camel_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f53_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3578,7 +4811,7 @@
     "form_54": {
      "animations": [
       {
-       "f54_ravager_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f54_cat_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f54_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3596,7 +4829,10 @@
     "form_55": {
      "animations": [
       {
-       "f55_walk": "!variable.is_first_person"
+       "f55_spider_default_leg_pose": "!variable.is_first_person"
+      },
+      {
+       "f55_spider_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f55_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3614,7 +4850,10 @@
     "form_56": {
      "animations": [
       {
-       "f56_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f56_chicken_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f56_walk": "!variable.is_first_person"
       },
       {
        "f56_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3632,10 +4871,10 @@
     "form_57": {
      "animations": [
       {
-       "f57_absorb": "variable.morph_absorb && !variable.is_first_person"
+       "f57_walk": "!variable.is_first_person"
       },
       {
-       "f57_bodywalk": "1.0"
+       "f57_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "morph_body_pitch": "1.0"
@@ -3650,10 +4889,16 @@
     "form_58": {
      "animations": [
       {
-       "f58_silverfish_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f58_copper_golem_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f58_walk": "!variable.is_first_person"
       },
       {
        "f58_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3665,10 +4910,13 @@
     "form_59": {
      "animations": [
       {
-       "f59_absorb": "variable.morph_absorb && !variable.is_first_person"
+       "f59_cow_setup": "!variable.is_first_person"
       },
       {
-       "f59_bodywalk": "1.0"
+       "f59_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f59_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "morph_body_pitch": "1.0"
@@ -3682,9 +4930,6 @@
     },
     "form_60": {
      "animations": [
-      {
-       "f60_horse_v3_tail": "!variable.is_first_person"
-      },
       {
        "f60_walk": "!variable.is_first_person"
       },
@@ -3704,10 +4949,16 @@
     "form_61": {
      "animations": [
       {
+       "f61_dolphin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f61_walk": "!variable.is_first_person"
+      },
+      {
        "f61_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
-       "f61_bodywalk": "1.0"
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3718,6 +4969,9 @@
     },
     "form_62": {
      "animations": [
+      {
+       "f62_horse_v3_tail": "!variable.is_first_person"
+      },
       {
        "f62_walk": "!variable.is_first_person"
       },
@@ -3737,13 +4991,13 @@
     "form_63": {
      "animations": [
       {
-       "f63_snowgolem_move_v1_8": "!variable.is_first_person"
-      },
-      {
-       "f63_walk": "!variable.is_first_person"
+       "f63_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
       },
       {
        "f63_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f63_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -3758,10 +5012,13 @@
     "form_64": {
      "animations": [
       {
-       "f64_spider_default_leg_pose": "!variable.is_first_person"
+       "f64_guardian_setup": "!variable.is_first_person"
       },
       {
-       "f64_spider_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f64_guardian_move_eye": "!variable.is_first_person"
+      },
+      {
+       "f64_walk": "!variable.is_first_person"
       },
       {
        "f64_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3783,6 +5040,9 @@
       },
       {
        "f65_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3793,6 +5053,12 @@
     },
     "form_66": {
      "animations": [
+      {
+       "f66_enderman_base_pose": "!variable.is_first_person"
+      },
+      {
+       "f66_enderman_arms_legs": "!variable.is_first_person"
+      },
       {
        "f66_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
@@ -3812,7 +5078,7 @@
     "form_67": {
      "animations": [
       {
-       "f67_walk": "!variable.is_first_person"
+       "f67_endermite_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f67_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3827,10 +5093,22 @@
     "form_68": {
      "animations": [
       {
+       "f68_evoker_general": "!variable.is_first_person"
+      },
+      {
+       "f68_evoker_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f68_walk": "!variable.is_first_person"
+      },
+      {
        "f68_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "f68_bodywalk": "1.0"
+      },
+      {
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3842,13 +5120,19 @@
     "form_69": {
      "animations": [
       {
-       "f69_tadpole_swim": "!variable.is_first_person"
+       "f69_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f69_fox_setup": "!variable.is_first_person"
       },
       {
        "f69_walk": "!variable.is_first_person"
       },
       {
        "f69_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3860,10 +5144,10 @@
     "form_70": {
      "animations": [
       {
-       "f70_llama_setup": "!variable.is_first_person"
+       "f70_frog_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
-       "f70_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f70_walk": "!variable.is_first_person"
       },
       {
        "f70_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3881,7 +5165,7 @@
     "form_71": {
      "animations": [
       {
-       "f71_walk": "!variable.is_first_person"
+       "f71_ghast_move": "!variable.is_first_person"
       },
       {
        "f71_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3896,16 +5180,10 @@
     "form_72": {
      "animations": [
       {
-       "f72_turtle_general": "!variable.is_first_person"
-      },
-      {
-       "f72_turtle_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f72_walk": "!variable.is_first_person"
       },
       {
        "f72_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3917,7 +5195,7 @@
     "form_73": {
      "animations": [
       {
-       "f73_vex_idle": "!variable.is_first_person"
+       "f73_walk": "!variable.is_first_person"
       },
       {
        "f73_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -3935,10 +5213,10 @@
     "form_74": {
      "animations": [
       {
-       "f74_villager_general": "!variable.is_first_person"
+       "f74_guardian_setup": "!variable.is_first_person"
       },
       {
-       "f74_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f74_guardian_move_eye": "!variable.is_first_person"
       },
       {
        "f74_walk": "!variable.is_first_person"
@@ -3959,19 +5237,10 @@
     "form_75": {
      "animations": [
       {
-       "f75_villager_general": "!variable.is_first_person"
-      },
-      {
-       "f75_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
-      },
-      {
-       "f75_walk": "!variable.is_first_person"
+       "f75_happy_ghast_move": "!variable.is_first_person"
       },
       {
        "f75_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -3983,10 +5252,7 @@
     "form_76": {
      "animations": [
       {
-       "f76_vindicator_base": "!variable.is_first_person"
-      },
-      {
-       "f76_vindicator_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f76_walk": "!variable.is_first_person"
       },
       {
        "f76_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -4004,10 +5270,7 @@
     "form_77": {
      "animations": [
       {
-       "f77_villager_general": "!variable.is_first_person"
-      },
-      {
-       "f77_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f77_horse_v3_tail": "!variable.is_first_person"
       },
       {
        "f77_walk": "!variable.is_first_person"
@@ -4028,10 +5291,13 @@
     "form_78": {
      "animations": [
       {
-       "f78_walk": "!variable.is_first_person"
+       "f78_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
       },
       {
        "f78_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f78_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -4046,10 +5312,7 @@
     "form_79": {
      "animations": [
       {
-       "f79_villager_general": "!variable.is_first_person"
-      },
-      {
-       "f79_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f79_iron_golem_walk_to_target": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f79_walk": "!variable.is_first_person"
@@ -4070,10 +5333,16 @@
     "form_80": {
      "animations": [
       {
+       "f80_llama_setup": "!variable.is_first_person"
+      },
+      {
+       "f80_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
        "f80_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
-       "f80_bodywalk": "1.0"
+       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -4089,9 +5358,6 @@
       },
       {
        "f81_bodywalk": "1.0"
-      },
-      {
-       "morph_body_pitch": "1.0"
       }
      ],
      "transitions": [
@@ -4103,13 +5369,10 @@
     "form_82": {
      "animations": [
       {
-       "f82_wolf_setup": "!variable.is_first_person"
+       "f82_mooshroom_setup": "!variable.is_first_person"
       },
       {
-       "f82_wolf_leg_default": "!variable.is_first_person"
-      },
-      {
-       "f82_walk": "!variable.is_first_person"
+       "f82_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f82_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -4126,6 +5389,9 @@
     },
     "form_83": {
      "animations": [
+      {
+       "f83_horse_v3_tail": "!variable.is_first_person"
+      },
       {
        "f83_walk": "!variable.is_first_person"
       },
@@ -4145,13 +5411,10 @@
     "form_84": {
      "animations": [
       {
-       "f84_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+       "f84_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f84_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "f84_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -4166,10 +5429,7 @@
     "form_85": {
      "animations": [
       {
-       "f85_horse_v3_tail": "!variable.is_first_person"
-      },
-      {
-       "f85_walk": "!variable.is_first_person"
+       "f85_ocelot_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f85_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -4187,7 +5447,7 @@
     "form_86": {
      "animations": [
       {
-       "f86_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+       "f86_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
       },
       {
        "f86_absorb": "variable.morph_absorb && !variable.is_first_person"
@@ -4226,13 +5486,16 @@
     "form_88": {
      "animations": [
       {
-       "f88_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+       "f88_parrot_base": "!variable.is_first_person"
+      },
+      {
+       "f88_parrot_flying": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f88_walk": "!variable.is_first_person"
       },
       {
        "f88_absorb": "variable.morph_absorb && !variable.is_first_person"
-      },
-      {
-       "f88_bodywalk": "1.0"
       },
       {
        "morph_body_pitch": "1.0"
@@ -4247,10 +5510,13 @@
     "form_89": {
      "animations": [
       {
-       "f89_absorb": "variable.morph_absorb && !variable.is_first_person"
+       "f89_phantom_base_pose": "!variable.is_first_person"
       },
       {
-       "f89_bodywalk": "1.0"
+       "f89_phantom_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f89_absorb": "variable.morph_absorb && !variable.is_first_person"
       },
       {
        "morph_body_pitch": "1.0"
@@ -4259,6 +5525,828 @@
      "transitions": [
       {
        "router": "variable.morph_form != 89"
+      }
+     ]
+    },
+    "form_90": {
+     "animations": [
+      {
+       "f90_pig_setup": "!variable.is_first_person"
+      },
+      {
+       "f90_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f90_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 90"
+      }
+     ]
+    },
+    "form_91": {
+     "animations": [
+      {
+       "f91_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f91_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 91"
+      }
+     ]
+    },
+    "form_92": {
+     "animations": [
+      {
+       "f92_piglin_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f92_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 92"
+      }
+     ]
+    },
+    "form_93": {
+     "animations": [
+      {
+       "f93_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f93_bodywalk": "1.0"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 93"
+      }
+     ]
+    },
+    "form_94": {
+     "animations": [
+      {
+       "f94_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f94_polarbear_move": "!variable.is_first_person"
+      },
+      {
+       "f94_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 94"
+      }
+     ]
+    },
+    "form_95": {
+     "animations": [
+      {
+       "f95_walk": "!variable.is_first_person"
+      },
+      {
+       "f95_absorb": "variable.morph_absorb && !variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 95"
+      }
+     ]
+    },
+    "form_96": {
+     "animations": [
+      {
+       "f96_rabbit_move_v2": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f96_rabbit_idle_head_tilt": "!variable.is_first_person"
+      },
+      {
+       "f96_walk": "!variable.is_first_person"
+      },
+      {
+       "f96_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 96"
+      }
+     ]
+    },
+    "form_97": {
+     "animations": [
+      {
+       "f97_ravager_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f97_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 97"
+      }
+     ]
+    },
+    "form_98": {
+     "animations": [
+      {
+       "f98_walk": "!variable.is_first_person"
+      },
+      {
+       "f98_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 98"
+      }
+     ]
+    },
+    "form_99": {
+     "animations": [
+      {
+       "f99_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f99_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 99"
+      }
+     ]
+    },
+    "form_100": {
+     "animations": [
+      {
+       "f100_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f100_bodywalk": "1.0"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 100"
+      }
+     ]
+    },
+    "form_101": {
+     "animations": [
+      {
+       "f101_silverfish_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f101_absorb": "variable.morph_absorb && !variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 101"
+      }
+     ]
+    },
+    "form_102": {
+     "animations": [
+      {
+       "f102_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f102_bodywalk": "1.0"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 102"
+      }
+     ]
+    },
+    "form_103": {
+     "animations": [
+      {
+       "f103_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f103_walk": "!variable.is_first_person"
+      },
+      {
+       "f103_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 103"
+      }
+     ]
+    },
+    "form_104": {
+     "animations": [
+      {
+       "f104_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f104_bodywalk": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 104"
+      }
+     ]
+    },
+    "form_105": {
+     "animations": [
+      {
+       "f105_walk": "!variable.is_first_person"
+      },
+      {
+       "f105_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 105"
+      }
+     ]
+    },
+    "form_106": {
+     "animations": [
+      {
+       "f106_snowgolem_move_v1_8": "!variable.is_first_person"
+      },
+      {
+       "f106_walk": "!variable.is_first_person"
+      },
+      {
+       "f106_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 106"
+      }
+     ]
+    },
+    "form_107": {
+     "animations": [
+      {
+       "f107_spider_default_leg_pose": "!variable.is_first_person"
+      },
+      {
+       "f107_spider_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f107_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 107"
+      }
+     ]
+    },
+    "form_108": {
+     "animations": [
+      {
+       "f108_walk": "!variable.is_first_person"
+      },
+      {
+       "f108_absorb": "variable.morph_absorb && !variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 108"
+      }
+     ]
+    },
+    "form_109": {
+     "animations": [
+      {
+       "f109_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f109_bodywalk": "1.0"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 109"
+      }
+     ]
+    },
+    "form_110": {
+     "animations": [
+      {
+       "f110_walk": "!variable.is_first_person"
+      },
+      {
+       "f110_absorb": "variable.morph_absorb && !variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 110"
+      }
+     ]
+    },
+    "form_111": {
+     "animations": [
+      {
+       "f111_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f111_bodywalk": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 111"
+      }
+     ]
+    },
+    "form_112": {
+     "animations": [
+      {
+       "f112_tadpole_swim": "!variable.is_first_person"
+      },
+      {
+       "f112_walk": "!variable.is_first_person"
+      },
+      {
+       "f112_absorb": "variable.morph_absorb && !variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 112"
+      }
+     ]
+    },
+    "form_113": {
+     "animations": [
+      {
+       "f113_llama_setup": "!variable.is_first_person"
+      },
+      {
+       "f113_quadruped_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f113_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 113"
+      }
+     ]
+    },
+    "form_114": {
+     "animations": [
+      {
+       "f114_walk": "!variable.is_first_person"
+      },
+      {
+       "f114_absorb": "variable.morph_absorb && !variable.is_first_person"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 114"
+      }
+     ]
+    },
+    "form_115": {
+     "animations": [
+      {
+       "f115_turtle_general": "!variable.is_first_person"
+      },
+      {
+       "f115_turtle_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f115_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 115"
+      }
+     ]
+    },
+    "form_116": {
+     "animations": [
+      {
+       "f116_vex_idle": "!variable.is_first_person"
+      },
+      {
+       "f116_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 116"
+      }
+     ]
+    },
+    "form_117": {
+     "animations": [
+      {
+       "f117_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f117_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f117_walk": "!variable.is_first_person"
+      },
+      {
+       "f117_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 117"
+      }
+     ]
+    },
+    "form_118": {
+     "animations": [
+      {
+       "f118_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f118_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f118_walk": "!variable.is_first_person"
+      },
+      {
+       "f118_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 118"
+      }
+     ]
+    },
+    "form_119": {
+     "animations": [
+      {
+       "f119_vindicator_base": "!variable.is_first_person"
+      },
+      {
+       "f119_vindicator_walk": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f119_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 119"
+      }
+     ]
+    },
+    "form_120": {
+     "animations": [
+      {
+       "f120_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f120_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f120_walk": "!variable.is_first_person"
+      },
+      {
+       "f120_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 120"
+      }
+     ]
+    },
+    "form_121": {
+     "animations": [
+      {
+       "f121_walk": "!variable.is_first_person"
+      },
+      {
+       "f121_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 121"
+      }
+     ]
+    },
+    "form_122": {
+     "animations": [
+      {
+       "f122_villager_general": "!variable.is_first_person"
+      },
+      {
+       "f122_villager_move": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f122_walk": "!variable.is_first_person"
+      },
+      {
+       "f122_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 122"
+      }
+     ]
+    },
+    "form_123": {
+     "animations": [
+      {
+       "f123_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f123_bodywalk": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 123"
+      }
+     ]
+    },
+    "form_124": {
+     "animations": [
+      {
+       "f124_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f124_bodywalk": "1.0"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 124"
+      }
+     ]
+    },
+    "form_125": {
+     "animations": [
+      {
+       "f125_wolf_setup": "!variable.is_first_person"
+      },
+      {
+       "f125_wolf_leg_default": "!variable.is_first_person"
+      },
+      {
+       "f125_walk": "!variable.is_first_person"
+      },
+      {
+       "f125_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 125"
+      }
+     ]
+    },
+    "form_126": {
+     "animations": [
+      {
+       "f126_walk": "!variable.is_first_person"
+      },
+      {
+       "f126_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 126"
+      }
+     ]
+    },
+    "form_127": {
+     "animations": [
+      {
+       "f127_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f127_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f127_bodywalk": "1.0"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 127"
+      }
+     ]
+    },
+    "form_128": {
+     "animations": [
+      {
+       "f128_horse_v3_tail": "!variable.is_first_person"
+      },
+      {
+       "f128_walk": "!variable.is_first_person"
+      },
+      {
+       "f128_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 128"
+      }
+     ]
+    },
+    "form_129": {
+     "animations": [
+      {
+       "f129_nautilus_swim": "!variable.is_first_person * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
+      },
+      {
+       "f129_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 129"
+      }
+     ]
+    },
+    "form_130": {
+     "animations": [
+      {
+       "f130_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f130_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f130_bodywalk": "1.0"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 130"
+      }
+     ]
+    },
+    "form_131": {
+     "animations": [
+      {
+       "f131_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"
+      },
+      {
+       "f131_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f131_bodywalk": "1.0"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 131"
+      }
+     ]
+    },
+    "form_132": {
+     "animations": [
+      {
+       "f132_absorb": "variable.morph_absorb && !variable.is_first_person"
+      },
+      {
+       "f132_bodywalk": "1.0"
+      },
+      {
+       "morph_body_pitch": "1.0"
+      }
+     ],
+     "transitions": [
+      {
+       "router": "variable.morph_form != 132"
       }
      ]
     }

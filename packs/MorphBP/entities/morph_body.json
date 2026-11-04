@@ -10,7 +10,7 @@
      "type": "int",
      "range": [
       0,
-      89
+      132
      ],
      "default": 0,
      "client_sync": true
@@ -4653,6 +4653,162 @@
      "height": 0.42
     }
    },
+   "morph:size_42_39": {
+    "minecraft:collision_box": {
+     "width": 0.42,
+     "height": 0.39
+    }
+   },
+   "morph:size_38_21": {
+    "minecraft:collision_box": {
+     "width": 0.38,
+     "height": 0.21
+    }
+   },
+   "morph:size_28_25": {
+    "minecraft:collision_box": {
+     "width": 0.28,
+     "height": 0.25
+    }
+   },
+   "morph:size_77_107": {
+    "minecraft:collision_box": {
+     "width": 0.77,
+     "height": 1.07
+    }
+   },
+   "morph:size_24_28": {
+    "minecraft:collision_box": {
+     "width": 0.24,
+     "height": 0.28
+    }
+   },
+   "morph:size_30_40": {
+    "minecraft:collision_box": {
+     "width": 0.3,
+     "height": 0.4
+    }
+   },
+   "morph:size_45_65": {
+    "minecraft:collision_box": {
+     "width": 0.45,
+     "height": 0.65
+    }
+   },
+   "morph:size_59_39": {
+    "minecraft:collision_box": {
+     "width": 0.59,
+     "height": 0.39
+    }
+   },
+   "morph:size_70_80": {
+    "minecraft:collision_box": {
+     "width": 0.7,
+     "height": 0.8
+    }
+   },
+   "morph:size_49_98": {
+    "minecraft:collision_box": {
+     "width": 0.49,
+     "height": 0.98
+    }
+   },
+   "morph:size_36_42": {
+    "minecraft:collision_box": {
+     "width": 0.36,
+     "height": 0.42
+    }
+   },
+   "morph:size_50_50": {
+    "minecraft:collision_box": {
+     "width": 0.5,
+     "height": 0.5
+    }
+   },
+   "morph:size_95_95": {
+    "minecraft:collision_box": {
+     "width": 0.95,
+     "height": 0.95
+    }
+   },
+   "morph:size_75_85": {
+    "minecraft:collision_box": {
+     "width": 0.75,
+     "height": 0.85
+    }
+   },
+   "morph:size_98_112": {
+    "minecraft:collision_box": {
+     "width": 0.98,
+     "height": 1.12
+    }
+   },
+   "morph:size_45_94": {
+    "minecraft:collision_box": {
+     "width": 0.45,
+     "height": 0.94
+    }
+   },
+   "morph:size_22_25": {
+    "minecraft:collision_box": {
+     "width": 0.22,
+     "height": 0.25
+    }
+   },
+   "morph:size_30_35": {
+    "minecraft:collision_box": {
+     "width": 0.3,
+     "height": 0.35
+    }
+   },
+   "morph:size_52_50": {
+    "minecraft:collision_box": {
+     "width": 0.52,
+     "height": 0.5
+    }
+   },
+   "morph:size_45_45": {
+    "minecraft:collision_box": {
+     "width": 0.45,
+     "height": 0.45
+    }
+   },
+   "morph:size_70_70": {
+    "minecraft:collision_box": {
+     "width": 0.7,
+     "height": 0.7
+    }
+   },
+   "morph:size_24_40": {
+    "minecraft:collision_box": {
+     "width": 0.24,
+     "height": 0.4
+    }
+   },
+   "morph:size_85_79": {
+    "minecraft:collision_box": {
+     "width": 0.85,
+     "height": 0.79
+    }
+   },
+   "morph:size_45_85": {
+    "minecraft:collision_box": {
+     "width": 0.45,
+     "height": 0.85
+    }
+   },
+   "morph:size_64_21": {
+    "minecraft:collision_box": {
+     "width": 0.64,
+     "height": 0.21
+    }
+   },
+   "morph:size_30_95": {
+    "minecraft:collision_box": {
+     "width": 0.3,
+     "height": 0.95
+    }
+   },
    "morph:size_50_90": {
     "minecraft:collision_box": {
      "width": 0.5,
@@ -4843,12 +4999,6 @@
     "minecraft:collision_box": {
      "width": 1.95,
      "height": 2.2
-    }
-   },
-   "morph:size_50_50": {
-    "minecraft:collision_box": {
-     "width": 0.5,
-     "height": 0.5
     }
    },
    "morph:size_190_175": {
@@ -6711,6 +6861,188 @@
      ]
     }
    },
+   "morph:size_42_39": {
+    "add": {
+     "component_groups": [
+      "morph:size_42_39"
+     ]
+    }
+   },
+   "morph:size_38_21": {
+    "add": {
+     "component_groups": [
+      "morph:size_38_21"
+     ]
+    }
+   },
+   "morph:size_28_25": {
+    "add": {
+     "component_groups": [
+      "morph:size_28_25"
+     ]
+    }
+   },
+   "morph:size_77_107": {
+    "add": {
+     "component_groups": [
+      "morph:size_77_107"
+     ]
+    }
+   },
+   "morph:size_24_28": {
+    "add": {
+     "component_groups": [
+      "morph:size_24_28"
+     ]
+    }
+   },
+   "morph:size_30_40": {
+    "add": {
+     "component_groups": [
+      "morph:size_30_40"
+     ]
+    }
+   },
+   "morph:size_45_65": {
+    "add": {
+     "component_groups": [
+      "morph:size_45_65"
+     ]
+    }
+   },
+   "morph:size_59_39": {
+    "add": {
+     "component_groups": [
+      "morph:size_59_39"
+     ]
+    }
+   },
+   "morph:size_70_80": {
+    "add": {
+     "component_groups": [
+      "morph:size_70_80"
+     ]
+    }
+   },
+   "morph:size_49_98": {
+    "add": {
+     "component_groups": [
+      "morph:size_49_98"
+     ]
+    }
+   },
+   "morph:size_36_42": {
+    "add": {
+     "component_groups": [
+      "morph:size_36_42"
+     ]
+    }
+   },
+   "morph:size_50_50": {
+    "add": {
+     "component_groups": [
+      "morph:size_50_50"
+     ]
+    }
+   },
+   "morph:size_95_95": {
+    "add": {
+     "component_groups": [
+      "morph:size_95_95"
+     ]
+    }
+   },
+   "morph:size_75_85": {
+    "add": {
+     "component_groups": [
+      "morph:size_75_85"
+     ]
+    }
+   },
+   "morph:size_98_112": {
+    "add": {
+     "component_groups": [
+      "morph:size_98_112"
+     ]
+    }
+   },
+   "morph:size_45_94": {
+    "add": {
+     "component_groups": [
+      "morph:size_45_94"
+     ]
+    }
+   },
+   "morph:size_22_25": {
+    "add": {
+     "component_groups": [
+      "morph:size_22_25"
+     ]
+    }
+   },
+   "morph:size_30_35": {
+    "add": {
+     "component_groups": [
+      "morph:size_30_35"
+     ]
+    }
+   },
+   "morph:size_52_50": {
+    "add": {
+     "component_groups": [
+      "morph:size_52_50"
+     ]
+    }
+   },
+   "morph:size_45_45": {
+    "add": {
+     "component_groups": [
+      "morph:size_45_45"
+     ]
+    }
+   },
+   "morph:size_70_70": {
+    "add": {
+     "component_groups": [
+      "morph:size_70_70"
+     ]
+    }
+   },
+   "morph:size_24_40": {
+    "add": {
+     "component_groups": [
+      "morph:size_24_40"
+     ]
+    }
+   },
+   "morph:size_85_79": {
+    "add": {
+     "component_groups": [
+      "morph:size_85_79"
+     ]
+    }
+   },
+   "morph:size_45_85": {
+    "add": {
+     "component_groups": [
+      "morph:size_45_85"
+     ]
+    }
+   },
+   "morph:size_64_21": {
+    "add": {
+     "component_groups": [
+      "morph:size_64_21"
+     ]
+    }
+   },
+   "morph:size_30_95": {
+    "add": {
+     "component_groups": [
+      "morph:size_30_95"
+     ]
+    }
+   },
    "morph:size_50_90": {
     "add": {
      "component_groups": [
@@ -6932,13 +7264,6 @@
     "add": {
      "component_groups": [
       "morph:size_195_220"
-     ]
-    }
-   },
-   "morph:size_50_50": {
-    "add": {
-     "component_groups": [
-      "morph:size_50_50"
      ]
     }
    },

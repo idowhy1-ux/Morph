@@ -27,11 +27,25 @@ const DP_K = "morph:seat_k"; // world: measured (head height - seat height) for 
 const DP_DIED = "morph:died";
 const PLAYER_EYE = 1.62;
 
-/** @typedef {{id:number,type:string|null,key:string,name:string,hp:number,eye:number,height:number,width:number,size:string,r:number,families:string[]}} Form */
+/** @typedef {{id:number,type:string|null,key:string,name:string,hp:number,eye:number,height:number,width:number,size:string,r:number,baby:boolean,families:string[]}} Form */
 /** @type {Form[]} */
 const FORMS = FORM_DATA;
 const FORM_BY_TYPE = new Map();
-for (const f of FORMS) if (f.type) FORM_BY_TYPE.set(f.type, f);
+const BABY_BY_TYPE = new Map();
+for (const f of FORMS) if (f.type) (f.baby ? BABY_BY_TYPE : FORM_BY_TYPE).set(f.type, f);
+
+/** Remember which mobs were babies while they were still alive (death can strip components). */
+const babyIds = new Map();
+/** @param {import("@minecraft/server").Entity} e */
+function checkBaby(e) {
+  const v = safe(() => !!e.getComponent("minecraft:is_baby"));
+  if (typeof v === "boolean") babyIds.set(e.id, v);
+  if (babyIds.size > 2000) babyIds.clear();
+  return v;
+}
+world.afterEvents.entityHurt.subscribe((ev) => {
+  if (ev.hurtEntity.typeId !== "minecraft:player" && BABY_BY_TYPE.has(ev.hurtEntity.typeId)) checkBaby(ev.hurtEntity);
+});
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -569,7 +583,7 @@ const KIT = {
   silverfish: { ab: "miteBlink", text: "Quick" },
 };
 const DEFAULT_KIT = { ab: "lunge", text: "Feral instincts" };
-const kit = (f) => KIT[f.key] ?? DEFAULT_KIT;
+const kit = (f) => KIT[f.key] ?? KIT[f.key.replace(/^baby_/, "")] ?? DEFAULT_KIT;
 
 const ALL_FX = ["strength", "speed", "night_vision", "fire_resistance", "slow_falling", "resistance", "jump_boost", "water_breathing", "regeneration", "conduit_power"];
 
@@ -679,7 +693,9 @@ world.afterEvents.entityDie.subscribe((ev) => {
   }
   const killer = ev.damageSource.damagingEntity;
   if (!killer || killer.typeId !== "minecraft:player") return;
-  const f = FORM_BY_TYPE.get(dead.typeId);
+  const isBaby = checkBaby(dead) || babyIds.get(dead.id) === true;
+  babyIds.delete(dead.id);
+  const f = (isBaby && BABY_BY_TYPE.get(dead.typeId)) || FORM_BY_TYPE.get(dead.typeId);
   if (!f) return;
   const p = /** @type {import("@minecraft/server").Player} */ (killer);
   const from = safe(() => dead.location) ?? p.location;

@@ -115,7 +115,22 @@ def index(root):
             hp = max(vals) if vals else None
         cb = pick("minecraft:collision_box") or {}
         sc = pick("minecraft:scale") or {}
-        bp[ident] = {"hp": hp, "height": cb.get("height", 1.8), "width": cb.get("width", 0.6),
+        baby = None
+        for gname, g in groups.items():
+            if "minecraft:is_baby" in g:
+                bs = (g.get("minecraft:scale") or {}).get("value", 0.5)
+                bcb = g.get("minecraft:collision_box") or cb
+                bh = g.get("minecraft:health")
+                bhp = None
+                if bh:
+                    v = bh.get("max", bh.get("value"))
+                    bhp = v.get("range_max", v.get("range_min")) if isinstance(v, dict) else v
+                baby = {"scale": bs if isinstance(bs, (int, float)) else 0.5,
+                        "height": bcb.get("height", 1.8) * (bs if isinstance(bs, (int, float)) else 0.5),
+                        "width": bcb.get("width", 0.6) * (bs if isinstance(bs, (int, float)) else 0.5),
+                        "hp": bhp}
+                break
+        bp[ident] = {"baby": baby, "hp": hp, "height": cb.get("height", 1.8), "width": cb.get("width", 0.6),
                      "bp_scale": sc.get("value", 1.0) if isinstance(sc.get("value", 1.0), (int, float)) else 1.0,
                      "families": (comps.get("minecraft:type_family") or {}).get("family", [])}
 
@@ -131,14 +146,18 @@ def index(root):
         if ident not in clients or score > clients[ident][0]:
             clients[ident] = (score, d)
 
-    def eval_scale(expr):
+    def eval_scale(expr, baby=False):
         if expr is None:
             return 1.0
         if isinstance(expr, (int, float)):
             return float(expr)
         e = str(expr)
         if "?" in e:
-            e = e.split(":")[-1]
+            cond, _, rest = e.partition("?")
+            yes, _, no = rest.rpartition(":")
+            if "is_baby" not in cond:
+                yes = no
+            e = yes if baby else no
         try:
             return float(eval(e, {"__builtins__": {}}))
         except Exception:
@@ -186,6 +205,18 @@ def index(root):
             "hp": b["hp"], "height": b["height"], "width": b["width"],
             "natural_scale": eval_scale(d.get("scripts", {}).get("scale")) * b["bp_scale"],
             "texture": texture, "geometry": geometry, "tw": g["tw"], "th": g["th"], "legacy": g["legacy"],
-            "bones": g["bones"], "anims": chosen, "families": b["families"],
+            "bones": g["bones"], "anims": chosen, "families": b["families"], "baby": False,
         })
+        if b["baby"]:
+            bb = b["baby"]
+            bgeo = next((v for k, v in geo_map.items() if "baby" in k), geometry)
+            btex = next((v for k, v in tex.items() if "baby" in k or "ghastling" in k), texture)
+            bg = resolve(bgeo) or g
+            adult = mobs[-1]
+            mobs.append(dict(adult,
+                key="baby_" + name, name="Baby " + adult["name"], baby=True,
+                hp=bb["hp"] or b["hp"], height=bb["height"], width=bb["width"],
+                natural_scale=eval_scale(d.get("scripts", {}).get("scale"), True) * bb["scale"],
+                texture=btex, geometry=bgeo if resolve(bgeo) else geometry,
+                tw=bg["tw"], th=bg["th"], legacy=bg["legacy"], bones=bg["bones"]))
     return mobs
