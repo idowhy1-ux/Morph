@@ -75,6 +75,39 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.shapeshifter": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.walk.allay": {
    "loop": true,
    "bones": {
@@ -96,14 +129,14 @@
      "rotation": [
       0,
       0,
-      "math.sin(query.life_time * 1100.0) * 35"
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * 1"
      ]
     },
     "right_wing": {
      "rotation": [
       0,
       0,
-      "math.sin(query.life_time * 1100.0) * -35"
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * -1"
      ]
     }
    }
@@ -412,6 +445,25 @@
     }
    }
   },
+  "animation.morph.gen.walk.bat": {
+   "loop": true,
+   "bones": {
+    "rightWing": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * -1"
+     ]
+    },
+    "leftWing": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * 1"
+     ]
+    }
+   }
+  },
   "animation.morph.gen.absorb.bat": {
    "loop": true,
    "bones": {
@@ -489,6 +541,46 @@
       "math.sin(query.life_time * 900.0) * 35",
       0.0,
       "-30"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.walk.bee": {
+   "loop": true,
+   "bones": {
+    "rightwing_bone": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * -1"
+     ]
+    },
+    "leftwing_bone": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * 1"
+     ]
+    },
+    "leg_front": {
+     "rotation": [
+      "variable.tcos0 * -1.2",
+      0,
+      0
+     ]
+    },
+    "leg_mid": {
+     "rotation": [
+      "variable.tcos0 * 1.2",
+      0,
+      0
+     ]
+    },
+    "leg_back": {
+     "rotation": [
+      "variable.tcos0 * 1.2",
+      0,
+      0
      ]
     }
    }
@@ -853,6 +945,39 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.bogged": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.absorb.breeze": {
    "loop": true,
    "bones": {
@@ -889,6 +1014,25 @@
       "math.sin(query.life_time * 500.0) * 25.0",
       0.0,
       "math.cos(query.life_time * 420.0) * 30.0"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.bodywalk.breeze": {
+   "loop": true,
+   "bones": {
+    "body": {
+     "position": [
+      0,
+      "math.abs(math.sin(query.modified_distance_moved * 25.0)) * 3.0 * math.clamp(query.modified_move_speed * 2.0, 0.0, 1.0) + math.sin(query.life_time * 120.0) * 0.4",
+      0
+     ]
+    },
+    "rods": {
+     "rotation": [
+      0,
+      "query.life_time * 90.0",
+      0
      ]
     }
    }
@@ -1200,14 +1344,14 @@
      "rotation": [
       0,
       0,
-      "math.sin(query.life_time * 1100.0) * -35"
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * -1"
      ]
     },
     "wing1": {
      "rotation": [
       0,
       0,
-      "math.sin(query.life_time * 1100.0) * 35"
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * 1"
      ]
     }
    }
@@ -1387,6 +1531,39 @@
       "math.sin(query.life_time * 500.0) * 25.0",
       0.0,
       "math.cos(query.life_time * 420.0) * 30.0"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.walk.copper_golem": {
+   "loop": true,
+   "bones": {
+    "right_arm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "left_arm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "right_leg": {
+     "rotation": [
+      "variable.tcos0 * -1.2",
+      0,
+      0
+     ]
+    },
+    "left_leg": {
+     "rotation": [
+      "variable.tcos0 * 1.2",
+      0,
+      0
      ]
     }
    }
@@ -1869,6 +2046,39 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.drowned": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.walk.elder_guardian": {
    "loop": true,
    "bones": {
@@ -1940,28 +2150,28 @@
      "rotation": [
       0,
       0,
-      "math.sin(query.life_time * 1100.0) * -35"
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * -1"
      ]
     },
     "wingtip": {
      "rotation": [
       0,
       0,
-      "math.sin(query.life_time * 1100.0) * -35"
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * -1"
      ]
     },
     "wing1": {
      "rotation": [
       0,
       0,
-      "math.sin(query.life_time * 1100.0) * 35"
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * 1"
      ]
     },
     "wingtip1": {
      "rotation": [
       0,
       0,
-      "math.sin(query.life_time * 1100.0) * -35"
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * -1"
      ]
     },
     "rearleg": {
@@ -2427,6 +2637,39 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.enderman": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.absorb.endermite": {
    "loop": true,
    "bones": {
@@ -2456,6 +2699,18 @@
       "math.sin(query.life_time * 500.0) * 25.0",
       0.0,
       "math.cos(query.life_time * 420.0) * 30.0"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.walk.evocation_illager": {
+   "loop": true,
+   "bones": {
+    "arms": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
      ]
     }
    }
@@ -2541,6 +2796,25 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.evocation_illager": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.walk.fox": {
    "loop": true,
    "bones": {
@@ -2617,6 +2891,39 @@
       "math.sin(query.life_time * 900.0) * 35",
       0.0,
       "-30"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.walk.frog": {
+   "loop": true,
+   "bones": {
+    "left_arm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "right_arm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "left_leg": {
+     "rotation": [
+      "variable.tcos0 * 1.2",
+      0,
+      0
+     ]
+    },
+    "right_leg": {
+     "rotation": [
+      "variable.tcos0 * -1.2",
+      0,
+      0
      ]
     }
    }
@@ -2804,56 +3111,56 @@
    "bones": {
     "tentacle1": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 243) * 12.0",
+      "math.sin(query.life_time * 200.0 + 325) * 12.0",
       0,
       0
      ]
     },
     "tentacle2": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 248) * 12.0",
+      "math.sin(query.life_time * 200.0 + 131) * 12.0",
       0,
       0
      ]
     },
     "tentacle3": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 258) * 12.0",
+      "math.sin(query.life_time * 200.0 + 245) * 12.0",
       0,
       0
      ]
     },
     "tentacle4": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 116) * 12.0",
+      "math.sin(query.life_time * 200.0 + 327) * 12.0",
       0,
       0
      ]
     },
     "tentacle5": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 195) * 12.0",
+      "math.sin(query.life_time * 200.0 + 29) * 12.0",
       0,
       0
      ]
     },
     "tentacle6": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 202) * 12.0",
+      "math.sin(query.life_time * 200.0 + 29) * 12.0",
       0,
       0
      ]
     },
     "tentacle7": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 22) * 12.0",
+      "math.sin(query.life_time * 200.0 + 21) * 12.0",
       0,
       0
      ]
     },
     "tentacle8": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 75) * 12.0",
+      "math.sin(query.life_time * 200.0 + 213) * 12.0",
       0,
       0
      ]
@@ -3540,6 +3847,39 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.husk": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.walk.iron_golem": {
    "loop": true,
    "bones": {
@@ -3738,6 +4078,18 @@
       "math.sin(query.life_time * 500.0) * 25.0",
       0.0,
       "math.cos(query.life_time * 420.0) * 30.0"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.bodywalk.magma_cube": {
+   "loop": true,
+   "bones": {
+    "insideCube": {
+     "position": [
+      0,
+      "math.abs(math.sin(query.modified_distance_moved * 25.0)) * 3.0 * math.clamp(query.modified_move_speed * 2.0, 0.0, 1.0) + math.sin(query.life_time * 120.0) * 0.4",
+      0
      ]
     }
    }
@@ -4174,6 +4526,65 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.parched": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.walk.parrot": {
+   "loop": true,
+   "bones": {
+    "tail": {
+     "rotation": [
+      0,
+      "math.sin(query.life_time * 400.0) * 15.0",
+      0
+     ]
+    },
+    "wing0": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * 1"
+     ]
+    },
+    "wing1": {
+     "rotation": [
+      0,
+      0,
+      "math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * -1"
+     ]
+    }
+   }
+  },
   "animation.morph.gen.absorb.parrot": {
    "loop": true,
    "bones": {
@@ -4585,6 +4996,39 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.pillager": {
+   "loop": true,
+   "bones": {
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "rightarm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftarm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.absorb.polar_bear": {
    "loop": true,
    "bones": {
@@ -4700,6 +5144,32 @@
       "math.sin(query.life_time * 500.0) * 25.0",
       0.0,
       "math.cos(query.life_time * 420.0) * 30.0"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.walk.rabbit": {
+   "loop": true,
+   "bones": {
+    "tail": {
+     "rotation": [
+      0,
+      "math.sin(query.life_time * 400.0) * 15.0",
+      0
+     ]
+    },
+    "frontlegs": {
+     "rotation": [
+      "variable.tcos0 * -1.2",
+      0,
+      0
+     ]
+    },
+    "backlegs": {
+     "rotation": [
+      "variable.tcos0 * 1.2",
+      0,
+      0
      ]
     }
    }
@@ -5096,6 +5566,18 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.shulker": {
+   "loop": true,
+   "bones": {
+    "base": {
+     "position": [
+      0,
+      "math.abs(math.sin(query.modified_distance_moved * 25.0)) * 3.0 * math.clamp(query.modified_move_speed * 2.0, 0.0, 1.0) + math.sin(query.life_time * 120.0) * 0.4",
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.absorb.silverfish": {
    "loop": true,
    "bones": {
@@ -5199,6 +5681,39 @@
       "math.sin(query.life_time * 900.0) * 35",
       0.0,
       "-30"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.bodywalk.skeleton": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
      ]
     }
    }
@@ -5333,6 +5848,18 @@
       "math.sin(query.life_time * 500.0) * 25.0",
       0.0,
       "math.cos(query.life_time * 420.0) * 30.0"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.bodywalk.slime": {
+   "loop": true,
+   "bones": {
+    "cube": {
+     "position": [
+      0,
+      "math.abs(math.sin(query.modified_distance_moved * 25.0)) * 3.0 * math.clamp(query.modified_move_speed * 2.0, 0.0, 1.0) + math.sin(query.life_time * 120.0) * 0.4",
+      0
      ]
     }
    }
@@ -5647,56 +6174,56 @@
    "bones": {
     "tentacle1": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 243) * 12.0",
+      "math.sin(query.life_time * 200.0 + 325) * 12.0",
       0,
       0
      ]
     },
     "tentacle2": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 248) * 12.0",
+      "math.sin(query.life_time * 200.0 + 131) * 12.0",
       0,
       0
      ]
     },
     "tentacle3": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 258) * 12.0",
+      "math.sin(query.life_time * 200.0 + 245) * 12.0",
       0,
       0
      ]
     },
     "tentacle4": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 116) * 12.0",
+      "math.sin(query.life_time * 200.0 + 327) * 12.0",
       0,
       0
      ]
     },
     "tentacle5": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 195) * 12.0",
+      "math.sin(query.life_time * 200.0 + 29) * 12.0",
       0,
       0
      ]
     },
     "tentacle6": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 202) * 12.0",
+      "math.sin(query.life_time * 200.0 + 29) * 12.0",
       0,
       0
      ]
     },
     "tentacle7": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 22) * 12.0",
+      "math.sin(query.life_time * 200.0 + 21) * 12.0",
       0,
       0
      ]
     },
     "tentacle8": {
      "rotation": [
-      "math.sin(query.life_time * 200.0 + 75) * 12.0",
+      "math.sin(query.life_time * 200.0 + 213) * 12.0",
       0,
       0
      ]
@@ -5866,6 +6393,39 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.stray": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.walk.strider": {
    "loop": true,
    "bones": {
@@ -5992,6 +6552,37 @@
       "math.sin(query.life_time * 537.0) * 25.0",
       0.0,
       "math.cos(query.life_time * 449.0) * 30.0"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.bodywalk.sulfur_cube": {
+   "loop": true,
+   "bones": {
+    "rightItem": {
+     "position": [
+      0,
+      "math.abs(math.sin(query.modified_distance_moved * 25.0)) * 3.0 * math.clamp(query.modified_move_speed * 2.0, 0.0, 1.0) + math.sin(query.life_time * 120.0) * 0.4",
+      0
+     ]
+    },
+    "sulfur_cube": {
+     "position": [
+      0,
+      "math.abs(math.sin(query.modified_distance_moved * 25.0)) * 3.0 * math.clamp(query.modified_move_speed * 2.0, 0.0, 1.0) + math.sin(query.life_time * 120.0) * 0.4",
+      0
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.walk.tadpole": {
+   "loop": true,
+   "bones": {
+    "tail": {
+     "rotation": [
+      0,
+      "math.sin(query.life_time * 400.0) * 15.0",
+      0
      ]
     }
    }
@@ -6306,6 +6897,18 @@
     }
    }
   },
+  "animation.morph.gen.walk.villager": {
+   "loop": true,
+   "bones": {
+    "arms": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.absorb.villager": {
    "loop": true,
    "bones": {
@@ -6363,6 +6966,18 @@
       "math.sin(query.life_time * 900.0) * 35",
       0.0,
       "-30"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.walk.villager_v2": {
+   "loop": true,
+   "bones": {
+    "arms": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
      ]
     }
    }
@@ -6505,6 +7120,18 @@
       "math.sin(query.life_time * 900.0) * 35",
       0.0,
       "-30"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.walk.wandering_trader": {
+   "loop": true,
+   "bones": {
+    "arms": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
      ]
     }
    }
@@ -6685,6 +7312,18 @@
     }
    }
   },
+  "animation.morph.gen.walk.witch": {
+   "loop": true,
+   "bones": {
+    "arms": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.absorb.witch": {
    "loop": true,
    "bones": {
@@ -6779,6 +7418,32 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.wither": {
+   "loop": true,
+   "bones": {
+    "upperBodyPart1": {
+     "position": [
+      0,
+      "math.abs(math.sin(query.modified_distance_moved * 25.0)) * 3.0 * math.clamp(query.modified_move_speed * 2.0, 0.0, 1.0) + math.sin(query.life_time * 120.0) * 0.4",
+      0
+     ]
+    },
+    "upperBodyPart2": {
+     "rotation": [
+      "math.sin(query.life_time * 90.0) * 5.0",
+      0,
+      0
+     ]
+    },
+    "upperBodyPart3": {
+     "rotation": [
+      "math.sin(query.life_time * 90.0) * 5.0",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.absorb.wither_skeleton": {
    "loop": true,
    "bones": {
@@ -6849,6 +7514,51 @@
       "math.sin(query.life_time * 900.0) * 35",
       0.0,
       "-30"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.bodywalk.wither_skeleton": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.walk.wolf": {
+   "loop": true,
+   "bones": {
+    "tail": {
+     "rotation": [
+      0,
+      "math.sin(query.life_time * 400.0) * 15.0",
+      0
      ]
     }
    }
@@ -7188,6 +7898,39 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.zombie": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.walk.zombie_horse": {
    "loop": true,
    "bones": {
@@ -7388,6 +8131,39 @@
     }
    }
   },
+  "animation.morph.gen.bodywalk.zombie_villager": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
+     ]
+    }
+   }
+  },
   "animation.morph.gen.absorb.zombie_villager_v2": {
    "loop": true,
    "bones": {
@@ -7443,6 +8219,39 @@
       "math.sin(query.life_time * 900.0) * 35",
       0.0,
       "-30"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.bodywalk.zombie_villager_v2": {
+   "loop": true,
+   "bones": {
+    "rightArm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftArm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightLeg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftLeg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
      ]
     }
    }
@@ -7517,6 +8326,39 @@
       "math.sin(query.life_time * 900.0) * 35",
       0.0,
       "-30"
+     ]
+    }
+   }
+  },
+  "animation.morph.gen.bodywalk.zombie_pigman": {
+   "loop": true,
+   "bones": {
+    "rightarm": {
+     "rotation": [
+      "variable.tcos0 * -1.0",
+      0,
+      0
+     ]
+    },
+    "leftarm": {
+     "rotation": [
+      "variable.tcos0 * 1.0",
+      0,
+      0
+     ]
+    },
+    "rightleg": {
+     "rotation": [
+      "variable.tcos0 * 1.4",
+      0,
+      0
+     ]
+    },
+    "leftleg": {
+     "rotation": [
+      "variable.tcos0 * -1.4",
+      0,
+      0
      ]
     }
    }

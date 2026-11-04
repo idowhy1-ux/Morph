@@ -40,7 +40,7 @@ DROP_ANIMS = {
     "frog": {"animation.frog.swim", "animation.frog.idle.water"},
     "fox": {"animation.fox.wiggle", "animation.fox.stuck"},
     "panda": {"animation.panda.unhappy", "animation.panda.sneezing", "animation.panda.lying"},
-    "parrot": {"animation.parrot.flying"},
+    "parrot": {"animation.parrot.standing"},
     "iron_golem": {"animation.iron_golem.move_to_target"},
     "wither": {"animation.wither_boss.scale"},
 }
@@ -229,11 +229,33 @@ def generic_motion(mob, animated):
         elif "arm" in n and "armor" not in n:
             out[b["name"]] = {"rotation": [f"variable.tcos0 * {-1.0 * side}", 0, 0]}
         elif "wing" in n:
-            out[b["name"]] = {"rotation": [0, 0, f"math.sin(query.life_time * 1100.0) * {35 * side}"]}
+            out[b["name"]] = {"rotation": [0, 0, f"math.sin(query.life_time * 1100.0) * (query.is_on_ground ? 8.0 : 40.0) * {side}"]}
         elif "tentacle" in n:
             out[b["name"]] = {"rotation": [f"math.sin(query.life_time * 200.0 + {abs(hash(n)) % 360}) * 12.0", 0, 0]}
         elif "fin" in n or "tail" in n:
             out[b["name"]] = {"rotation": [0, "math.sin(query.life_time * 400.0) * 15.0", 0]}
+    return out
+
+
+def body_motion(mob, already):
+    """Motion the player animations used to supply, for when the mob is drawn on the body."""
+    already = {a.lower() for a in already}
+    out = {}
+    limbs = {"rightarm": -1, "leftarm": 1, "rightleg": 1, "leftleg": -1}
+    found = False
+    for b in mob["bones"]:
+        n = lname(b)
+        if n in limbs and renderable(b) and n not in already:
+            out[b["name"]] = {"rotation": [f"variable.tcos0 * {1.4 * limbs[n] if 'leg' in n else 1.0 * limbs[n]}", 0, 0]}
+            found = True
+    has_limbs = found or any(any(w in lname(b) for w in ("leg", "arm", "wing", "fin", "tentacle")) for b in mob["bones"] if renderable(b))
+    if not has_limbs and not already:
+        for t in top_bones(mob):
+            out[t] = {"position": [0, "math.abs(math.sin(query.modified_distance_moved * 25.0)) * 3.0 * math.clamp(query.modified_move_speed * 2.0, 0.0, 1.0) + math.sin(query.life_time * 120.0) * 0.4", 0]}
+    for b in mob["bones"]:
+        n = lname(b)
+        if n in ("rods", "upperbodypart2", "upperbodypart3") and n not in already:
+            out[b["name"]] = {"rotation": [0, "query.life_time * 90.0", 0]} if n == "rods" else {"rotation": [f"math.sin(query.life_time * 90.0) * 5.0", 0, 0]}
     return out
 
 
@@ -338,7 +360,11 @@ def main(vanilla):
             if speed:
                 w += " * math.clamp(query.modified_move_speed * 1.5, 0.0, 1.0)"
             state_anims.append({short: w})
-            animated |= bone_set(anims_src.get(a["id"], {}))
+            # only animations that actually move over time count as "animating" a bone; static poses
+            # (e.g. parrot.base) must not stop the generic walk/flap from being added
+            body_json = json.dumps(anims_src.get(a["id"], {}))
+            if any(q in body_json for q in ("anim_time", "life_time", "modified_distance_moved", "modified_move_speed", "tcos0")):
+                animated |= bone_set(anims_src.get(a["id"], {}))
         if key in ZOMBIE_ARMS:
             m.setdefault("anim_map", {})[f"f{fid}_zombie_arms"] = "animation.morph.zombie.arms"
             state_anims.append({f"f{fid}_zombie_arms": "!variable.is_first_person && variable.attack_time <= 0.0"})
@@ -369,6 +395,13 @@ def main(vanilla):
         states["router"]["transitions"].append({f"form_{fid}": f"variable.morph_form == {fid}"})
         # the same form, drawn on the invisible body the player rides (third person / other players)
         body_anims = [a for a in state_anims if not any(x in next(iter(a)) for x in ("_absorb_fp", "_fpfit"))]
+        # the body has no vanilla player animations: walk human-style limbs and liven up limbless mobs
+        extra = body_motion(m, animated | set(generic_motion(m, animated)))
+        if extra:
+            aid = f"animation.morph.gen.bodywalk.{key}"
+            gen_anims[aid] = {"loop": True, "bones": extra}
+            m["anim_map"][f"f{fid}_bodywalk"] = aid
+            body_anims.append({f"f{fid}_bodywalk": "1.0"})
         hb = find(m, "head")
         if hb:
             m["anim_map"]["morph_body_pitch"] = "animation.morph.body.pitch"

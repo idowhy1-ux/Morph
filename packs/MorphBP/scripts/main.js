@@ -710,15 +710,29 @@ function ridingBody(p) {
   return r && r.typeId === BODY_ID ? r : undefined;
 }
 
+/** A safe standing spot at the player's x/z: the first air gap at or above the ground below them. */
+function groundUnder(p) {
+  const l = p.location;
+  const x = l.x, z = l.z;
+  let y = Math.floor(l.y);
+  const solid = (yy) => isSolid(safe(() => p.dimension.getBlock({ x, y: yy, z })));
+  // a rider of a small body sits below the surface: climb out of the ground first
+  for (let i = 0; i < 12 && solid(y); i++) y++;
+  // then drop to the floor
+  for (let i = 0; i < 12 && !solid(y - 1); i++) y--;
+  return { x, y, z };
+}
+
 /** @param {import("@minecraft/server").Player} p @param {boolean} v */
 function setInBody(p, v) {
   if ((safe(() => p.getProperty(P_IN_BODY)) === true) !== v) safe(() => p.setProperty(P_IN_BODY, v));
 }
 
-function removeBody(playerId) {
+function removeBody(playerId, keepSpot = false) {
   const rec = bodies.get(playerId);
   if (rec?.body?.isValid) safe(() => rec.body.remove());
-  bodies.delete(playerId);
+  if (keepSpot && rec) bodies.set(playerId, { lastFeet: rec.body?.isValid ? rec.body.location : rec.lastFeet, dim: rec.dim });
+  else bodies.delete(playerId);
 }
 
 /** @param {import("@minecraft/server").Player} p @param {import("@minecraft/server").Vector3} loc */
@@ -743,8 +757,9 @@ function syncBody(p, seatOverride) {
   const seat = seatOverride ?? f.eye - riderK();
   const rec = bodies.get(p.id);
   if (rec?.body?.isValid && rec.formId === f.id && Math.abs(rec.seat - seat) < SEAT.step / 2 && rec.body.dimension.id === p.dimension.id) return;
-  const at = rec?.body?.isValid && rec.body.dimension.id === p.dimension.id ? rec.body.location : p.location;
-  removeBody(p.id);
+  const sameDim = rec?.body?.isValid && rec.body.dimension.id === p.dimension.id;
+  const at = sameDim ? rec.body.location : rec?.lastFeet && rec.dim === p.dimension.id ? rec.lastFeet : groundUnder(p);
+  removeBody(p.id, true);
   setInBody(p, false);
   const body = safe(() => p.dimension.spawnEntity(BODY_ID, at));
   if (!body) return;
@@ -755,7 +770,7 @@ function syncBody(p, seatOverride) {
   safe(() => body.setProperty("morph:r", f.r));
   // the camera ends up exactly eye-height above the body's feet; the body hides itself from that camera
   safe(() => body.setProperty("morph:eye", Math.min(Math.max(f.eye, 0), 16)));
-  bodies.set(p.id, { body, formId: f.id, seat: SEAT.min + seatIndex(seat) * SEAT.step, mountedAt: -1, calibrated: seatOverride !== undefined });
+  bodies.set(p.id, { body, formId: f.id, seat: SEAT.min + seatIndex(seat) * SEAT.step, mountedAt: -1, calibrated: seatOverride !== undefined, lastFeet: at, dim: p.dimension.id });
   system.run(() => mount(p));
 }
 
@@ -768,7 +783,10 @@ function mount(p) {
   // nobody else may sit in your body
   for (const r of safe(() => rideable.getRiders()) ?? []) if (r.id !== p.id) safe(() => rideable.ejectRider(r));
   if (ridingBody(p)?.id === rec.body.id) return;
-  safe(() => rec.body.teleport(p.location));
+  // only fetch the body if the player wandered off (e.g. teleported); never to the rider's shifted position
+  const b = rec.body.location;
+  const pl = p.location;
+  if (Math.hypot(b.x - pl.x, b.z - pl.z) > 4 || Math.abs(b.y - pl.y) > 12) safe(() => rec.body.teleport(groundUnder(p)));
   if (safe(() => rideable.addRider(p))) rec.mountedAt = system.currentTick;
 }
 
@@ -781,6 +799,10 @@ function driveBody(p) {
     return;
   }
   const b = rec.body;
+  if (b.isOnGround || b.isInWater) {
+    rec.lastFeet = { x: b.location.x, y: b.location.y, z: b.location.z };
+    rec.dim = p.dimension.id;
+  }
   if (ridingBody(p)?.id !== b.id) {
     // dismounted (sneak, dismount button, teleport...): hop straight back in
     setInBody(p, false);
